@@ -14,6 +14,7 @@
 2. Open a **draft PR early** against `rohanarun/riemann-hypothesis:opt/collapse-and-consolidate-4.36`, titled `Fix <Module>`. That's your claim.
 3. One module (or one family, such as all `JetR` files) per PR.
 4. **Claim before you start.** Every 15 minutes a coordinator script fixes unclaimed rows it can resolve mechanically (name collisions, and fixes that already exist on aliromman's branch), pushes them to the branch, and republishes [PR120-BUGS.md](PR120-BUGS.md). It never touches a file that an open PR against the branch modifies, and the list shows those rows as `claimed: #N @you`. Before you push, pull the branch so you're working on the latest fixes.
+5. **Mark the PR "Ready for review" when your fix is done.** The coordinator cycle (every few minutes) merges ready PRs that only change `src/*.lean`, touch no protected files, add no `sorry`/`admit`/axioms/`unsafe`, and merge cleanly. A draft is also merged early if it passes the same checks, changes at most 5 files, and every file it changes is currently a failing row in [PR120-BUGS.md](PR120-BUGS.md), because it can't make things worse. Merged PRs are closed automatically. If two PRs fix the same file, the first to merge wins; rebase the other if it still adds something.
 
 ## How to diagnose
 
