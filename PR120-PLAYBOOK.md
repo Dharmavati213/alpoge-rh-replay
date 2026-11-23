@@ -102,6 +102,20 @@ and only if it then compiles quickly.
 - **Duplicate same-named theorems that differ only in binder explicitness:** call them with named arguments.
 - **`unfold … Matrix.mulVec`** fails on 4.36: use `delta Matrix.mulVec dotProduct`.
 
+## Recently found (Nov 23, afternoon)
+
+- **`GlobalTheory.AdmLoc.modFun`** is a high-priority `Module` instance that derails `Module`/`Decidable` searches.
+  Fix: `attribute [-instance] GlobalTheory.AdmLoc.modFun in` before the declaration.
+- **`GlobalTheory.entries`** shadows `Formalism.BasicNotions.entries` inside `GlobalTheory.*`: qualify the use.
+- **Ideal powers** now go through `Submodule.instPowNat`, so `pow_mul`/`pow_two` on ideals need `(M := Ideal R)`.
+- **`Pi.single a 1`** can default to `ℕ`: give the codomain explicitly (for example `(C := TrivSqZeroExt …)`).
+- **Slow searches on `Ob l` (`PreTilt`):** a generic lemma like `map_neg` routes through `Module ℚ≥0` and times out.
+  Use the bundled hom's own lemma instead (`A.s.map_neg`).
+- **`cj_cj`** should be `LevelTowerAlt.Charts.cj_cj`. **`dualMap`** in GeometryProofs may need `_root_.` before
+  `GlobalTheory.CompanionTheory.Ar.dualMap`.
+- **"failed to read file … .olean"** on a machine with all dependencies built is not a Lean error. The kernel limit
+  `vm.max_map_count` is too low; Lean needs at least `1048576` (`sudo sysctl -w vm.max_map_count=1048576`).
+
 ## If nothing works
 
 If a section is identical to the original and still fails only because of the bundle's widened imports, the reliable
