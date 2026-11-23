@@ -2,7 +2,7 @@
 
 Branch `rohanarun/riemann-hypothesis:opt/collapse-and-consolidate-4.36`, head `476666d73f`. Updated 2026-11-23 01:48 UTC.
 
-**How to help:** read [AGENTS.md](AGENTS.md), pick a row, and open a draft PR titled `Fix <Module>` against the branch to claim it.
+**How to help:** read [AGENTS.md](AGENTS.md), pick a row without a `claimed:` note, and open a draft PR titled `Fix <Module>` against the branch to claim it. This list is regenerated every ~15 minutes; unclaimed rows that can be fixed mechanically get fixed by the coordinator script.
 
 The table lists the **root failures** from a 4-shard build of all 47,881 modules. Another **34** modules fail only with `bad import`. They are blocked behind these and need no separate fix. About a third of the modules have not compiled yet, so new rows will appear as the build continues.
 

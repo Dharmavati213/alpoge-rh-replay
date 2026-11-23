@@ -13,6 +13,7 @@
 1. Check [open PRs against the branch](https://github.com/rohanarun/riemann-hypothesis/pulls) so you don't duplicate someone else's work.
 2. Open a **draft PR early** against `rohanarun/riemann-hypothesis:opt/collapse-and-consolidate-4.36`, titled `Fix <Module>`. That's your claim.
 3. One module (or one family, such as all `JetR` files) per PR.
+4. **Claim before you start.** Every 15 minutes a coordinator script fixes unclaimed rows it can resolve mechanically (name collisions, and fixes that already exist on aliromman's branch), pushes them to the branch, and republishes [PR120-BUGS.md](PR120-BUGS.md). It never touches a file that an open PR against the branch modifies, and the list shows those rows as `claimed: #N @you`. Before you push, pull the branch so you're working on the latest fixes.
 
 ## How to diagnose
 
