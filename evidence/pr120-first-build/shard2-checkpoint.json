@@ -1,0 +1,17 @@
+{
+  "build_exit_code": null,
+  "controller_pid": 5295,
+  "identity": {
+    "build_roots": {},
+    "candidate_head": "a681843ee0f22d3035f00fc12d61bef5f8fe6528",
+    "candidate_tree": "1f87b3c77ad8d257045100702476a76374cfb854",
+    "lakefile_sha256": "27f52f9db27c82dfebe4fc7183ca7dd3516e5a6c7a73c3e3a083c366661c2282",
+    "manifest_sha256": "ee003c5c7a9b2b2a82a142b6633916661c07117199dd143d94d1af63910237df",
+    "source_tree": "f4cbf28e1dc82dc37b915b60a31e1b6884384baa",
+    "toolchain": "leanprover/lean4:v4.36.0"
+  },
+  "schema": 1,
+  "staging": "/tmp/pr120-staging-s2",
+  "state": "building",
+  "work": "/home/rh-ci/.local/share/riemann-build-state/failed-work/run-bmfm3rjm"
+}

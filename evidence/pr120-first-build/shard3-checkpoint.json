@@ -1,0 +1,17 @@
+{
+  "build_exit_code": null,
+  "controller_pid": 5324,
+  "identity": {
+    "build_roots": {},
+    "candidate_head": "1814e37fe99ac3df89e4d20a47af2c6a1cba95db",
+    "candidate_tree": "304a78915c16b01e0527ab8f5158f8c730dd3c23",
+    "lakefile_sha256": "e2f8578c7e7c4783056f159fbeaff031dfb7bf58e724b51ccdff457f23dbe7b1",
+    "manifest_sha256": "ee003c5c7a9b2b2a82a142b6633916661c07117199dd143d94d1af63910237df",
+    "source_tree": "4da37e5d31f23acc338278491c00dea0e63ae9c9",
+    "toolchain": "leanprover/lean4:v4.36.0"
+  },
+  "schema": 1,
+  "staging": "/tmp/pr120-staging-s3",
+  "state": "building",
+  "work": "/home/rh-ci/.local/share/riemann-build-state/failed-work/run-vtjwfcv9"
+}
