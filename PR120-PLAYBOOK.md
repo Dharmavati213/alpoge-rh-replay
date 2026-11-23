@@ -113,6 +113,12 @@ and only if it then compiles quickly.
   Use the bundled hom's own lemma instead (`A.s.map_neg`).
 - **`cj_cj`** should be `LevelTowerAlt.Charts.cj_cj`. **`dualMap`** in GeometryProofs may need `_root_.` before
   `GlobalTheory.CompanionTheory.Ar.dualMap`.
+- **`smul_smul`/`mul_smul` never match on `KaehlerDifferential` (Ω[S⁄R]).** Quotient-ring scalars use a derived
+  `SMul` (`instSMulKaehlerDifferentialOfSMulCommClass`) that doesn't unify with `MulAction.toSMul`, because
+  `KaehlerDifferential` is a plain `def`. Rewrite with `← smul_assoc, smul_eq_mul`, which goes through `IsScalarTower`.
+- **Tensor-product instances** such as `AddCommGroup ((⨂ …) ⊗[ℂ] (⨂ …))` need `set_option maxSynthPendingDepth 2 in`
+  (no culprit instance, just Lean 4.36's lower default); pass the space explicitly to `invFun` with `(V := …)`.
+- **`GlobalTheory.AdmLoc.modFun`** also breaks `map_sub` on linear maps into `κ → OB l O`; same `[-instance] … in` fix.
 - **"failed to read file … .olean"** on a machine with all dependencies built is not a Lean error. The kernel limit
   `vm.max_map_count` is too low; Lean needs at least `1048576` (`sudo sysctl -w vm.max_map_count=1048576`).
 
