@@ -1,0 +1,164 @@
+{
+ "generated_at": "2026-11-23T17:40:12Z",
+ "repo": "rohanarun/riemann-hypothesis",
+ "branch": "opt/collapse-and-consolidate-4.36",
+ "base": "f941065836",
+ "upstream_pr": "https://github.com/leanprover-community/riemann-hypothesis/pull/120",
+ "totals": {
+  "contributors": 25,
+  "merged_prs": 200,
+  "commits": 550
+ },
+ "contributors": [
+  {
+   "login": "gledos",
+   "merged_prs": 58,
+   "commits": 69,
+   "coauthored": 0
+  },
+  {
+   "login": "roy7",
+   "merged_prs": 44,
+   "commits": 64,
+   "coauthored": 0
+  },
+  {
+   "login": "jjjhenriksen",
+   "merged_prs": 20,
+   "commits": 21,
+   "coauthored": 0
+  },
+  {
+   "login": "hipotures",
+   "merged_prs": 15,
+   "commits": 30,
+   "coauthored": 0
+  },
+  {
+   "login": "bgould132",
+   "merged_prs": 15,
+   "commits": 18,
+   "coauthored": 0
+  },
+  {
+   "login": "florianmodel",
+   "merged_prs": 10,
+   "commits": 10,
+   "coauthored": 0
+  },
+  {
+   "login": "aliromman",
+   "merged_prs": 8,
+   "commits": 31,
+   "coauthored": 24
+  },
+  {
+   "login": "maugomez77",
+   "merged_prs": 5,
+   "commits": 10,
+   "coauthored": 0
+  },
+  {
+   "login": "emsi",
+   "merged_prs": 5,
+   "commits": 5,
+   "coauthored": 0
+  },
+  {
+   "login": "TheMrZZ",
+   "merged_prs": 2,
+   "commits": 4,
+   "coauthored": 0
+  },
+  {
+   "login": "21Z121Z1",
+   "merged_prs": 2,
+   "commits": 2,
+   "coauthored": 0
+  },
+  {
+   "login": "JanSimeonMetzger",
+   "merged_prs": 2,
+   "commits": 2,
+   "coauthored": 0
+  },
+  {
+   "login": "m4tthewdavis",
+   "merged_prs": 2,
+   "commits": 2,
+   "coauthored": 0
+  },
+  {
+   "login": "maxime-fleury",
+   "merged_prs": 2,
+   "commits": 2,
+   "coauthored": 0
+  },
+  {
+   "login": "pCwOrM",
+   "merged_prs": 2,
+   "commits": 2,
+   "coauthored": 0
+  },
+  {
+   "login": "t-choudhury",
+   "merged_prs": 1,
+   "commits": 2,
+   "coauthored": 0
+  },
+  {
+   "login": "CubeJerry",
+   "merged_prs": 1,
+   "commits": 1,
+   "coauthored": 0
+  },
+  {
+   "login": "Mfweb",
+   "merged_prs": 1,
+   "commits": 1,
+   "coauthored": 0
+  },
+  {
+   "login": "MLEARNER701",
+   "merged_prs": 1,
+   "commits": 1,
+   "coauthored": 0
+  },
+  {
+   "login": "Mzzj114",
+   "merged_prs": 1,
+   "commits": 1,
+   "coauthored": 0
+  },
+  {
+   "login": "WorldianAI",
+   "merged_prs": 1,
+   "commits": 1,
+   "coauthored": 0
+  },
+  {
+   "login": "yingluom",
+   "merged_prs": 1,
+   "commits": 1,
+   "coauthored": 0
+  },
+  {
+   "login": "mdpmcc",
+   "merged_prs": 1,
+   "commits": 0,
+   "coauthored": 0
+  },
+  {
+   "login": "rohanarun",
+   "merged_prs": 0,
+   "commits": 58,
+   "coauthored": 0
+  },
+  {
+   "login": "Rafa-Ross",
+   "merged_prs": 0,
+   "commits": 1,
+   "coauthored": 0
+  }
+ ]
+}

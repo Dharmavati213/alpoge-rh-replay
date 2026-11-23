@@ -64,6 +64,16 @@
   .chip { display: inline-flex; align-items: center; background: var(--card); border: 1px solid var(--border); border-radius: 999px; padding: 3px 10px 3px 4px; font-size: 0.85rem; text-decoration: none; color: var(--fg); }
   .chip:hover { border-color: var(--c4); }
   .chip .cnt { color: var(--muted); margin-left: 5px; font-variant-numeric: tabular-nums; }
+  .contrib-row { display: grid; grid-template-columns: minmax(0, 190px) 1fr auto; align-items: center; gap: 10px; margin: 5px 0; }
+  .contrib-row .who { display: flex; align-items: center; min-width: 0; color: var(--fg); text-decoration: none; font-size: 0.9rem; }
+  .contrib-row .who span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .contrib-row .who:hover span { color: var(--accent); text-decoration: underline; }
+  .contrib-row .bar { height: 14px; }
+  .contrib-row .val { color: var(--muted); font-size: 0.85rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  @media (max-width: 560px) {
+    .contrib-row { grid-template-columns: minmax(0, 1fr) auto; }
+    .contrib-row .bar { grid-column: 1 / -1; order: 3; }
+  }
 </style>
 </head>
 <body>
@@ -80,6 +90,18 @@
   <div class="headline-num" id="headline">Loading…</div>
   <div class="bar big-bar" role="img" aria-label="Overall progress"><div class="big-fill" id="bigfill" style="width:0%"></div></div>
   <div class="cards" id="cards"></div>
+
+  <section id="pr120-section" aria-labelledby="pr120-heading" hidden>
+    <h2 id="pr120-heading">PR #120 optimization contributors</h2>
+    <p class="sub" id="pr120-sub"></p>
+    <div class="cards" id="pr120-cards"></div>
+    <div class="legend">
+      <span><span class="swatch" style="background:var(--c1)"></span>Merged PRs</span>
+      <span><span class="swatch" style="background:var(--c2)"></span>Commits</span>
+      <span><span class="swatch" style="background:var(--c3)"></span>Co-authored commits</span>
+    </div>
+    <div id="pr120-chart" role="list" style="margin-top:10px"></div>
+  </section>
 
   <section id="porting-section" aria-labelledby="porting-heading" hidden>
     <h2 id="porting-heading">Lean 4.36 Porting &amp; Upstream Pruning</h2>
@@ -444,6 +466,40 @@ fetch("data.json?t=" + Date.now())
       "matching tracker/tasks.py. This page is unofficial; the repository README and ledger are authoritative.";
   })
   .catch(function (e) { el("error").textContent = "Could not load data.json — " + e.message; });
+
+// PR #120 optimization contributors (independent of data.json so a failure here can't break the page).
+fetch("pr120-contributors.json?t=" + Date.now())
+  .then(function (r) { if (!r.ok) { throw new Error("HTTP " + r.status); } return r.json(); })
+  .then(function (d) {
+    var rows = d.contributors || [];
+    if (!rows.length) { return; }
+    var t = d.totals;
+    el("pr120-sub").innerHTML =
+      'People who have landed fixes on the consolidated Lean 4.36 branch for ' +
+      '<a href="' + esc(d.upstream_pr) + '" target="_blank" rel="noopener">leanprover-community/riemann-hypothesis#120</a> ' +
+      '(branch <code>' + esc(d.branch) + '</code> on <a href="https://github.com/' + esc(d.repo) + '" target="_blank" rel="noopener">' +
+      esc(d.repo) + '</a>), counted from GitHub since the consolidation commit. Updated ' + esc(d.generated_at) + '.';
+    el("pr120-cards").innerHTML =
+      card(fmt(t.contributors), "contributors") + card(fmt(t.merged_prs), "merged PRs") + card(fmt(t.commits), "commits");
+    var max = Math.max.apply(null, rows.map(function (p) { return p.merged_prs + p.commits + p.coauthored; })) || 1;
+    el("pr120-chart").innerHTML = rows.map(function (p) {
+      var seg = function (n, color) {
+        return n > 0 ? '<div style="width:' + (100 * n / max).toFixed(2) + '%;background:' + color + '"></div>' : "";
+      };
+      var parts = [];
+      if (p.merged_prs) { parts.push(fmt(p.merged_prs) + (p.merged_prs === 1 ? " PR" : " PRs")); }
+      if (p.commits) { parts.push(fmt(p.commits) + (p.commits === 1 ? " commit" : " commits")); }
+      if (p.coauthored) { parts.push(fmt(p.coauthored) + " co-authored"); }
+      return '<div class="contrib-row" role="listitem">' +
+        '<a class="who" href="https://github.com/' + encodeURIComponent(p.login) + '" target="_blank" rel="noopener">' +
+        '<img class="avatar" src="' + esc(avatarUrl(p.login)) + '" alt="" loading="lazy"/><span>' + esc(p.login) + '</span></a>' +
+        '<div class="bar" aria-hidden="true">' + seg(p.merged_prs, "var(--c1)") + seg(p.commits, "var(--c2)") +
+        seg(p.coauthored, "var(--c3)") + '</div>' +
+        '<span class="val">' + esc(parts.join(" · ")) + '</span></div>';
+    }).join("");
+    el("pr120-section").hidden = false;
+  })
+  .catch(function () { /* section stays hidden */ });
 </script>
 </body>
 </html>

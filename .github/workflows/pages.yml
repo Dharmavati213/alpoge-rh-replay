@@ -30,6 +30,10 @@ jobs:
           fetch-depth: 0  # Sample historical module coverage for the rate chart.
       - name: Regenerate dashboard data from tracker files
         run: python3 dashboard/generate_data.py
+      - name: Refresh PR #120 contributor counts from GitHub (keeps the committed file on failure)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 dashboard/generate_pr120_contributors.py || true
       - id: upload
         uses: actions/upload-pages-artifact@v3
         with:
