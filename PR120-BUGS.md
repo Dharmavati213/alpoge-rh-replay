@@ -1,12 +1,12 @@
 # PR #120 — open build failures
 
-Branch `rohanarun/riemann-hypothesis:opt/collapse-and-consolidate-4.36`, head `275775a10e`. Updated 2026-11-23 13:57 UTC.
+Branch `rohanarun/riemann-hypothesis:opt/collapse-and-consolidate-4.36`, head `e4d8aefea2`. Updated 2026-11-23 14:13 UTC.
 
 **How to help:** read [AGENTS.md](AGENTS.md), pick a row without a `claimed:` note, and open a draft PR titled `Fix <Module>` against the branch to claim it. This list is regenerated every ~15 minutes; unclaimed rows that can be fixed mechanically get fixed by the coordinator script.
 
 The table lists the **root failures** from a 4-shard build of all 47,881 modules. Another **0** modules fail only with `bad import`. They are blocked behind these and need no separate fix. About a third of the modules have not compiled yet, so new rows will appear as the build continues.
 
-## Open (30)
+## Open (35)
 
 | Module (file:line) | Category | First error | Notes |
 |---|---|---|---|
@@ -40,10 +40,14 @@ The table lists the **root failures** from a 4-shard build of all 47,881 modules
 | `Formalism/PeriodIntegrals/UnitaryGroupMassFormula/LocalUnitaryOrbits/Bundle0006.lean:40` | other | unsolved goals F E : Type inst✝⁵ : Field F inst✝⁴ : NumberField F inst✝³ : Field E inst✝² : NumberField E |  |
 | `Formalism/SharpRestriction/GrowthBounds/MonomialFactorials/Bundle0005.lean:24` | other | Tactic `apply` failed: could not unify the conclusion of `@rank_le` LE.le.{0} (CountingStatementReduction.clSum ?C0 ?CE1 ?CE2 ?X (CountingStatementReduction.bRank ?C0 ?CE1 ?CE2 ?X ?aTop ?aPlus) ?aTop ?dl) (CountingStatem |  |
 | `GroundTheory/HeightsAndTheta/Heights/HeightKernels/PDualStackedExcCycle.lean:89` | wrong name resolved (likely collision) | Application type mismatch: The argument W has type Ideal (MRing ι) but is expected to have type Ideal (MvPolynomial (Fin ?m.16) ?m.14) |  |
+| `GroundTheory/HeightsAndTheta/Heights/HodgeLowerBound/PModelFibreSumAeSheet.lean:22` | wrong name resolved (likely collision) | Application type mismatch: The argument L has type HermLine ?m.24 but is expected to have type ReciprocityTheory.ChartRestriction.G.Geo.HermLine ?m.42 |  |
+| `GroundTheory/HeightsAndTheta/Heights/Intersections/Bundle0051.lean:150` | wrong name resolved (likely collision) | Application type mismatch: The argument s has type MRing ι but is expected to have type ℕ |  |
+| `GroundTheory/HeightsAndTheta/Heights/OrbitLimits/Bundle0037.lean:127` | wrong name resolved (likely collision) | Application type mismatch: The argument s has type MRing ι but is expected to have type ℕ |  |
+| `GroundTheory/HeightsAndTheta/Heights/OrbitLimits/Bundle0041.lean:385` | wrong name resolved (likely collision) | Application type mismatch: The argument s has type MRing ι but is expected to have type ℕ |  |
+| `GroundTheory/HeightsAndTheta/Heights/OrbitLimits/PCurveVertPointResidue.lean:27` | wrong name resolved (likely collision) | Application type mismatch: The argument f has type MRing ι but is expected to have type ℕ |  |
 
 ## Open PRs not auto-merged
 
-- #224 (@roy7): empty diff
 - #184 (@JanSimeonMetzger): empty diff
 - #147 (@jjjhenriksen): draft touches files that are not failing (mark ready for review)
 - #101 (@hipotures): needs rebase (conflicts with the branch)
@@ -56,7 +60,7 @@ The table lists the **root failures** from a 4-shard build of all 47,881 modules
 
 ## Fixed so far (on the branch)
 
-About 2127 files, including:
+About 2138 files, including:
 
 - **Name collisions:** `sigR` (104 files), `Gz`, `Wp`, `UJ`, `wt`, `Zhat`, `blockEnds`, `GE`, `Ideles`/`localIdele`, `dualLattice`, `homAt`, `IsCWCont`, `cechDiag`/`cechAug`, `admitted`, `expandsAt_scale`, `mem_nonzeroLocus`, `wd_congr`.
 - **Restored or deduplicated declarations:** 29 files from aliromman's integration branch (thanks, @aliromman).
