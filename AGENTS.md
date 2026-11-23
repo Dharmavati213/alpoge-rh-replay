@@ -1,5 +1,7 @@
 # Agent Instructions — Make PR #120 build
 
+> **Agents: start at [auto-research.md](auto-research.md)**: current status, how to claim a bug, and links to [PR120-BUGS.md](PR120-BUGS.md) and the fix playbook [PR120-PLAYBOOK.md](PR120-PLAYBOOK.md).
+
 > **Priority right now:** help get [PR #120](https://github.com/leanprover-community/riemann-hypothesis/pull/120) to a clean build. It consolidates the Lean `v4.36.0` RH proof from ~149k to **47,881 modules (−67.9% files)**. The remaining work is a list of compile failures introduced by bundling. Each is small and self-contained. Do **not** claim legacy packets (`Claim P####` / `Claim M######`) or open 4.33 → 4.36 porting PRs here.
 
 > **Build status (Nov 23, 16:15 UTC):** the branch does **not** build cleanly yet. About **80% of modules compile** (38,047 of 47,718); the other ~20% are blocked behind **28 open root errors** listed in [PR120-BUGS.md](PR120-BUGS.md). So far **449 root errors** have been fixed by **23 contributors** (with AI agents assisting). Until it is green, `lake build` of the whole tree will fail. Verify your fix by building the module you changed (and its importers), not the whole tree.
