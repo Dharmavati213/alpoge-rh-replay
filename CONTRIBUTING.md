@@ -1,26 +1,34 @@
-# Agent Instructions — Lean 4.36 Proof Optimization
+# Agent Instructions — Make PR #120 build
 
-> **Notice:** The Lean `v4.36.0` port of Alpöge's Riemann Hypothesis proof is **complete**. Do **not** claim legacy packets (`Claim P####` / `Claim M######`) or open Lean 4.33 → 4.36 porting PRs in `rohanarun/alpoge-rh-replay`.
+> **Priority right now:** help get [PR #120](https://github.com/leanprover-community/riemann-hypothesis/pull/120) to a clean build. It consolidates the Lean `v4.36.0` RH proof from ~149k to **47,881 modules (−67.9% files)**. The remaining work is a list of compile failures introduced by bundling. Each is small and self-contained. Do **not** claim legacy packets (`Claim P####` / `Claim M######`) or open 4.33 → 4.36 porting PRs here.
 
-## Target Codebase
+## Where the work is
 
-Work on the consolidated Lean `v4.36.0` + Mathlib (`fc4f59e577feb1a4956671bc04ac18aaaf8cd842`) codebase:
-- **Upstream repository:** https://github.com/leanprover-community/riemann-hypothesis (`main`)
-- **Consolidated 47,882-module branch (`−67.95%` file count vs `main`):** https://github.com/leanprover-community/riemann-hypothesis/pull/120 (`rohanarun/riemann-hypothesis`, branch `opt/collapse-and-consolidate-4.36`)
+- **Branch:** `rohanarun/riemann-hypothesis`, branch `opt/collapse-and-consolidate-4.36` (the head of PR #120).
+- **Open failures:** [PR120-BUGS.md](PR120-BUGS.md). A 4-shard, 512-vCPU build updates it as new failures appear.
+- Modules that fail only with `bad import` are **not** bugs. They import a broken module and will build once it's fixed. Fix the root failures in the list.
 
-## Optimization Priorities
+## How to take a bug
 
-Focus on self-contained, verifiable improvements to the Lean 4.36 proof:
-1. **Import & dependency pruning:** Remove unused transitive imports, flatten remaining single-declaration pass-through wrappers, and shorten import depth.
-2. **Proof & tactic acceleration:** Speed up slow modules, replace heavy `simp` / `aesop` / `linarith` / `omega` scripts with direct rewrites or lemmas, and eliminate `set_option maxHeartbeats` bumps where possible.
-3. **Mathlib deduplication & modularization:** Replace duplicated local helper definitions or lemmas with canonical Mathlib `v4.36.0` declarations, and decompose overly large files cleanly without re-creating wrapper chains.
+1. Check [open PRs against the branch](https://github.com/rohanarun/riemann-hypothesis/pulls) so you don't duplicate someone else's work.
+2. Open a **draft PR early** against `rohanarun/riemann-hypothesis:opt/collapse-and-consolidate-4.36`, titled `Fix <Module>`. That's your claim.
+3. One module (or one family, such as all `JetR` files) per PR.
 
-## Strict Verification Rules
+## How to diagnose
+
+Most failures come from bundling: several original files were merged into one `BundleNNNN.lean` (each section is marked `-- bundled from <OriginalModule>`), and their `open`s now see each other's names.
+
+- **Ambiguous term / wrong declaration picked.** Look up the original module on `main` (`c779160312`): `git grep -F '<the failing line>' c779160312 -- src`. Its `open`s and imports tell you which declaration was meant. Qualify the bare name to that declaration's full name, **only inside that original's `namespace … end` block**. Never rewrite the `def`/`theorem` line that declares the name.
+- **Lean looks up enclosing namespaces before opened ones.** Inside `namespace PI.Foo`, a bare `sigR` finds `PI.sigR` before an opened `GenusMassVolumes.sigR`. `open X hiding y` does **not** help there; qualify instead.
+- **Unknown identifier / already declared.** Usually a declaration lost or duplicated when thin wrappers were collapsed. Check aliromman's [`codex/pr120-integration-4.36`](https://github.com/aliromman/riemann-hypothesis/tree/codex/pr120-integration-4.36) branch first; it fixes many of these.
+- **Instances (`failed to synthesize`, `instance problem is stuck`).** Supply the instance or measure explicitly. See `DivisorProofs/Bundle0386`/`Bundle0408` on the branch for an example.
+
+## Strict rules
 
 - **Never modify** `src/Challenge.lean`, `src/Statements.lean`, or `comparator.json`.
-- **Never introduce** `sorry`, `admit`, new `axiom`s, or unsafe features.
-- Verify every modified module with `lake build <Target>` (and `lake build Main Challenge` + `lake comparator` for end-to-end PRs).
-- Include before/after build times, import counts, and `.olean` sizes in your PR description.
+- **Never introduce** `sorry`, `admit`, new `axiom`s, or unsafe features. Don't change what a theorem states.
+- Build the module you changed if you can (`lake build <Module>`; `lake exe mathlib/cache get` for Mathlib). If you can't build locally, say so in the PR; the coordinator's 4-shard build will check it.
+- In the PR, paste the original error and explain where the fix came from (which original module or declaration).
 
 ---
 

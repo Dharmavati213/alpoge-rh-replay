@@ -4,11 +4,12 @@ Levent Alpöge announced a Lean proof of the Riemann Hypothesis on November 20, 
 
 ## Current status
 
-**Lean 4.36 port complete — now optimizing the Lean 4.36 proof.**
+**Priority: get the consolidated Lean 4.36 proof ([PR #120](https://github.com/leanprover-community/riemann-hypothesis/pull/120)) to a clean build.**
 
-- **Porting & packet claims paused:** Please **do not** open new packet claims (`Claim P####` / `Claim M######`) or Lean 4.33.1 → 4.36.0 porting PRs. The full Lean `v4.36.0` port has landed upstream in [`leanprover-community/riemann-hypothesis`](https://github.com/leanprover-community/riemann-hypothesis) (`main`), and a consolidated 47,884-file build (`−67.9%` file count vs `main`) is staged in [PR #120](https://github.com/leanprover-community/riemann-hypothesis/pull/120) (`rohanarun/riemann-hypothesis` branch `opt/collapse-and-consolidate-4.36`).
-- **New focus:** Simplifying, accelerating, and modularizing the Lean 4.36 proof while keeping `src/Challenge.lean`, `src/Statements.lean`, and `lake comparator` (`Lean paranoid` + `nanoda`) green.
-- **Historical replay archive:** All volunteer credits, historical packet logs, and pinned 4.33.1 replay records remain preserved below and on the [live progress dashboard](https://rohanarun.github.io/alpoge-rh-replay/).
+- **47,881 modules, −67.9% files** compared with `main`. The remaining work is a list of small compile failures introduced by bundling: name collisions and declarations lost when wrappers were collapsed.
+- **Open failures:** [PR120-BUGS.md](PR120-BUGS.md). **How to help:** [AGENTS.md](AGENTS.md). Claim a bug by opening a draft PR `Fix <Module>` against `rohanarun/riemann-hypothesis:opt/collapse-and-consolidate-4.36`.
+- **Packet claims remain closed:** don't open `Claim P####` / `Claim M######` issues or 4.33 → 4.36 porting PRs.
+- **Historical replay archive:** volunteer credits, packet logs and pinned 4.33.1 replay records remain below and on the [live progress dashboard](https://rohanarun.github.io/alpoge-rh-replay/).
 
 ## Contributors
 
@@ -150,18 +151,15 @@ Thank you to all volunteers and agent contributors who helped replay and port th
 
 ## Give this prompt to an agent
 
-**Default: optimize the Lean 4.36 proof.**
+**Default: fix a PR #120 build failure.**
 
-> The Lean 4.36.0 port of the Riemann Hypothesis proof is complete—do NOT claim legacy packets or open Lean 4.33 -> 4.36 porting PRs in `rohanarun/alpoge-rh-replay`. Instead, help optimize, simplify, and speed up the Lean `v4.36.0` + Mathlib (`fc4f59e577feb1a4956671bc04ac18aaaf8cd842`) codebase in https://github.com/leanprover-community/riemann-hypothesis (and the consolidated 47,884-module branch `opt/collapse-and-consolidate-4.36` in https://github.com/rohanarun/riemann-hypothesis/pull/120).
+> Help get the consolidated Lean 4.36 Riemann Hypothesis proof to build: https://github.com/leanprover-community/riemann-hypothesis/pull/120 (branch `opt/collapse-and-consolidate-4.36` in https://github.com/rohanarun/riemann-hypothesis). Read https://github.com/rohanarun/alpoge-rh-replay/blob/main/AGENTS.md, pick one open row from https://github.com/rohanarun/alpoge-rh-replay/blob/main/PR120-BUGS.md, and check the open PRs on rohanarun/riemann-hypothesis so you don't duplicate work. Open a draft PR `Fix <Module>` against that branch to claim it.
 >
-> Focus on self-contained, verifiable improvements:
-> 1. **Import & dependency pruning:** Remove unused transitive imports, flatten redundant pass-through wrapper files, and shorten import depth.
-> 2. **Proof & tactic acceleration:** Speed up slow modules, replace heavy `simp`/`aesop`/`linarith` scripts with direct rewrites or lemmas, and eliminate `maxHeartbeats` bumps where possible.
-> 3. **Mathlib deduplication:** Replace duplicated local helper definitions or lemmas with canonical Mathlib `v4.36.0` declarations.
+> Most failures come from bundling: merged files see each other's `open`s. Find the original module on `main` (`c779160312`) and qualify the name it meant, only inside that original's namespace block. For missing or duplicate declarations, check aliromman's `codex/pr120-integration-4.36` branch first.
 >
-> **Strict rules:** Never modify `src/Challenge.lean`, `src/Statements.lean`, or `comparator.json`. Never introduce `sorry`, `admit`, new `axiom`s, or unsafe features. Verify every touched module with `lake build <Target>` (and `lake build Main Challenge` + `lake comparator` for end-to-end PRs), and include before/after build times, import counts, and `.olean` sizes in your PR description.
+> **Strict rules:** never modify `src/Challenge.lean`, `src/Statements.lean` or `comparator.json`; never add `sorry`, `admit`, axioms or unsafe features; don't change any theorem statement. Paste the original error and where the fix came from in the PR.
 
-[Optimization & agent notes](auto-research.md) · [Upstream Lean 4.36 repo](https://github.com/leanprover-community/riemann-hypothesis) · [Consolidated 4.36 PR #120](https://github.com/leanprover-community/riemann-hypothesis/pull/120) · [Historical replay archive](STATUS.md)
+[Agent instructions](AGENTS.md) · [Open failures](PR120-BUGS.md) · [PR #120](https://github.com/leanprover-community/riemann-hypothesis/pull/120) · [Historical replay archive](STATUS.md)
 
 ## Reproduce the check
 
