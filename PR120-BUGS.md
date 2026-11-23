@@ -1,6 +1,6 @@
 # PR #120 — open build failures
 
-Branch `rohanarun/riemann-hypothesis:opt/collapse-and-consolidate-4.36`, head `e4d8aefea2`. Updated 2026-11-23 14:13 UTC.
+Branch `rohanarun/riemann-hypothesis:opt/collapse-and-consolidate-4.36`, head `cd21724aba`. Updated 2026-11-23 14:28 UTC.
 
 **How to help:** read [AGENTS.md](AGENTS.md), pick a row without a `claimed:` note, and open a draft PR titled `Fix <Module>` against the branch to claim it. This list is regenerated every ~15 minutes; unclaimed rows that can be fixed mechanically get fixed by the coordinator script.
 
@@ -17,9 +17,10 @@ The table lists the **root failures** from a 4-shard build of all 47,881 modules
 | `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle0698.lean:164` | instance | failed to synthesize Decidable (∃ p, p ∈ K₀.W k) (deterministic) timeout at `typeclass`, maximum number of heartbeats (20000) has been reached |  |
 | `Development/AbelianVarietyTheory/Proofs/FlagMeasures/Bundle0260.lean:72` | instance | failed to synthesize instance of type class BorelSpace (Matrix (Fin (2 * r + k + 1)) (Fin (2 * r + k + 1)) ℂ) haveI̵ The goal is a proposition, so `have` is preferred over `haveI`. |  |
 | `Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/Bundle0132.lean:138` | wrong name resolved (likely collision) | Type mismatch ↑ab.1 + Complex.I • ↑ab.2 has type Matrix (Fin A ⊕ Fin B) (Fin A ⊕ Fin B) ℂ but is expected to have type (s : ?m.184 A B) → Matrix (?m.185 A B s) (?m.186 A B s) (?m.187 A B) |  |
-| `Development/AbelianVarietyTheory/Proofs/JetHarmonics/Bundle0119.lean:387` | other | Invalid field `mulVec`: The environment does not contain `ContinuousLinearMap.mulVec`, so it is not possible to project the field `mulVec` from an expression linPart ?m.31 of type `?m.9 →L[ℂ] ?m.14` |  |
+| `Development/AbelianVarietyTheory/Proofs/JetHarmonics/Bundle0119.lean:387` | other | Invalid field `mulVec`: The environment does not contain `ContinuousLinearMap.mulVec`, so it is not possible to project the field `mulVec` from |  |
 | `Development/AbelianVarietyTheory/Proofs/JetHarmonics/LevelModuleFormEqIntegralOfCompactCoeff.lean:104` | instance | failed to synthesize Unique (Ix Empty) (deterministic) timeout at `typeclass`, maximum number of heartbeats (20000) has been reached |  |
 | `Development/AbelianVarietyTheory/Proofs/RingsOfIntegers/SmallPointsSubstitutionAlgHomSinglePoint.lean:146` | other | Invalid simp theorem: Expected a proposition, but found (A : Type) → [inst : CommRing A] → [IsLocalRing A] → ↥(Sp A) |  |
+| `Development/AbelianVarietyTheory/Proofs/UnitaryExistence/Bundle0086.lean:236` | ambiguous name | Ambiguous term rdU Possible interpretations: Formalism.L2.PjFree.rdU : (U : Formalism.L2.PjFree.Unf ?m.142 ?m.143 ?m.144 ?m.145) → Rul ?m.142 ?m.143 →ₛₗ[?m.144] Formalism.L2.PjFree.FDSec U.X |  |
 | `Development/AbelianVarietyTheory/Proofs/UnitaryExistence/FiniteNotIsUnitOneAddSmul.lean:387` | other | Tactic `rewrite` failed: Did not find an occurrence of the pattern ?v ᵥ* 1 in the target expression (x ⬝ᵥ 1 *ᵥ fun b ↦ cc (y b)) = stdForm x y E : Type |  |
 | `Development/AbelianVarietyTheory/Proofs/UnitaryExistence/TransvectionEq.lean:110` | wrong name resolved (likely collision) | Application type mismatch: The argument abelianSchemeLaws_all.left.secBaseChange has type Out.SecBaseChangeSt but is expected to have type Out.Laws |  |
 | `Development/AutomorphicArithmetic/AutomorphicVarieties/UnitaryThreeDeformations/HostOk.lean:60` | instance | linter Mathlib.Linter.declTypeLinter failed: failed to synthesize IsLocalRing O (deterministic) timeout at `typeclass`, maximum number of heartbeats (20000) has been reached |  |
@@ -28,6 +29,7 @@ The table lists the **root failures** from a 4-shard build of all 47,881 modules
 | `Development/AutomorphicArithmetic/OrbitLabellings/Bundle0004.lean:103` | other | Invalid projection: Type of q is not known; cannot resolve projection `1` |  |
 | `Development/AutomorphicArithmetic/TwistedTraces/CuspDecayArchConvFinAvg.lean:49` | instance | failed to synthesize T2Space (G1 K n) (deterministic) timeout at `typeclass`, maximum number of heartbeats (20000) has been reached |  |
 | `Development/AutomorphicSpectrum/Proofs/AlgebraProofs/Bundle0050.lean:125` | wrong name resolved (likely collision) | Application type mismatch: The argument b' has type Module.Basis T ℤ ↥(dualLattice ?m.16) but is expected to have type Module.Basis T ℤ ↥(GroundTheory.Heights₂.Heights.dualLattice ?m.51) |  |
+| `Development/AutomorphicSpectrum/Proofs/AlgebraProofs/DualStackedExceptionalChart.lean:81` | ambiguous name | Ambiguous term linForm Possible interpretations: ReciprocityTheory.ChartRestriction.G.AI.I4.linForm : ((k : ?m.105) → ?m.108 k → ?m.106 k → ℤ) → (k : ?m.105) × ?m.108 k → MRing ?m.106 |  |
 | `Development/AutomorphicSpectrum/Proofs/GeometryProofs/Bundle0077.lean:216` | other | Invalid field `isDomain_stalk`: The environment does not contain `Function.isDomain_stalk`, so it is not possible to project the field `isDomain_stalk` from an expression A.normal of type ∀ (x : ↥A.X), IsDomain ↑(A.X.pre |  |
 | `Development/AutomorphicSpectrum/Proofs/MetricProofs/Bundle0070.lean:461` | wrong name resolved (likely collision) | Type mismatch forall_isDomain_and_isIntegrallyClosed_stalk_of_smooth f 𝔐.normal has type ∀ (x : ↥Z), IsDomain ↑(Z.presheaf.stalk x) ∧ IsIntegrallyClosed ↑(Z.presheaf.stalk x) but is expected to have type IsNormalScheme Z |  |
 | `Development/AutomorphicSpectrum/Proofs/MetricProofs/FlagCoverArithmeticFourth.lean:100` | instance | failed to synthesize Module.Free ↥A ↥(IntermediateField.extendScalars h) (deterministic) timeout at `typeclass`, maximum number of heartbeats (20000) has been reached |  |
@@ -39,12 +41,10 @@ The table lists the **root failures** from a 4-shard build of all 47,881 modules
 | `Formalism/PeriodIntegrals/UnitaryGroupMassFormula/IntegralityAtPrimeLattices/Bundle0003.lean:93` | other | Tactic `rewrite` failed: Did not find an occurrence of the pattern ↑((Formalism.UG.bc (prV ?v)) ?x) *ᵥ fun i ↦ (prV ?v) (?y i) in the target expression (fun i ↦ (prV q) (((inclE (FiniteAdeleRing (𝓞 F) F)) a • ↑(g2⁻¹ * g1 |  |
 | `Formalism/PeriodIntegrals/UnitaryGroupMassFormula/LocalUnitaryOrbits/Bundle0006.lean:40` | other | unsolved goals F E : Type inst✝⁵ : Field F inst✝⁴ : NumberField F inst✝³ : Field E inst✝² : NumberField E |  |
 | `Formalism/SharpRestriction/GrowthBounds/MonomialFactorials/Bundle0005.lean:24` | other | Tactic `apply` failed: could not unify the conclusion of `@rank_le` LE.le.{0} (CountingStatementReduction.clSum ?C0 ?CE1 ?CE2 ?X (CountingStatementReduction.bRank ?C0 ?CE1 ?CE2 ?X ?aTop ?aPlus) ?aTop ?dl) (CountingStatem |  |
-| `GroundTheory/HeightsAndTheta/Heights/HeightKernels/PDualStackedExcCycle.lean:89` | wrong name resolved (likely collision) | Application type mismatch: The argument W has type Ideal (MRing ι) but is expected to have type Ideal (MvPolynomial (Fin ?m.16) ?m.14) |  |
-| `GroundTheory/HeightsAndTheta/Heights/HodgeLowerBound/PModelFibreSumAeSheet.lean:22` | wrong name resolved (likely collision) | Application type mismatch: The argument L has type HermLine ?m.24 but is expected to have type ReciprocityTheory.ChartRestriction.G.Geo.HermLine ?m.42 |  |
-| `GroundTheory/HeightsAndTheta/Heights/Intersections/Bundle0051.lean:150` | wrong name resolved (likely collision) | Application type mismatch: The argument s has type MRing ι but is expected to have type ℕ |  |
-| `GroundTheory/HeightsAndTheta/Heights/OrbitLimits/Bundle0037.lean:127` | wrong name resolved (likely collision) | Application type mismatch: The argument s has type MRing ι but is expected to have type ℕ |  |
-| `GroundTheory/HeightsAndTheta/Heights/OrbitLimits/Bundle0041.lean:385` | wrong name resolved (likely collision) | Application type mismatch: The argument s has type MRing ι but is expected to have type ℕ |  |
-| `GroundTheory/HeightsAndTheta/Heights/OrbitLimits/PCurveVertPointResidue.lean:27` | wrong name resolved (likely collision) | Application type mismatch: The argument f has type MRing ι but is expected to have type ℕ |  |
+| `GroundTheory/HeightsAndTheta/Heights/OrbitLimits/Bundle0042.lean:38` | wrong name resolved (likely collision) | Application type mismatch: The argument g has type MRing ι but is expected to have type ℕ |  |
+| `GroundTheory/HeightsAndTheta/Heights/OrbitLimits/Bundle0043.lean:29` | wrong name resolved (likely collision) | Application type mismatch: The argument s has type MRing ι but is expected to have type ℕ |  |
+| `GroundTheory/HeightsAndTheta/Heights/OrbitLimits/CurveVerticalPointChart.lean:30` | wrong name resolved (likely collision) | Application type mismatch: The argument f has type MRing ι but is expected to have type ℕ |  |
+| `GroundTheory/HeightsAndTheta/Heights/OrbitLimits/StatementsCurveVertPointNagata.lean:28` | wrong name resolved (likely collision) | Application type mismatch: The argument s has type MRing ι but is expected to have an expression linPart ?m.31 of type `?m.9 →L[ℂ] ?m.14` |  |
 
 ## Open PRs not auto-merged
 
@@ -60,7 +60,7 @@ The table lists the **root failures** from a 4-shard build of all 47,881 modules
 
 ## Fixed so far (on the branch)
 
-About 2138 files, including:
+About 2144 files, including:
 
 - **Name collisions:** `sigR` (104 files), `Gz`, `Wp`, `UJ`, `wt`, `Zhat`, `blockEnds`, `GE`, `Ideles`/`localIdele`, `dualLattice`, `homAt`, `IsCWCont`, `cechDiag`/`cechAug`, `admitted`, `expandsAt_scale`, `mem_nonzeroLocus`, `wd_congr`.
 - **Restored or deduplicated declarations:** 29 files from aliromman's integration branch (thanks, @aliromman).
