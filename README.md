@@ -4,6 +4,8 @@ Levent Alpöge announced a Lean proof of the Riemann Hypothesis on November 20, 
 
 ## Current status
 
+> **Build status (Nov 23, 16:15 UTC):** the branch does **not** build cleanly yet. About **80% of modules compile** (38,047 of 47,718); the other ~20% are blocked behind **28 open root errors** listed in [PR120-BUGS.md](PR120-BUGS.md). So far **449 root errors** have been fixed by **23 contributors** (with AI agents assisting). Until it is green, `lake build` of the whole tree will fail. Verify your fix by building the module you changed (and its importers), not the whole tree.
+
 **Priority: get the consolidated Lean 4.36 proof ([PR #120](https://github.com/leanprover-community/riemann-hypothesis/pull/120)) to a clean build.**
 
 - **47,881 modules, −67.9% files** compared with `main`. The remaining work is a list of small compile failures introduced by bundling: name collisions and declarations lost when wrappers were collapsed.
