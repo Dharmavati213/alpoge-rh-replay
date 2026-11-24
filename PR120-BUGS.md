@@ -63,14 +63,15 @@ The table lists the **root failures** from a 4-shard build of all 47,881 modules
 
 ## Look-ahead: all known errors (preview)
 
-A scratch build compiles the current branch head and, where a declaration fails, replaces only that declaration's proof with `sorry` in the scratch copy so everything after it can be checked too. This lists errors the normal build can't reach yet. Round 1 = current layer; round 2+ = hidden behind it (**start there: nobody else sees those yet**). Nothing from the scratch copy is ever committed. Pull the branch and compile the file before fixing; rows can be minutes old. 67 files (44 in rounds 2+). Sessions: rh-ci-v128: session 2026-11-24T05:56:08Z branch head 74f1320f2e target Shard0 part=1; rh-ci-v128: 07:29:17 round 3: 90 errors in 21 files, 57 declarations stubbed, 14 statement errors; rh-ci-v128-2: session 2026-11-24T09:23:27Z branch head a1cc207186 target Shard1 part=1; rh-ci-v128-2: session 2026-11-24T09:23:27Z branch head a1cc207186 target Shard1 part=1; rh-ci-v128-3: session 2026-11-24T09:23:36Z branch head a1cc207186 target Shard2 part=1; rh-ci-v128-3: session 2026-11-24T09:23:36Z branch head a1cc207186 target Shard2 part=1; rh-ci-v128-4: session 2026-11-24T07:36:35Z branch head 9bcb6a9ec6 target Shard3 part=0; rh-ci-v128-4: 10:21:47 round 4: 31 errors in 5 files, 20 declarations stubbed, 2 statement errors.
+A scratch build compiles the current branch head and, where a declaration fails, replaces only that declaration's proof with `sorry` in the scratch copy so everything after it can be checked too. This lists errors the normal build can't reach yet. Round 1 = current layer; round 2+ = hidden behind it (**start there: nobody else sees those yet**). Nothing from the scratch copy is ever committed. Pull the branch and compile the file before fixing; rows can be minutes old. 68 files (44 in rounds 2+). Sessions: rh-ci-v128: session 2026-11-24T05:56:08Z branch head 74f1320f2e target Shard0 part=1; rh-ci-v128: 07:29:17 round 3: 90 errors in 21 files, 57 declarations stubbed, 14 statement errors; rh-ci-v128-2: session 2026-11-24T09:23:27Z branch head a1cc207186 target Shard1 part=1; rh-ci-v128-2: session 2026-11-24T09:23:27Z branch head a1cc207186 target Shard1 part=1; rh-ci-v128-3: session 2026-11-24T09:23:36Z branch head a1cc207186 target Shard2 part=1; rh-ci-v128-3: session 2026-11-24T09:23:36Z branch head a1cc207186 target Shard2 part=1; rh-ci-v128-4: session 2026-11-24T07:36:35Z branch head 9bcb6a9ec6 target Shard3 part=0; rh-ci-v128-4: done 2026-11-24T10:25:52Z.
 
 | First error | Round | Kind | Error |
 |---|---|---|---|
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/ClosedLocalOrbits/GaugeLatticeShifts/SlabCoverPf.lean:14` | 5 | error | Unknown constant `Formalism.L2.SG.PoincareInHH.PoincareSetting` |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/ClosedLocalOrbits/GaugeLatticeShifts/SatGramActL.lean:18` | 5 | error | Unknown constant `Formalism.L2.SG.NormCut` |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/CokernelGLCounts/RankPointCounts/FixedDecomposition.lean:17` | 5 | error | Unknown constant `Formalism.L2.SG.TermOp` |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/RootLatticeThresholds/FullExists.lean:18` | 5 | error | Unknown constant `Formalism.L2.SG.TermOp` |
+| `Formalism/LocalToGlobal/SiegelLatticeTheory/ClosedLocalOrbits/GaugeLatticeShifts/SlabCoverPf.lean:14` | 8 | error | Unknown constant `Formalism.L2.SG.PoincareInHH.PoincareSetting` |
+| `Formalism/LocalToGlobal/SiegelLatticeTheory/ClosedLocalOrbits/GaugeLatticeShifts/SatGramActL.lean:18` | 8 | error | Unknown constant `Formalism.L2.SG.NormCut` |
+| `Formalism/LocalToGlobal/SiegelLatticeTheory/CokernelGLCounts/RankPointCounts/FixedDecomposition.lean:17` | 8 | error | Unknown constant `Formalism.L2.SG.TermOp` |
+| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/RootLatticeThresholds/FullExists.lean:18` | 8 | error | Unknown constant `Formalism.L2.SG.TermOp` |
+| `Development/AutomorphicArithmetic/Foundations/Convolution/BlockHeckeSlices/CuspidalNormBounds/RepOps.lean:12` | 8 | error | unknown module Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.TsphVec |
 | `Formalism/PeriodIntegrals/UnitaryGroupMassFormula/ValuationLocalVolumes/Bundle0013.lean:237` | 4 | error | Application type mismatch: The argument |
 | `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/ThmSOwn.lean:238` | 4 | error | Application type mismatch: The argument |
 | `Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/Bundle0231.lean:165` | 4 | error | Application type mismatch: The argument |
@@ -79,7 +80,6 @@ A scratch build compiles the current branch head and, where a declaration fails,
 | `Development/AbelianVarietyTheory/Proofs/FlagMeasures/LocalHaarMeasuresPullbackRealGroup.lean:20` | 4 | error | Unknown constant `Formalism.L2.SG.LocWSOf` |
 | `Development/AbelianVarietyTheory/Proofs/ThetaShiftProofs/Bundle0059.lean:285` | 4 | error | Ambiguous term |
 | `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:227` | 4 | error | Function expected at |
-| `Development/AutomorphicArithmetic/Foundations/Convolution/BlockHeckeSlices/CuspidalNormBounds/RepOps.lean:12` | 4 | error | unknown module Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.TsphVec |
 | `Development/AutomorphicArithmetic/WhittakerHecke/Bundle0027.lean:37` | 4 | error | overloaded, errors  |
 | `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/Bundle0575.lean:160` | 4 | error | failed to synthesize |
 | `Development/AutomorphicArithmetic/WhittakerHecke/ExistsWhittakerHeckeEigenvaluesAtSplitPlace.lean:52` | 4 | error | overloaded, errors  |
@@ -134,6 +134,7 @@ A scratch build compiles the current branch head and, where a declaration fails,
 | `Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/Bundle0246.lean:478` | 1 | error | Tactic `rewrite` failed: Did not find an occurrence of the pattern |
 | `Development/AutomorphicArithmetic/Foundations/Convolution/RealGroupAnalysis/UnramifiedSplitting/PlaceAe.lean:254` | 1 | error | (deterministic) timeout at `whnf`, maximum number of heartbeats (4000000) has been reached |
 | `Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/IntegralTateH2Top.lean:289` | 1 | error | (deterministic) timeout at `isDefEq`, maximum number of heartbeats (1000000) has been reached |
+| `Formalism/PeriodIntegrals/UnitaryGroupMassFormula/ValuationLocalVolumes/Bundle0015.lean:243` | 1 | error | Application type mismatch: The argument |
 
 ## Open PRs not auto-merged
 
