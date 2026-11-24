@@ -78,6 +78,18 @@ These files changed after the build that reported the error (a merged PR or coor
 |---|---|---|---|
 | `Development/AutomorphicArithmetic/Foundations/Convolution/RealGroupAnalysis/GaussianForms/Bundle0009.lean:85` | instance | failed to synthesize instance of type class (adeleMeasurePi F).IsNegInvariant |  |
 
+## Look-ahead: all known errors (preview)
+
+A scratch build compiles the current branch head and, where a declaration fails, replaces only that declaration's proof with `sorry` in the scratch copy so everything after it can be checked too. This lists errors the normal build can't reach yet. Round 1 = current layer; round 2+ = hidden behind it (**start there: nobody else sees those yet**). Nothing from the scratch copy is ever committed. Pull the branch and compile the file before fixing; rows can be minutes old. 5 files (0 in rounds 2+). Sessions: rh-ci-v128: session 2026-11-24T13:52:23Z branch head 2d345a6cbd target Shard0 part=1; rh-ci-v128: session 2026-11-24T13:52:23Z branch head 2d345a6cbd target Shard0 part=1; rh-ci-v128-2: session 2026-11-24T16:28:59Z branch head 763420bcd0 target Shard1 part=1; rh-ci-v128-2: session 2026-11-24T16:28:59Z branch head 763420bcd0 target Shard1 part=1; rh-ci-v128-3: session 2026-11-24T15:47:21Z branch head 442bd1dd12 target Shard2 part=1; rh-ci-v128-3: session 2026-11-24T15:47:21Z branch head 442bd1dd12 target Shard2 part=1; rh-ci-v128-4: session 2026-11-24T15:04:12Z branch head feedd579fc target Shard3 part=0; rh-ci-v128-4: session 2026-11-24T15:04:12Z branch head feedd579fc target Shard3 part=0.
+
+| First error | Round | Kind | Error |
+|---|---|---|---|
+| `Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/Bundle0762.lean:143` | 1 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1610.lean:195` | 1 | error | failed to synthesize instance of type class |
+| `Development/AbelianVarietyTheory/Proofs/TwistedOperators/ZetaIdentityPersistsRowColumnChanges.lean:62` | 1 | error | failed to synthesize instance of type class |
+| `Development/AbelianVarietyTheory/Proofs/TwistedOperators/RealVectorsAllPlacesOfLocalData.lean:43` | 1 | error | failed to synthesize instance of type class |
+| `Development/AutomorphicSpectrum/Proofs/GeometryProofs/Bundle0224.lean:220` | 1 | error | Application type mismatch: The argument |
+
 ## Open PRs not auto-merged
 
 - #15 (@aliromman): touches protected files (needs manual review)
