@@ -127,23 +127,13 @@ The table lists the **root failures** from a 4-shard build of all 47,881 modules
 
 ## Look-ahead: all known errors (preview)
 
-A scratch build on shard 3 compiles the current branch head and, where a declaration fails, replaces only that declaration's proof with `sorry` in the scratch copy so the modules after it can be checked too. That exposes errors that the normal build can't reach yet. Round 1 is the current layer; round 2+ are hidden behind it. Nothing from the scratch copy is ever committed. Fix PRs for any row are welcome (keep the hard rules: no sorry/axiom in real files). 13 locations, 1 of them in rounds 2+. Session: 2026-11-24T20:03:29Z branch head 922ec0eed6 target Shard3 part=0; last: 23:05:06 round 2: 1 errors in 1 files, 1 declarations stubbed, 0 statement errors.
+A scratch build compiles the current branch head and, where a declaration fails, replaces only that declaration's proof with `sorry` in the scratch copy so everything after it can be checked too. This lists errors the normal build can't reach yet. Round 1 = current layer; round 2+ = hidden behind it (**start there: nobody else sees those yet**). Nothing from the scratch copy is ever committed. Pull the branch and compile the file before fixing; rows can be minutes old. 3 files (1 in rounds 2+). Sessions: rh-ci-v128: session 2026-11-24T21:45:30Z branch head 3c5f12fe8c target Shard0 part=1; rh-ci-v128: session 2026-11-24T21:45:30Z branch head 3c5f12fe8c target Shard0 part=1; rh-ci-v128-2: session 2026-11-24T20:00:11Z branch head edfef50285 target Shard1 part=1; rh-ci-v128-2: 23:24:16 round 2: 1 errors in 1 files, 1 declarations stubbed, 0 statement errors; rh-ci-v128-3: session 2026-11-24T20:03:37Z branch head 922ec0eed6 target Shard2 part=1; rh-ci-v128-3: 23:03:54 round 2: 1 errors in 1 files, 1 declarations stubbed, 0 statement errors; rh-ci-v128-4: session 2026-11-24T20:03:29Z branch head 922ec0eed6 target Shard3 part=0; rh-ci-v128-4: 23:05:06 round 2: 1 errors in 1 files, 1 declarations stubbed, 0 statement errors.
 
-| Location | Round | Kind | Error |
+| First error | Round | Kind | Error |
 |---|---|---|---|
-| `GroundTheory/AutomorphicForms/GL2/GJStandardLEuler.lean:479` | 1 | stubbed | failed to synthesize instance of type class |
-| `GroundTheory/AutomorphicForms/GL2/GJStandardLEuler.lean:347` | 1 | stubbed | No goals to be solved |
-| `GroundTheory/AutomorphicForms/GL2/GJStandardLEuler.lean:343` | 1 | stubbed | failed to synthesize instance of type class |
-| `GroundTheory/AutomorphicForms/GL2/GJStandardLEuler.lean:270` | 1 | stubbed | failed to synthesize instance of type class |
-| `GroundTheory/AutomorphicForms/GL2/GJStandardLEuler.lean:253` | 1 | stubbed | failed to synthesize instance of type class |
-| `GroundTheory/AutomorphicForms/GL2/GJStandardLEuler.lean:216` | 1 | stubbed | failed to synthesize instance of type class |
-| `Development/AbelianVarietyTheory/Proofs/FlagMeasures/ExistsIsHaarProbabilityMaxCompactHermitian.lean:88` | 1 | stubbed | failed to synthesize instance of type class |
-| `Development/AbelianVarietyTheory/Proofs/FlagMeasures/ExistsIsHaarProbabilityMaxCompactHermitian.lean:83` | 1 | stubbed | failed to synthesize instance of type class |
-| `Development/AbelianVarietyTheory/Proofs/FlagMeasures/ExistsIsHaarProbabilityMaxCompactHermitian.lean:74` | 1 | stubbed | Tactic `rewrite` failed: Did not find an occurrence of the pattern |
-| `Development/AbelianVarietyTheory/Proofs/FlagMeasures/ExistsIsHaarProbabilityMaxCompactHermitian.lean:73` | 1 | stubbed | failed to synthesize instance of type class |
-| `Development/AbelianVarietyTheory/Proofs/FlagMeasures/ExistsIsHaarProbabilityMaxCompactHermitian.lean:71` | 1 | stubbed | failed to synthesize instance of type class |
-| `Development/AbelianVarietyTheory/Proofs/FlagMeasures/ExistsIsHaarProbabilityMaxCompactHermitian.lean:67` | 1 | stubbed | failed to synthesize instance of type class |
-| `Development/AbelianVarietyTheory/Proofs/FlagMeasures/Bundle0354.lean:98` | 2 | stubbed | failed to synthesize instance of type class |
+| `Development/AbelianVarietyTheory/Proofs/FlagMeasures/Bundle0354.lean:98` | 2 | error | failed to synthesize instance of type class |
+| `GroundTheory/AutomorphicForms/GL2/GJStandardLEuler.lean:216` | 1 | error | failed to synthesize instance of type class |
+| `Development/AbelianVarietyTheory/Proofs/FlagMeasures/ExistsIsHaarProbabilityMaxCompactHermitian.lean:67` | 1 | error | failed to synthesize instance of type class |
 
 ## Open PRs not auto-merged
 
