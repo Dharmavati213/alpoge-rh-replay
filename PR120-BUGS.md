@@ -67,7 +67,7 @@ The table lists the **root failures** from a 4-shard build of all 47,881 modules
 
 ## Look-ahead: all known errors (preview)
 
-A scratch build compiles the current branch head and, where a declaration fails, replaces only that declaration's proof with `sorry` in the scratch copy so everything after it can be checked too. This lists errors the normal build can't reach yet. Round 1 = current layer; round 2+ = hidden behind it (**start there: nobody else sees those yet**). Nothing from the scratch copy is ever committed. Pull the branch and compile the file before fixing; rows can be minutes old. 68 files (40 in rounds 2+). Sessions: rh-ci-v128: session 2026-11-24T05:56:08Z branch head 74f1320f2e target Shard0 part=1; rh-ci-v128: 07:29:17 round 3: 90 errors in 21 files, 57 declarations stubbed, 14 statement errors; rh-ci-v128-3: session 2026-11-24T09:23:36Z branch head a1cc207186 target Shard2 part=1; rh-ci-v128-3: session 2026-11-24T09:23:36Z branch head a1cc207186 target Shard2 part=1; rh-ci-v128-4: session 2026-11-24T10:47:40Z branch head fbb0941754 target Shard3 part=0; rh-ci-v128-4: session 2026-11-24T10:47:40Z branch head fbb0941754 target Shard3 part=0.
+A scratch build compiles the current branch head and, where a declaration fails, replaces only that declaration's proof with `sorry` in the scratch copy so everything after it can be checked too. This lists errors the normal build can't reach yet. Round 1 = current layer; round 2+ = hidden behind it (**start there: nobody else sees those yet**). Nothing from the scratch copy is ever committed. Pull the branch and compile the file before fixing; rows can be minutes old. 71 files (44 in rounds 2+). Sessions: rh-ci-v128: session 2026-11-24T05:56:08Z branch head 74f1320f2e target Shard0 part=1; rh-ci-v128: 07:29:17 round 3: 90 errors in 21 files, 57 declarations stubbed, 14 statement errors; rh-ci-v128-3: session 2026-11-24T09:23:36Z branch head a1cc207186 target Shard2 part=1; rh-ci-v128-3: 11:53:02 round 2: 15 errors in 13 files, 13 declarations stubbed, 0 statement errors; rh-ci-v128-4: session 2026-11-24T10:47:40Z branch head fbb0941754 target Shard3 part=0; rh-ci-v128-4: session 2026-11-24T10:47:40Z branch head fbb0941754 target Shard3 part=0.
 
 | First error | Round | Kind | Error |
 |---|---|---|---|
@@ -100,6 +100,7 @@ A scratch build compiles the current branch head and, where a declaration fails,
 | `Development/WeilBound/RepresentationTheoryGL/ArchimedeanBaseChange/ArchimedeanBaseChangeProof/SatakeExponents/UniformizerValuations/AdelicHeckeBlocks/Bundle0001.lean:191` | 3 | error | failed to synthesize |
 | `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1510.lean:331` | 3 | error | failed to synthesize instance of type class |
 | `Development/AbelianVarietyTheory/Proofs/TwistedOperators/ReductionMemUnipSymOfFlagCongruences.lean:50` | 3 | error | failed to synthesize |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/CrystallineOrdinaryIdeals/QcontDual.lean:53` | 3 | error | failed to synthesize instance of type class |
 | `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1269.lean:123` | 2 | error | failed to synthesize |
 | `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/InductionEstimates/BorelHeckeBounds/HeckeShiftSums/CancelN.lean:59` | 2 | error | typeclass instance problem is stuck |
 | `Development/AutomorphicArithmetic/WhittakerHecke/Bundle0014.lean:199` | 2 | error | No goals to be solved |
@@ -111,6 +112,9 @@ A scratch build compiles the current branch head and, where a declaration fails,
 | `Development/AutomorphicArithmetic/WhittakerHecke/CentralCharGaloisInvariantOfConjInv.lean:40` | 2 | error | Tactic `rewrite` failed: Did not find an occurrence of the pattern |
 | `Development/AutomorphicSpectrum/Proofs/MetricProofs/HodgeCompactificationInteriorPoint.lean:42` | 2 | error | failed to synthesize |
 | `Development/AutomorphicSpectrum/Proofs/GeometryProofs/ExistsFullTorsionNumberField.lean:316` | 2 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/ZetaIntegralShellsVanishBeyondPeriodRamified.lean:89` | 2 | error | Application type mismatch: The argument |
+| `Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/Bundle0391.lean:98` | 2 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/ThCLeftStab.lean:378` | 2 | error | Ambiguous term |
 | `Development/AutomorphicSpectrum/Proofs/GeometryProofs/ProperGroupGermFiniteSubscheme.lean:103` | 1 | error | Function expected at |
 | `Development/DiscreteGroups/GlobalIrreducibility/Bundle0004.lean:245` | 1 | error | failed to synthesize |
 | `Development/WeilBound/RepresentationTheoryGL/ResidualSpectrum/ExponentialNegativity/L2Gluing/IntegralLeToReal.lean:182` | 1 | error | failed to synthesize |
@@ -138,7 +142,6 @@ A scratch build compiles the current branch head and, where a declaration fails,
 | `Development/AbelianVarietyTheory/Proofs/DivisorProofs/SetIntegralLeftCosetShellIntegrandEqZero.lean:119` | 1 | error | failed to synthesize instance of type class |
 | `Development/AbelianVarietyTheory/Proofs/DivisorProofs/IntegrableOnCartanDoubleCosetShellIntegrand.lean:46` | 1 | error | failed to synthesize instance of type class |
 | `Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/Bundle0265.lean:210` | 1 | error | failed to synthesize |
-| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/CrystallineOrdinaryIdeals/QcontDual.lean:53` | 1 | error | failed to synthesize instance of type class |
 
 ## Open PRs not auto-merged
 
