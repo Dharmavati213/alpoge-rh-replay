@@ -65,192 +65,75 @@ These files changed after the build that reported the error (a merged PR or coor
 
 ## Look-ahead: all known errors (preview)
 
-A scratch build on shard 3 compiles the current branch head and, where a declaration fails, replaces only that declaration's proof with `sorry` in the scratch copy so the modules after it can be checked too. That exposes errors that the normal build can't reach yet. Round 1 is the current layer; round 2+ are hidden behind it. Nothing from the scratch copy is ever committed. Fix PRs for any row are welcome (keep the hard rules: no sorry/axiom in real files). 182 locations, 351 of them in rounds 2+. Session: 2026-11-24T04:24:28Z branch head c7367cd94f; last: round 8: nothing new to stub; stopping.
+A scratch build compiles the current branch head and, where a declaration fails, replaces only that declaration's proof with `sorry` in the scratch copy so everything after it can be checked too. This lists errors the normal build can't reach yet. Round 1 = current layer; round 2+ = hidden behind it (**start there: nobody else sees those yet**). Nothing from the scratch copy is ever committed. Pull the branch and compile the file before fixing; rows can be minutes old. 65 files (40 in rounds 2+). Sessions: rh-ci-v128: session 2026-11-24T05:56:08Z branch head 74f1320f2e target Shard0 part=1; rh-ci-v128: 07:29:17 round 3: 90 errors in 21 files, 57 declarations stubbed, 14 statement errors; rh-ci-v128-2: session 2026-11-24T07:36:41Z branch head 9bcb6a9ec6 target Shard1 part=1; rh-ci-v128-2: session 2026-11-24T07:36:41Z branch head 9bcb6a9ec6 target Shard1 part=1; rh-ci-v128-3: session 2026-11-24T07:37:08Z branch head 9bcb6a9ec6 target Shard2 part=1; rh-ci-v128-3: session 2026-11-24T07:37:08Z branch head 9bcb6a9ec6 target Shard2 part=1; rh-ci-v128-4: session 2026-11-24T07:36:35Z branch head 9bcb6a9ec6 target Shard3 part=0; rh-ci-v128-4: session 2026-11-24T07:36:35Z branch head 9bcb6a9ec6 target Shard3 part=0.
 
-| Location | Round | Kind | Error |
+| First error | Round | Kind | Error |
 |---|---|---|---|
-| `Development/AutomorphicSpectrum/Proofs/MetricProofs/ChartDensityIntegrable.lean:281` | 1 | stubbed | Unknown identifier `exists_poly_of_not_mem` |
-| `Development/AutomorphicSpectrum/Proofs/MetricProofs/ChartDensityIntegrable.lean:257` | 1 | stubbed | Unknown identifier `exists_minimalPrime_of_mem_zeroSet` |
-| `Development/AutomorphicSpectrum/Proofs/MetricProofs/ChartDensityIntegrable.lean:221` | 1 | stubbed | Unknown identifier `isSectionOn_ofWeight_one` |
-| `Development/AutomorphicSpectrum/Proofs/MetricProofs/ChartDensityIntegrable.lean:199` | 1 | stubbed | Unknown identifier `isClosed_zeroSet` |
-| `Development/AutomorphicSpectrum/Proofs/MetricProofs/ChartDensityIntegrable.lean:146` | 1 | stubbed | unsolved goals |
-| `Development/AutomorphicSpectrum/Proofs/MetricProofs/ChartDensityIntegrable.lean:36` | 1 | nodecl | Unknown constant `GroundTheory.Heights₂.Heights.PtsSegreChartFibreSum._root_.GroundTheory.Heights₂.Heights.PtsSegreChartFibreSum.logNorm_ofW |
-| `Development/AutomorphicSpectrum/Proofs/GeometryProofs/ProperGroupGermFiniteSubscheme.lean:141` | 1 | stubbed | Function expected at |
-| `Development/AutomorphicSpectrum/Proofs/GeometryProofs/ProperGroupGermFiniteSubscheme.lean:103` | 1 | stubbed | Function expected at |
-| `Formalism/PeriodIntegrals/UnitaryGroupMassFormula/ValuationLocalVolumes/Bundle0013.lean:237` | 1 | stubbed | Application type mismatch: The argument |
-| `Development/AbelianVarietyTheory/Proofs/GlobalInterpolation/Bundle0138.lean:150` | 1 | stubbed | Tactic `rewrite` failed: Did not find an occurrence of the pattern |
-| `Development/AbelianVarietyTheory/Proofs/GlobalInterpolation/Bundle0138.lean:142` | 1 | stubbed | Tactic `rewrite` failed: Did not find an occurrence of the pattern |
-| `Development/AbelianVarietyTheory/Definitions/GaloisGeometry/Bundle0019.lean:53` | 1 | stubbed | Ambiguous term |
-| `Development/DiscreteGroups/GlobalIrreducibility/Bundle0003.lean:439` | 1 | stubbed | failed to synthesize instance of type class |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/ContinuousDen.lean:218` | 1 | stubbed | Tactic `rewrite` failed: Did not find an occurrence of the pattern |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/ContinuousDen.lean:203` | 1 | stubbed | Type mismatch |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/ContinuousDen.lean:198` | 1 | stubbed | Type mismatch |
-| `Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/HeisenbergIntegralFourierBesselBasePointEqPairin.lean:150` | 1 | stubbed | Unknown identifier `splitLine` |
-| `Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/HeisenbergIntegralFourierBesselBasePointEqPairin.lean:139` | 1 | stubbed | unsolved goals |
-| `Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/HeisenbergIntegralFourierBesselBasePointEqPairin.lean:125` | 1 | stubbed | Unknown identifier `splitLine` |
-| `Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/HeisenbergIntegralFourierBesselBasePointEqPairin.lean:111` | 1 | stubbed | Unknown identifier `splitLine` |
-| `Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/HeisenbergIntegralFourierBesselBasePointEqPairin.lean:63` | 1 | stubbed | stuck at solving universe constraint |
-| `Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/HeisenbergIntegralFourierBesselBasePointEqPairin.lean:59` | 1 | stubbed | Unknown identifier `splitLine` |
-| `Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/HeisenbergIntegralFourierBesselBasePointEqPairin.lean:55` | 1 | statement | failed to synthesize |
-| `Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/HeisenbergIntegralFourierBesselBasePointEqPairin.lean:39` | 1 | statement | unknown free variable `_fvar.26272` |
-| `Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/Bundle0135.lean:391` | 1 | stubbed | Tactic `rewrite` failed: Did not find an occurrence of the pattern |
-| `Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/Bundle0135.lean:375` | 1 | stubbed | Tactic `rewrite` failed: Did not find an occurrence of the pattern |
-| `Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/Bundle0135.lean:371` | 1 | stubbed | Tactic `rewrite` failed: Did not find an occurrence of the pattern |
-| `Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/Bundle0282.lean:266` | 1 | stubbed | failed to synthesize |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/ThmSOwn.lean:373` | 1 | stubbed | Application type mismatch: The argument |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/ThmSOwn.lean:334` | 1 | stubbed | Unknown identifier `hF.shBij` |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/ThmSOwn.lean:333` | 1 | stubbed | Unknown identifier `hF` |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/ThmSOwn.lean:331` | 1 | stubbed | unsolved goals |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/ThmSOwn.lean:321` | 1 | stubbed | Unknown identifier `hF` |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/ThmSOwn.lean:320` | 1 | stubbed | unsolved goals |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/ThmSOwn.lean:313` | 1 | stubbed | Application type mismatch: The argument |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/ThmSOwn.lean:290` | 1 | stubbed | Invalid argument name `hF` for function `PhiC` |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/ThmSOwn.lean:289` | 1 | stubbed | unsolved goals |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/ThmSOwn.lean:272` | 1 | stubbed | Unknown identifier `hF.shBij` |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/ThmSOwn.lean:271` | 1 | stubbed | unsolved goals |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/ThmSOwn.lean:259` | 1 | stubbed | Unknown identifier `hF` |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/ThmSOwn.lean:257` | 1 | stubbed | Invalid argument name `hF` for function `PhiC` |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/ThmSOwn.lean:253` | 1 | stubbed | Unknown identifier `hF` |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/ThmSOwn.lean:248` | 1 | stubbed | Application type mismatch: The argument |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/ThmSOwn.lean:245` | 1 | stubbed | Unknown identifier `hF` |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/ThmSOwn.lean:244` | 1 | stubbed | Invalid argument name `hF` for function `PhiC` |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/ThmSOwn.lean:241` | 1 | stubbed | Application type mismatch: The argument |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/ThmSOwn.lean:239` | 1 | stubbed | Application type mismatch: The argument |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/ThmSOwn.lean:159` | 1 | stubbed | Unknown identifier `hF.shInj` |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/ThmSOwn.lean:158` | 1 | stubbed | Application type mismatch: The argument |
-| `Development/AbelianVarietyTheory/Proofs/UnitaryExistence/Bundle0093.lean:230` | 1 | stubbed | failed to synthesize |
-| `Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/Bundle0680.lean:335` | 1 | stubbed | failed to synthesize |
-| `Development/AbelianVarietyTheory/Proofs/ThetaShiftProofs/Bundle0059.lean:382` | 1 | statement | Ambiguous term |
-| `Development/AbelianVarietyTheory/Proofs/ThetaShiftProofs/Bundle0059.lean:371` | 1 | stubbed | ambiguous term, use fully qualified name, possible interpretations [@Formalism.L2.PjFree.laU, @Formalism.L2.Pj.laU] |
-| `Development/AbelianVarietyTheory/Proofs/ThetaShiftProofs/Bundle0059.lean:329` | 1 | stubbed | Ambiguous term |
-| `Development/AbelianVarietyTheory/Proofs/ThetaShiftProofs/Bundle0059.lean:328` | 1 | stubbed | Ambiguous term |
-| `Development/AbelianVarietyTheory/Proofs/ThetaShiftProofs/Bundle0059.lean:324` | 1 | stubbed | Ambiguous term |
-| `Development/AbelianVarietyTheory/Proofs/ThetaShiftProofs/Bundle0059.lean:320` | 1 | stubbed | ambiguous term, use fully qualified name, possible interpretations [@Formalism.L2.PjFree.perFr, @Formalism.L2.Pj.perFr] |
-| `Development/AbelianVarietyTheory/Proofs/ThetaShiftProofs/Bundle0059.lean:317` | 1 | stubbed | ambiguous term, use fully qualified name, possible interpretations [@Formalism.L2.PjFree.perFr, @Formalism.L2.Pj.perFr] |
-| `Development/AbelianVarietyTheory/Proofs/ThetaShiftProofs/Bundle0059.lean:292` | 1 | stubbed | Ambiguous term |
-| `Development/AbelianVarietyTheory/Proofs/ThetaShiftProofs/Bundle0059.lean:285` | 1 | stubbed | Ambiguous term |
-| `Development/WeilBound/RepresentationTheoryGL/UnitaryDualProof/CompactOrbits/NilpotentOrbits/FourierTransforms/TraceEqZeroOfQZ.lean:105` | 1 | stubbed | Ambiguous term |
-| `Development/WeilBound/RepresentationTheoryGL/UnitaryDualProof/CompactOrbits/NilpotentOrbits/FourierTransforms/TraceEqZeroOfQZ.lean:42` | 1 | stubbed | Ambiguous term |
-| `Development/WeilBound/RepresentationTheoryGL/UnitaryDualProof/CompactOrbits/NilpotentOrbits/FourierTransforms/TraceEqZeroOfQZ.lean:34` | 1 | stubbed | unsolved goals |
-| `Development/WeilBound/RepresentationTheoryGL/UnitaryDualProof/CompactOrbits/NilpotentOrbits/FourierTransforms/TraceEqZeroOfQZ.lean:31` | 1 | stubbed | Ambiguous term |
-| `Development/WeilBound/RepresentationTheoryGL/UnitaryDualProof/CompactOrbits/NilpotentOrbits/FourierTransforms/TraceEqZeroOfQZ.lean:21` | 1 | stubbed | Ambiguous term |
-| `Development/AutomorphicArithmetic/WhittakerHecke/ExistsNumberFieldExtensionPlaceFrobeniusDegree.lean:131` | 1 | stubbed | failed to synthesize |
-| `Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/Bundle0697.lean:473` | 1 | stubbed | failed to synthesize |
-| `Development/WeilBound/RepresentationTheoryGL/UnitaryDualProof/TwistedPieces/FiniteDimensionalDescent/ClosedOrbitPieces/Bundle0002.lean:207` | 1 | stubbed | failed to synthesize |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/LastColsVal.lean:38` | 1 | stubbed | synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized |
-| `Development/WeilBound/CoreStatements/PublishedTheorems/JacquetShalikaRigidity/Bundle0002.lean:435` | 1 | stubbed | typeclass instance problem is stuck |
-| `Development/WeilBound/CoreStatements/PublishedTheorems/JacquetShalikaRigidity/Bundle0002.lean:365` | 1 | stubbed | Ambiguous term |
-| `Development/WeilBound/CoreStatements/PublishedTheorems/JacquetShalikaRigidity/UnipotentBlockMeasure.lean:237` | 1 | statement | failed to synthesize |
-| `Development/WeilBound/CoreStatements/PublishedTheorems/JacquetShalikaRigidity/WeightCoefficients.lean:226` | 1 | stubbed | failed to synthesize |
-| `Development/AutomorphicArithmetic/Foundations/Convolution/CentreSplitting/Bundle0003.lean:257` | 1 | stubbed | failed to synthesize |
-| `Development/AutomorphicArithmetic/Foundations/Convolution/CentreSplitting/Bundle0003.lean:253` | 1 | stubbed | unsolved goals |
-| `Development/AutomorphicArithmetic/AutomorphicVarieties/UnitaryThreeDeformations/LevelAt.lean:89` | 1 | statement | Ambiguous term |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/IntegrableZetaIntegralMatrixSchwartz.lean:69` | 1 | stubbed | Type mismatch |
-| `Development/AutomorphicArithmetic/Foundations/Convolution/RealGroupAnalysis/UnramifiedSplitting/PlaceAe.lean:254` | 1 | stubbed | (deterministic) timeout at `whnf`, maximum number of heartbeats (4000000) has been reached |
-| `Development/AutomorphicArithmetic/AutomorphicVarieties/PatchingModules/ArchimedeanH0Cards/ExistsCore.lean:405` | 1 | stubbed | Application type mismatch: The argument |
-| `Development/WeilBound/RepresentationTheoryGL/ArchimedeanBaseChange/ArchimedeanBaseChangeProof/ThetaNormCommutation/LocalComparisonSplitting/Bundle0001.lean:196` | 1 | stubbed | failed to synthesize |
-| `Development/AutomorphicArithmetic/Foundations/Convolution/RealGroupAnalysis/GaussianForms/Bundle0009.lean:85` | 1 | stubbed | failed to synthesize instance of type class |
-| `Development/AutomorphicArithmetic/Foundations/Convolution/RealGroupAnalysis/GaussianForms/Bundle0009.lean:74` | 1 | stubbed | unsolved goals |
-| `Development/AutomorphicArithmetic/Foundations/Convolution/SplitEigenfunctions/InfinitePlaceGluing/PairCases.lean:288` | 1 | stubbed | Function expected at |
-| `Development/AutomorphicArithmetic/Foundations/Convolution/SplitEigenfunctions/InfinitePlaceGluing/PairCases.lean:266` | 1 | stubbed | unsolved goals |
-| `Development/WeilBound/RepresentationTheoryGL/GaloisPermutationReps/SubquotientEquivalence/Bundle0003.lean:127` | 1 | stubbed | Ambiguous term |
-| `Development/WeilBound/ThetaLifts/SmallCones/Bundle0004.lean:171` | 1 | stubbed | failed to synthesize |
-| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/MemMapBasis.lean:317` | 1 | stubbed | failed to synthesize |
-| `Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/HeisenbergIntegralFourierBesselBasePointEqPairin.lean:102` | 2 | stubbed | Unknown identifier `splitLine` |
-| `Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/HeisenbergIntegralFourierBesselBasePointEqPairin.lean:98` | 2 | stubbed | Unknown identifier `splitLine` |
-| `Development/AbelianVarietyTheory/Proofs/ThetaShiftProofs/Bundle0059.lean:307` | 2 | statement | Ambiguous term |
-| `Development/AbelianVarietyTheory/Proofs/ThetaShiftProofs/Bundle0059.lean:302` | 2 | statement | Ambiguous term |
-| `Development/AbelianVarietyTheory/Proofs/ThetaShiftProofs/Bundle0059.lean:301` | 2 | statement | Ambiguous term |
-| `Development/AbelianVarietyTheory/Proofs/ThetaShiftProofs/Bundle0059.lean:297` | 2 | statement | Ambiguous term |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/ThmSOwn.lean:270` | 2 | stubbed | Application type mismatch: The argument |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/ThmSOwn.lean:212` | 2 | stubbed | Invalid argument name `hF` for function `PhiC` |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/ThmSOwn.lean:209` | 2 | stubbed | Invalid argument name `hF` for function `PhiC` |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/ThmSOwn.lean:204` | 2 | stubbed | Application type mismatch: The argument |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/SmoothCharacterOrbitalIntegralStable.lean:66` | 2 | stubbed | Type mismatch |
-| `Development/DiscreteGroups/GlobalIrreducibility/Bundle0004.lean:245` | 2 | stubbed | failed to synthesize |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/ZetaIntegralEquivariantNonzero.lean:57` | 2 | stubbed | Type mismatch |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/ZetaIntegralEquivariantNonzero.lean:25` | 2 | stubbed | Type mismatch |
-| `Development/AbelianVarietyTheory/Proofs/GlobalInterpolation/Bundle0144.lean:131` | 2 | statement | Ambiguous term |
-| `Development/AbelianVarietyTheory/Proofs/GlobalInterpolation/Bundle0144.lean:104` | 2 | statement | Ambiguous term |
-| `Development/AbelianVarietyTheory/Proofs/GlobalInterpolation/Bundle0144.lean:48` | 2 | statement | Ambiguous term |
-| `Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/Bundle0150.lean:342` | 2 | stubbed | Type mismatch: After simplification, term |
-| `Development/AutomorphicArithmetic/WhittakerHecke/ExistsWhittakerHeckeEigenvaluesAtSplitPlace.lean:77` | 2 | stubbed | overloaded, errors  |
-| `Development/AutomorphicArithmetic/WhittakerHecke/ExistsWhittakerHeckeEigenvaluesAtSplitPlace.lean:52` | 2 | stubbed | overloaded, errors  |
-| `Development/AutomorphicArithmetic/WhittakerHecke/Bundle0027.lean:51` | 2 | stubbed | overloaded, errors  |
-| `Development/AutomorphicArithmetic/WhittakerHecke/Bundle0027.lean:37` | 2 | stubbed | overloaded, errors  |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1178.lean:303` | 2 | stubbed | failed to synthesize |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1178.lean:300` | 2 | stubbed | failed to synthesize |
-| `Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/ClosedPhiFunctoriality/Bundle0001.lean:171` | 2 | stubbed | failed to synthesize |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0194.lean:230` | 2 | statement | Ambiguous term |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0194.lean:174` | 2 | statement | Ambiguous term |
-| `Development/AbelianVarietyTheory/Definitions/NonGaloisDescent/Bundle0030.lean:286` | 2 | stubbed | Application type mismatch: The argument |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/AllRowsOf.lean:34` | 2 | stubbed | Not a definitional equality: the left-hand side |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:369` | 2 | stubbed | unsolved goals |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:360` | 2 | stubbed | unsolved goals |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:356` | 2 | stubbed | unsolved goals |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:352` | 2 | stubbed | unsolved goals |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:348` | 2 | stubbed | Function expected at |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:343` | 2 | stubbed | Unknown identifier `mulB_smul_left` |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:342` | 2 | statement | unsolved goals |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:341` | 2 | stubbed | Unknown identifier `mulB_smul` |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:340` | 2 | stubbed | unsolved goals |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:339` | 2 | stubbed | Function expected at |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:327` | 2 | stubbed | Function expected at |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:320` | 2 | stubbed | Unknown identifier `mulB_tmul` |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:318` | 2 | stubbed | unsolved goals |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:315` | 2 | stubbed | unsolved goals |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:313` | 2 | stubbed | Function expected at |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:301` | 2 | stubbed | Unknown identifier `mulB_tmul` |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:299` | 2 | statement | unsolved goals |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:296` | 2 | stubbed | unsolved goals |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:294` | 2 | stubbed | Function expected at |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:293` | 2 | stubbed | Function expected at |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:288` | 2 | stubbed | Unknown identifier `mulB_tmul` |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:286` | 2 | stubbed | unsolved goals |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:283` | 2 | stubbed | unsolved goals |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:281` | 2 | stubbed | Function expected at |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:278` | 2 | stubbed | Tactic `simp` failed with a nested error: |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:277` | 2 | stubbed | Tactic `simp` failed with a nested error: |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:274` | 2 | stubbed | unsolved goals |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:271` | 2 | statement | unsolved goals |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:269` | 2 | stubbed | Function expected at |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:266` | 2 | stubbed | Tactic `simp` failed with a nested error: |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:265` | 2 | statement | Tactic `simp` failed with a nested error: |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:262` | 2 | statement | unsolved goals |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:259` | 2 | statement | unsolved goals |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:257` | 2 | stubbed | Function expected at |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:250` | 2 | stubbed | unsolved goals |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:247` | 2 | statement | unsolved goals |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:245` | 2 | stubbed | Function expected at |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:238` | 2 | stubbed | unsolved goals |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:235` | 2 | statement | unsolved goals |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:233` | 2 | stubbed | Function expected at |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:227` | 2 | stubbed | Function expected at |
-| `Development/AbelianVarietyTheory/Proofs/FlagMeasures/Bundle0381.lean:293` | 2 | stubbed | Type mismatch |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1196.lean:435` | 3 | stubbed | failed to synthesize |
-| `Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/Bundle0170.lean:210` | 3 | stubbed | failed to synthesize instance of type class |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:270` | 3 | stubbed | Function expected at |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:255` | 3 | stubbed | Function expected at |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:248` | 3 | stubbed | Function expected at |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:244` | 3 | stubbed | Function expected at |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:241` | 3 | stubbed | Function expected at |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:232` | 3 | stubbed | Function expected at |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/ShellSumEquivariantNonzero.lean:224` | 3 | stubbed | Type mismatch |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/ShellSumEquivariantNonzero.lean:165` | 3 | stubbed | Unknown identifier `shell_eq_mul` |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/ShellSumEquivariantNonzero.lean:155` | 3 | stubbed | unsolved goals |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/ShellSumEquivariantNonzero.lean:145` | 3 | statement | Application type mismatch: The argument |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/ShellSumEquivariantNonzero.lean:134` | 3 | stubbed | Type mismatch |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/ShellSumEquivariantNonzero.lean:100` | 3 | stubbed | synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/ShellSumEquivariantNonzero.lean:86` | 3 | stubbed | unsolved goals |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1245.lean:257` | 3 | stubbed | failed to synthesize |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/RootLatticeThresholds/Bundle0041.lean:69` | 3 | stubbed | Application type mismatch: The argument |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/RootLatticeThresholds/AllRowsKpp.lean:193` | 3 | stubbed | Tactic `rewrite` failed: Did not find an occurrence of the pattern |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/ShellSumEquivariantNonzero.lean:116` | 4 | statement | Application type mismatch: The argument |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1254.lean:164` | 4 | stubbed | failed to synthesize |
-| `Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/MemBddFormsOfWithSmoothings.lean:225` | 4 | stubbed | failed to synthesize |
-| `Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/MemBddFormsOfWithSmoothings.lean:205` | 4 | stubbed | unsolved goals |
-| `Development/AbelianVarietyTheory/Definitions/Divisors/Bundle0045.lean:189` | 4 | stubbed | failed to synthesize |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1269.lean:123` | 5 | stubbed | failed to synthesize |
+| `Formalism/PeriodIntegrals/UnitaryGroupMassFormula/ValuationLocalVolumes/Bundle0013.lean:237` | 4 | error | Application type mismatch: The argument |
+| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/ThmSOwn.lean:238` | 4 | error | Application type mismatch: The argument |
+| `Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/Bundle0231.lean:165` | 4 | error | Application type mismatch: The argument |
+| `Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/SingleBlockDoublingIntegralValue.lean:147` | 4 | error | cannot omit referenced section variable `inst✝` |
+| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/HermitianBlockDecompositionHomeomorph.lean:253` | 4 | error | Tactic `rfl` failed: The left-hand side |
+| `Development/AbelianVarietyTheory/Proofs/FlagMeasures/LocalHaarMeasuresPullbackRealGroup.lean:20` | 4 | error | Unknown constant `Formalism.L2.SG.LocWSOf` |
+| `Development/AbelianVarietyTheory/Proofs/ThetaShiftProofs/Bundle0059.lean:285` | 4 | error | Ambiguous term |
+| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:227` | 4 | error | Function expected at |
+| `Development/AutomorphicArithmetic/Foundations/Convolution/BlockHeckeSlices/CuspidalNormBounds/RepOps.lean:12` | 4 | error | unknown module Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.TsphVec |
+| `Development/AutomorphicArithmetic/WhittakerHecke/Bundle0027.lean:37` | 4 | error | overloaded, errors  |
+| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/Bundle0575.lean:160` | 4 | error | failed to synthesize |
+| `Development/AutomorphicArithmetic/WhittakerHecke/ExistsWhittakerHeckeEigenvaluesAtSplitPlace.lean:52` | 4 | error | overloaded, errors  |
+| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/Bundle0531.lean:148` | 4 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Definitions/Divisors/BarCompSubsetClosure.lean:235` | 4 | error | failed to synthesize |
+| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/Bundle0555.lean:94` | 4 | error | failed to synthesize |
+| `Development/WeilBound/RepresentationTheoryGL/ArchimedeanBaseChange/ArchimedeanBaseChangeProof/SatakeExponents/UniformizerValuations/FrameReading/Bundle0001.lean:76` | 4 | error | failed to synthesize |
+| `Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/ClosedPhiFunctoriality/Bundle0001.lean:171` | 4 | error | failed to synthesize |
+| `Development/DiscreteGroups/PiInvariants/CompactSupportTwists/Bundle0003.lean:126` | 4 | error | failed to synthesize |
+| `Development/DiscreteGroups/PiInvariants/CompactSupportTwists/PiClosT.lean:54` | 4 | error | failed to synthesize |
+| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/Bundle0607.lean:458` | 4 | error | failed to synthesize |
+| `Development/WeilBound/CoreStatements/SesquilinearFractions/ExistsUnitValueSkewHermitian.lean:339` | 4 | error | No goals to be solved |
+| `Development/WeilBound/RepresentationTheoryGL/ResidualSpectrum/SliceTensors/Bundle0010.lean:408` | 3 | error | failed to synthesize |
+| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/Bundle0519.lean:302` | 3 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1453.lean:408` | 3 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1447.lean:348` | 3 | error | failed to synthesize |
+| `Development/WeilBound/RepresentationTheoryGL/ArchimedeanBaseChange/ArchimedeanBaseChangeProof/HeckeFubiniCompatibility/Bundle0003.lean:340` | 3 | error | failed to synthesize |
+| `Development/WeilBound/RepresentationTheoryGL/ArchimedeanBaseChange/ArchimedeanBaseChangeProof/SatakeExponents/UniformizerValuations/AdelicHeckeBlocks/Bundle0001.lean:191` | 3 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1510.lean:331` | 3 | error | failed to synthesize instance of type class |
+| `Development/AbelianVarietyTheory/Proofs/TwistedOperators/ReductionMemUnipSymOfFlagCongruences.lean:50` | 3 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1269.lean:123` | 2 | error | failed to synthesize |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/InductionEstimates/BorelHeckeBounds/HeckeShiftSums/CancelN.lean:59` | 2 | error | typeclass instance problem is stuck |
+| `Development/AutomorphicArithmetic/WhittakerHecke/Bundle0014.lean:199` | 2 | error | No goals to be solved |
+| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/RootLatticeThresholds/Bundle0041.lean:69` | 2 | error | Application type mismatch: The argument |
+| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/Bundle0463.lean:213` | 2 | error | failed to synthesize |
+| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/IsQuotNormaliserIndicator.lean:373` | 2 | error | failed to synthesize |
+| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/Bundle0484.lean:129` | 2 | error | failed to synthesize |
+| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/RootLatticeThresholds/AllRowsKpp.lean:193` | 2 | error | Tactic `rewrite` failed: Did not find an occurrence of the pattern |
+| `Development/AutomorphicArithmetic/WhittakerHecke/CentralCharGaloisInvariantOfConjInv.lean:40` | 2 | error | Tactic `rewrite` failed: Did not find an occurrence of the pattern |
+| `Development/AutomorphicSpectrum/Proofs/MetricProofs/HodgeCompactificationInteriorPoint.lean:42` | 2 | error | failed to synthesize |
+| `Development/AutomorphicSpectrum/Proofs/GeometryProofs/ExistsFullTorsionNumberField.lean:316` | 2 | error | failed to synthesize |
+| `Development/AutomorphicSpectrum/Proofs/GeometryProofs/ProperGroupGermFiniteSubscheme.lean:103` | 1 | error | Function expected at |
+| `Development/DiscreteGroups/GlobalIrreducibility/Bundle0004.lean:245` | 1 | error | failed to synthesize |
+| `Development/WeilBound/RepresentationTheoryGL/ResidualSpectrum/ExponentialNegativity/L2Gluing/IntegralLeToReal.lean:182` | 1 | error | failed to synthesize |
+| `Development/WeilBound/ThetaLifts/SmallCones/Bundle0004.lean:171` | 1 | error | failed to synthesize |
+| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/ArchimedeanOrbitalIntegralHuaBound.lean:30` | 1 | error | Type mismatch |
+| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/Bundle0380.lean:339` | 1 | error | failed to synthesize |
+| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/KernelSumBoundUniform.lean:234` | 1 | error | failed to synthesize |
+| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/Bundle0420.lean:162` | 1 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1245.lean:257` | 1 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1254.lean:164` | 1 | error | failed to synthesize |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/PatchingModules/ArchimedeanH0Cards/ExistsCore.lean:405` | 1 | error | Application type mismatch: The argument |
+| `Development/AutomorphicArithmetic/Foundations/Convolution/RealGroupAnalysis/GaussianForms/Bundle0009.lean:85` | 1 | error | failed to synthesize instance of type class |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/InductionEstimates/BorelHeckeBounds/HeckeShiftSums/Bundle0001.lean:242` | 1 | error | Invalid projection: Projections cannot be used on functions, and |
+| `Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/MemBddFormsOfWithSmoothings.lean:225` | 1 | error | failed to synthesize |
+| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/AllRowsOf.lean:34` | 1 | error | Not a definitional equality: the left-hand side |
+| `Development/AbelianVarietyTheory/Definitions/Divisors/Bundle0045.lean:189` | 1 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Proofs/FlagMeasures/Bundle0381.lean:293` | 1 | error | Type mismatch |
+| `Development/AutomorphicArithmetic/Foundations/Convolution/CentreSplitting/Bundle0003.lean:257` | 1 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Proofs/TwistedOperators/Bundle0367.lean:47` | 1 | error | Type mismatch |
+| `Development/AutomorphicArithmetic/Foundations/Convolution/SplitEigenfunctions/InfinitePlaceGluing/PairCases.lean:288` | 1 | error | Function expected at |
+| `Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/Bundle0246.lean:478` | 1 | error | Tactic `rewrite` failed: Did not find an occurrence of the pattern |
+| `Development/AutomorphicArithmetic/Foundations/Convolution/RealGroupAnalysis/UnramifiedSplitting/PlaceAe.lean:254` | 1 | error | (deterministic) timeout at `whnf`, maximum number of heartbeats (4000000) has been reached |
+| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/RootLatticeThresholds/FullExists.lean:18` | 1 | error | Unknown constant `Formalism.L2.SG.TermOp` |
+| `Formalism/LocalToGlobal/SiegelLatticeTheory/ClosedLocalOrbits/GaugeLatticeShifts/SatGramActL.lean:18` | 1 | error | Unknown constant `Formalism.L2.SG.NormCut` |
+| `Formalism/LocalToGlobal/SiegelLatticeTheory/ClosedLocalOrbits/GaugeLatticeShifts/SlabCoverPf.lean:14` | 1 | error | Unknown constant `Formalism.L2.SG.PoincareInHH.PoincareSetting` |
 
 ## Open PRs not auto-merged
 
