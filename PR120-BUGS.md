@@ -1,8 +1,9 @@
 # PR #120 — open build failures
 
-Branch `rohanarun/riemann-hypothesis:opt/collapse-and-consolidate-4.36`, head `feedd579fc`. Updated 2026-11-24 15:03 UTC.
+Branch `rohanarun/riemann-hypothesis:opt/collapse-and-consolidate-4.36`, head `294d3491f9`. Updated 2026-11-24 15:22 UTC.
 
-**Compiled: 41,883 / 47,885 modules (87.5%)** across the four build shards, as of 2026-11-24 15:03 UTC.
+**Compiled: 41,883 / 47,885 modules (87.5%)** across the four build shards, as of 2026-11-24 15:22 UTC.
+
 
 
 
@@ -74,24 +75,6 @@ The table lists the **root failures** from a 4-shard build of all 47,881 modules
 | `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/ThmSOwn.lean:239` | wrong name resolved (likely collision) | Application type mismatch: The argument hF has type FinX Y of sort `Prop` but is expected to have type D7 |  |
 | `Formalism/PeriodIntegrals/UnitaryGroupMassFormula/ValuationLocalVolumes/Bundle0013.lean:237` | wrong name resolved (likely collision) | Application type mismatch: The argument ⋯.sig has type X.B.I.E →ₐ[X.B.I.F] X.B.I.E of sort `Type` but is expected to have type HidaSetting ?m.11 |  |
 
-## Look-ahead: all known errors (preview)
-
-A scratch build compiles the current branch head and, where a declaration fails, replaces only that declaration's proof with `sorry` in the scratch copy so everything after it can be checked too. This lists errors the normal build can't reach yet. Round 1 = current layer; round 2+ = hidden behind it (**start there: nobody else sees those yet**). Nothing from the scratch copy is ever committed. Pull the branch and compile the file before fixing; rows can be minutes old. 11 files (0 in rounds 2+). Sessions: rh-ci-v128: session 2026-11-24T13:52:23Z branch head 2d345a6cbd target Shard0 part=1; rh-ci-v128: session 2026-11-24T13:52:23Z branch head 2d345a6cbd target Shard0 part=1; rh-ci-v128-2: session 2026-11-24T13:13:00Z branch head 6a37040314 target Shard1 part=1; rh-ci-v128-2: session 2026-11-24T13:13:00Z branch head 6a37040314 target Shard1 part=1; rh-ci-v128-3: session 2026-11-24T12:29:25Z branch head ed115838f1 target Shard2 part=1; rh-ci-v128-3: session 2026-11-24T12:29:25Z branch head ed115838f1 target Shard2 part=1; rh-ci-v128-4: session 2026-11-24T15:04:12Z branch head feedd579fc target Shard3 part=0; rh-ci-v128-4: session 2026-11-24T15:04:12Z branch head feedd579fc target Shard3 part=0.
-
-| First error | Round | Kind | Error |
-|---|---|---|---|
-| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/HermitianBlockDecompositionHomeomorph.lean:34` | 1 | error | No goals to be solved |
-| `Development/WeilBound/RepresentationTheoryGL/ArchimedeanBaseChange/ArchimedeanBaseChangeProof/SatakeExponents/UniformizerValuations/FrameReading/Bundle0001.lean:77` | 1 | error | failed to synthesize |
-| `Development/DiscreteGroups/PiInvariants/CompactSupportTwists/Bundle0003.lean:127` | 1 | error | failed to synthesize |
-| `Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/Bundle0391.lean:98` | 1 | error | failed to synthesize |
-| `Development/AbelianVarietyTheory/Proofs/TwistedOperators/ReductionMemUnipSymOfFlagCongruences.lean:53` | 1 | error | failed to synthesize |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1528.lean:406` | 1 | error | Ambiguous term |
-| `Development/WeilBound/RepresentationTheoryGL/SiegelWeilProof/HolomorphicContinuation/GlobalGaussLaws/Bundle0027.lean:193` | 1 | error | Invalid simp theorem: Expected a proposition, but found |
-| `Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/Bundle0275.lean:169` | 1 | error | failed to synthesize |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/ActLevMemCuspA.lean:67` | 1 | error | failed to synthesize |
-| `Development/AutomorphicSpectrum/Proofs/GeometryProofs/Bundle0224.lean:220` | 1 | error | Application type mismatch: The argument |
-| `Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/Bundle0762.lean:143` | 1 | error | failed to synthesize |
-
 ## Open PRs not auto-merged
 
 - #15 (@aliromman): touches protected files (needs manual review)
@@ -102,14 +85,12 @@ A scratch build compiles the current branch head and, where a declaration fails,
 - #995 (@rmsnorm): draft too large to auto-merge (mark ready for review)
 - #1003 (@aliromman): draft touches files that are not failing (mark ready for review)
 - #1033 (@TheLarkInn): no diff (empty or already on the branch)
-- #1035 (@TheLarkInn): no diff (empty or already on the branch)
-- #1040 (@TheLarkInn): no diff (empty or already on the branch)
-- #1041 (@TheLarkInn): no diff (empty or already on the branch)
-- #1042 (@TheLarkInn): no diff (empty or already on the branch)
+- #1045 (@TheLarkInn): no diff (empty or already on the branch)
+- #1048 (@TheLarkInn): no diff (empty or already on the branch)
 
 ## Fixed so far (on the branch)
 
-About 2 files, including:
+About 6 files, including:
 
 - **Name collisions:** `sigR` (104 files), `Gz`, `Wp`, `UJ`, `wt`, `Zhat`, `blockEnds`, `GE`, `Ideles`/`localIdele`, `dualLattice`, `homAt`, `IsCWCont`, `cechDiag`/`cechAug`, `admitted`, `expandsAt_scale`, `mem_nonzeroLocus`, `wd_congr`.
 - **Restored or deduplicated declarations:** 29 files from aliromman's integration branch (thanks, @aliromman).
