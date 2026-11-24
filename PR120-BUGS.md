@@ -79,16 +79,24 @@ The table lists the **root failures** from a 4-shard build of all 47,881 modules
 
 ## Look-ahead: all known errors (preview)
 
-A scratch build compiles the current branch head and, where a declaration fails, replaces only that declaration's proof with `sorry` in the scratch copy so everything after it can be checked too. This lists errors the normal build can't reach yet. Round 1 = current layer; round 2+ = hidden behind it (**start there: nobody else sees those yet**). Nothing from the scratch copy is ever committed. Pull the branch and compile the file before fixing; rows can be minutes old. 22 files (0 in rounds 2+). Sessions: rh-ci-v128: session 2026-11-24T13:52:23Z branch head 2d345a6cbd target Shard0 part=1; rh-ci-v128: session 2026-11-24T13:52:23Z branch head 2d345a6cbd target Shard0 part=1; rh-ci-v128-2: session 2026-11-24T13:13:00Z branch head 6a37040314 target Shard1 part=1; rh-ci-v128-2: session 2026-11-24T13:13:00Z branch head 6a37040314 target Shard1 part=1; rh-ci-v128-3: session 2026-11-24T15:47:21Z branch head 442bd1dd12 target Shard2 part=1; rh-ci-v128-3: session 2026-11-24T15:47:21Z branch head 442bd1dd12 target Shard2 part=1; rh-ci-v128-4: session 2026-11-24T15:04:12Z branch head feedd579fc target Shard3 part=0; rh-ci-v128-4: session 2026-11-24T15:04:12Z branch head feedd579fc target Shard3 part=0.
+A scratch build compiles the current branch head and, where a declaration fails, replaces only that declaration's proof with `sorry` in the scratch copy so everything after it can be checked too. This lists errors the normal build can't reach yet. Round 1 = current layer; round 2+ = hidden behind it (**start there: nobody else sees those yet**). Nothing from the scratch copy is ever committed. Pull the branch and compile the file before fixing; rows can be minutes old. 28 files (10 in rounds 2+). Sessions: rh-ci-v128: session 2026-11-24T13:52:23Z branch head 2d345a6cbd target Shard0 part=1; rh-ci-v128: session 2026-11-24T13:52:23Z branch head 2d345a6cbd target Shard0 part=1; rh-ci-v128-2: session 2026-11-24T13:13:00Z branch head 6a37040314 target Shard1 part=1; rh-ci-v128-2: 16:02:41 round 1: 67 errors in 22 files, 43 declarations stubbed, 10 statement errors; rh-ci-v128-3: session 2026-11-24T15:47:21Z branch head 442bd1dd12 target Shard2 part=1; rh-ci-v128-3: session 2026-11-24T15:47:21Z branch head 442bd1dd12 target Shard2 part=1; rh-ci-v128-4: session 2026-11-24T15:04:12Z branch head feedd579fc target Shard3 part=0; rh-ci-v128-4: session 2026-11-24T15:04:12Z branch head feedd579fc target Shard3 part=0.
 
 | First error | Round | Kind | Error |
 |---|---|---|---|
+| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0252.lean:484` | 2 | error | Ambiguous term |
+| `Development/AutomorphicSpectrum/Proofs/GeometryProofs/Bundle0224.lean:220` | 2 | error | Application type mismatch: The argument |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/ActLevMemCuspA.lean:67` | 2 | error | failed to synthesize |
+| `Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/IntegralStructures/GeometricFlagBases/Bundle0004.lean:342` | 2 | error | Unknown identifier `a_snd` |
+| `Development/AbelianVarietyTheory/Proofs/TwistedOperators/Bundle0480.lean:201` | 2 | error | failed to synthesize instance of type class |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1636.lean:209` | 2 | error | Failed to rewrite using equation theorems for `phiA` |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/ExistsConstJetOperatorNormCauchyBound.lean:22` | 2 | error | unsolved goals |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1659.lean:244` | 2 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Definitions/LatticeFrames/Bundle0026.lean:275` | 2 | error | Tactic `rewrite` failed: Did not find an occurrence of the pattern |
+| `Development/WeilBound/RepresentationTheoryGL/UnitaryDualProof/TwistedPieces/IntegralParts/HaarFourierSupport/SuppCongr.lean:22` | 2 | error | Application type mismatch: The argument |
 | `Development/DiscreteGroups/PiInvariants/CompactSupportTwists/Bundle0003.lean:127` | 1 | error | failed to synthesize |
 | `Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/Bundle0762.lean:143` | 1 | error | failed to synthesize |
-| `Development/AutomorphicSpectrum/Proofs/GeometryProofs/Bundle0224.lean:220` | 1 | error | Application type mismatch: The argument |
 | `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/T2SpaceAdelicGLCmField.lean:352` | 1 | error | failed to synthesize |
 | `Development/AbelianVarietyTheory/Proofs/TwistedOperators/SchrodingerModelIsometryHalfLatticeVolumeOne.lean:264` | 1 | error | failed to synthesize instance of type class |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/ActLevMemCuspA.lean:67` | 1 | error | failed to synthesize |
 | `Development/WeilBound/RepresentationTheoryGL/SiegelWeilProof/HolomorphicContinuation/GlobalGaussLaws/Bundle0027.lean:193` | 1 | error | Invalid simp theorem: Expected a proposition, but found |
 | `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1609.lean:441` | 1 | error | Ambiguous term |
 | `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1610.lean:195` | 1 | error | failed to synthesize instance of type class |
@@ -98,8 +106,6 @@ A scratch build compiles the current branch head and, where a declaration fails,
 | `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/TraceFormula/GlobalTraceComparison/TraceAsymptotics/DcosTr.lean:253` | 1 | error | Ambiguous term |
 | `Development/AbelianVarietyTheory/Proofs/TwistedOperators/ZetaIdentityTransportLocalFieldIso.lean:128` | 1 | error | failed to synthesize instance of type class |
 | `Development/AbelianVarietyTheory/Proofs/SatakeParameters/MuCharacterDetLevelEqLocalTameProduct.lean:261` | 1 | error | Ambiguous term |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0252.lean:484` | 1 | error | Ambiguous term |
-| `Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/IntegralStructures/GeometricFlagBases/Bundle0004.lean:342` | 1 | error | Unknown identifier `a_snd` |
 | `Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/SymmetricDoubleIntegralFiniteCombination.lean:54` | 1 | error | failed to synthesize instance of type class |
 | `Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/PAdicWittLattices/Bundle0013.lean:144` | 1 | error | failed to synthesize |
 | `Development/AbelianVarietyTheory/Proofs/TwistedOperators/Bundle0473.lean:170` | 1 | error | Tactic `rewrite` failed: Did not find an occurrence of the pattern |
