@@ -74,21 +74,33 @@ The table lists the **root failures** from a 4-shard build of all 47,881 modules
 
 ## Look-ahead: all known errors (preview)
 
-A scratch build compiles the current branch head and, where a declaration fails, replaces only that declaration's proof with `sorry` in the scratch copy so everything after it can be checked too. This lists errors the normal build can't reach yet. Round 1 = current layer; round 2+ = hidden behind it (**start there: nobody else sees those yet**). Nothing from the scratch copy is ever committed. Pull the branch and compile the file before fixing; rows can be minutes old. 45 files (38 in rounds 2+). Sessions: rh-ci-v128: session 2026-11-24T13:52:23Z branch head 2d345a6cbd target Shard0 part=1; rh-ci-v128: session 2026-11-24T13:52:23Z branch head 2d345a6cbd target Shard0 part=1; rh-ci-v128-2: session 2026-11-24T13:13:00Z branch head 6a37040314 target Shard1 part=1; rh-ci-v128-2: session 2026-11-24T13:13:00Z branch head 6a37040314 target Shard1 part=1; rh-ci-v128-3: session 2026-11-24T12:29:25Z branch head ed115838f1 target Shard2 part=1; rh-ci-v128-3: session 2026-11-24T12:29:25Z branch head ed115838f1 target Shard2 part=1; rh-ci-v128-4: session 2026-11-24T10:47:40Z branch head fbb0941754 target Shard3 part=0; rh-ci-v128-4: 14:21:59 round 3: 72 errors in 27 files, 42 declarations stubbed, 6 statement errors.
+A scratch build compiles the current branch head and, where a declaration fails, replaces only that declaration's proof with `sorry` in the scratch copy so everything after it can be checked too. This lists errors the normal build can't reach yet. Round 1 = current layer; round 2+ = hidden behind it (**start there: nobody else sees those yet**). Nothing from the scratch copy is ever committed. Pull the branch and compile the file before fixing; rows can be minutes old. 57 files (50 in rounds 2+). Sessions: rh-ci-v128: session 2026-11-24T13:52:23Z branch head 2d345a6cbd target Shard0 part=1; rh-ci-v128: session 2026-11-24T13:52:23Z branch head 2d345a6cbd target Shard0 part=1; rh-ci-v128-2: session 2026-11-24T13:13:00Z branch head 6a37040314 target Shard1 part=1; rh-ci-v128-2: session 2026-11-24T13:13:00Z branch head 6a37040314 target Shard1 part=1; rh-ci-v128-3: session 2026-11-24T12:29:25Z branch head ed115838f1 target Shard2 part=1; rh-ci-v128-3: session 2026-11-24T12:29:25Z branch head ed115838f1 target Shard2 part=1; rh-ci-v128-4: session 2026-11-24T10:47:40Z branch head fbb0941754 target Shard3 part=0; rh-ci-v128-4: 14:32:42 round 4: 38 errors in 17 files, 27 declarations stubbed, 5 statement errors.
 
 | First error | Round | Kind | Error |
 |---|---|---|---|
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0252.lean:473` | 4 | error | Ambiguous term |
-| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/CrystallineOrdinaryIdeals/QcontDual.lean:53` | 4 | error | failed to synthesize instance of type class |
-| `Development/AutomorphicSpectrum/Proofs/GeometryProofs/Bundle0224.lean:220` | 4 | error | Application type mismatch: The argument |
-| `Development/AutomorphicArithmetic/Foundations/Convolution/BlockHeckeSlices/CuspidalNormBounds/RepOps.lean:12` | 4 | error | 'kgl_eq' not found in the provided declarations: |
+| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0252.lean:473` | 5 | error | Ambiguous term |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/CrystallineOrdinaryIdeals/QcontDual.lean:53` | 5 | error | failed to synthesize instance of type class |
+| `Development/AutomorphicSpectrum/Proofs/GeometryProofs/Bundle0224.lean:220` | 5 | error | Application type mismatch: The argument |
+| `Development/AutomorphicArithmetic/Foundations/Convolution/BlockHeckeSlices/CuspidalNormBounds/RepOps.lean:12` | 5 | error | 'kgl_eq' not found in the provided declarations: |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/ActLevMemCuspA.lean:67` | 5 | error | failed to synthesize |
+| `Development/WeilBound/RepresentationTheoryGL/ArchimedeanBaseChange/ArchimedeanBaseChangeProof/SatakeExponents/UniformizerValuations/FrameReading/Bundle0001.lean:128` | 5 | error | Invalid `⟨...⟩` notation: The expected type `(gOps g).1 (g x).op` is not an inductive type |
+| `Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/IntegralStructures/GeometricFlagBases/Bundle0004.lean:342` | 5 | error | Unknown identifier `a_snd` |
+| `Development/AbelianVarietyTheory/Proofs/TwistedOperators/Bundle0480.lean:201` | 5 | error | failed to synthesize instance of type class |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1662.lean:394` | 5 | error | Application type mismatch: The argument |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/ContinuousComplEquivSymm.lean:96` | 5 | error | failed to synthesize instance of type class |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1710.lean:145` | 5 | error | failed to synthesize instance of type class |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1712.lean:434` | 5 | error | failed to synthesize instance of type class |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1708.lean:367` | 5 | error | failed to synthesize instance of type class |
 | `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1639.lean:257` | 4 | error | Application type mismatch: The argument |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/ActLevMemCuspA.lean:67` | 4 | error | failed to synthesize |
-| `Development/WeilBound/RepresentationTheoryGL/ArchimedeanBaseChange/ArchimedeanBaseChangeProof/SatakeExponents/UniformizerValuations/FrameReading/Bundle0001.lean:128` | 4 | error | Invalid `⟨...⟩` notation: The expected type `(gOps g).1 (g x).op` is not an inductive type |
 | `Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/ThetaParseval/SplitLineSubtraction/PClSub.lean:60` | 4 | error | overloaded, errors  |
 | `Development/AbelianVarietyTheory/Proofs/DivisorProofs/ExistsConstJetOperatorNormCauchyBound.lean:22` | 4 | error | unsolved goals |
-| `Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/IntegralStructures/GeometricFlagBases/Bundle0004.lean:342` | 4 | error | Unknown identifier `a_snd` |
 | `Development/AbelianVarietyTheory/Proofs/TwistedOperators/Bundle0473.lean:170` | 4 | error | Tactic `rewrite` failed: Did not find an occurrence of the pattern |
+| `Development/WeilBound/ThetaLifts/SmallCones/Bundle0013.lean:185` | 4 | error | Tactic `rewrite` failed: Did not find an occurrence of the pattern |
+| `Development/AbelianVarietyTheory/Definitions/LatticeFrames/Bundle0026.lean:275` | 4 | error | Tactic `rewrite` failed: Did not find an occurrence of the pattern |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1636.lean:209` | 4 | error | Failed to rewrite using equation theorems for `phiA` |
+| `Development/WeilBound/RepresentationTheoryGL/SiegelWeilProof/HolomorphicContinuation/GlobalGaussLaws/Bundle0027.lean:193` | 4 | error | Invalid simp theorem: Expected a proposition, but found |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1659.lean:244` | 4 | error | failed to synthesize |
+| `Development/WeilBound/RepresentationTheoryGL/UnitaryDualProof/TwistedPieces/IntegralParts/HaarFourierSupport/SuppCongr.lean:22` | 4 | error | Application type mismatch: The argument |
 | `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/HermitianBlockDecompositionHomeomorph.lean:254` | 3 | error | Tactic `rfl` failed: The left-hand side |
 | `Development/DiscreteGroups/PiInvariants/CompactSupportTwists/Bundle0003.lean:127` | 3 | error | failed to synthesize |
 | `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/Bundle0531.lean:149` | 3 | error | failed to synthesize |
