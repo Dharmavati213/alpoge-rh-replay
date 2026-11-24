@@ -78,6 +78,56 @@ The table lists the **root failures** from a 4-shard build of all 47,881 modules
 | `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/ThmSOwn.lean:239` | wrong name resolved (likely collision) | Application type mismatch: The argument hF has type FinX Y of sort `Prop` but is expected to have type D7 |  |
 | `Formalism/PeriodIntegrals/UnitaryGroupMassFormula/ValuationLocalVolumes/Bundle0013.lean:237` | wrong name resolved (likely collision) | Application type mismatch: The argument ⋯.sig has type X.B.I.E →ₐ[X.B.I.F] X.B.I.E of sort `Type` but is expected to have type HidaSetting ?m.11 |  |
 
+## Look-ahead: all known errors (preview)
+
+A scratch build compiles the current branch head and, where a declaration fails, replaces only that declaration's proof with `sorry` in the scratch copy so everything after it can be checked too. This lists errors the normal build can't reach yet. Round 1 = current layer; round 2+ = hidden behind it (**start there: nobody else sees those yet**). Nothing from the scratch copy is ever committed. Pull the branch and compile the file before fixing; rows can be minutes old. 43 files (25 in rounds 2+). Sessions: rh-ci-v128: session 2026-11-24T13:52:23Z branch head 2d345a6cbd target Shard0 part=1; rh-ci-v128: session 2026-11-24T13:52:23Z branch head 2d345a6cbd target Shard0 part=1; rh-ci-v128-2: session 2026-11-24T13:13:00Z branch head 6a37040314 target Shard1 part=1; rh-ci-v128-2: 16:18:13 round 3: 30 errors in 14 files, 22 declarations stubbed, 6 statement errors; rh-ci-v128-3: session 2026-11-24T15:47:21Z branch head 442bd1dd12 target Shard2 part=1; rh-ci-v128-3: session 2026-11-24T15:47:21Z branch head 442bd1dd12 target Shard2 part=1; rh-ci-v128-4: session 2026-11-24T15:04:12Z branch head feedd579fc target Shard3 part=0; rh-ci-v128-4: session 2026-11-24T15:04:12Z branch head feedd579fc target Shard3 part=0.
+
+| First error | Round | Kind | Error |
+|---|---|---|---|
+| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0252.lean:484` | 4 | error | Ambiguous term |
+| `Development/AutomorphicSpectrum/Proofs/GeometryProofs/Bundle0224.lean:220` | 4 | error | Application type mismatch: The argument |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/ActLevMemCuspA.lean:67` | 4 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Proofs/TwistedOperators/Bundle0520.lean:422` | 4 | error | Ambiguous term |
+| `Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/IntegralStructures/GeometricFlagBases/Bundle0004.lean:342` | 4 | error | Unknown identifier `a_snd` |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1736.lean:117` | 4 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/ZetaIntegralLeftTranslatePrimitiveFrames.lean:62` | 4 | error | Failed to rewrite using equation theorems for `phiA` |
+| `Development/AutomorphicArithmetic/DivisorFrames/Bundle0007.lean:160` | 4 | error | failed to synthesize instance of type class |
+| `Development/AutomorphicArithmetic/DivisorFrames/BigPStdSchwartzTranslateEqSmallPOfIsUnif.lean:123` | 4 | error | failed to synthesize instance of type class |
+| `Development/DiscreteGroups/PiInvariants/CompactSupportTwists/Bundle0008.lean:138` | 4 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1662.lean:394` | 3 | error | Application type mismatch: The argument |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/ContinuousComplEquivSymm.lean:96` | 3 | error | failed to synthesize instance of type class |
+| `Development/WeilBound/RepresentationTheoryGL/ConstantTermFiniteness/LieInvariants/InvariantOfLieOneLEqZero.lean:52` | 3 | error | failed to synthesize |
+| `Development/WeilBound/CoreStatements/PublishedTheorems/FiniteGLInvariants/AffineLieInvariants/InvariantOfLieOneLEqZero.lean:49` | 3 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1710.lean:145` | 3 | error | failed to synthesize instance of type class |
+| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/Bundle0687.lean:81` | 3 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1712.lean:434` | 3 | error | failed to synthesize instance of type class |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1708.lean:367` | 3 | error | failed to synthesize instance of type class |
+| `Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/Bundle0826.lean:326` | 3 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Proofs/TwistedOperators/Bundle0480.lean:201` | 2 | error | failed to synthesize instance of type class |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1636.lean:209` | 2 | error | Failed to rewrite using equation theorems for `phiA` |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/ExistsConstJetOperatorNormCauchyBound.lean:22` | 2 | error | unsolved goals |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1659.lean:244` | 2 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Definitions/LatticeFrames/Bundle0026.lean:275` | 2 | error | Tactic `rewrite` failed: Did not find an occurrence of the pattern |
+| `Development/WeilBound/RepresentationTheoryGL/UnitaryDualProof/TwistedPieces/IntegralParts/HaarFourierSupport/SuppCongr.lean:22` | 2 | error | Application type mismatch: The argument |
+| `Development/DiscreteGroups/PiInvariants/CompactSupportTwists/Bundle0003.lean:127` | 1 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/Bundle0762.lean:143` | 1 | error | failed to synthesize |
+| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/T2SpaceAdelicGLCmField.lean:352` | 1 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Proofs/TwistedOperators/SchrodingerModelIsometryHalfLatticeVolumeOne.lean:264` | 1 | error | failed to synthesize instance of type class |
+| `Development/WeilBound/RepresentationTheoryGL/SiegelWeilProof/HolomorphicContinuation/GlobalGaussLaws/Bundle0027.lean:193` | 1 | error | Invalid simp theorem: Expected a proposition, but found |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1609.lean:441` | 1 | error | Ambiguous term |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1610.lean:195` | 1 | error | failed to synthesize instance of type class |
+| `Development/AutomorphicArithmetic/Foundations/Convolution/BlockHeckeSlices/CuspidalNormBounds/Bundle0006.lean:149` | 1 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Proofs/TwistedOperators/RealVectorsAllPlacesOfLocalData.lean:43` | 1 | error | failed to synthesize instance of type class |
+| `Development/AbelianVarietyTheory/Proofs/TwistedOperators/ZetaIdentityPersistsRowColumnChanges.lean:62` | 1 | error | failed to synthesize instance of type class |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/TraceFormula/GlobalTraceComparison/TraceAsymptotics/DcosTr.lean:253` | 1 | error | Ambiguous term |
+| `Development/AbelianVarietyTheory/Proofs/TwistedOperators/ZetaIdentityTransportLocalFieldIso.lean:128` | 1 | error | failed to synthesize instance of type class |
+| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/MuCharacterDetLevelEqLocalTameProduct.lean:261` | 1 | error | Ambiguous term |
+| `Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/SymmetricDoubleIntegralFiniteCombination.lean:54` | 1 | error | failed to synthesize instance of type class |
+| `Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/PAdicWittLattices/Bundle0013.lean:144` | 1 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Proofs/TwistedOperators/Bundle0473.lean:170` | 1 | error | Tactic `rewrite` failed: Did not find an occurrence of the pattern |
+| `Development/WeilBound/ThetaLifts/SmallCones/Bundle0013.lean:185` | 1 | error | Tactic `rewrite` failed: Did not find an occurrence of the pattern |
+| `Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/Bundle0027.lean:226` | 1 | error | Application type mismatch: The argument |
+
 ## Open PRs not auto-merged
 
 - #15 (@aliromman): touches protected files (needs manual review)
