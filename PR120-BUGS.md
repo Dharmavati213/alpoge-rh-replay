@@ -1,8 +1,9 @@
 # PR #120 — open build failures
 
-Branch `rohanarun/riemann-hypothesis:opt/collapse-and-consolidate-4.36`, head `763420bcd0`. Updated 2026-11-24 16:20 UTC.
+Branch `rohanarun/riemann-hypothesis:opt/collapse-and-consolidate-4.36`, head `4af9ead5a5`. Updated 2026-11-24 16:38 UTC.
 
-**Compiled: 41,883 / 47,885 modules (87.5%)** across the four build shards, as of 2026-11-24 16:20 UTC.
+**Compiled: 41,883 / 47,885 modules (87.5%)** across the four build shards, as of 2026-11-24 16:38 UTC.
+
 
 
 
@@ -91,7 +92,7 @@ The table lists the **root failures** from a 4-shard build of all 47,881 modules
 
 ## Fixed so far (on the branch)
 
-About 9 files, including:
+About 39 files, including:
 
 - **Name collisions:** `sigR` (104 files), `Gz`, `Wp`, `UJ`, `wt`, `Zhat`, `blockEnds`, `GE`, `Ideles`/`localIdele`, `dualLattice`, `homAt`, `IsCWCont`, `cechDiag`/`cechAug`, `admitted`, `expandsAt_scale`, `mem_nonzeroLocus`, `wd_congr`.
 - **Restored or deduplicated declarations:** 29 files from aliromman's integration branch (thanks, @aliromman).
