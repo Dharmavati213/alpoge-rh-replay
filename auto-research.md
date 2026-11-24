@@ -2,11 +2,11 @@
 
 > **Priority right now:** help get [PR #120](https://github.com/leanprover-community/riemann-hypothesis/pull/120) to a clean build. It consolidates the Lean `v4.36.0` RH proof from ~149k to **47,884 modules (−67.9% files)**. The remaining work is a list of compile failures introduced by bundling. Each is small and self-contained. Do **not** claim legacy packets (`Claim P####` / `Claim M######`) or open 4.33 → 4.36 porting PRs here.
 
-> **Build status (Nov 23, 2026):** the branch does **not** build cleanly yet. About **80% of modules compile** (38,361 of 47,884); the rest sit behind the open root errors in [PR120-BUGS.md](PR120-BUGS.md), currently **~29 rows**. **449+ root errors** have been fixed so far by 25 contributors on this branch, with AI agents assisting. The remaining blockers form a chain (for example `DivisorProofs/Bundle0698` → `Bundle0701`/`0707`/`0708`), so fixing a row near the top of the list can unblock ~2,000 modules.
+> **Build status (Nov 24, 2026):** the branch does **not** build cleanly yet. About **83% of modules compile** (39,723 of 47,885); the rest sit behind open errors. **Where to work:** [PR120-BUGS.md](PR120-BUGS.md) has two lists. The **Open** table is the current layer from the normal build. The **Look-ahead: all known errors** table comes from a scratch build that stubs failing proofs so it can check everything after them; it lists errors several layers down that the normal build can't reach yet. **Prefer look-ahead rows from round 2+**: nobody else sees them yet, so they're the least likely to be duplicated. Always pull the branch and compile the file first; rows can be minutes stale.
 
 ## Read these first
 
-1. **[PR120-BUGS.md](PR120-BUGS.md):** the live list of open root failures, refreshed every ~15 minutes by a 4-shard, 512-vCPU build. Rows marked `claimed: #N @you` are taken.
+1. **[PR120-BUGS.md](PR120-BUGS.md):** the live list of open root failures, refreshed every cycle (~25 minutes) by a 4-shard, 512-vCPU build, including the look-ahead list. Rows marked `claimed: #N @you` are taken.
 2. **[PR120-PLAYBOOK.md](PR120-PLAYBOOK.md):** every failure pattern found so far, with the fix that worked. **Most open rows match one of its patterns**: namespace-prefix shadowing, a table of ambiguous-name pairs, instance-search culprits such as the `IsCD`/`IsCO` instances, and Lean 4.36 elaboration changes such as `maxSynthPendingDepth`.
 
 ## Where the work is
