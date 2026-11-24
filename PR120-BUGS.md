@@ -37,6 +37,64 @@ These files changed after the build that reported the error (a merged PR or coor
 | `Development/WeilBound/RepresentationTheoryGL/UnitaryDualProof/CompactOrbits/NilpotentOrbits/FourierTransforms/TraceEqZeroOfQZ.lean:21` | ambiguous name | Ambiguous term trace_add Possible interpretations: GroundTheory.Automorphic.trace_add : IsTraceClass ?m.34 → IsTraceClass ?m.35 → GroundTheory.Automorphic.trace (?m.34 + ?m.35) = |  |
 | `Development/WeilBound/RepresentationTheoryGL/UnitaryDualProof/TwistedPieces/FiniteDimensionalDescent/ClosedOrbitPieces/Bundle0002.lean:207` | instance | failed to synthesize Module.Free ↥(Fe hA he) ↥(Wd e) (deterministic) timeout at `typeclass`, maximum number of heartbeats (200000) has been reached |  |
 
+## Look-ahead: all known errors (preview)
+
+A scratch build compiles the current branch head and, where a declaration fails, replaces only that declaration's proof with `sorry` in the scratch copy so everything after it can be checked too. This lists errors the normal build can't reach yet. Round 1 = current layer; round 2+ = hidden behind it (**start there: nobody else sees those yet**). Nothing from the scratch copy is ever committed. Pull the branch and compile the file before fixing; rows can be minutes old. 51 files (0 in rounds 2+). Sessions: rh-ci-v128: session 2026-11-24T05:56:08Z branch head 74f1320f2e target Shard0 part=1; rh-ci-v128: session 2026-11-24T05:56:08Z branch head 74f1320f2e target Shard0 part=1; rh-ci-v128-2: session 2026-11-24T05:14:33Z branch head 1a0cb6e573 target Shard1 part=1; rh-ci-v128-2: session 2026-11-24T05:14:33Z branch head 1a0cb6e573 target Shard1 part=1; rh-ci-v128-4: session 2026-11-24T04:24:28Z branch head c7367cd94f; rh-ci-v128-4: 06:51:28 round 1: 87 errors in 33 files, 56 declarations stubbed, 5 statement errors.
+
+| First error | Round | Kind | Error |
+|---|---|---|---|
+| `Development/AutomorphicSpectrum/Proofs/GeometryProofs/ProperGroupGermFiniteSubscheme.lean:103` | 1 | error | Function expected at |
+| `Development/DiscreteGroups/GlobalIrreducibility/Bundle0004.lean:245` | 1 | error | failed to synthesize |
+| `Development/WeilBound/RepresentationTheoryGL/ResidualSpectrum/ExponentialNegativity/L2Gluing/IntegralLeToReal.lean:182` | 1 | error | failed to synthesize |
+| `Formalism/PeriodIntegrals/UnitaryGroupMassFormula/ValuationLocalVolumes/Bundle0013.lean:237` | 1 | error | Application type mismatch: The argument |
+| `Development/WeilBound/ThetaLifts/SmallCones/Bundle0004.lean:171` | 1 | error | failed to synthesize |
+| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/ArchimedeanOrbitalIntegralHuaBound.lean:30` | 1 | error | Type mismatch |
+| `Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/ClosedPhiFunctoriality/Bundle0001.lean:171` | 1 | error | failed to synthesize |
+| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/ThmSOwn.lean:239` | 1 | error | Application type mismatch: The argument |
+| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/Bundle0380.lean:339` | 1 | error | failed to synthesize |
+| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/KernelSumBoundUniform.lean:234` | 1 | error | failed to synthesize |
+| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/Bundle0420.lean:162` | 1 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1245.lean:257` | 1 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1254.lean:164` | 1 | error | failed to synthesize |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/PatchingModules/ArchimedeanH0Cards/ExistsCore.lean:405` | 1 | error | Application type mismatch: The argument |
+| `Development/AutomorphicArithmetic/Foundations/Convolution/RealGroupAnalysis/GaussianForms/Bundle0009.lean:85` | 1 | error | failed to synthesize instance of type class |
+| `Development/AbelianVarietyTheory/Proofs/ThetaShiftProofs/Bundle0059.lean:285` | 1 | error | Ambiguous term |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/InductionEstimates/BorelHeckeBounds/HeckeShiftSums/Bundle0001.lean:242` | 1 | error | Invalid projection: Projections cannot be used on functions, and |
+| `Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/MemBddFormsOfWithSmoothings.lean:225` | 1 | error | failed to synthesize |
+| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/AllRowsOf.lean:34` | 1 | error | Not a definitional equality: the left-hand side |
+| `Development/AbelianVarietyTheory/Definitions/Divisors/Bundle0045.lean:189` | 1 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:227` | 1 | error | Function expected at |
+| `Development/AbelianVarietyTheory/Proofs/FlagMeasures/Bundle0381.lean:293` | 1 | error | Type mismatch |
+| `Development/AutomorphicArithmetic/Foundations/Convolution/CentreSplitting/Bundle0003.lean:257` | 1 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Proofs/TwistedOperators/Bundle0367.lean:47` | 1 | error | Type mismatch |
+| `Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/Bundle0231.lean:165` | 1 | error | Application type mismatch: The argument |
+| `Development/AutomorphicArithmetic/Foundations/Convolution/SplitEigenfunctions/InfinitePlaceGluing/PairCases.lean:288` | 1 | error | Function expected at |
+| `Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/Bundle0246.lean:478` | 1 | error | Tactic `rewrite` failed: Did not find an occurrence of the pattern |
+| `Development/AutomorphicArithmetic/Foundations/Convolution/RealGroupAnalysis/UnramifiedSplitting/PlaceAe.lean:254` | 1 | error | (deterministic) timeout at `whnf`, maximum number of heartbeats (4000000) has been reached |
+| `Development/AutomorphicSpectrum/Proofs/MetricProofs/ChartDensityIntegrable.lean:36` | 1 | error | Unknown constant `GroundTheory.Heights₂.Heights.PtsSegreChartFibreSum._root_.GroundTheory.Heights₂.Heights.PtsSegreChartFibreSum.logNorm_ofW |
+| `Development/AbelianVarietyTheory/Proofs/GlobalInterpolation/Bundle0138.lean:142` | 1 | error | Tactic `rewrite` failed: Did not find an occurrence of the pattern |
+| `Development/AbelianVarietyTheory/Definitions/GaloisGeometry/Bundle0019.lean:53` | 1 | error | Ambiguous term |
+| `Development/DiscreteGroups/GlobalIrreducibility/Bundle0003.lean:439` | 1 | error | failed to synthesize instance of type class |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/ContinuousDen.lean:198` | 1 | error | Type mismatch |
+| `Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/HeisenbergIntegralFourierBesselBasePointEqPairin.lean:55` | 1 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/Bundle0135.lean:371` | 1 | error | Tactic `rewrite` failed: Did not find an occurrence of the pattern |
+| `Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/Bundle0282.lean:266` | 1 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Proofs/UnitaryExistence/Bundle0093.lean:230` | 1 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/Bundle0680.lean:335` | 1 | error | failed to synthesize |
+| `Development/WeilBound/RepresentationTheoryGL/UnitaryDualProof/CompactOrbits/NilpotentOrbits/FourierTransforms/TraceEqZeroOfQZ.lean:21` | 1 | error | Ambiguous term |
+| `Development/AutomorphicArithmetic/WhittakerHecke/ExistsNumberFieldExtensionPlaceFrobeniusDegree.lean:131` | 1 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/Bundle0697.lean:473` | 1 | error | failed to synthesize |
+| `Development/WeilBound/RepresentationTheoryGL/UnitaryDualProof/TwistedPieces/FiniteDimensionalDescent/ClosedOrbitPieces/Bundle0002.lean:207` | 1 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/LastColsVal.lean:38` | 1 | error | synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized |
+| `Development/WeilBound/CoreStatements/PublishedTheorems/JacquetShalikaRigidity/Bundle0002.lean:365` | 1 | error | Ambiguous term |
+| `Development/WeilBound/CoreStatements/PublishedTheorems/JacquetShalikaRigidity/UnipotentBlockMeasure.lean:237` | 1 | error | failed to synthesize |
+| `Development/WeilBound/CoreStatements/PublishedTheorems/JacquetShalikaRigidity/WeightCoefficients.lean:226` | 1 | error | failed to synthesize |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/UnitaryThreeDeformations/LevelAt.lean:89` | 1 | error | Ambiguous term |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/IntegrableZetaIntegralMatrixSchwartz.lean:69` | 1 | error | Type mismatch |
+| `Development/WeilBound/RepresentationTheoryGL/ArchimedeanBaseChange/ArchimedeanBaseChangeProof/ThetaNormCommutation/LocalComparisonSplitting/Bundle0001.lean:196` | 1 | error | failed to synthesize |
+| `Development/WeilBound/RepresentationTheoryGL/GaloisPermutationReps/SubquotientEquivalence/Bundle0003.lean:127` | 1 | error | Ambiguous term |
+| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/MemMapBasis.lean:317` | 1 | error | failed to synthesize |
+
 ## Open PRs not auto-merged
 
 - #15 (@aliromman): touches protected files (needs manual review)
