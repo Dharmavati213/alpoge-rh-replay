@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M142168 | P1496 | `Development.WeilBound.RepresentationTheoryGL.ResidualSpectrum.SliceTensors.PolynomialKilling.KillPoly4` | volunteer-build-reviewed |
 | M142170 | P1526 | `Development.WeilBound.RepresentationTheoryGL.ResidualSpectrum.SliceTensors.ProjOf` | volunteer-build-reviewed |
 | M142171 | P0067 | `Development.WeilBound.RepresentationTheoryGL.ResidualSpectrum.SliceTensors.SdNormCpow` | volunteer-build-reviewed |
 | M142173 | P2077 | `Development.WeilBound.RepresentationTheoryGL.SiegelWeil.ArchimedeanSiegelWeil.PlaceIntegrals.AdelicSiegelWeilCoefficientEq` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M142799 | P0324 | `Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.PolynomialDerivatives.MapDomainFlpFlp` | volunteer-build-reviewed |
 | M142800 | P0501 | `Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.PolynomialDerivatives.MapDomainInlInr` | volunteer-build-reviewed |
 | M142801 | P0420 | `Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.PolynomialDerivatives.MomLin` | volunteer-build-reviewed |
-| M142802 | P0501 | `Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.PolynomialDerivatives.MonomialMemSupported` | volunteer-build-reviewed |

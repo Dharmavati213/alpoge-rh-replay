@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M154482 | P0423 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.BoundarySlices.StarSingleOne` | build-observed |
 | M154483 | P0377 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.BoundarySlices.WbPartBvecEI` | build-observed |
 | M154484 | P0463 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CMDegreeEquality.FinrankEqTwo` | build-observed |
 | M154485 | P0504 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CMDiscriminantSquare.AdjoinEqTopOfStarNe` | build-observed |
@@ -401,4 +402,3 @@
 | M154953 | P0330 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.FockJointMultiplicity.ExistWt` | volunteer-build-reviewed |
 | M154955 | P0377 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.FockJointMultiplicity.GlobalTheory` | volunteer-build-reviewed |
 | M154957 | P0377 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.FockJointMultiplicity.IsDiagonalBlockIndexRightOfPositiveRoot` | volunteer-build-reviewed |
-| M154958 | P0276 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.FockJointMultiplicity.JointMultOfSteps` | volunteer-build-reviewed |

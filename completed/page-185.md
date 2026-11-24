@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M121839 | P1207 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousFunctionsPeriodRingSeparation` | build-observed |
 | M121840 | P1235 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousFunctionsPeriodRingSeparationStatement` | build-observed |
 | M121845 | P1550 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousInvOfPowEqOne` | volunteer-build-reviewed |
 | M121846 | P1849 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousIpFst` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M122447 | P1752 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DoubleContragredientOfInducedProduct` | volunteer-build-reviewed |
 | M122448 | P1778 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DoubleContragredientOfInducedProductStatement` | volunteer-build-reviewed |
 | M122451 | P2552 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DoubleCosetMultiplication` | volunteer-build-reviewed |
-| M122452 | P2573 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DoubleCosetMultiplicationStatement` | volunteer-build-reviewed |

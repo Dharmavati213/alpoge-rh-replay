@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M095867 | P1434 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.MatchUpOfTr` | volunteer-build-reviewed |
 | M095868 | P2182 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.MatchedIntegralFiniteSupport` | volunteer-build-reviewed |
 | M095869 | P2192 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.MatchedIntegralFiniteSupportStatement` | volunteer-build-reviewed |
 | M095870 | P2161 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.MatchedMapsArchimedeanIdentity` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M096367 | P0487 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.OrbitLocallyConstant` | build-observed |
 | M096368 | P1931 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.OrientedPairFockMapsLieEquivariant` | volunteer-build-reviewed |
 | M096369 | P1948 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.OrientedPairFockMapsLieEquivariantStatement` | volunteer-build-reviewed |
-| M096370 | P2060 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.OrientedThetaEqFiniteHeisenbergTranslatesVacua` | volunteer-build-reviewed |

@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M171607 | P0579 | `ReciprocityTheory.ClassFieldTheory.LocalClassField.ExistsDvdQKPowSubOne` | wave-reused |
 | M171608 | P0512 | `ReciprocityTheory.ClassFieldTheory.LocalClassField.ExistsIntEKMulVbar` | wave-reused |
 | M171611 | P0546 | `ReciprocityTheory.ClassFieldTheory.LocalClassField.GalBasic` | wave-reused |
 | M171613 | P0233 | `ReciprocityTheory.ClassFieldTheory.LocalClassField.Herbrand` | wave-reused |
@@ -401,4 +402,3 @@
 | M172089 | P0703 | `ReciprocityTheory.L2DbarEstimates.Localization.ShellCeilEq` | wave-reused |
 | M172090 | P0703 | `ReciprocityTheory.L2DbarEstimates.Localization.SplitTest` | wave-reused |
 | M172091 | P0703 | `ReciprocityTheory.L2DbarEstimates.Localization.TestIneq` | wave-reused |
-| M172092 | P0729 | `ReciprocityTheory.L2DbarEstimates.Localization.UnweightBack` | wave-reused |

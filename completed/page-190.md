@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M125070 | P2076 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LeftInvSubtypeSum` | volunteer-build-reviewed |
 | M125073 | P1850 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LeftPartialFourierTwistedIntegral` | volunteer-build-reviewed |
 | M125079 | P0934 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LeftTranslateCommutes` | build-observed |
 | M125080 | P0962 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LeftTranslateCommutesStatement` | build-observed |
@@ -401,4 +402,3 @@
 | M125801 | P1636 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MemSubmoduleOfBumpsStatement` | volunteer-build-reviewed |
 | M125802 | P1780 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MemTwCentSwTw` | volunteer-build-reviewed |
 | M125803 | P0140 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MemTwKerIffAverage` | volunteer-build-reviewed |
-| M125804 | P2232 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MemTwKerOfFibIntEqZero` | volunteer-build-reviewed |

@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M157643 | P0777 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeilStabilizerVolume.LocDensVolS` | wave-reused |
 | M157644 | P0605 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeilStabilizerVolume.LocDensVolT` | wave-reused |
 | M157645 | P0804 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeilStabilizerVolume.LocDensVolTop` | wave-reused |
 | M157646 | P0539 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeilStabilizerVolume.LocExOf` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M158046 | P0424 | `Formalism.RealPlaceAnalysis.RealPlaceTaylor.VectorComplexifiedDerivativeCommutator` | wave-reused |
 | M158047 | P0156 | `Formalism.RealPlaceAnalysis.SmoothOnG` | wave-reused |
 | M158048 | P0379 | `Formalism.RealPlaceAnalysis.SmoothOnGVIff` | wave-reused |
-| M158049 | P0332 | `Formalism.RealPlaceAnalysis.SmoothVectorGrowthBound` | wave-reused |

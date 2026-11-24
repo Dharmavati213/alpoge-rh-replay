@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M164342 | P0162 | `GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PRegularSequenceLengthLeDim` | volunteer-build-reviewed |
 | M164343 | P0284 | `GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PRemovableHyperplane` | wave-reused |
 | M164344 | P0336 | `GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PRiemannExtensionAnalytic` | volunteer-build-reviewed |
 | M164345 | P0336 | `GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PRiemannExtensionPolynomial` | wave-reused |
@@ -401,4 +402,3 @@
 | M164836 | P0383 | `GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceComponents` | wave-reused |
 | M164837 | P0640 | `GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceCutBoundary` | wave-reused |
 | M164839 | P0670 | `GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceCutDecay` | wave-reused |
-| M164840 | P0383 | `GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceCutOffLimit` | wave-reused |

@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M109883 | P0412 | `Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.TotallyRealRoots.GalOpen` | wave-reused |
 | M109884 | P0317 | `Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.TotallyRealRoots.GalRoots` | wave-reused |
 | M109885 | P0317 | `Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.TotallyRealRoots.Generate` | wave-reused |
 | M109886 | P0135 | `Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.TotallyRealRoots.LeNuIffPowMemPrinc` | wave-reused |
@@ -401,4 +402,3 @@
 | M110376 | P2590 | `Development.AutomorphicArithmetic.DivisorFrames.SemiFibrePointGivesModelObject` | volunteer-build-reviewed |
 | M110377 | P1950 | `Development.AutomorphicArithmetic.DivisorFrames.SemiabelianQuotientTorusInvariants` | volunteer-build-reviewed |
 | M110378 | P0367 | `Development.AutomorphicArithmetic.DivisorFrames.SetIntegralMemAddSubgroupOfOpenSubgroupInvariant` | volunteer-build-reviewed |
-| M110379 | P2129 | `Development.AutomorphicArithmetic.DivisorFrames.ShellSumEqConstOfTwistEqIndicatorDoubleCoset` | volunteer-build-reviewed |

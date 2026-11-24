@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M140448 | P0210 | `Development.WeilBound.CoreStatements.TorusUniformisation.ChowMahlerFamilies.KernelLatticeBaseChange` | volunteer-build-reviewed |
 | M140449 | P2445 | `Development.WeilBound.CoreStatements.TorusUniformisation.ChowMahlerFamilies.KernelMem` | volunteer-build-reviewed |
 | M140450 | P0145 | `Development.WeilBound.CoreStatements.TorusUniformisation.ChowMahlerFamilies.KernelRankAlgebraicBound` | volunteer-build-reviewed |
 | M140452 | P0066 | `Development.WeilBound.CoreStatements.TorusUniformisation.ChowMahlerFamilies.KernelRankNormBound` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M141374 | P0145 | `Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.SatakeExponents.UniformizerValuations.ShuffleChoices.EvalGLShift` | volunteer-build-reviewed |
 | M141376 | P2502 | `Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.SatakeExponents.UniformizerValuations.ShuffleChoices.ShufStd` | volunteer-build-reviewed |
 | M141377 | P2528 | `Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.SatakeExponents.UniformizerValuations.ShuffleChoices.SumPairSignEqRho` | volunteer-build-reviewed |
-| M141379 | P2528 | `Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.SatakeExponents.UniformizerValuations.ShuffleChoices.ValEqCard` | volunteer-build-reviewed |

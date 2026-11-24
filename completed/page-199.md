@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M131240 | P0661 | `Development.AutomorphicSpectrum.Proofs.GeometryProofs.JoinCoordsCoordTieStatement` | volunteer-build-reviewed |
 | M131241 | P0826 | `Development.AutomorphicSpectrum.Proofs.GeometryProofs.JoinCoordsUnitValues` | volunteer-build-reviewed |
 | M131243 | P0826 | `Development.AutomorphicSpectrum.Proofs.GeometryProofs.JoinModelPointsLift` | volunteer-build-reviewed |
 | M131246 | P0799 | `Development.AutomorphicSpectrum.Proofs.GeometryProofs.JoinModelPointsProjectStatement` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M131913 | P2552 | `Development.AutomorphicSpectrum.Proofs.GeometryProofs.RootModelFlagHeight` | volunteer-build-reviewed |
 | M131914 | P2573 | `Development.AutomorphicSpectrum.Proofs.GeometryProofs.RootModelFlagHeightStatement` | volunteer-build-reviewed |
 | M131916 | P2701 | `Development.AutomorphicSpectrum.Proofs.GeometryProofs.RootOriginCompareFirstStatement` | volunteer-build-reviewed |
-| M131918 | P2701 | `Development.AutomorphicSpectrum.Proofs.GeometryProofs.RootOriginCompareSecondStatement` | volunteer-build-reviewed |

@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M153141 | P1734 | `Formalism.LocalToGlobal.UnitaryNorms.DatumS` | build-observed |
 | M153142 | P0859 | `Formalism.LocalToGlobal.UnitaryNorms.DefsDatum` | build-observed |
 | M153143 | P0831 | `Formalism.LocalToGlobal.UnitaryNorms.ExistsCycAct` | build-observed |
 | M153144 | P0503 | `Formalism.LocalToGlobal.UnitaryNorms.IotaABijective` | build-observed |
@@ -401,4 +402,3 @@
 | M153552 | P0073 | `Formalism.PeriodIntegrals.HeisDefs` | volunteer-build-reviewed |
 | M153553 | P0151 | `Formalism.PeriodIntegrals.HeisMul` | build-observed |
 | M153554 | P0151 | `Formalism.PeriodIntegrals.HeisNorm` | build-observed |
-| M153555 | P0151 | `Formalism.PeriodIntegrals.HeisPull` | build-observed |

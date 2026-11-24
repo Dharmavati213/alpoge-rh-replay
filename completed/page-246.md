@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M159442 | P1215 | `Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.ThrLPOf` | build-observed |
 | M159443 | P1215 | `Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.ThresholdDensityFacts` | build-observed |
 | M159444 | P1167 | `Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.ThresholdFinalFacts` | build-observed |
 | M159445 | P1167 | `Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.ThresholdFixedWeightFacts` | build-observed |
@@ -401,4 +402,3 @@
 | M159853 | P1081 | `Formalism.SharpRestriction.GrowthBounds.MultisetValuation.EntryAOneParity` | build-observed |
 | M159854 | P1321 | `Formalism.SharpRestriction.GrowthBounds.MultisetValuation.ExistsAtPiG1EqCPowMulIntegralSeries` | build-observed |
 | M159855 | P1296 | `Formalism.SharpRestriction.GrowthBounds.MultisetValuation.ExpansionAllPlacesOfPlace` | build-observed |
-| M159856 | P1111 | `Formalism.SharpRestriction.GrowthBounds.MultisetValuation.FacEmbDomain` | build-observed |

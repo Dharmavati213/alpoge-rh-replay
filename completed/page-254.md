@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M163220 | P0606 | `GroundTheory.GlobalFields.IdeleClassGroup.IdeleClassMapIdeleClassMap` | build-observed |
 | M163221 | P0698 | `GroundTheory.GlobalFields.IdeleClassGroup.Invariants` | build-observed |
 | M163222 | P0725 | `GroundTheory.GlobalFields.IdeleClassGroup.InvariantsGalois` | build-observed |
 | M163223 | P0942 | `GroundTheory.GlobalFields.IdeleClassGroup.NatCardTateOfIsCyclic` | build-observed |
@@ -401,4 +402,3 @@
 | M163711 | P0161 | `GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.PTrdegAdjoinLe` | volunteer-build-reviewed |
 | M163712 | P0161 | `GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.PTrdegBaseAlgebraic` | volunteer-build-reviewed |
 | M163713 | P0161 | `GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.PZeroLocusDimH` | wave-reused |
-| M163714 | P0081 | `GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.ReducedTensorPerfect` | volunteer-build-reviewed |

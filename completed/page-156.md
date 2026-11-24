@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M106940 | P2756 | `Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.TGalAEOf` | volunteer-build-reviewed |
 | M106942 | P2704 | `Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.TGapTwo` | volunteer-build-reviewed |
 | M106943 | P2698 | `Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.TGlobFixed` | volunteer-build-reviewed |
 | M106944 | P2766 | `Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.TGoodW` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M107380 | P0200 | `Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.TraceFormula.OrbitalIntegrals.TwistedOrbitalIntegrals.Untwist` | volunteer-build-reviewed |
 | M107381 | P2061 | `Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.TraceFormula.SplitRigidity.AbsShare` | volunteer-build-reviewed |
 | M107382 | P2775 | `Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.TraceFormula.SplitRigidity.AntiTw` | volunteer-build-reviewed |
-| M107383 | P2785 | `Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.TraceFormula.SplitRigidity.HasOfSplit` | volunteer-build-reviewed |

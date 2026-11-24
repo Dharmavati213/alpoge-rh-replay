@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M162750 | P0778 | `GroundTheory.AutomorphicForms.HarishChandraRegularity` | wave-reused |
 | M162751 | P0425 | `GroundTheory.AutomorphicForms.HarishChandraRegularity.CartanBasis` | wave-reused |
 | M162752 | P0333 | `GroundTheory.AutomorphicForms.HarishChandraRegularity.ContDiffCompCoordEquiv` | wave-reused |
 | M162753 | P0380 | `GroundTheory.AutomorphicForms.HarishChandraRegularity.ExpChart` | wave-reused |
@@ -401,4 +402,3 @@
 | M163217 | P0465 | `GroundTheory.GlobalFields.HerbrandQuotients.UnitsHerbrandValue` | wave-reused |
 | M163218 | P0670 | `GroundTheory.GlobalFields.IdeleClassGroup.ConjugateNorm` | build-observed |
 | M163219 | P0639 | `GroundTheory.GlobalFields.IdeleClassGroup.IdeleClassEquivIdeleClassMapOfComm` | build-observed |
-| M163220 | P0606 | `GroundTheory.GlobalFields.IdeleClassGroup.IdeleClassMapIdeleClassMap` | build-observed |

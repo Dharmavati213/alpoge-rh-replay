@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M161897 | P0379 | `Formalism.WachLatticeTwists.HerrComplexInjectivity.StatementH` | wave-reused |
 | M161898 | P0281 | `Formalism.WachLatticeTwists.HodgeTateChains.AdicPerturbationFixedFreeAndCoboundary` | wave-reused |
 | M161899 | P0669 | `Formalism.WachLatticeTwists.HodgeTateChains.CorrectedHypothesisWConsequences` | wave-reused |
 | M161900 | P0379 | `Formalism.WachLatticeTwists.HodgeTateChains.FrobeniusPowerCongruence` | wave-reused |
@@ -401,4 +402,3 @@
 | M162328 | P0606 | `GroundTheory.ArithmeticGeometry.SchemeCohomology.ProjectiveCohomology.ImmersionCech` | wave-reused |
 | M162329 | P0606 | `GroundTheory.ArithmeticGeometry.SchemeCohomology.ProjectiveCohomology.ImmersionProj` | wave-reused |
 | M162330 | P0281 | `GroundTheory.ArithmeticGeometry.SchemeCohomology.ProjectiveCohomology.ImmersionPullback` | wave-reused |
-| M162331 | P0574 | `GroundTheory.ArithmeticGeometry.SchemeCohomology.ProjectiveCohomology.ImmersionPush` | wave-reused |

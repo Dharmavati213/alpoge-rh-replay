@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M148008 | P0967 | `Formalism.LocalToGlobal.Columns.CardPathsEqSubmodulePairs` | build-observed |
 | M148009 | P1163 | `Formalism.LocalToGlobal.Columns.ChainFrmOk` | build-observed |
 | M148010 | P1211 | `Formalism.LocalToGlobal.Columns.ChainInst` | build-observed |
 | M148011 | P1415 | `Formalism.LocalToGlobal.Columns.ChainInstS` | build-observed |
@@ -401,4 +402,3 @@
 | M148596 | P1266 | `Formalism.LocalToGlobal.GlobalTheory.FamColC` | build-observed |
 | M148597 | P1238 | `Formalism.LocalToGlobal.GlobalTheory.FamColP` | build-observed |
 | M148598 | P1049 | `Formalism.LocalToGlobal.GlobalTheory.FamRec` | build-observed |
-| M148599 | P1077 | `Formalism.LocalToGlobal.GlobalTheory.FamRecP` | build-observed |

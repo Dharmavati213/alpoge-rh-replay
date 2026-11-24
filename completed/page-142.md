@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M098674 | P1132 | `Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ExistsFourierJacobiExpansionOverFieldStatement` | wave-reused |
 | M098675 | P0740 | `Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ExistsFourthSide` | wave-reused |
 | M098676 | P0877 | `Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ExistsFrameRatio` | build-observed |
 | M098678 | P1132 | `Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ExistsFunctionalEquationSectionNonzeroClass` | build-observed |
@@ -401,4 +402,3 @@
 | M099289 | P0960 | `Development.AbelianVarietyTheory.Proofs.UniformizationProofs.UniformisationPolarisationsAgreeAtLevel` | wave-reused |
 | M099290 | P0989 | `Development.AbelianVarietyTheory.Proofs.UniformizationProofs.UniformisationPolarisationsAgreeAtLevelStatement` | wave-reused |
 | M099291 | P1286 | `Development.AbelianVarietyTheory.Proofs.UniformizationProofs.UniformisationPolarisedAbelianSchemesIso` | wave-reused |
-| M099292 | P1313 | `Development.AbelianVarietyTheory.Proofs.UniformizationProofs.UniformisationPolarisedAbelianSchemesIsoStatement` | wave-reused |

@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M116316 | P1826 | `Development.AutomorphicArithmetic.ThetaCorrespondence.RallisInnerProduct.ExistsCommonLevelSobolevBoundWeilCompact` | volunteer-build-reviewed |
 | M116317 | P2129 | `Development.AutomorphicArithmetic.ThetaCorrespondence.RallisInnerProduct.GraphRelationExtendsFromFockVectorsToKFinite` | volunteer-build-reviewed |
 | M116318 | P2103 | `Development.AutomorphicArithmetic.ThetaCorrespondence.RallisInnerProduct.ThetaFunApproxByFockVectorsOfCartanInvolutions` | volunteer-build-reviewed |
 | M116320 | P0136 | `Development.AutomorphicArithmetic.ThetaCorrespondence.RealBands.BandCc` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M116781 | P2526 | `Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.LocalTypeDictionary.KplugFill` | volunteer-build-reviewed |
 | M116783 | P2441 | `Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.LocalTypeDictionary.LeadingCoefficientTermLawTheta` | volunteer-build-reviewed |
 | M116784 | P2499 | `Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.LocalTypeDictionary.LieActionMemKerPolarizationProjection` | volunteer-build-reviewed |
-| M116785 | P2526 | `Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.LocalTypeDictionary.LieAlgebraPreservesPolynomialKernel` | volunteer-build-reviewed |

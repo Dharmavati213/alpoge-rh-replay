@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M115744 | P0057 | `Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.SquareOfApproximation` | volunteer-build-reviewed |
 | M115745 | P0057 | `Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.Stabilizer` | volunteer-build-reviewed |
 | M115746 | P0057 | `Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.StabilizerIsOpen` | volunteer-build-reviewed |
 | M115747 | P0057 | `Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.StabilizerOf` | wave-reused |
@@ -401,4 +402,3 @@
 | M116308 | P0136 | `Development.AutomorphicArithmetic.ThetaCorrespondence.HoweDuality.SlotBasic` | volunteer-build-reviewed |
 | M116310 | P1159 | `Development.AutomorphicArithmetic.ThetaCorrespondence.LocalComparison.CoeNeTo6` | worker-kernel-checked |
 | M116314 | P2242 | `Development.AutomorphicArithmetic.ThetaCorrespondence.LocalLanglands.UnitaryThetaCorrespondenceOfHyp` | volunteer-build-reviewed |
-| M116316 | P1826 | `Development.AutomorphicArithmetic.ThetaCorrespondence.RallisInnerProduct.ExistsCommonLevelSobolevBoundWeilCompact` | volunteer-build-reviewed |

@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M102521 | P1158 | `Development.AutomorphicArithmetic.AutomorphicVarieties.CharacterLevelBounds.H0LocalCardBoundedOfClsKerLeKer` | build-observed |
 | M102522 | P0625 | `Development.AutomorphicArithmetic.AutomorphicVarieties.CharacterLevelBounds.H0Nu` | build-observed |
 | M102526 | P0625 | `Development.AutomorphicArithmetic.AutomorphicVarieties.CharacterLevelBounds.LevChange` | build-observed |
 | M102527 | P0625 | `Development.AutomorphicArithmetic.AutomorphicVarieties.CharacterLevelBounds.LevGal` | build-observed |
@@ -401,4 +402,3 @@
 | M103200 | P0365 | `Development.AutomorphicArithmetic.AutomorphicVarieties.FrobeniusSmoothVectors.Oddm` | wave-reused |
 | M103203 | P2569 | `Development.AutomorphicArithmetic.AutomorphicVarieties.FrobeniusSmoothVectors.OkBasic` | volunteer-build-reviewed |
 | M103204 | P0488 | `Development.AutomorphicArithmetic.AutomorphicVarieties.FrobeniusSmoothVectors.OneAddMaximalIdealSubsetUnits` | wave-reused |
-| M103205 | P0365 | `Development.AutomorphicArithmetic.AutomorphicVarieties.FrobeniusSmoothVectors.OrdOfFlag` | wave-reused |

@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M155854 | P0696 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalGlobalInclusion.SmulMemIdealSmul` | build-observed |
 | M155855 | P0153 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalGlobalLattice.ExistsSmulMemOfLocal` | build-observed |
 | M155856 | P0377 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalGluing.ExistsIntegralMultiple` | volunteer-build-reviewed |
 | M155857 | P0423 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalGluing.LocGlueOf` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M156304 | P0219 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.PolynomialDifferentialWords.PolarizationBihomogeneous` | build-observed |
 | M156305 | P0219 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.PolynomialDifferentialWords.VanishExp` | build-observed |
 | M156306 | P0278 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.PolynomialDifferentialWords.VanishMain` | build-observed |
-| M156307 | P0637 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.PolynomialModelIsometry.Assembly` | wave-reused |

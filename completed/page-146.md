@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M101189 | P0312 | `Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.SpecGood` | volunteer-build-reviewed |
 | M101190 | P0409 | `Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.SplitsSelfOfIso` | build-observed |
 | M101191 | P1435 | `Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.TraceDefinitePairsEqAutomorphicTrace` | build-observed |
 | M101192 | P2523 | `Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.TwoNeZeroClosure` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M101825 | P2629 | `Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.NewformCoefficients.Decomp` | volunteer-build-reviewed |
 | M101826 | P2617 | `Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.NewformCoefficients.DirChar` | volunteer-build-reviewed |
 | M101827 | P2617 | `Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.NewformCoefficients.DvdOfOhat` | volunteer-build-reviewed |
-| M101828 | P2617 | `Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.NewformCoefficients.HkCoef` | volunteer-build-reviewed |

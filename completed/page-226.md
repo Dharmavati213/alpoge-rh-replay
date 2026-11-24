@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M149069 | P0911 | `Formalism.LocalToGlobal.GroupLattices.PerfectRings.CharZeroWittQuadratic` | build-observed |
 | M149070 | P0070 | `Formalism.LocalToGlobal.GroupLattices.PerfectRings.ExistsSqEqIntCast` | build-observed |
 | M149071 | P0939 | `Formalism.LocalToGlobal.GroupLattices.PerfectRings.ExtWEx` | build-observed |
 | M149072 | P0967 | `Formalism.LocalToGlobal.GroupLattices.PerfectRings.ExtWRec` | build-observed |
@@ -401,4 +402,3 @@
 | M149973 | P0911 | `Formalism.LocalToGlobal.KernelLattices.XiIndCClass` | build-observed |
 | M149974 | P0995 | `Formalism.LocalToGlobal.LatticeGeometry.AmpleOnAbelianBase` | build-observed |
 | M149975 | P0830 | `Formalism.LocalToGlobal.LatticeGeometry.ArVolEqOfNef` | build-observed |
-| M149976 | P0802 | `Formalism.LocalToGlobal.LatticeGeometry.CmTypeMeetsConjugatePair` | build-observed |

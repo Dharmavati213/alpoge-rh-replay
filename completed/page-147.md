@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M101828 | P2617 | `Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.NewformCoefficients.HkCoef` | volunteer-build-reviewed |
 | M101829 | P2603 | `Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.NewformCoefficients.Imports` | volunteer-build-reviewed |
 | M101830 | P2603 | `Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.NewformCoefficients.InfGLScalar` | volunteer-build-reviewed |
 | M101831 | P2603 | `Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.NewformCoefficients.IntOfIntegers` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M102515 | P0625 | `Development.AutomorphicArithmetic.AutomorphicVarieties.CharacterLevelBounds.ClsFacts` | wave-reused |
 | M102516 | P1133 | `Development.AutomorphicArithmetic.AutomorphicVarieties.CharacterLevelBounds.ClsOnto` | build-observed |
 | M102520 | P0656 | `Development.AutomorphicArithmetic.AutomorphicVarieties.CharacterLevelBounds.FactorGS` | wave-reused |
-| M102521 | P1158 | `Development.AutomorphicArithmetic.AutomorphicVarieties.CharacterLevelBounds.H0LocalCardBoundedOfClsKerLeKer` | build-observed |

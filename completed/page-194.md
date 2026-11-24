@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M127654 | P1829 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SmulInvSub` | volunteer-build-reviewed |
 | M127656 | P0207 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SmulMemRangeLTensorOfLTensorEqZero` | volunteer-build-reviewed |
 | M127657 | P1729 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SmulQuotientInvMkEqMkIffMulEquiv` | volunteer-build-reviewed |
 | M127658 | P0141 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SmulSmulMemRange` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M128382 | P1524 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TwistedKernelOfSmallBoxCharacterStatement` | volunteer-build-reviewed |
 | M128383 | P1782 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TwistedKernelSupDistributesSubreps` | volunteer-build-reviewed |
 | M128384 | P1806 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TwistedKernelSupDistributesSubrepsStatement` | volunteer-build-reviewed |
-| M128385 | P2152 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TwistedLatticeSumsBoundedProduct` | volunteer-build-reviewed |

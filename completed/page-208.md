@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M136864 | P0535 | `Development.ResolutionOfSingularities.EmbeddedResolution.StrongResolution.AffineResolutionConditions` | wave-reused |
 | M136865 | P0322 | `Development.ResolutionOfSingularities.EmbeddedResolution.StrongResolution.AffineSpaceSmooth` | wave-reused |
 | M136866 | P0568 | `Development.ResolutionOfSingularities.EmbeddedResolution.StrongResolution.CentersLieOverSingularLocus` | wave-reused |
 | M136867 | P0322 | `Development.ResolutionOfSingularities.EmbeddedResolution.StrongResolution.ClosedEmbeddingsIntoAffineSpace` | wave-reused |
@@ -401,4 +402,3 @@
 | M137789 | P1755 | `Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.WhitGenLowOf` | volunteer-build-reviewed |
 | M137792 | P0065 | `Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.WhittakerCovolume.CovolUnique` | volunteer-build-reviewed |
 | M137796 | P2196 | `Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.WhittakerCovolume.GenDictXOf` | volunteer-build-reviewed |
-| M137798 | P2164 | `Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.WhittakerCovolume.Height` | volunteer-build-reviewed |

@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M160842 | P0942 | `Formalism.SharpRestriction.LevelLetterCocycles.MapCompZero` | build-observed |
 | M160843 | P1141 | `Formalism.SharpRestriction.LevelLetterCocycles.MapEqOfProdEq` | build-observed |
 | M160844 | P0998 | `Formalism.SharpRestriction.LevelLetterCocycles.MapEvalPsPi` | wave-reused |
 | M160845 | P0913 | `Formalism.SharpRestriction.LevelLetterCocycles.MatOfEquiv` | wave-reused |
@@ -401,4 +402,3 @@
 | M161481 | P0464 | `Formalism.ThetaLogCoordinates.DualWeylCoordinates.DualWeylProofs.QsColHHigh` | build-observed |
 | M161482 | P0506 | `Formalism.ThetaLogCoordinates.DualWeylCoordinates.DualWeylProofs.QsColHStrip` | build-observed |
 | M161483 | P0332 | `Formalism.ThetaLogCoordinates.DualWeylCoordinates.DualWeylProofs.QsMnTranspose` | build-observed |
-| M161484 | P0379 | `Formalism.ThetaLogCoordinates.DualWeylCoordinates.DualWeylProofs.QsRemIffAdd` | build-observed |

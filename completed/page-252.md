@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M162331 | P0574 | `GroundTheory.ArithmeticGeometry.SchemeCohomology.ProjectiveCohomology.ImmersionPush` | wave-reused |
 | M162332 | P0541 | `GroundTheory.ArithmeticGeometry.SchemeCohomology.ProjectiveCohomology.IsQuasicoherentTensorOfInvertible` | wave-reused |
 | M162333 | P0465 | `GroundTheory.ArithmeticGeometry.SchemeCohomology.ProjectiveCohomology.ModulesAbExact` | wave-reused |
 | M162334 | P0541 | `GroundTheory.ArithmeticGeometry.SchemeCohomology.ProjectiveCohomology.PSpaceFinite` | wave-reused |
@@ -401,4 +402,3 @@
 | M162747 | P0282 | `GroundTheory.AutomorphicForms.HarishChandraCentre.Triangular` | wave-reused |
 | M162748 | P0380 | `GroundTheory.AutomorphicForms.HarishChandraCentre.VermaCoordEqZeroOfMemNPlusU` | wave-reused |
 | M162749 | P0465 | `GroundTheory.AutomorphicForms.HarishChandraInvariance.Compact` | wave-reused |
-| M162750 | P0778 | `GroundTheory.AutomorphicForms.HarishChandraRegularity` | wave-reused |

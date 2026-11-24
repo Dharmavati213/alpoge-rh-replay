@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M148599 | P1077 | `Formalism.LocalToGlobal.GlobalTheory.FamRecP` | build-observed |
 | M148600 | P1238 | `Formalism.LocalToGlobal.GlobalTheory.FamRows` | build-observed |
 | M148601 | P1266 | `Formalism.LocalToGlobal.GlobalTheory.FamRowsP` | build-observed |
 | M148602 | P1107 | `Formalism.LocalToGlobal.GlobalTheory.GL1.AdelicLatticeLinkFamily` | build-observed |
@@ -401,4 +402,3 @@
 | M149062 | P1163 | `Formalism.LocalToGlobal.GroupLattices.PendingLemmas.WeightUpdateAtPlace` | build-observed |
 | M149066 | P0213 | `Formalism.LocalToGlobal.GroupLattices.PendingLemmas.WittFractionToCpAlgebraMap` | build-observed |
 | M149068 | P0149 | `Formalism.LocalToGlobal.GroupLattices.PerfectRings.AlgebraMapFinite` | build-observed |
-| M149069 | P0911 | `Formalism.LocalToGlobal.GroupLattices.PerfectRings.CharZeroWittQuadratic` | build-observed |

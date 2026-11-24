@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M138646 | P0323 | `Development.WeilBound.CoreStatements.HomogeneousNonvanishing.TwGPadic` | build-observed |
 | M138647 | P0209 | `Development.WeilBound.CoreStatements.HomogeneousNonvanishing.TwGSemi` | volunteer-build-reviewed |
 | M138648 | P0144 | `Development.WeilBound.CoreStatements.HomogeneousNonvanishing.TwGStd` | volunteer-build-reviewed |
 | M138649 | P0144 | `Development.WeilBound.CoreStatements.HomogeneousNonvanishing.TwGTheta` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M139531 | P0601 | `Development.WeilBound.CoreStatements.PlurisubharmonicCones.FiniteOfTorsion` | wave-reused |
 | M139532 | P0145 | `Development.WeilBound.CoreStatements.PlurisubharmonicCones.FiniteSat` | volunteer-build-reviewed |
 | M139537 | P0269 | `Development.WeilBound.CoreStatements.PlurisubharmonicCones.GeoNumOneLin` | volunteer-build-reviewed |
-| M139538 | P2592 | `Development.WeilBound.CoreStatements.PlurisubharmonicCones.GoodOriginTowerHeight` | volunteer-build-reviewed |

@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M100551 | P0130 | `Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.SplittingIdempotents` | volunteer-build-reviewed |
 | M100552 | P0878 | `Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.SquarefreeMapMinpolyInt` | build-observed |
 | M100553 | P0713 | `Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.SubSurjectiveOfLinLeftInverse` | build-observed |
 | M100554 | P0042 | `Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.SubstEqOfCoeffEqOfKilled` | wave-reused |
@@ -401,4 +402,3 @@
 | M101186 | P2229 | `Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.SetAtOfSizeAt` | volunteer-build-reviewed |
 | M101187 | P2193 | `Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.SingleIndexPlacesAreTwisted` | volunteer-build-reviewed |
 | M101188 | P2216 | `Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.SizeAt` | volunteer-build-reviewed |
-| M101189 | P0312 | `Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.SpecGood` | volunteer-build-reviewed |

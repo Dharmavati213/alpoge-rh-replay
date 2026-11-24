@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M097436 | P1434 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.StepSplittingCharactersTameLevelResidueStatement` | volunteer-build-reviewed |
 | M097438 | P2060 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.StepVecCongr` | volunteer-build-reviewed |
 | M097439 | P1891 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.StepVectorLiftPairFlagLevelRealizedChain` | volunteer-build-reviewed |
 | M097440 | P1912 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.StepVectorLiftPairFlagLevelRealizedChainStatement` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M098062 | P1575 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.UnitaryAdelicHeightWittEmbeddingLeConstMul` | volunteer-build-reviewed |
 | M098065 | P1846 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.UnitaryArchimedeanCoordinateActionLinearMulStatement` | volunteer-build-reviewed |
 | M098067 | P1846 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.UnitaryArchimedeanCoordinateActionSymplecticStatement` | volunteer-build-reviewed |
-| M098068 | P2116 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.UnitaryArchimedeanLineOperatorsOneParameter` | volunteer-build-reviewed |

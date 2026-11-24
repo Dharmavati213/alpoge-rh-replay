@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M147123 | P1048 | `Formalism.HermitianCurvature.HermitianCurvatureProofs.UnipotentCharacterOneOfProduct` | build-observed |
 | M147124 | P0938 | `Formalism.HermitianCurvature.HermitianCurvatureProofs.UnipotentCoordinatesMeasurePreserving` | wave-reused |
 | M147125 | P0665 | `Formalism.HermitianCurvature.HermitianCurvatureProofs.UnipotentHeisenbergDecomposition` | wave-reused |
 | M147126 | P1048 | `Formalism.HermitianCurvature.HermitianCurvatureProofs.UnipotentLevelZeroEqOne` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M147559 | P0695 | `Formalism.LocalRingCardinality.SpanPowerMembership.GPlacesExampleNatAct` | build-observed |
 | M147560 | P0802 | `Formalism.LocalRingCardinality.SpanPowerMembership.GatAdd` | build-observed |
 | M147561 | P0069 | `Formalism.LocalRingCardinality.SpanPowerMembership.GatRing` | build-observed |
-| M147562 | P0666 | `Formalism.LocalRingCardinality.SpanPowerMembership.GatSetting` | build-observed |

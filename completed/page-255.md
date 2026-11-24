@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M163714 | P0081 | `GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.ReducedTensorPerfect` | volunteer-build-reviewed |
 | M163715 | P0161 | `GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.RenameProdMapMul` | wave-reused |
 | M163716 | P0283 | `GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.SectionLineAnyField` | volunteer-build-reviewed |
 | M163717 | P0335 | `GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.SpecFirstDetFormNeZero` | wave-reused |
@@ -401,4 +402,3 @@
 | M164338 | P0284 | `GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PRegularLocusDense` | volunteer-build-reviewed |
 | M164339 | P0284 | `GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PRegularLocusIdentity` | volunteer-build-reviewed |
 | M164341 | P0284 | `GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PRegularQuotientIndependent` | volunteer-build-reviewed |
-| M164342 | P0162 | `GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PRegularSequenceLengthLeDim` | volunteer-build-reviewed |

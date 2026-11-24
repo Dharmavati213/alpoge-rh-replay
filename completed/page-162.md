@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M110379 | P2129 | `Development.AutomorphicArithmetic.DivisorFrames.ShellSumEqConstOfTwistEqIndicatorDoubleCoset` | volunteer-build-reviewed |
 | M110380 | P2550 | `Development.AutomorphicArithmetic.DivisorFrames.SideDataGoodOnOpen` | volunteer-build-reviewed |
 | M110381 | P2572 | `Development.AutomorphicArithmetic.DivisorFrames.SideDataNonunitOnChart` | volunteer-build-reviewed |
 | M110383 | P1870 | `Development.AutomorphicArithmetic.DivisorFrames.SkewUnitaryReductionTheory` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M110870 | P1577 | `Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.ArchSlotEx` | volunteer-build-reviewed |
 | M110879 | P1892 | `Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.EigBasic` | volunteer-build-reviewed |
 | M110886 | P1913 | `Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.JUnique` | volunteer-build-reviewed |
-| M110887 | P1577 | `Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.JointEx` | volunteer-build-reviewed |

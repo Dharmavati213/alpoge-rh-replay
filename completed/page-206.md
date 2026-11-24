@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M135886 | P0632 | `Development.EtaleCohomology.EtaleSheaves.SecondDegreeKilling` | build-observed |
 | M135887 | P0533 | `Development.EtaleCohomology.EtaleSheaves.SecondDegreeKilling.HkpullComp` | build-observed |
 | M135888 | P0663 | `Development.EtaleCohomology.EtaleSheaves.SecondDegreeKilling.LeafKill2Of` | build-observed |
 | M135890 | P0632 | `Development.EtaleCohomology.EtaleSheaves.SheafIsomorphism` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M136461 | P0417 | `Development.ResolutionOfSingularities.EmbeddedResolution.DerivativeIdeal.PowerContainmentAndOrderLocus` | wave-reused |
 | M136462 | P0663 | `Development.ResolutionOfSingularities.EmbeddedResolution.DerivativeIdeal.StrictTransformLogDerivativeIdealSheaf` | wave-reused |
 | M136463 | P0064 | `Development.ResolutionOfSingularities.EmbeddedResolution.DerivativeIdeal.TaylorExpansion` | volunteer-build-reviewed |
-| M136464 | P0144 | `Development.ResolutionOfSingularities.EmbeddedResolution.DerivativeIdeal.TaylorExpansionComparison` | wave-reused |

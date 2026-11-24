@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M133940 | P0268 | `Development.AutomorphicSpectrum.Proofs.MetricProofs.LeviZeroInCompatibleChart` | build-observed |
 | M133941 | P0321 | `Development.AutomorphicSpectrum.Proofs.MetricProofs.LeviZeroInCompatibleChartStatement` | build-observed |
 | M133948 | P0143 | `Development.AutomorphicSpectrum.Proofs.MetricProofs.LimRateMulLogSqLe` | volunteer-build-reviewed |
 | M133949 | P0496 | `Development.AutomorphicSpectrum.Proofs.MetricProofs.LineIsomorphismDefectFunction` | build-observed |
@@ -401,4 +402,3 @@
 | M134548 | P0883 | `Development.AutomorphicSpectrum.Proofs.MetricProofs.TwoPointFibreChartSeventh` | build-observed |
 | M134549 | P0909 | `Development.AutomorphicSpectrum.Proofs.MetricProofs.TwoPointFibreChartSeventhStatement` | build-observed |
 | M134550 | P0883 | `Development.AutomorphicSpectrum.Proofs.MetricProofs.TwoPointFibreChartSixth` | build-observed |
-| M134551 | P0909 | `Development.AutomorphicSpectrum.Proofs.MetricProofs.TwoPointFibreChartSixthStatement` | build-observed |

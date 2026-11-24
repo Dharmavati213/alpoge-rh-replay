@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M157158 | P0220 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.TranslationInvariantLattice.TransInvLatOfPhase` | build-observed |
 | M157159 | P0155 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.TwistedCharacterOne.IsIntegralAtSuperdiagonalSum` | build-observed |
 | M157160 | P0220 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.TwistedCharacterOne.TwChrOneMain` | build-observed |
 | M157161 | P0423 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.TwistedEisensteinCoset.ChangeVariablesDeterminantOne` | build-observed |
@@ -401,4 +402,3 @@
 | M157640 | P0605 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeilStabilizerVolume.LocDensVolB` | wave-reused |
 | M157641 | P0723 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeilStabilizerVolume.LocDensVolC` | wave-reused |
 | M157642 | P0832 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeilStabilizerVolume.LocDensVolDone` | wave-reused |
-| M157643 | P0777 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeilStabilizerVolume.LocDensVolS` | wave-reused |

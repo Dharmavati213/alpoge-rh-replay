@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M144593 | P0634 | `Formalism.GL3MeanSquares.BoxCountAll` | build-observed |
 | M144594 | P0147 | `Formalism.GL3MeanSquares.ConcavityEquidistribution` | wave-reused |
 | M144595 | P0420 | `Formalism.GL3MeanSquares.CongruenceTorsion` | build-observed |
 | M144596 | P0536 | `Formalism.GL3MeanSquares.FinalB` | wave-reused |
@@ -401,4 +402,3 @@
 | M144993 | P0634 | `Formalism.GL3MeanSquares.HookFormulaTorsion.SecondEstimateOfHypothesis` | build-observed |
 | M144994 | P0212 | `Formalism.GL3MeanSquares.HookFormulaTorsion.SeparatedSetPackingBound` | build-observed |
 | M144995 | P0271 | `Formalism.GL3MeanSquares.HookFormulaTorsion.ShortIntervalImpliesProgressionsStatement` | build-observed |
-| M144996 | P0271 | `Formalism.GL3MeanSquares.HookFormulaTorsion.SizeEstimates` | build-observed |

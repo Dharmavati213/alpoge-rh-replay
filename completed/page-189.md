@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M124332 | P1804 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntegrableMulCIff` | volunteer-build-reviewed |
 | M124333 | P2264 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntegrableMulInner` | volunteer-build-reviewed |
 | M124334 | P1873 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntegrableMulIntInd` | build-observed |
 | M124337 | P0061 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntegrableOfMulUnimodular` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M125065 | P1804 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LeafBound` | volunteer-build-reviewed |
 | M125066 | P1828 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LeafBoundStatement` | volunteer-build-reviewed |
 | M125067 | P0140 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LeftCommLTensorNatural` | volunteer-build-reviewed |
-| M125070 | P2076 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LeftInvSubtypeSum` | volunteer-build-reviewed |

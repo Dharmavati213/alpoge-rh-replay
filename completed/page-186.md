@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M122452 | P2573 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DoubleCosetMultiplicationStatement` | volunteer-build-reviewed |
 | M122456 | P1849 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DualChangeOfVariablesIdentities` | volunteer-build-reviewed |
 | M122463 | P1550 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DualClassTwistNegStatement` | volunteer-build-reviewed |
 | M122464 | P1827 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DualFWeightLe` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M123092 | P2527 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FactorThroughFiniteFlat` | volunteer-build-reviewed |
 | M123093 | P2552 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FactorThroughFiniteFlatStatement` | volunteer-build-reviewed |
 | M123095 | P1752 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FactorizableSchwartzOrbitalIntegral` | volunteer-build-reviewed |
-| M123096 | P1779 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FactorizableSchwartzOrbitalIntegralStatement` | volunteer-build-reviewed |

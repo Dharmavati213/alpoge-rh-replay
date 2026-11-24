@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M173635 | P0344 | `ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.MemOfProjTwoEqZero` | wave-reused |
 | M173636 | P0291 | `ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.NormProjectionSq` | wave-reused |
 | M173637 | P0092 | `ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.OneAddPowSubOneLe` | wave-reused |
 | M173638 | P0514 | `ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.OneChar` | wave-reused |
@@ -401,4 +402,3 @@
 | M174063 | P1243 | `ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.SigZeroDecay` | wave-reused |
 | M174066 | P0944 | `ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.SigZeroTopA` | build-observed |
 | M174067 | P1000 | `ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.SlmPhiCont` | wave-reused |
-| M174068 | P0890 | `ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.Smooth` | wave-reused |

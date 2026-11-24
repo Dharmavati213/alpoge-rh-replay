@@ -23,3 +23,4 @@
 | [@RhizoNymph](https://github.com/RhizoNymph) | [P2748](https://github.com/rohanarun/alpoge-rh-replay/issues/25103#issuecomment-7085656907) | 64 | [Build evidence verified](../../../evidence/volunteers/P2748.json) |
 | [@UnityChaos](https://github.com/UnityChaos) | [P2771](https://github.com/rohanarun/alpoge-rh-replay/issues/30424#issuecomment-7088754643) | 64 | [Build evidence verified](../../../evidence/volunteers/P2771.json) |
 | [@hipotures](https://github.com/hipotures) | [M164958](https://github.com/rohanarun/alpoge-rh-replay/issues/34579#issuecomment-7082827663) | 1 | [Build evidence verified](../../../evidence/volunteers/M164958.json) |
+| [@JamCh01](https://github.com/JamCh01) | [M094425](https://github.com/rohanarun/alpoge-rh-replay/issues/34578#issuecomment-7082829494) | 1 | [Build evidence verified](../../../evidence/volunteers/M094425.json) |

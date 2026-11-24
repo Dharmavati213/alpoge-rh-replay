@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M158049 | P0332 | `Formalism.RealPlaceAnalysis.SmoothVectorGrowthBound` | wave-reused |
 | M158050 | P0077 | `Formalism.RealPlaceAnalysis.StatementA` | wave-reused |
 | M158051 | P0156 | `Formalism.RealPlaceAnalysis.StatementB` | wave-reused |
 | M158052 | P0221 | `Formalism.RealPlaceAnalysis.StatementC` | wave-reused |
@@ -401,4 +402,3 @@
 | M158490 | P0750 | `Formalism.SharpRestriction.CuspSpanNormBounds.LocalDataRealPlace` | wave-reused |
 | M158491 | P0860 | `Formalism.SharpRestriction.CuspSpanNormBounds.LocalGroupInFamilyNontrivial` | wave-reused |
 | M158492 | P1023 | `Formalism.SharpRestriction.CuspSpanNormBounds.LocalModelPeriodLattices` | build-observed |
-| M158493 | P1052 | `Formalism.SharpRestriction.CuspSpanNormBounds.LocalOrbitGerms` | build-observed |

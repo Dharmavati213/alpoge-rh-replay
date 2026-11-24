@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M095400 | P1409 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.IwasawaStdMaxParab` | volunteer-build-reviewed |
 | M095401 | P1987 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.JEvExistsAndJEvBar` | volunteer-build-reviewed |
 | M095402 | P2007 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.JacobiActionFunctionIsUnfoldingNoCompactCore` | volunteer-build-reviewed |
 | M095403 | P2026 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.JacobiActionFunctionIsUnfoldingNoCompactCoreStatement` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M095863 | P0795 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.MapWithDensityOfJacobianComplexMatrices` | build-observed |
 | M095865 | P1547 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.MatCoordScalarMul` | volunteer-build-reviewed |
 | M095866 | P1987 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.MatchOfPolMatch` | volunteer-build-reviewed |
-| M095867 | P1434 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.MatchUpOfTr` | volunteer-build-reviewed |

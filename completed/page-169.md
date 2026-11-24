@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M114016 | P2193 | `Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.ThetaKernels.HeightFunctionContinuousPos` | volunteer-build-reviewed |
 | M114017 | P2162 | `Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.ThetaKernels.HeisCK` | volunteer-build-reviewed |
 | M114018 | P2172 | `Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.ThetaKernels.HeisOFDblGDeltaTK` | volunteer-build-reviewed |
 | M114019 | P2162 | `Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.ThetaKernels.HeisOFDerivFixK` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M114436 | P2184 | `Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.ThetaKernels.ThetaOfSmFK` | volunteer-build-reviewed |
 | M114437 | P2205 | `Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.ThetaKernels.ThetaPreservingEndomorphismScalar` | volunteer-build-reviewed |
 | M114438 | P2173 | `Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.ThetaKernels.ThetaSubspaceHaarIntegral` | volunteer-build-reviewed |
-| M114439 | P2173 | `Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.ThetaKernels.ThetaSumRationalPairInvariant` | volunteer-build-reviewed |

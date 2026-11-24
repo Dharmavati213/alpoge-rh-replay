@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M126394 | P2232 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ParabolicFactorizationRowsStatement` | volunteer-build-reviewed |
 | M126395 | P0140 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ParabolicFundamentalDomainSplit` | volunteer-build-reviewed |
 | M126397 | P0140 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ParabolicFundamentalDomainVolume` | volunteer-build-reviewed |
 | M126401 | P1896 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ParabolicIffFrameParabolic` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M126973 | P0140 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RealizationAdd` | volunteer-build-reviewed |
 | M126974 | P0206 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RealizationAddStatement` | volunteer-build-reviewed |
 | M126976 | P0206 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RealizationCupProductStatement` | volunteer-build-reviewed |
-| M126977 | P0140 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RealizationFunctorial` | volunteer-build-reviewed |

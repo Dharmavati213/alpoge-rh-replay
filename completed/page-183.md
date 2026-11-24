@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M120677 | P0059 | `Development.AutomorphicSpectrum.Proofs.AlgebraProofs.SymplecticUnipotentShape` | volunteer-build-reviewed |
 | M120678 | P1074 | `Development.AutomorphicSpectrum.Proofs.AlgebraProofs.TateMapDualHomBidual` | build-observed |
 | M120679 | P0204 | `Development.AutomorphicSpectrum.Proofs.AlgebraProofs.TeichmullerCharacterExists` | volunteer-build-reviewed |
 | M120680 | P0264 | `Development.AutomorphicSpectrum.Proofs.AlgebraProofs.TeichmullerCharacterExistsStatement` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M121266 | P1634 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CellLeviTensorDecompositionStatement` | volunteer-build-reviewed |
 | M121267 | P0138 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CellSumOfCntBasic` | volunteer-build-reviewed |
 | M121269 | P2028 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CenterActsByScalarOnCyclicStatement` | volunteer-build-reviewed |
-| M121270 | P1607 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CenterCommutesLieAction` | volunteer-build-reviewed |

@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M108229 | P1725 | `Development.AutomorphicArithmetic.AutomorphicVarieties.SelmerModuleFiniteness.CardSelmerMulCardBoundaryLeCardSelmerMatrix` | volunteer-build-reviewed |
 | M108230 | P1725 | `Development.AutomorphicArithmetic.AutomorphicVarieties.SelmerModuleFiniteness.FiniteSelmerModuleOfFiniteCohomology` | volunteer-build-reviewed |
 | M108233 | P2854 | `Development.AutomorphicArithmetic.AutomorphicVarieties.SmallClassNumbers.CorGKOf` | volunteer-build-reviewed |
 | M108235 | P2713 | `Development.AutomorphicArithmetic.AutomorphicVarieties.SmallClassNumbers.OnePoint` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M108827 | P1632 | `Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.AdjointCoefficients.MuLoc` | volunteer-build-reviewed |
 | M108828 | P1314 | `Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.AdjointCoefficients.MuQuot` | volunteer-build-reviewed |
 | M108831 | P1288 | `Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.AdjointCoefficients.PresQuot` | volunteer-build-reviewed |
-| M108832 | P1288 | `Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.AdjointCoefficients.RankAdjLe` | volunteer-build-reviewed |

@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M146457 | P0665 | `Formalism.HermitianCurvature.HermitianCurvatureProofs.InnerDensityThreshold` | build-observed |
 | M146464 | P1266 | `Formalism.HermitianCurvature.HermitianCurvatureProofs.IntegrableInvCube` | build-observed |
 | M146467 | P1136 | `Formalism.HermitianCurvature.HermitianCurvatureProofs.IntegrablePhiF` | build-observed |
 | M146469 | P0966 | `Formalism.HermitianCurvature.HermitianCurvatureProofs.IntegrableUnipotentNormRpowNeg` | build-observed |
@@ -401,4 +402,3 @@
 | M147118 | P0966 | `Formalism.HermitianCurvature.HermitianCurvatureProofs.UhMemMeasurableSet` | build-observed |
 | M147119 | P1318 | `Formalism.HermitianCurvature.HermitianCurvatureProofs.UnfoldIint` | build-observed |
 | M147122 | P0502 | `Formalism.HermitianCurvature.HermitianCurvatureProofs.UnipotentBlockMeasure` | build-observed |
-| M147123 | P1048 | `Formalism.HermitianCurvature.HermitianCurvatureProofs.UnipotentCharacterOneOfProduct` | build-observed |

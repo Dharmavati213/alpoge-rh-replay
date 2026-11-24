@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M118983 | P2633 | `Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.SideB` | volunteer-build-reviewed |
 | M118984 | P2766 | `Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.SideEigenformCopyTransfer` | volunteer-build-reviewed |
 | M118985 | P2219 | `Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.SideOf` | volunteer-build-reviewed |
 | M118986 | P2527 | `Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.SidePtPartOfPack` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M119439 | P1894 | `Development.AutomorphicArithmetic.TwistedTraces.TrOnEqMulOfEqSmulOnSubspace` | volunteer-build-reviewed |
 | M119440 | P1950 | `Development.AutomorphicArithmetic.TwistedTraces.TrOnProdEigenProjectionsEqTrOnJointEigenspace` | volunteer-build-reviewed |
 | M119441 | P1894 | `Development.AutomorphicArithmetic.TwistedTraces.TrOnRestrictAndEqOfMapsInto` | volunteer-build-reviewed |
-| M119443 | P1950 | `Development.AutomorphicArithmetic.TwistedTraces.TraceEigenspaceOfSelfAdjointInvariantSubspaces` | volunteer-build-reviewed |

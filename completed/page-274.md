@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M174590 | P0944 | `ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.HalfRatioLeSegmentBaseOfStd` | build-observed |
 | M174592 | P0916 | `ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.HermitianMeasures.EquivA` | volunteer-build-reviewed |
 | M174597 | P0092 | `ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.HermitianMeasures.JOrbBoundA` | volunteer-build-reviewed |
 | M174601 | P0093 | `ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.HermitianMeasures.NHeisInt` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M175063 | P0292 | `ReciprocityTheory.SemistableReduction.ApproxGraphC` | wave-reused |
 | M175064 | P0236 | `ReciprocityTheory.SemistableReduction.BWPoly` | wave-reused |
 | M175065 | P0093 | `ReciprocityTheory.SemistableReduction.BWPolyA` | wave-reused |
-| M175066 | P0171 | `ReciprocityTheory.SemistableReduction.BWPolyB` | wave-reused |

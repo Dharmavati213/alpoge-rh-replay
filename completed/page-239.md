@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M156307 | P0637 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.PolynomialModelIsometry.Assembly` | wave-reused |
 | M156308 | P0637 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.PolynomialModelIsometry.DetSplit` | wave-reused |
 | M156309 | P0604 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.PolynomialModelIsometry.IsPolyMon` | wave-reused |
 | M156310 | P0637 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.PolynomialModelIsometry.LowerInv` | wave-reused |
@@ -401,4 +402,3 @@
 | M156738 | P0668 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerOrbitVolume.DensInfCo` | build-observed |
 | M156739 | P0696 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerOrbitVolume.DensInfFS` | build-observed |
 | M156740 | P0572 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerOrbitVolume.DensInfLoc` | build-observed |
-| M156741 | P0723 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerOrbitVolume.DensInfSS` | build-observed |

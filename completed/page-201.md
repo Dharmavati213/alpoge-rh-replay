@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M132621 | P1706 | `Development.AutomorphicSpectrum.Proofs.GlobalProofs.ExistsBasisLieOfOrthogonal` | volunteer-build-reviewed |
 | M132628 | P0992 | `Development.AutomorphicSpectrum.Proofs.GlobalProofs.ExistsPrimeDegreeOneAvoiding` | build-observed |
 | M132629 | P1018 | `Development.AutomorphicSpectrum.Proofs.GlobalProofs.ExistsPrimeDegreeOneAvoidingStatement` | build-observed |
 | M132632 | P1829 | `Development.AutomorphicSpectrum.Proofs.GlobalProofs.ExistsRealApproximateIdentityStatement` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M133285 | P0143 | `Development.AutomorphicSpectrum.Proofs.MetricProofs.DenseCoordinateTorus` | volunteer-build-reviewed |
 | M133286 | P0208 | `Development.AutomorphicSpectrum.Proofs.MetricProofs.DenseCoordinateTorusStatement` | volunteer-build-reviewed |
 | M133287 | P0936 | `Development.AutomorphicSpectrum.Proofs.MetricProofs.DetFacChange` | wave-reused |
-| M133288 | P0827 | `Development.AutomorphicSpectrum.Proofs.MetricProofs.DetFacGMatEqOne` | build-observed |

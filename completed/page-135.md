@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M094924 | P0408 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.IndicatorIdentity` | volunteer-build-reviewed |
 | M094925 | P1799 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.InducedCharacterSupportOfVanishing` | build-observed |
 | M094927 | P1489 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.InducedFunctionL2PositiveStatement` | volunteer-build-reviewed |
 | M094928 | P1574 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.InducedIntertwiningIntegralNonzero` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M095397 | P0196 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.IwasawaBlockTriangular` | build-observed |
 | M095398 | P1912 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.IwasawaDecompositionAdelic` | volunteer-build-reviewed |
 | M095399 | P1931 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.IwasawaDecompositionAdelicStatement` | volunteer-build-reviewed |
-| M095400 | P1409 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.IwasawaStdMaxParab` | volunteer-build-reviewed |

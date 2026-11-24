@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M121270 | P1607 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CenterCommutesLieAction` | volunteer-build-reviewed |
 | M121271 | P1681 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CenterCommutesLieActionStatement` | volunteer-build-reviewed |
 | M121272 | P1703 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CenterCommutesOneParameterFlow` | volunteer-build-reviewed |
 | M121273 | P1726 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CenterCommutesOneParameterFlowStatement` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M121835 | P1727 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousFourierCharacterOfMatrixStatement` | volunteer-build-reviewed |
 | M121837 | P0689 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousFunctionsPerfectAdicRing` | wave-reused |
 | M121838 | P0715 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousFunctionsPerfectAdicRingStatement` | wave-reused |
-| M121839 | P1207 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousFunctionsPeriodRingSeparation` | build-observed |

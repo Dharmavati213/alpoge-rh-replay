@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M114439 | P2173 | `Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.ThetaKernels.ThetaSumRationalPairInvariant` | volunteer-build-reviewed |
 | M114440 | P2162 | `Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.ThetaKernels.ThetaTrCoDblBoxFunK` | volunteer-build-reviewed |
 | M114441 | P2162 | `Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.ThetaKernels.ThetaTrLevelFK` | volunteer-build-reviewed |
 | M114442 | P2173 | `Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.ThetaKernels.ThetaTrLevelK` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M114858 | P2745 | `Development.AutomorphicArithmetic.Foundations.UnitarySphericalFixing.SatakeParameters.ClsEqOfLocVEqG` | volunteer-build-reviewed |
 | M114859 | P2756 | `Development.AutomorphicArithmetic.Foundations.UnitarySphericalFixing.SatakeParameters.DzGoodVec` | volunteer-build-reviewed |
 | M114860 | P2751 | `Development.AutomorphicArithmetic.Foundations.UnitarySphericalFixing.SatakeParameters.DzValue` | volunteer-build-reviewed |
-| M114861 | P2745 | `Development.AutomorphicArithmetic.Foundations.UnitarySphericalFixing.SatakeParameters.ExistsCgTrueCharSide` | volunteer-build-reviewed |

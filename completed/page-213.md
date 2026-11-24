@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M141379 | P2528 | `Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.SatakeExponents.UniformizerValuations.ShuffleChoices.ValEqCard` | volunteer-build-reviewed |
 | M141382 | P2502 | `Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.SatakeExponents.UniformizerValuations.SplitPlacePowersOfLocalOps` | volunteer-build-reviewed |
 | M141383 | P2644 | `Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.SatakeExponents.UniformizerValuations.StrictJoinCandidates.CandIndep` | volunteer-build-reviewed |
 | M141384 | P2634 | `Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.SatakeExponents.UniformizerValuations.StrictJoinCandidates.CandSt` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M142164 | P0067 | `Development.WeilBound.RepresentationTheoryGL.ResidualSpectrum.SliceTensors.PStringStepA` | volunteer-build-reviewed |
 | M142165 | P1732 | `Development.WeilBound.RepresentationTheoryGL.ResidualSpectrum.SliceTensors.PStringStepB` | volunteer-build-reviewed |
 | M142167 | P1784 | `Development.WeilBound.RepresentationTheoryGL.ResidualSpectrum.SliceTensors.PStringStepD` | volunteer-build-reviewed |
-| M142168 | P1496 | `Development.WeilBound.RepresentationTheoryGL.ResidualSpectrum.SliceTensors.PolynomialKilling.KillPoly4` | volunteer-build-reviewed |

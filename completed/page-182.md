@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M120036 | P0561 | `Development.AutomorphicSpectrum.Proofs.AlgebraProofs.DegreeMonoLatticeLe` | build-observed |
 | M120037 | P0594 | `Development.AutomorphicSpectrum.Proofs.AlgebraProofs.DegreeMonoLatticeLeStatement` | build-observed |
 | M120038 | P0594 | `Development.AutomorphicSpectrum.Proofs.AlgebraProofs.DegreeSumEigenSubDegrees` | build-observed |
 | M120039 | P0627 | `Development.AutomorphicSpectrum.Proofs.AlgebraProofs.DegreeSumEigenSubDegreesStatement` | build-observed |
@@ -401,4 +402,3 @@
 | M120674 | P0137 | `Development.AutomorphicSpectrum.Proofs.AlgebraProofs.SumMemLoc` | volunteer-build-reviewed |
 | M120675 | P0137 | `Development.AutomorphicSpectrum.Proofs.AlgebraProofs.SymplecticPeriodMatrixIntegrality` | volunteer-build-reviewed |
 | M120676 | P0204 | `Development.AutomorphicSpectrum.Proofs.AlgebraProofs.SymplecticPeriodMatrixIntegralityStatement` | volunteer-build-reviewed |
-| M120677 | P0059 | `Development.AutomorphicSpectrum.Proofs.AlgebraProofs.SymplecticUnipotentShape` | volunteer-build-reviewed |

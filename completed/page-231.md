@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M152522 | P1165 | `Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.RowsProj` | build-observed |
 | M152523 | P1557 | `Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.SCompact` | build-observed |
 | M152524 | P0939 | `Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.SettingBlocks` | build-observed |
 | M152525 | P0995 | `Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.SplitPrimeCounts.LsSetresInt` | build-observed |
@@ -401,4 +402,3 @@
 | M153138 | P0886 | `Formalism.LocalToGlobal.UnitaryNorms.CharTied` | build-observed |
 | M153139 | P0376 | `Formalism.LocalToGlobal.UnitaryNorms.CharTransport` | build-observed |
 | M153140 | P0859 | `Formalism.LocalToGlobal.UnitaryNorms.CharUniq` | build-observed |
-| M153141 | P1734 | `Formalism.LocalToGlobal.UnitaryNorms.DatumS` | build-observed |

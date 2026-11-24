@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M096370 | P2060 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.OrientedThetaEqFiniteHeisenbergTranslatesVacua` | volunteer-build-reviewed |
 | M096371 | P1846 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.OrthogonalProjectionPreservesDepthLattice` | volunteer-build-reviewed |
 | M096373 | P1385 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.OrthogonalSumSelfDualExists` | volunteer-build-reviewed |
 | M096374 | P1575 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.OrthogonalSummandProjectionMemLatticeOfSplits` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M096900 | P1575 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.RightTranslateCompactLiftActsByReduction` | volunteer-build-reviewed |
 | M096902 | P1677 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.RkSubSuccLe` | volunteer-build-reviewed |
 | M096903 | P0130 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.RootDecomposeOrthogonal` | volunteer-build-reviewed |
-| M096904 | P0196 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.RootDecomposeOrthogonalStatement` | volunteer-build-reviewed |

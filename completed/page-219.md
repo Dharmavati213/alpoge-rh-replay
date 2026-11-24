@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M144996 | P0271 | `Formalism.GL3MeanSquares.HookFormulaTorsion.SizeEstimates` | build-observed |
 | M144997 | P0212 | `Formalism.GL3MeanSquares.HookFormulaTorsion.SmallPrimeFactorSumBound` | build-observed |
 | M144998 | P0212 | `Formalism.GL3MeanSquares.HookFormulaTorsion.SmoothedRemainderRealHasDerivBound` | build-observed |
 | M144999 | P0212 | `Formalism.GL3MeanSquares.HookFormulaTorsion.SmoothedRemainderRealIntegralFormula` | build-observed |
@@ -401,4 +402,3 @@
 | M145411 | P0857 | `Formalism.HermitianCurvature.HermitianCurvatureProofs.BesselDecayBounds.BesselUnitNorm.BesselNormSteps.BesselLine.PartAIff` | build-observed |
 | M145412 | P0910 | `Formalism.HermitianCurvature.HermitianCurvatureProofs.BesselDecayBounds.BesselUnitNorm.BesselNormSteps.BesselLine.PsiMulStar` | build-observed |
 | M145413 | P0938 | `Formalism.HermitianCurvature.HermitianCurvatureProofs.BesselDecayBounds.BesselUnitNorm.BesselNormSteps.BesselLine.SfiniteMuN` | build-observed |
-| M145414 | P0993 | `Formalism.HermitianCurvature.HermitianCurvatureProofs.BesselDecayBounds.BesselUnitNorm.BesselNormSteps.BesselLine.SmoothStep` | build-observed |

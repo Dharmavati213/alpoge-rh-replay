@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M147562 | P0666 | `Formalism.LocalRingCardinality.SpanPowerMembership.GatSetting` | build-observed |
 | M147563 | P0748 | `Formalism.LocalRingCardinality.SpanPowerMembership.GatTies` | build-observed |
 | M147564 | P0802 | `Formalism.LocalRingCardinality.SpanPowerMembership.GenericMemberLevelNearLower` | build-observed |
 | M147565 | P0274 | `Formalism.LocalRingCardinality.SpanPowerMembership.HaarDensityNeZero` | build-observed |
@@ -401,4 +402,3 @@
 | M148005 | P1077 | `Formalism.LocalToGlobal.Columns.BtExistsSmulLeOfFg` | build-observed |
 | M148006 | P1163 | `Formalism.LocalToGlobal.Columns.BzdConjTTranspose` | build-observed |
 | M148007 | P0939 | `Formalism.LocalToGlobal.Columns.CardFilterNeighboursEqPaths` | build-observed |
-| M148008 | P0967 | `Formalism.LocalToGlobal.Columns.CardPathsEqSubmodulePairs` | build-observed |

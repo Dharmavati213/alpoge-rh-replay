@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M113511 | P2621 | `Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.SphericalCoordinates.AlgebraEquivSetup.PPerfOf` | volunteer-build-reviewed |
 | M113512 | P2660 | `Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.SphericalCoordinates.AlgebraEquivSetup.PPhiEx` | volunteer-build-reviewed |
 | M113513 | P2660 | `Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.SphericalCoordinates.AlgebraEquivSetup.PPhiTy` | volunteer-build-reviewed |
 | M113514 | P2621 | `Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.SphericalCoordinates.AlgebraEquivSetup.PPosGen` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M114013 | P2162 | `Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.ThetaKernels.HeckeCharEqOneOfSplitK` | volunteer-build-reviewed |
 | M114014 | P2172 | `Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.ThetaKernels.HeckeCharacterTrivialOfSplit` | volunteer-build-reviewed |
 | M114015 | P2184 | `Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.ThetaKernels.HeightContinuousPosK` | volunteer-build-reviewed |
-| M114016 | P2193 | `Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.ThetaKernels.HeightFunctionContinuousPos` | volunteer-build-reviewed |

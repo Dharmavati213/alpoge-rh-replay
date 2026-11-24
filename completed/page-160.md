@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M109308 | P0990 | `Development.AutomorphicArithmetic.CharacterBoxes.DivinNOfHypV` | build-observed |
 | M109311 | P1182 | `Development.AutomorphicArithmetic.CharacterBoxes.ExS` | build-observed |
 | M109312 | P0490 | `Development.AutomorphicArithmetic.CharacterBoxes.ExistsPageN` | wave-reused |
 | M109314 | P0045 | `Development.AutomorphicArithmetic.CharacterBoxes.HalfPlane` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M109880 | P0263 | `Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.TotallyRealRoots.GalAut` | wave-reused |
 | M109881 | P0201 | `Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.TotallyRealRoots.GalDefs` | wave-reused |
 | M109882 | P0367 | `Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.TotallyRealRoots.GalDegree` | wave-reused |
-| M109883 | P0412 | `Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.TotallyRealRoots.GalOpen` | wave-reused |

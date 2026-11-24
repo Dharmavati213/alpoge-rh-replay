@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M098068 | P2116 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.UnitaryArchimedeanLineOperatorsOneParameter` | volunteer-build-reviewed |
 | M098069 | P2129 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.UnitaryArchimedeanLineOperatorsOneParameterStatement` | volunteer-build-reviewed |
 | M098070 | P2116 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.UnitaryArchimedeanLinePairOperatorsOneParameter` | volunteer-build-reviewed |
 | M098071 | P2129 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.UnitaryArchimedeanLinePairOperatorsOneParameterStatement` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M098668 | P0042 | `Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ExistsFiniteSeparablePoint` | volunteer-build-reviewed |
 | M098670 | P1386 | `Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ExistsFormCorrection` | build-observed |
 | M098673 | P1103 | `Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ExistsFourierJacobiExpansionOverField` | wave-reused |
-| M098674 | P1132 | `Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ExistsFourierJacobiExpansionOverFieldStatement` | wave-reused |

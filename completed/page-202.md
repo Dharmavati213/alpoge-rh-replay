@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M133288 | P0827 | `Development.AutomorphicSpectrum.Proofs.MetricProofs.DetFacGMatEqOne` | build-observed |
 | M133290 | P0854 | `Development.AutomorphicSpectrum.Proofs.MetricProofs.DetMemSubring` | build-observed |
 | M133292 | P0799 | `Development.AutomorphicSpectrum.Proofs.MetricProofs.DomCellLogNormMeasurableInvariantStatement` | volunteer-build-reviewed |
 | M133293 | P0063 | `Development.AutomorphicSpectrum.Proofs.MetricProofs.DominatedConvergenceExhaustion` | wave-reused |
@@ -401,4 +402,3 @@
 | M133933 | P1047 | `Development.AutomorphicSpectrum.Proofs.MetricProofs.LeviChartRegularityStatementHolds` | build-observed |
 | M133935 | P0268 | `Development.AutomorphicSpectrum.Proofs.MetricProofs.LeviFlatSeparatelyHarmonic` | build-observed |
 | M133936 | P0321 | `Development.AutomorphicSpectrum.Proofs.MetricProofs.LeviFlatSeparatelyHarmonicStatement` | build-observed |
-| M133940 | P0268 | `Development.AutomorphicSpectrum.Proofs.MetricProofs.LeviZeroInCompatibleChart` | build-observed |

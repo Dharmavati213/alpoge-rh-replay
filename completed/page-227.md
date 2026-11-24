@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M149976 | P0802 | `Formalism.LocalToGlobal.LatticeGeometry.CmTypeMeetsConjugatePair` | build-observed |
 | M149977 | P1022 | `Formalism.LocalToGlobal.LatticeGeometry.CompNe` | build-observed |
 | M149978 | P0802 | `Formalism.LocalToGlobal.LatticeGeometry.DegFlLApply` | build-observed |
 | M149980 | P1078 | `Formalism.LocalToGlobal.LatticeGeometry.FormsK` | build-observed |
@@ -401,4 +402,3 @@
 | M150575 | P1416 | `Formalism.LocalToGlobal.SiegelLatticeTheory.CasimirReductionTheory.OneParameterDerivatives.TauReduction.BlockGramReduction.FreeQuotientRank` | build-observed |
 | M150576 | P1391 | `Formalism.LocalToGlobal.SiegelLatticeTheory.CasimirReductionTheory.OneParameterDerivatives.TauReduction.BlockGramReduction.Imports` | build-observed |
 | M150577 | P1391 | `Formalism.LocalToGlobal.SiegelLatticeTheory.CasimirReductionTheory.OneParameterDerivatives.TauReduction.BlockGramReduction.KsetInvMem` | build-observed |
-| M150578 | P1391 | `Formalism.LocalToGlobal.SiegelLatticeTheory.CasimirReductionTheory.OneParameterDerivatives.TauReduction.BlockGramReduction.LatticeFinitelyGeneratedOfCommensurable` | build-observed |

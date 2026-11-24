@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M104280 | P1233 | `Development.AutomorphicArithmetic.AutomorphicVarieties.LevelCohomology.HcDirVal` | volunteer-build-reviewed |
 | M104281 | P1233 | `Development.AutomorphicArithmetic.AutomorphicVarieties.LevelCohomology.HcFrameOb` | volunteer-build-reviewed |
 | M104283 | P1233 | `Development.AutomorphicArithmetic.AutomorphicVarieties.LevelCohomology.HcGalIdx` | volunteer-build-reviewed |
 | M104284 | P1261 | `Development.AutomorphicArithmetic.AutomorphicVarieties.LevelCohomology.HcGalTail` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M104925 | P2679 | `Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.AutomorphyLifting.AdmissibleLevelRestriction.NewAdmS` | volunteer-build-reviewed |
 | M104926 | P2691 | `Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.AutomorphyLifting.AdmissibleLevelRestriction.PotQOf` | volunteer-build-reviewed |
 | M104927 | P2691 | `Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.AutomorphyLifting.AdmissibleLevelRestriction.SplitIrr` | volunteer-build-reviewed |
-| M104928 | P2697 | `Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.AutomorphyLifting.AdmissibleLevelRestriction.UnlAllOf` | volunteer-build-reviewed |

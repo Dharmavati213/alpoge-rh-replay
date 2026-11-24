@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M159004 | P1111 | `Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.CountHypothesesIffText` | build-observed |
 | M159005 | P0969 | `Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.DroppingPropositionHolds` | build-observed |
 | M159006 | P0606 | `Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.EqOfLeOfAbsNormEq` | build-observed |
 | M159007 | P1052 | `Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.FamilyPartFiveExplicitHolds` | build-observed |
@@ -401,4 +402,3 @@
 | M159439 | P1529 | `Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.TheoremIFamilyOfClosedForm` | build-observed |
 | M159440 | P1111 | `Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.TheoremIOfIntermediateBounds` | build-observed |
 | M159441 | P1500 | `Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.TheoremIOfLatticeFunctorComparison` | build-observed |
-| M159442 | P1215 | `Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.ThrLPOf` | build-observed |

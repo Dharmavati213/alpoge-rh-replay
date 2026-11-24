@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M129812 | P2552 | `Development.AutomorphicSpectrum.Proofs.GeometryProofs.CompLawsTowerBoundStatement` | volunteer-build-reviewed |
 | M129813 | P2443 | `Development.AutomorphicSpectrum.Proofs.GeometryProofs.CompactDatumIntersection` | volunteer-build-reviewed |
 | M129814 | P2472 | `Development.AutomorphicSpectrum.Proofs.GeometryProofs.CompactDatumIntersectionStatement` | volunteer-build-reviewed |
 | M129815 | P2264 | `Development.AutomorphicSpectrum.Proofs.GeometryProofs.CompactificationCompEquiv` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M130542 | P1209 | `Development.AutomorphicSpectrum.Proofs.GeometryProofs.FormalGermDimensionUniqueStatement` | build-observed |
 | M130543 | P1209 | `Development.AutomorphicSpectrum.Proofs.GeometryProofs.FormalGermJetLift` | build-observed |
 | M130544 | P1236 | `Development.AutomorphicSpectrum.Proofs.GeometryProofs.FormalGermJetLiftStatement` | volunteer-build-reviewed |
-| M130548 | P1236 | `Development.AutomorphicSpectrum.Proofs.GeometryProofs.FormalGermsIsomorphicStatement` | volunteer-build-reviewed |

@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M094434 | P1948 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.GluedLatticeSelfDualPrimitiveMeetStatement` | volunteer-build-reviewed |
 | M094435 | P1518 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.GluingLawHolds` | volunteer-build-reviewed |
 | M094436 | P1547 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.GluingLawHoldsStatement` | volunteer-build-reviewed |
 | M094437 | P1652 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.GoodAtReductionConjugatedUnitaryElement` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M094920 | P1601 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.IndexMovedHomLatticeSplitPlaceChartStatement` | volunteer-build-reviewed |
 | M094922 | P1489 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.IndexNormalizationInertNormEqNegStatement` | volunteer-build-reviewed |
 | M094923 | P0685 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.IndexTwoOfFiniteReal` | wave-reused |
-| M094924 | P0408 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.IndicatorIdentity` | volunteer-build-reviewed |

@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M143468 | P0210 | `Development.WeilBound.ThetaLifts.LeviDeterminants.CharacterAdmissibility.ResAdm` | volunteer-build-reviewed |
 | M143469 | P0270 | `Development.WeilBound.ThetaLifts.LeviDeterminants.CharacterAdmissibility.SchrodingerApplyZeroOfFst` | volunteer-build-reviewed |
 | M143470 | P2077 | `Development.WeilBound.ThetaLifts.LeviDeterminants.ChiIndep` | volunteer-build-reviewed |
 | M143474 | P2118 | `Development.WeilBound.ThetaLifts.LeviDeterminants.EigenIntertwinerSkewPlaneUnique` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M144189 | P0420 | `Formalism.CyclotomicNorms.IrreducibilityOfGoodTuple` | build-observed |
 | M144190 | P0211 | `Formalism.CyclotomicNorms.NonsquarefreeBounds.AdaptiveSubstitutionBound` | build-observed |
 | M144191 | P0146 | `Formalism.CyclotomicNorms.NonsquarefreeBounds.Central` | build-observed |
-| M144192 | P0146 | `Formalism.CyclotomicNorms.NonsquarefreeBounds.Cycles` | build-observed |

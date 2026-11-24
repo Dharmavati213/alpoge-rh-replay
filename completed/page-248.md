@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M160256 | P1759 | `Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.IoDChain` | build-observed |
 | M160257 | P1786 | `Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.IoDScalLast` | build-observed |
 | M160258 | P1615 | `Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.IoDVariableLastEqTopEnd` | build-observed |
 | M160259 | P1242 | `Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.KGShift` | build-observed |
@@ -401,4 +402,3 @@
 | M160838 | P0998 | `Formalism.SharpRestriction.LevelLetterCocycles.LocalTheoremOfUnramifiedLifting` | wave-reused |
 | M160839 | P0833 | `Formalism.SharpRestriction.LevelLetterCocycles.LocalTheoryWindows` | wave-reused |
 | M160841 | P0724 | `Formalism.SharpRestriction.LevelLetterCocycles.LocsCoverTw` | build-observed |
-| M160842 | P0942 | `Formalism.SharpRestriction.LevelLetterCocycles.MapCompZero` | build-observed |

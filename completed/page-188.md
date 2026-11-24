@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M123705 | P2415 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GeometricallyIntegralGlobalFunctionsConstantStatement` | volunteer-build-reviewed |
 | M123706 | P1827 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Gl2ComplexIwasawaDecomposition` | volunteer-build-reviewed |
 | M123707 | P1849 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Gl2ComplexIwasawaDecompositionStatement` | volunteer-build-reviewed |
 | M123708 | P1752 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Gl3ConstantTermUnipotent` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M124325 | P1873 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntegrableIntIndMul` | build-observed |
 | M124326 | P1827 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntegrableIwasawaOfSharp` | volunteer-build-reviewed |
 | M124327 | P1849 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntegrableIwasawaPullback` | volunteer-build-reviewed |
-| M124332 | P1804 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntegrableMulCIff` | volunteer-build-reviewed |

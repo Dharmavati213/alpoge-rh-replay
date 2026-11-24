@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M135237 | P0322 | `Development.EtaleCohomology.DivisorCycles.DenseAlg2` | volunteer-build-reviewed |
 | M135238 | P0322 | `Development.EtaleCohomology.DivisorCycles.DiagScalar2` | volunteer-build-reviewed |
 | M135239 | P0322 | `Development.EtaleCohomology.DivisorCycles.DivPlus` | volunteer-build-reviewed |
 | M135240 | P0322 | `Development.EtaleCohomology.DivisorCycles.EntriesCont` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M135881 | P0497 | `Development.EtaleCohomology.EtaleSheaves.SHExistsPf` | volunteer-build-reviewed |
 | M135883 | P0497 | `Development.EtaleCohomology.EtaleSheaves.SHSectionPf` | volunteer-build-reviewed |
 | M135884 | P0497 | `Development.EtaleCohomology.EtaleSheaves.SHTensorPf` | volunteer-build-reviewed |
-| M135886 | P0632 | `Development.EtaleCohomology.EtaleSheaves.SecondDegreeKilling` | build-observed |

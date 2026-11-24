@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M137798 | P2164 | `Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.WhittakerCovolume.Height` | volunteer-build-reviewed |
 | M137806 | P0144 | `Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.WhittakerCovolume.MeasProps` | volunteer-build-reviewed |
 | M137811 | P2185 | `Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.WhittakerCovolume.RelExOf` | volunteer-build-reviewed |
 | M137819 | P1755 | `Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.WhittakerCovolume.WhitKOfSteps` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M138642 | P0065 | `Development.WeilBound.CoreStatements.HomogeneousNonvanishing.TwGDiff` | volunteer-build-reviewed |
 | M138643 | P0065 | `Development.WeilBound.CoreStatements.HomogeneousNonvanishing.TwGFree` | volunteer-build-reviewed |
 | M138644 | P0065 | `Development.WeilBound.CoreStatements.HomogeneousNonvanishing.TwGHerm` | volunteer-build-reviewed |
-| M138646 | P0323 | `Development.WeilBound.CoreStatements.HomogeneousNonvanishing.TwGPadic` | build-observed |

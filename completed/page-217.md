@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M144192 | P0146 | `Formalism.CyclotomicNorms.NonsquarefreeBounds.Cycles` | build-observed |
 | M144193 | P0374 | `Formalism.CyclotomicNorms.NonsquarefreeBounds.IrreducibilityOfRestriction` | build-observed |
 | M144194 | P0324 | `Formalism.CyclotomicNorms.NonsquarefreeBounds.Jordan` | build-observed |
 | M144195 | P0146 | `Formalism.CyclotomicNorms.NonsquarefreeBounds.LowDegreePowerSeries` | build-observed |
@@ -401,4 +402,3 @@
 | M144590 | P0420 | `Formalism.FrobeniusOrbits.RealSubfieldLeCompositum` | wave-reused |
 | M144591 | P0211 | `Formalism.FrobeniusOrbits.Statement` | wave-reused |
 | M144592 | P0325 | `Formalism.GL3MeanSquares.AffineFibreCountComparison` | build-observed |
-| M144593 | P0634 | `Formalism.GL3MeanSquares.BoxCountAll` | build-observed |

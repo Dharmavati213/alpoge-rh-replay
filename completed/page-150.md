@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M103755 | P2604 | `Development.AutomorphicArithmetic.AutomorphicVarieties.GaussSumFiltrations.AdelicLiftKFiniteOfIsLift` | volunteer-build-reviewed |
 | M103756 | P2604 | `Development.AutomorphicArithmetic.AutomorphicVarieties.GaussSumFiltrations.AdelicLiftMemSmoothKilledByLowering` | volunteer-build-reviewed |
 | M103757 | P2587 | `Development.AutomorphicArithmetic.AutomorphicVarieties.GaussSumFiltrations.ConstEqZero` | volunteer-build-reviewed |
 | M103758 | P2587 | `Development.AutomorphicArithmetic.AutomorphicVarieties.GaussSumFiltrations.CountSpanInt` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M104274 | P1261 | `Development.AutomorphicArithmetic.AutomorphicVarieties.LevelCohomology.H1cZero` | volunteer-build-reviewed |
 | M104276 | P1233 | `Development.AutomorphicArithmetic.AutomorphicVarieties.LevelCohomology.HcCycKFacts` | volunteer-build-reviewed |
 | M104277 | P1233 | `Development.AutomorphicArithmetic.AutomorphicVarieties.LevelCohomology.HcDecZhat` | volunteer-build-reviewed |
-| M104280 | P1233 | `Development.AutomorphicArithmetic.AutomorphicVarieties.LevelCohomology.HcDirVal` | volunteer-build-reviewed |

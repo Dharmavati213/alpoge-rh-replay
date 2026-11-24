@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M142802 | P0501 | `Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.PolynomialDerivatives.MonomialMemSupported` | volunteer-build-reviewed |
 | M142803 | P0420 | `Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.PolynomialDerivatives.NullOperatorEvaluation` | volunteer-build-reviewed |
 | M142804 | P0324 | `Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.PolynomialDerivatives.NullSecKAlg` | volunteer-build-reviewed |
 | M142806 | P0270 | `Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.PolynomialDerivatives.NullStableAlt` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M143464 | P2118 | `Development.WeilBound.ThetaLifts.LeviDeterminants.CharacterAdmissibility.LawWLevi` | volunteer-build-reviewed |
 | M143465 | P2131 | `Development.WeilBound.ThetaLifts.LeviDeterminants.CharacterAdmissibility.LeavesX` | volunteer-build-reviewed |
 | M143467 | P2131 | `Development.WeilBound.ThetaLifts.LeviDeterminants.CharacterAdmissibility.MixWOfAdel` | volunteer-build-reviewed |
-| M143468 | P0210 | `Development.WeilBound.ThetaLifts.LeviDeterminants.CharacterAdmissibility.ResAdm` | volunteer-build-reviewed |

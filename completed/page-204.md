@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M134551 | P0909 | `Development.AutomorphicSpectrum.Proofs.MetricProofs.TwoPointFibreChartSixthStatement` | build-observed |
 | M134552 | P0799 | `Development.AutomorphicSpectrum.Proofs.MetricProofs.TwoPointFibreChartThird` | volunteer-build-reviewed |
 | M134553 | P0827 | `Development.AutomorphicSpectrum.Proofs.MetricProofs.TwoPointFibreChartThirdStatement` | build-observed |
 | M134554 | P0855 | `Development.AutomorphicSpectrum.Proofs.MetricProofs.TwoPointFibreTwistedResolution` | build-observed |
@@ -401,4 +402,3 @@
 | M135231 | P0321 | `Development.EtaleCohomology.DivisorCycles.ConjugateIdempotents` | volunteer-build-reviewed |
 | M135232 | P0371 | `Development.EtaleCohomology.DivisorCycles.CycSpecQzkPf` | volunteer-build-reviewed |
 | M135233 | P0268 | `Development.EtaleCohomology.DivisorCycles.CycleCount` | volunteer-build-reviewed |
-| M135237 | P0322 | `Development.EtaleCohomology.DivisorCycles.DenseAlg2` | volunteer-build-reviewed |

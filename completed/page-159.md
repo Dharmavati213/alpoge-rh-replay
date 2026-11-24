@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M108832 | P1288 | `Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.AdjointCoefficients.RankAdjLe` | volunteer-build-reviewed |
 | M108833 | P1288 | `Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.AdjointCoefficients.SpDims` | volunteer-build-reviewed |
 | M108834 | P1288 | `Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.AdjointCoefficients.TanInj` | volunteer-build-reviewed |
 | M108837 | P2571 | `Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.AutomorphicCharacters.AuArith` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M109304 | P0134 | `Development.AutomorphicArithmetic.CharacterBoxes.ClaimStrip` | volunteer-build-reviewed |
 | M109305 | P2193 | `Development.AutomorphicArithmetic.CharacterBoxes.ClassSel` | volunteer-build-reviewed |
 | M109306 | P1073 | `Development.AutomorphicArithmetic.CharacterBoxes.DesWin` | build-observed |
-| M109308 | P0990 | `Development.AutomorphicArithmetic.CharacterBoxes.DivinNOfHypV` | build-observed |

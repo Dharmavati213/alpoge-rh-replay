@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M129019 | P1782 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WhittakerWellDefinedStatement` | volunteer-build-reviewed |
 | M129020 | P0062 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WirtingerCombinationNeZero` | volunteer-build-reviewed |
 | M129034 | P1524 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WittCoordQuotientPullBijectiveStatement` | volunteer-build-reviewed |
 | M129035 | P1637 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WittFrameRankLeWittIndex` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M129809 | P2443 | `Development.AutomorphicSpectrum.Proofs.GeometryProofs.CompLawsRootModelRelay` | volunteer-build-reviewed |
 | M129810 | P2472 | `Development.AutomorphicSpectrum.Proofs.GeometryProofs.CompLawsRootModelRelayStatement` | volunteer-build-reviewed |
 | M129811 | P2527 | `Development.AutomorphicSpectrum.Proofs.GeometryProofs.CompLawsTowerBound` | volunteer-build-reviewed |
-| M129812 | P2552 | `Development.AutomorphicSpectrum.Proofs.GeometryProofs.CompLawsTowerBoundStatement` | volunteer-build-reviewed |

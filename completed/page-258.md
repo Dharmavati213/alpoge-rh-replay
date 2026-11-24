@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M165362 | P0428 | `GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.StatementsProjIdealFormValue` | wave-reused |
 | M165363 | P0083 | `GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.StatementsReesAlgebraDim` | wave-reused |
 | M165364 | P0384 | `GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.StatementsSegreClosureModel` | wave-reused |
 | M165365 | P0428 | `GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.StatementsSegreClosureNumber` | wave-reused |
@@ -401,4 +402,3 @@
 | M165847 | P0752 | `GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.PUnipotentModulusHomeo` | wave-reused |
 | M165848 | P0084 | `GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.PUnipotentModulusMatrix` | wave-reused |
 | M165849 | P0164 | `GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.PUnitsInvHaar` | wave-reused |
-| M165850 | P0672 | `GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.PVecAtNeZero` | wave-reused |

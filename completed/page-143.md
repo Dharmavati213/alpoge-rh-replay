@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M099292 | P1313 | `Development.AbelianVarietyTheory.Proofs.UniformizationProofs.UniformisationPolarisedAbelianSchemesIsoStatement` | wave-reused |
 | M099294 | P1678 | `Development.AbelianVarietyTheory.Proofs.UniformizationProofs.UniformisationTorsionEqOfLawsStatement` | build-observed |
 | M099295 | P1629 | `Development.AbelianVarietyTheory.Proofs.UniformizationProofs.UniformisationTorsionIdentificationWithPairing` | build-observed |
 | M099296 | P1654 | `Development.AbelianVarietyTheory.Proofs.UniformizationProofs.UniformisationTorsionIdentificationWithPairingStatement` | build-observed |
@@ -401,4 +402,3 @@
 | M099910 | P0042 | `Development.AbelianVarietyTheory.Proofs.UnitaryExistence.MapRestrictSubgroupEqCommonSmulHaar` | volunteer-build-reviewed |
 | M099912 | P2007 | `Development.AbelianVarietyTheory.Proofs.UnitaryExistence.MarkingAtConjugateSplitPointTransportedTwistedStatement` | volunteer-build-reviewed |
 | M099913 | P1846 | `Development.AbelianVarietyTheory.Proofs.UnitaryExistence.MarkingComponentUniqueFrameUniqueArithmeticGroup` | volunteer-build-reviewed |
-| M099916 | P2027 | `Development.AbelianVarietyTheory.Proofs.UnitaryExistence.MarkingConjugateComponentAdelic` | volunteer-build-reviewed |

@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M154003 | P0749 | `Formalism.PeriodIntegrals.OrbitalBoundsConclusion.UsCost` | wave-reused |
 | M154004 | P0216 | `Formalism.PeriodIntegrals.OrbitalBoundsConclusion.VacEntire` | volunteer-build-reviewed |
 | M154005 | P0776 | `Formalism.PeriodIntegrals.OrbitalBoundsConclusion.VolSemiDirect` | build-observed |
 | M154006 | P1022 | `Formalism.PeriodIntegrals.OrbitalBoundsConclusion.VolStabSW` | build-observed |
@@ -401,4 +402,3 @@
 | M154479 | P0423 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.BorderMinorRotation.SkipOneEqSuccAbove` | wave-reused |
 | M154480 | P0423 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.BorderMinorRotation.SkipTwoSuccAboveComp` | wave-reused |
 | M154481 | P0377 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.BorderSignIdentity.SkipOneEqSuccAbove` | wave-reused |
-| M154482 | P0423 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.BoundarySlices.StarSingleOne` | build-observed |

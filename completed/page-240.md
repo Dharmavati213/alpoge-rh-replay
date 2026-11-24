@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M156741 | P0723 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerOrbitVolume.DensInfSS` | build-observed |
 | M156742 | P0539 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerOrbitVolume.DensInfSt` | volunteer-build-reviewed |
 | M156743 | P0750 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerOrbitVolume.DensInfTR` | build-observed |
 | M156744 | P0637 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerOrbitVolume.DensInfTop` | build-observed |
@@ -401,4 +402,3 @@
 | M157143 | P0572 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.TransferIndices.DvTransferIdxOf` | volunteer-build-reviewed |
 | M157148 | P0076 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.TransferIndices.GrpNorm` | volunteer-build-reviewed |
 | M157157 | P0331 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.TranslationInvariantLattice.TransInvLatMain` | build-observed |
-| M157158 | P0220 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.TranslationInvariantLattice.TransInvLatOfPhase` | build-observed |

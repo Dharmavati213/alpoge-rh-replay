@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M099916 | P2027 | `Development.AbelianVarietyTheory.Proofs.UnitaryExistence.MarkingConjugateComponentAdelic` | volunteer-build-reviewed |
 | M099917 | P2044 | `Development.AbelianVarietyTheory.Proofs.UnitaryExistence.MarkingConjugateComponentAdelicStatement` | volunteer-build-reviewed |
 | M099920 | P0130 | `Development.AbelianVarietyTheory.Proofs.UnitaryExistence.MemAdelicCompletionPseudoBasisIff` | build-observed |
 | M099921 | P0196 | `Development.AbelianVarietyTheory.Proofs.UnitaryExistence.MemAdelicCompletionPseudoBasisIffStatement` | build-observed |
@@ -401,4 +402,3 @@
 | M100546 | P0852 | `Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.ShiftedSumMemTypicalCurveSet` | build-observed |
 | M100547 | P0878 | `Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.ShiftedSumMemTypicalCurveSetStatement` | build-observed |
 | M100548 | P1073 | `Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.SiegPairPBNonempty` | build-observed |
-| M100551 | P0130 | `Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.SplittingIdempotents` | volunteer-build-reviewed |

@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M171148 | P0167 | `PositivityTheory.AutomorphicForms.PublishedInputs.JacquetLanglands.TorusKernels.MultivariableReproducingFormula` | volunteer-build-reviewed |
 | M171149 | P0232 | `PositivityTheory.AutomorphicForms.PublishedInputs.JacquetLanglands.TorusKernels.MultivariableReproducingFormulaProof` | volunteer-build-reviewed |
 | M171150 | P0232 | `PositivityTheory.AutomorphicForms.PublishedInputs.JacquetLanglands.TorusKernels.OrbitCoverProof` | volunteer-build-reviewed |
 | M171151 | P0232 | `PositivityTheory.AutomorphicForms.PublishedInputs.JacquetLanglands.TorusKernels.PfEcut` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M171604 | P1168 | `ReciprocityTheory.ClassFieldTheory.LocalClassField.Existence` | build-observed |
 | M171605 | P0915 | `ReciprocityTheory.ClassFieldTheory.LocalClassField.ExistenceA` | build-observed |
 | M171606 | P1141 | `ReciprocityTheory.ClassFieldTheory.LocalClassField.ExistenceB` | build-observed |
-| M171607 | P0579 | `ReciprocityTheory.ClassFieldTheory.LocalClassField.ExistsDvdQKPowSubOne` | wave-reused |

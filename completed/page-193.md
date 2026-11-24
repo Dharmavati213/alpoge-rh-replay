@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M126977 | P0140 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RealizationFunctorial` | volunteer-build-reviewed |
 | M126980 | P0206 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RealizationSmulStatement` | volunteer-build-reviewed |
 | M126983 | P0141 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RealizationUnitClass` | volunteer-build-reviewed |
 | M126989 | P1208 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RedKillsToSome` | wave-reused |
@@ -401,4 +402,3 @@
 | M127650 | P1290 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SmulEqZeroOfEvEqZero` | build-observed |
 | M127651 | P0141 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SmulEqZeroOfLTensorSubtypeEqZero` | volunteer-build-reviewed |
 | M127652 | P1235 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SmulEqZeroOfMem` | build-observed |
-| M127654 | P1829 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SmulInvSub` | volunteer-build-reviewed |

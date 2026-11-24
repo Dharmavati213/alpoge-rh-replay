@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M166440 | P0385 | `GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.ArithModel` | pilot-reused |
 | M166441 | P0510 | `GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.ArithRes` | pilot-reused |
 | M166446 | P0286 | `GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.BergmanNorms` | volunteer-build-reviewed |
 | M166447 | P0229 | `GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.BergmanObjects` | wave-reused |
@@ -401,4 +402,3 @@
 | M167277 | P0888 | `GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.ContDiffAtSqrtQuotNormSq` | build-observed |
 | M167278 | P0286 | `GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.CoordinateIdeals` | wave-reused |
 | M167279 | P0429 | `GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.CoordinateIdeals.Example` | wave-reused |
-| M167280 | P0286 | `GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.CoordinateIdeals.FubiniLevi` | wave-reused |

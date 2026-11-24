@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M119443 | P1950 | `Development.AutomorphicArithmetic.TwistedTraces.TraceEigenspaceOfSelfAdjointInvariantSubspaces` | volunteer-build-reviewed |
 | M119445 | P0058 | `Development.AutomorphicArithmetic.TwistedTraces.TracePairingSeparatesEndomorphisms` | volunteer-build-reviewed |
 | M119446 | P1894 | `Development.AutomorphicArithmetic.TwistedTraces.TraceRestrictEqOfHasFinTrace` | volunteer-build-reviewed |
 | M119448 | P1894 | `Development.AutomorphicArithmetic.TwistedTraces.UiwPowCompEqOfAntitone` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M120033 | P0412 | `Development.AutomorphicSpectrum.Proofs.AlgebraProofs.DegreeAdditiveSubQuotientStatement` | build-observed |
 | M120034 | P0137 | `Development.AutomorphicSpectrum.Proofs.AlgebraProofs.DegreeInvariantLinearEquiv` | build-observed |
 | M120035 | P0204 | `Development.AutomorphicSpectrum.Proofs.AlgebraProofs.DegreeInvariantLinearEquivStatement` | build-observed |
-| M120036 | P0561 | `Development.AutomorphicSpectrum.Proofs.AlgebraProofs.DegreeMonoLatticeLe` | build-observed |

@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M172092 | P0729 | `ReciprocityTheory.L2DbarEstimates.Localization.UnweightBack` | wave-reused |
 | M172093 | P0703 | `ReciprocityTheory.L2DbarEstimates.Localization.UnweightBackA` | wave-reused |
 | M172094 | P0233 | `ReciprocityTheory.L2DbarEstimates.Localization.UnweightBackStatement` | wave-reused |
 | M172095 | P0703 | `ReciprocityTheory.L2DbarEstimates.Localization.UnweightRel` | wave-reused |
@@ -401,4 +402,3 @@
 | M172546 | P0390 | `ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.MultihomogeneousIdeals.CurvePt` | build-observed |
 | M172547 | P0290 | `ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.MultihomogeneousIdeals.CycDim` | pilot-reused |
 | M172548 | P0513 | `ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.MultihomogeneousIdeals.Exists` | build-observed |
-| M172549 | P0290 | `ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.MultihomogeneousIdeals.ExistsMonomialNotMem` | volunteer-build-reviewed |

@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M112326 | P2089 | `Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.IntegralStructures.GeometricFlagBases.MapInvMul` | volunteer-build-reviewed |
 | M112327 | P2103 | `Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.IntegralStructures.GeometricFlagBases.PCompSum` | volunteer-build-reviewed |
 | M112328 | P2103 | `Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.IntegralStructures.GeometricFlagBases.PContGL` | volunteer-build-reviewed |
 | M112329 | P2129 | `Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.IntegralStructures.GeometricFlagBases.PCutStep` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M112903 | P1314 | `Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.PAdicWittLattices.JHOmega` | volunteer-build-reviewed |
 | M112905 | P1314 | `Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.PAdicWittLattices.JHTrace` | volunteer-build-reviewed |
 | M112921 | P1340 | `Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.PAdicWittLattices.PAlgIsoPts` | volunteer-build-reviewed |
-| M112922 | P1340 | `Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.PAdicWittLattices.PAlgSplit` | volunteer-build-reviewed |

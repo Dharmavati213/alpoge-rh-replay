@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M164840 | P0383 | `GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceCutOffLimit` | wave-reused |
 | M164842 | P0383 | `GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceDim` | wave-reused |
 | M164843 | P0383 | `GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceExhaustion` | wave-reused |
 | M164844 | P0467 | `GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceFormLelong` | wave-reused |
@@ -401,4 +402,3 @@
 | M165359 | P0285 | `GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.StatementsPairNumberRelabel` | volunteer-build-reviewed |
 | M165360 | P0337 | `GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.StatementsPointIdealMultiProj` | wave-reused |
 | M165361 | P0083 | `GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.StatementsPowReductionCut` | volunteer-build-reviewed |
-| M165362 | P0428 | `GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.StatementsProjIdealFormValue` | wave-reused |

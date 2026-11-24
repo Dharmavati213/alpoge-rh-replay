@@ -394,6 +394,7 @@
 | M094418 | P2128 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.GlOrbitIntegralDepthDatumMemSubfieldStatement` | volunteer-build-reviewed |
 | M094419 | P1600 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.GlRelationsOnKFiniteVectors` | volunteer-build-reviewed |
 | M094420 | P1627 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.GlRelationsOnKFiniteVectorsStatement` | volunteer-build-reviewed |
+| M094425 | P0904 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.GlWordJetRelationsOfSchmidSystemJets` | volunteer-build-reviewed |
 | M094427 | P1489 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.GlueSmoothOfCompactSupport` | volunteer-build-reviewed |
 | M094428 | P1518 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.GlueSmoothOfCompactSupportStatement` | volunteer-build-reviewed |
 | M094429 | P1912 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.GluedHermitianLatticeUnique` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M094431 | P1930 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.GluedLatticePrescribedLocalComponents` | volunteer-build-reviewed |
 | M094432 | P1948 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.GluedLatticePrescribedLocalComponentsStatement` | volunteer-build-reviewed |
 | M094433 | P1930 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.GluedLatticeSelfDualPrimitiveMeet` | volunteer-build-reviewed |
-| M094434 | P1948 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.GluedLatticeSelfDualPrimitiveMeetStatement` | volunteer-build-reviewed |

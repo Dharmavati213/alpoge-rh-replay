@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M107383 | P2785 | `Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.TraceFormula.SplitRigidity.HasOfSplit` | volunteer-build-reviewed |
 | M107384 | P2756 | `Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.TraceFormula.SplitRigidity.ListOfMultiset` | volunteer-build-reviewed |
 | M107385 | P2061 | `Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.TraceFormula.SplitRigidity.ShareBd` | volunteer-build-reviewed |
 | M107387 | P2045 | `Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.TraceFormula.SplitRigidity.SplitRigidAlt` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M108215 | P0905 | `Development.AutomorphicArithmetic.AutomorphicVarieties.QuadraticExtensions.LevUAnti` | build-observed |
 | M108216 | P1725 | `Development.AutomorphicArithmetic.AutomorphicVarieties.QuadraticExtensions.LevelRk` | volunteer-build-reviewed |
 | M108217 | P0626 | `Development.AutomorphicArithmetic.AutomorphicVarieties.QuadraticExtensions.ModulusAdjoinISqrtNegPrimes` | build-observed |
-| M108229 | P1725 | `Development.AutomorphicArithmetic.AutomorphicVarieties.SelmerModuleFiniteness.CardSelmerMulCardBoundaryLeCardSelmerMatrix` | volunteer-build-reviewed |

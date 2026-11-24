@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M161484 | P0379 | `Formalism.ThetaLogCoordinates.DualWeylCoordinates.DualWeylProofs.QsRemIffAdd` | build-observed |
 | M161485 | P0424 | `Formalism.ThetaLogCoordinates.DualWeylCoordinates.DualWeylProofs.QsSymDMatEq` | build-observed |
 | M161486 | P0506 | `Formalism.ThetaLogCoordinates.DualWeylCoordinates.DualWeylProofs.QxFstInj` | build-observed |
 | M161487 | P0464 | `Formalism.ThetaLogCoordinates.DualWeylCoordinates.DualWeylProofs.QxPhApply` | build-observed |
@@ -401,4 +402,3 @@
 | M161894 | P0425 | `Formalism.WachLatticeTwists.HerrComplexInjectivity.StatInvWach` | wave-reused |
 | M161895 | P0333 | `Formalism.WachLatticeTwists.HerrComplexInjectivity.Statement` | wave-reused |
 | M161896 | P0379 | `Formalism.WachLatticeTwists.HerrComplexInjectivity.StatementA` | wave-reused |
-| M161897 | P0379 | `Formalism.WachLatticeTwists.HerrComplexInjectivity.StatementH` | wave-reused |

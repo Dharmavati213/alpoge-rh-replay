@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M145414 | P0993 | `Formalism.HermitianCurvature.HermitianCurvatureProofs.BesselDecayBounds.BesselUnitNorm.BesselNormSteps.BesselLine.SmoothStep` | build-observed |
 | M145415 | P1020 | `Formalism.HermitianCurvature.HermitianCurvatureProofs.BesselDecayBounds.BesselUnitNorm.BesselNormSteps.BesselLine.TrWSmulComp` | build-observed |
 | M145416 | P0829 | `Formalism.HermitianCurvature.HermitianCurvatureProofs.BesselDecayBounds.BesselUnitNorm.BesselNormSteps.UnitNorm.UnitNormAllOfCore` | build-observed |
 | M145417 | P0747 | `Formalism.HermitianCurvature.HermitianCurvatureProofs.BesselDecayBounds.BesselUnitNorm.BesselNormSteps.UnitNorm.UnrealifyRealify` | build-observed |
@@ -401,4 +402,3 @@
 | M146454 | P0994 | `Formalism.HermitianCurvature.HermitianCurvatureProofs.InnerAveragingInputOfSliceData` | wave-reused |
 | M146455 | P1107 | `Formalism.HermitianCurvature.HermitianCurvatureProofs.InnerBound` | build-observed |
 | M146456 | P0694 | `Formalism.HermitianCurvature.HermitianCurvatureProofs.InnerDensityOfAveraging` | wave-reused |
-| M146457 | P0665 | `Formalism.HermitianCurvature.HermitianCurvatureProofs.InnerDensityThreshold` | build-observed |

@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M136464 | P0144 | `Development.ResolutionOfSingularities.EmbeddedResolution.DerivativeIdeal.TaylorExpansionComparison` | wave-reused |
 | M136465 | P0209 | `Development.ResolutionOfSingularities.EmbeddedResolution.EtaleCoordinates.AdaptedParameters` | volunteer-build-reviewed |
 | M136466 | P0064 | `Development.ResolutionOfSingularities.EmbeddedResolution.EtaleCoordinates.AffineSpaceCoordinates` | volunteer-build-reviewed |
 | M136467 | P0064 | `Development.ResolutionOfSingularities.EmbeddedResolution.EtaleCoordinates.ChartAlgebra` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M136861 | P1237 | `Development.ResolutionOfSingularities.EmbeddedResolution.StrongResolution.AffineCentersOverSingularLocus` | wave-reused |
 | M136862 | P0693 | `Development.ResolutionOfSingularities.EmbeddedResolution.StrongResolution.AffineDetachedConditions` | wave-reused |
 | M136863 | P0322 | `Development.ResolutionOfSingularities.EmbeddedResolution.StrongResolution.AffineEmbeddingIntoAffineSpace` | wave-reused |
-| M136864 | P0535 | `Development.ResolutionOfSingularities.EmbeddedResolution.StrongResolution.AffineResolutionConditions` | wave-reused |

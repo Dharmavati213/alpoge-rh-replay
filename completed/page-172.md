@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M115313 | P0051 | `Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.HomOr` | volunteer-build-reviewed |
 | M115314 | P0051 | `Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.HomWProd` | build-observed |
 | M115316 | P0051 | `Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.HsSum` | volunteer-build-reviewed |
 | M115317 | P0051 | `Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.HwvLoweringSpanLower` | wave-reused |
@@ -401,4 +402,3 @@
 | M115741 | P0057 | `Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.SplittingFieldConstruction` | wave-reused |
 | M115742 | P0057 | `Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.SqShift` | volunteer-build-reviewed |
 | M115743 | P0057 | `Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.SquareNormBound` | volunteer-build-reviewed |
-| M115744 | P0057 | `Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.SquareOfApproximation` | volunteer-build-reviewed |

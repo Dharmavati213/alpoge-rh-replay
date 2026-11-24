@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M096904 | P0196 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.RootDecomposeOrthogonalStatement` | volunteer-build-reviewed |
 | M096905 | P0258 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.RootExchangeHeisenbergVariableSign` | build-observed |
 | M096906 | P0311 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.RootExchangeHeisenbergVariableSignStatement` | volunteer-build-reviewed |
 | M096907 | P0258 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.RootExchangeOperatorWeilRowUnipotent` | build-observed |
@@ -401,4 +402,3 @@
 | M097431 | P1434 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.StdMaxParabolicRadicalLeBlockUnipotentRadicalStatement` | volunteer-build-reviewed |
 | M097434 | P2101 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.StepPointMulPeriodUnipotentGLMeasurePreservingStatement` | volunteer-build-reviewed |
 | M097435 | P1409 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.StepSplittingCharactersTameLevelResidue` | volunteer-build-reviewed |
-| M097436 | P1434 | `Development.AbelianVarietyTheory.Proofs.TwistedOperators.StepSplittingCharactersTameLevelResidueStatement` | volunteer-build-reviewed |

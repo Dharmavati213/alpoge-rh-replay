@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M123096 | P1779 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FactorizableSchwartzOrbitalIntegralStatement` | volunteer-build-reviewed |
 | M123097 | P1727 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FactorizableSiegelWeilFiniteSet` | volunteer-build-reviewed |
 | M123098 | P1752 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FactorizableSiegelWeilFiniteSetStatement` | volunteer-build-reviewed |
 | M123099 | P1872 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FactorizationPureIntegrand` | build-observed |
@@ -401,4 +402,3 @@
 | M123702 | P1779 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GeometricSumBelowThreshold` | volunteer-build-reviewed |
 | M123703 | P1803 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GeometricSumBelowThresholdStatement` | volunteer-build-reviewed |
 | M123704 | P2385 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GeometricallyIntegralGlobalFunctionsConstant` | volunteer-build-reviewed |
-| M123705 | P2415 | `Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GeometricallyIntegralGlobalFunctionsConstantStatement` | volunteer-build-reviewed |

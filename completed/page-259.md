@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M165850 | P0672 | `GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.PVecAtNeZero` | wave-reused |
 | M165851 | P0726 | `GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.PVectorOrbitsFinite` | wave-reused |
 | M165852 | P0672 | `GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.PVolumeFormIntComb` | wave-reused |
 | M165853 | P0672 | `GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.PWeightPos` | wave-reused |
@@ -401,4 +402,3 @@
 | M166437 | P0544 | `GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.AnResBridgePot` | build-observed |
 | M166438 | P0576 | `GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.AnResBridgeProj` | build-observed |
 | M166439 | P0641 | `GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.AnResBridgeSheet` | build-observed |
-| M166440 | P0385 | `GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.ArithModel` | pilot-reused |

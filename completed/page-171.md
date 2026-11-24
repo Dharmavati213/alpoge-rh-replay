@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M114861 | P2745 | `Development.AutomorphicArithmetic.Foundations.UnitarySphericalFixing.SatakeParameters.ExistsCgTrueCharSide` | volunteer-build-reviewed |
 | M114862 | P2745 | `Development.AutomorphicArithmetic.Foundations.UnitarySphericalFixing.SatakeParameters.FieldGT` | volunteer-build-reviewed |
 | M114864 | P2745 | `Development.AutomorphicArithmetic.Foundations.UnitarySphericalFixing.SatakeParameters.GoodLem` | volunteer-build-reviewed |
 | M114865 | P2724 | `Development.AutomorphicArithmetic.Foundations.UnitarySphericalFixing.SatakeParameters.GoodRef` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M115310 | P0051 | `Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.HloweqTransfer` | volunteer-build-reviewed |
 | M115311 | P0051 | `Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.HoExistsPrime` | wave-reused |
 | M115312 | P0203 | `Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.HolSubMul` | volunteer-build-reviewed |
-| M115313 | P0051 | `Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.HomOr` | volunteer-build-reviewed |

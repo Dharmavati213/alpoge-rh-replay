@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M153555 | P0151 | `Formalism.PeriodIntegrals.HeisPull` | build-observed |
 | M153556 | P0073 | `Formalism.PeriodIntegrals.Hensel` | build-observed |
 | M153557 | P0073 | `Formalism.PeriodIntegrals.HermLatFin` | volunteer-build-reviewed |
 | M153558 | P0503 | `Formalism.PeriodIntegrals.HermitianGenusExtension.SemilocalHermitianLattices.AlgebraMapNeZeroOfMemHcompl` | build-observed |
@@ -401,4 +402,3 @@
 | M154000 | P0329 | `Formalism.PeriodIntegrals.OrbitalBoundsConclusion.UnitaryDense` | wave-reused |
 | M154001 | P1529 | `Formalism.PeriodIntegrals.OrbitalBoundsConclusion.UnitaryDimensionFormula` | build-observed |
 | M154002 | P0722 | `Formalism.PeriodIntegrals.OrbitalBoundsConclusion.UsCompose` | wave-reused |
-| M154003 | P0749 | `Formalism.PeriodIntegrals.OrbitalBoundsConclusion.UsCost` | wave-reused |

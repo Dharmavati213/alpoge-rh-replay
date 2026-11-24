@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M155434 | P1295 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IwasawaMeasureExistence.MemLeviGLOf` | build-observed |
 | M155435 | P0075 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IwasawaMeasureExistence.MulEquivHaarCharEqOfChart` | volunteer-build-reviewed |
 | M155436 | P1392 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IwasawaMeasureExistence.MulInvLevAMem` | build-observed |
 | M155437 | P1320 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IwasawaMeasureExistence.NatSmulMulEq` | build-observed |
@@ -401,4 +402,3 @@
 | M155851 | P0218 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalEndomorphisms.IsUniformInducingOfVal` | build-observed |
 | M155852 | P0218 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalEndomorphisms.LocalEndHomeoOf` | build-observed |
 | M155853 | P0153 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalEndomorphisms.ValSurjective` | build-observed |
-| M155854 | P0696 | `Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalGlobalInclusion.SmulMemIdealSmul` | build-observed |

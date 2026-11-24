@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M158493 | P1052 | `Formalism.SharpRestriction.CuspSpanNormBounds.LocalOrbitGerms` | build-observed |
 | M158494 | P0996 | `Formalism.SharpRestriction.CuspSpanNormBounds.LowestKTypeMultiplicity` | build-observed |
 | M158495 | P0996 | `Formalism.SharpRestriction.CuspSpanNormBounds.MassAndBranchingHypotheses` | build-observed |
 | M158496 | P0424 | `Formalism.SharpRestriction.CuspSpanNormBounds.MassRatioBound` | build-observed |
@@ -401,4 +402,3 @@
 | M159001 | P1347 | `Formalism.SharpRestriction.GlobalSchurBounds.GlobalLinkOfPartStatementsWithDelta` | build-observed |
 | M159002 | P0941 | `Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.BranchingInterlacingPairs` | build-observed |
 | M159003 | P1081 | `Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.CMFieldLemmas` | build-observed |
-| M159004 | P1111 | `Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.CountHypothesesIffText` | build-observed |

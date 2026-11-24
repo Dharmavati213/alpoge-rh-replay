@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M131918 | P2701 | `Development.AutomorphicSpectrum.Proofs.GeometryProofs.RootOriginCompareSecondStatement` | volunteer-build-reviewed |
 | M131920 | P2701 | `Development.AutomorphicSpectrum.Proofs.GeometryProofs.RootOriginCompareThirdStatement` | volunteer-build-reviewed |
 | M131922 | P1438 | `Development.AutomorphicSpectrum.Proofs.GeometryProofs.RootOriginCompleteDvrBoundStatement` | volunteer-build-reviewed |
 | M131923 | P2288 | `Development.AutomorphicSpectrum.Proofs.GeometryProofs.RootOriginComponentGenericPoint` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M132617 | P1438 | `Development.AutomorphicSpectrum.Proofs.GlobalProofs.EulerFactorStandardMeasureIdentityStatement` | volunteer-build-reviewed |
 | M132618 | P1388 | `Development.AutomorphicSpectrum.Proofs.GlobalProofs.ExistsAdelicHaarCovolumeOne` | volunteer-build-reviewed |
 | M132620 | P1236 | `Development.AutomorphicSpectrum.Proofs.GlobalProofs.ExistsAvoidOne` | volunteer-build-reviewed |
-| M132621 | P1706 | `Development.AutomorphicSpectrum.Proofs.GlobalProofs.ExistsBasisLieOfOrthogonal` | volunteer-build-reviewed |
