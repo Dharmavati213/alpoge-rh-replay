@@ -65,7 +65,7 @@ These files changed after the build that reported the error (a merged PR or coor
 
 ## Look-ahead: all known errors (preview)
 
-A scratch build compiles the current branch head and, where a declaration fails, replaces only that declaration's proof with `sorry` in the scratch copy so everything after it can be checked too. This lists errors the normal build can't reach yet. Round 1 = current layer; round 2+ = hidden behind it (**start there: nobody else sees those yet**). Nothing from the scratch copy is ever committed. Pull the branch and compile the file before fixing; rows can be minutes old. 67 files (40 in rounds 2+). Sessions: rh-ci-v128: session 2026-11-24T05:56:08Z branch head 74f1320f2e target Shard0 part=1; rh-ci-v128: 07:29:17 round 3: 90 errors in 21 files, 57 declarations stubbed, 14 statement errors; rh-ci-v128-2: session 2026-11-24T09:23:27Z branch head a1cc207186 target Shard1 part=1; rh-ci-v128-2: session 2026-11-24T09:23:27Z branch head a1cc207186 target Shard1 part=1; rh-ci-v128-3: session 2026-11-24T09:23:36Z branch head a1cc207186 target Shard2 part=1; rh-ci-v128-3: session 2026-11-24T09:23:36Z branch head a1cc207186 target Shard2 part=1; rh-ci-v128-4: session 2026-11-24T07:36:35Z branch head 9bcb6a9ec6 target Shard3 part=0; rh-ci-v128-4: session 2026-11-24T07:36:35Z branch head 9bcb6a9ec6 target Shard3 part=0.
+A scratch build compiles the current branch head and, where a declaration fails, replaces only that declaration's proof with `sorry` in the scratch copy so everything after it can be checked too. This lists errors the normal build can't reach yet. Round 1 = current layer; round 2+ = hidden behind it (**start there: nobody else sees those yet**). Nothing from the scratch copy is ever committed. Pull the branch and compile the file before fixing; rows can be minutes old. 67 files (44 in rounds 2+). Sessions: rh-ci-v128: session 2026-11-24T05:56:08Z branch head 74f1320f2e target Shard0 part=1; rh-ci-v128: 07:29:17 round 3: 90 errors in 21 files, 57 declarations stubbed, 14 statement errors; rh-ci-v128-2: session 2026-11-24T09:23:27Z branch head a1cc207186 target Shard1 part=1; rh-ci-v128-2: session 2026-11-24T09:23:27Z branch head a1cc207186 target Shard1 part=1; rh-ci-v128-3: session 2026-11-24T09:23:36Z branch head a1cc207186 target Shard2 part=1; rh-ci-v128-3: session 2026-11-24T09:23:36Z branch head a1cc207186 target Shard2 part=1; rh-ci-v128-4: session 2026-11-24T07:36:35Z branch head 9bcb6a9ec6 target Shard3 part=0; rh-ci-v128-4: 10:13:50 round 1: 88 errors in 11 files, 54 declarations stubbed, 0 statement errors.
 
 | First error | Round | Kind | Error |
 |---|---|---|---|
@@ -109,6 +109,10 @@ A scratch build compiles the current branch head and, where a declaration fails,
 | `Development/AutomorphicArithmetic/WhittakerHecke/CentralCharGaloisInvariantOfConjInv.lean:40` | 2 | error | Tactic `rewrite` failed: Did not find an occurrence of the pattern |
 | `Development/AutomorphicSpectrum/Proofs/MetricProofs/HodgeCompactificationInteriorPoint.lean:42` | 2 | error | failed to synthesize |
 | `Development/AutomorphicSpectrum/Proofs/GeometryProofs/ExistsFullTorsionNumberField.lean:316` | 2 | error | failed to synthesize |
+| `Formalism/LocalToGlobal/SiegelLatticeTheory/ClosedLocalOrbits/GaugeLatticeShifts/SlabCoverPf.lean:14` | 2 | error | Unknown constant `Formalism.L2.SG.PoincareInHH.PoincareSetting` |
+| `Formalism/LocalToGlobal/SiegelLatticeTheory/ClosedLocalOrbits/GaugeLatticeShifts/SatGramActL.lean:18` | 2 | error | Unknown constant `Formalism.L2.SG.NormCut` |
+| `Formalism/LocalToGlobal/SiegelLatticeTheory/CokernelGLCounts/RankPointCounts/FixedDecomposition.lean:17` | 2 | error | Unknown constant `Formalism.L2.SG.TermOp` |
+| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/RootLatticeThresholds/FullExists.lean:18` | 2 | error | Unknown constant `Formalism.L2.SG.TermOp` |
 | `Development/AutomorphicSpectrum/Proofs/GeometryProofs/ProperGroupGermFiniteSubscheme.lean:103` | 1 | error | Function expected at |
 | `Development/DiscreteGroups/GlobalIrreducibility/Bundle0004.lean:245` | 1 | error | failed to synthesize |
 | `Development/WeilBound/RepresentationTheoryGL/ResidualSpectrum/ExponentialNegativity/L2Gluing/IntegralLeToReal.lean:182` | 1 | error | failed to synthesize |
@@ -132,10 +136,6 @@ A scratch build compiles the current branch head and, where a declaration fails,
 | `Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/Bundle0246.lean:478` | 1 | error | Tactic `rewrite` failed: Did not find an occurrence of the pattern |
 | `Development/AutomorphicArithmetic/Foundations/Convolution/RealGroupAnalysis/UnramifiedSplitting/PlaceAe.lean:254` | 1 | error | (deterministic) timeout at `whnf`, maximum number of heartbeats (4000000) has been reached |
 | `Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/IntegralTateH2Top.lean:289` | 1 | error | (deterministic) timeout at `isDefEq`, maximum number of heartbeats (1000000) has been reached |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/RootLatticeThresholds/FullExists.lean:18` | 1 | error | Unknown constant `Formalism.L2.SG.TermOp` |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/ClosedLocalOrbits/GaugeLatticeShifts/SatGramActL.lean:18` | 1 | error | Unknown constant `Formalism.L2.SG.NormCut` |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/ClosedLocalOrbits/GaugeLatticeShifts/SlabCoverPf.lean:14` | 1 | error | Unknown constant `Formalism.L2.SG.PoincareInHH.PoincareSetting` |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/CokernelGLCounts/RankPointCounts/FixedDecomposition.lean:17` | 1 | error | Unknown constant `Formalism.L2.SG.TermOp` |
 
 ## Open PRs not auto-merged
 
