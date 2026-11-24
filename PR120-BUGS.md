@@ -1,8 +1,9 @@
 # PR #120 — open build failures
 
-Branch `rohanarun/riemann-hypothesis:opt/collapse-and-consolidate-4.36`, head `67edc6403c`. Updated 2026-11-24 11:35 UTC.
+Branch `rohanarun/riemann-hypothesis:opt/collapse-and-consolidate-4.36`, head `9fd16dd27f`. Updated 2026-11-24 12:00 UTC.
 
-**Compiled: 41,883 / 47,885 modules (87.5%)** across the four build shards, as of 2026-11-24 11:35 UTC.
+**Compiled: 41,883 / 47,885 modules (87.5%)** across the four build shards, as of 2026-11-24 12:00 UTC.
+
 
 
 
@@ -65,84 +66,6 @@ The table lists the **root failures** from a 4-shard build of all 47,881 modules
 | `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/ThmSOwn.lean:239` | wrong name resolved (likely collision) | Application type mismatch: The argument hF has type FinX Y of sort `Prop` but is expected to have type D7 |  |
 | `Formalism/PeriodIntegrals/UnitaryGroupMassFormula/ValuationLocalVolumes/Bundle0013.lean:237` | wrong name resolved (likely collision) | Application type mismatch: The argument ⋯.sig has type X.B.I.E →ₐ[X.B.I.F] X.B.I.E of sort `Type` but is expected to have type HidaSetting ?m.11 |  |
 
-## Look-ahead: all known errors (preview)
-
-A scratch build compiles the current branch head and, where a declaration fails, replaces only that declaration's proof with `sorry` in the scratch copy so everything after it can be checked too. This lists errors the normal build can't reach yet. Round 1 = current layer; round 2+ = hidden behind it (**start there: nobody else sees those yet**). Nothing from the scratch copy is ever committed. Pull the branch and compile the file before fixing; rows can be minutes old. 71 files (44 in rounds 2+). Sessions: rh-ci-v128: session 2026-11-24T05:56:08Z branch head 74f1320f2e target Shard0 part=1; rh-ci-v128: 07:29:17 round 3: 90 errors in 21 files, 57 declarations stubbed, 14 statement errors; rh-ci-v128-3: session 2026-11-24T09:23:36Z branch head a1cc207186 target Shard2 part=1; rh-ci-v128-3: 11:53:02 round 2: 15 errors in 13 files, 13 declarations stubbed, 0 statement errors; rh-ci-v128-4: session 2026-11-24T10:47:40Z branch head fbb0941754 target Shard3 part=0; rh-ci-v128-4: session 2026-11-24T10:47:40Z branch head fbb0941754 target Shard3 part=0.
-
-| First error | Round | Kind | Error |
-|---|---|---|---|
-| `Formalism/PeriodIntegrals/UnitaryGroupMassFormula/ValuationLocalVolumes/Bundle0013.lean:237` | 4 | error | Application type mismatch: The argument |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/ThmSOwn.lean:238` | 4 | error | Application type mismatch: The argument |
-| `Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/Bundle0231.lean:165` | 4 | error | Application type mismatch: The argument |
-| `Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/SingleBlockDoublingIntegralValue.lean:147` | 4 | error | cannot omit referenced section variable `inst✝` |
-| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/HermitianBlockDecompositionHomeomorph.lean:253` | 4 | error | Tactic `rfl` failed: The left-hand side |
-| `Development/AbelianVarietyTheory/Proofs/FlagMeasures/LocalHaarMeasuresPullbackRealGroup.lean:20` | 4 | error | Unknown constant `Formalism.L2.SG.LocWSOf` |
-| `Development/AbelianVarietyTheory/Proofs/ThetaShiftProofs/Bundle0059.lean:285` | 4 | error | Ambiguous term |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/Bundle0200.lean:227` | 4 | error | Function expected at |
-| `Development/AutomorphicArithmetic/Foundations/Convolution/BlockHeckeSlices/CuspidalNormBounds/RepOps.lean:12` | 4 | error | unknown module Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.TsphVec |
-| `Development/AutomorphicArithmetic/WhittakerHecke/Bundle0027.lean:37` | 4 | error | overloaded, errors  |
-| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/Bundle0575.lean:160` | 4 | error | failed to synthesize |
-| `Development/AutomorphicArithmetic/WhittakerHecke/ExistsWhittakerHeckeEigenvaluesAtSplitPlace.lean:52` | 4 | error | overloaded, errors  |
-| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/Bundle0531.lean:148` | 4 | error | failed to synthesize |
-| `Development/AbelianVarietyTheory/Definitions/Divisors/BarCompSubsetClosure.lean:235` | 4 | error | failed to synthesize |
-| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/Bundle0555.lean:94` | 4 | error | failed to synthesize |
-| `Development/WeilBound/RepresentationTheoryGL/ArchimedeanBaseChange/ArchimedeanBaseChangeProof/SatakeExponents/UniformizerValuations/FrameReading/Bundle0001.lean:76` | 4 | error | failed to synthesize |
-| `Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/ClosedPhiFunctoriality/Bundle0001.lean:171` | 4 | error | failed to synthesize |
-| `Development/DiscreteGroups/PiInvariants/CompactSupportTwists/Bundle0003.lean:126` | 4 | error | failed to synthesize |
-| `Development/DiscreteGroups/PiInvariants/CompactSupportTwists/PiClosT.lean:54` | 4 | error | failed to synthesize |
-| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/Bundle0607.lean:458` | 4 | error | failed to synthesize |
-| `Development/WeilBound/CoreStatements/SesquilinearFractions/ExistsUnitValueSkewHermitian.lean:339` | 4 | error | No goals to be solved |
-| `Development/WeilBound/RepresentationTheoryGL/ResidualSpectrum/SliceTensors/Bundle0010.lean:408` | 3 | error | failed to synthesize |
-| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/Bundle0519.lean:302` | 3 | error | failed to synthesize |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1453.lean:408` | 3 | error | failed to synthesize |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1447.lean:348` | 3 | error | failed to synthesize |
-| `Development/WeilBound/RepresentationTheoryGL/ArchimedeanBaseChange/ArchimedeanBaseChangeProof/HeckeFubiniCompatibility/Bundle0003.lean:340` | 3 | error | failed to synthesize |
-| `Development/WeilBound/RepresentationTheoryGL/ArchimedeanBaseChange/ArchimedeanBaseChangeProof/SatakeExponents/UniformizerValuations/AdelicHeckeBlocks/Bundle0001.lean:191` | 3 | error | failed to synthesize |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1510.lean:331` | 3 | error | failed to synthesize instance of type class |
-| `Development/AbelianVarietyTheory/Proofs/TwistedOperators/ReductionMemUnipSymOfFlagCongruences.lean:50` | 3 | error | failed to synthesize |
-| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/CrystallineOrdinaryIdeals/QcontDual.lean:53` | 3 | error | failed to synthesize instance of type class |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1269.lean:123` | 2 | error | failed to synthesize |
-| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/InductionEstimates/BorelHeckeBounds/HeckeShiftSums/CancelN.lean:59` | 2 | error | typeclass instance problem is stuck |
-| `Development/AutomorphicArithmetic/WhittakerHecke/Bundle0014.lean:199` | 2 | error | No goals to be solved |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/RootLatticeThresholds/Bundle0041.lean:69` | 2 | error | Application type mismatch: The argument |
-| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/Bundle0463.lean:213` | 2 | error | failed to synthesize |
-| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/IsQuotNormaliserIndicator.lean:373` | 2 | error | failed to synthesize |
-| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/Bundle0484.lean:129` | 2 | error | failed to synthesize |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/RootLatticeThresholds/AllRowsKpp.lean:193` | 2 | error | Tactic `rewrite` failed: Did not find an occurrence of the pattern |
-| `Development/AutomorphicArithmetic/WhittakerHecke/CentralCharGaloisInvariantOfConjInv.lean:40` | 2 | error | Tactic `rewrite` failed: Did not find an occurrence of the pattern |
-| `Development/AutomorphicSpectrum/Proofs/MetricProofs/HodgeCompactificationInteriorPoint.lean:42` | 2 | error | failed to synthesize |
-| `Development/AutomorphicSpectrum/Proofs/GeometryProofs/ExistsFullTorsionNumberField.lean:316` | 2 | error | failed to synthesize |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/ZetaIntegralShellsVanishBeyondPeriodRamified.lean:89` | 2 | error | Application type mismatch: The argument |
-| `Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/Bundle0391.lean:98` | 2 | error | failed to synthesize |
-| `Development/AbelianVarietyTheory/Proofs/SatakeParameters/ThCLeftStab.lean:378` | 2 | error | Ambiguous term |
-| `Development/AutomorphicSpectrum/Proofs/GeometryProofs/ProperGroupGermFiniteSubscheme.lean:103` | 1 | error | Function expected at |
-| `Development/DiscreteGroups/GlobalIrreducibility/Bundle0004.lean:245` | 1 | error | failed to synthesize |
-| `Development/WeilBound/RepresentationTheoryGL/ResidualSpectrum/ExponentialNegativity/L2Gluing/IntegralLeToReal.lean:182` | 1 | error | failed to synthesize |
-| `Development/WeilBound/ThetaLifts/SmallCones/Bundle0004.lean:171` | 1 | error | failed to synthesize |
-| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/ArchimedeanOrbitalIntegralHuaBound.lean:30` | 1 | error | Type mismatch |
-| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/Bundle0380.lean:339` | 1 | error | failed to synthesize |
-| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/KernelSumBoundUniform.lean:234` | 1 | error | failed to synthesize |
-| `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/Bundle0420.lean:162` | 1 | error | failed to synthesize |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1245.lean:257` | 1 | error | failed to synthesize |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle1254.lean:164` | 1 | error | failed to synthesize |
-| `Development/AutomorphicArithmetic/AutomorphicVarieties/PatchingModules/ArchimedeanH0Cards/ExistsCore.lean:405` | 1 | error | Application type mismatch: The argument |
-| `Development/AutomorphicArithmetic/Foundations/Convolution/RealGroupAnalysis/GaussianForms/Bundle0009.lean:85` | 1 | error | failed to synthesize instance of type class |
-| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/InductionEstimates/BorelHeckeBounds/HeckeShiftSums/Bundle0001.lean:242` | 1 | error | Invalid projection: Projections cannot be used on functions, and |
-| `Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/MemBddFormsOfWithSmoothings.lean:225` | 1 | error | failed to synthesize |
-| `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/AllRowsOf.lean:34` | 1 | error | Not a definitional equality: the left-hand side |
-| `Development/AbelianVarietyTheory/Definitions/Divisors/Bundle0045.lean:189` | 1 | error | failed to synthesize |
-| `Development/AbelianVarietyTheory/Proofs/FlagMeasures/Bundle0381.lean:293` | 1 | error | Type mismatch |
-| `Development/AutomorphicArithmetic/Foundations/Convolution/CentreSplitting/Bundle0003.lean:257` | 1 | error | failed to synthesize |
-| `Development/AbelianVarietyTheory/Proofs/TwistedOperators/Bundle0367.lean:47` | 1 | error | Type mismatch |
-| `Development/AutomorphicArithmetic/Foundations/Convolution/SplitEigenfunctions/InfinitePlaceGluing/PairCases.lean:288` | 1 | error | Function expected at |
-| `Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/Bundle0246.lean:478` | 1 | error | Tactic `rewrite` failed: Did not find an occurrence of the pattern |
-| `Development/AutomorphicArithmetic/Foundations/Convolution/RealGroupAnalysis/UnramifiedSplitting/PlaceAe.lean:254` | 1 | error | (deterministic) timeout at `whnf`, maximum number of heartbeats (4000000) has been reached |
-| `Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/IntegralTateH2Top.lean:289` | 1 | error | (deterministic) timeout at `isDefEq`, maximum number of heartbeats (1000000) has been reached |
-| `Formalism/PeriodIntegrals/UnitaryGroupMassFormula/ValuationLocalVolumes/Bundle0015.lean:243` | 1 | error | Application type mismatch: The argument |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/SetIntegralLeftCosetShellIntegrandEqZero.lean:119` | 1 | error | failed to synthesize instance of type class |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/IntegrableOnCartanDoubleCosetShellIntegrand.lean:46` | 1 | error | failed to synthesize instance of type class |
-| `Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/Bundle0265.lean:210` | 1 | error | failed to synthesize |
-
 ## Open PRs not auto-merged
 
 - #15 (@aliromman): touches protected files (needs manual review)
@@ -153,10 +76,11 @@ A scratch build compiles the current branch head and, where a declaration fails,
 - #861 (@AniCre0): no diff (empty or already on the branch)
 - #995 (@rmsnorm): draft too large to auto-merge (mark ready for review)
 - #1003 (@aliromman): draft touches files that are not failing (mark ready for review)
+- #1014 (@TheLarkInn): no diff (empty or already on the branch)
 
 ## Fixed so far (on the branch)
 
-About 3 files, including:
+About 1 files, including:
 
 - **Name collisions:** `sigR` (104 files), `Gz`, `Wp`, `UJ`, `wt`, `Zhat`, `blockEnds`, `GE`, `Ideles`/`localIdele`, `dualLattice`, `homAt`, `IsCWCont`, `cechDiag`/`cechAug`, `admitted`, `expandsAt_scale`, `mem_nonzeroLocus`, `wd_congr`.
 - **Restored or deduplicated declarations:** 29 files from aliromman's integration branch (thanks, @aliromman).
