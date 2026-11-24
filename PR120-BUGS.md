@@ -116,6 +116,14 @@ These files changed after the build that reported the error (a merged PR or coor
 | `Development/AutomorphicArithmetic/AutomorphicVarieties/PatchingModules/ArchimedeanH0Cards/ExistsCore.lean:405` | wrong name resolved (likely collision) | Application type mismatch: The argument D0.M has type FRep x.A G0.Γ of sort `Type 1` but is expected to have type ℕ |  |
 | `Development/AutomorphicSpectrum/Proofs/BlockDecomposition/DeRhamRankLubinTateLine.lean:223` | instance | failed to synthesize HSMul (↥↑LL) ((Fin 1 → ↥↑LL) ⊗[ℚ_[l]] P.R.BdR) ?m.244 (deterministic) timeout at `typeclass`, maximum number of heartbeats (20000) has been reached |  |
 
+## Look-ahead: all known errors (preview)
+
+A scratch build compiles the current branch head and, where a declaration fails, replaces only that declaration's proof with `sorry` in the scratch copy so everything after it can be checked too. This lists errors the normal build can't reach yet. Round 1 = current layer; round 2+ = hidden behind it (**start there: nobody else sees those yet**). Nothing from the scratch copy is ever committed. Pull the branch and compile the file before fixing; rows can be minutes old. 1 files (0 in rounds 2+). Sessions: rh-ci-v128: session 2026-11-24T20:44:21Z branch head a97a2bf83d target Shard0 part=1; rh-ci-v128: session 2026-11-24T20:44:21Z branch head a97a2bf83d target Shard0 part=1; rh-ci-v128-2: session 2026-11-24T20:00:11Z branch head edfef50285 target Shard1 part=1; rh-ci-v128-2: session 2026-11-24T20:00:11Z branch head edfef50285 target Shard1 part=1; rh-ci-v128-3: session 2026-11-24T20:03:37Z branch head 922ec0eed6 target Shard2 part=1; rh-ci-v128-3: session 2026-11-24T20:03:37Z branch head 922ec0eed6 target Shard2 part=1; rh-ci-v128-4: session 2026-11-24T20:03:29Z branch head 922ec0eed6 target Shard3 part=0; rh-ci-v128-4: session 2026-11-24T20:03:29Z branch head 922ec0eed6 target Shard3 part=0.
+
+| First error | Round | Kind | Error |
+|---|---|---|---|
+| `Development/AbelianVarietyTheory/Definitions/NonGaloisDescent/Bundle0006.lean:289` | 1 | error | failed to synthesize instance of type class |
+
 ## Open PRs not auto-merged
 
 - #15 (@aliromman): touches protected files (needs manual review)
