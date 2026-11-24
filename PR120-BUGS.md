@@ -131,6 +131,15 @@ These files changed after the build that reported the error (a merged PR or coor
 | `Development/AutomorphicArithmetic/Foundations/Convolution/RealGroupAnalysis/UnramifiedSplitting/PlaceAe.lean:254` | other | (deterministic) timeout at `whnf`, maximum number of heartbeats (4000000) has been reached haveI̵ The goal is a proposition, so `have` is preferred over `haveI`. |  |
 | `Formalism/LocalToGlobal/GlobalTheory/CoordinateLengths/Bundle0001.lean:89` | instance | failed to synthesize CoeT (((D.mem u).C.cls 0 → (D.mem u).C.Y 0 → ℂ) ≃ₗ[ℂ] (D.mem u).C.cls 0 → Fr D 0 ⋯ → ℂ) e (((D.mem u).C.cls 0 → (D.mem u).C.Y 0 → ℂ) →ₗ[ℂ] (D.mem u).C.cls 0 → Frames (gramC (gramN D 0 ⋯) (embT D)) →  |  |
 
+## Look-ahead: all known errors (preview)
+
+A scratch build compiles the current branch head and, where a declaration fails, replaces only that declaration's proof with `sorry` in the scratch copy so everything after it can be checked too. This lists errors the normal build can't reach yet. Round 1 = current layer; round 2+ = hidden behind it (**start there: nobody else sees those yet**). Nothing from the scratch copy is ever committed. Pull the branch and compile the file before fixing; rows can be minutes old. 2 files (0 in rounds 2+). Sessions: rh-ci-v128: session 2026-11-24T21:45:30Z branch head 3c5f12fe8c target Shard0 part=1; rh-ci-v128: session 2026-11-24T21:45:30Z branch head 3c5f12fe8c target Shard0 part=1; rh-ci-v128-2: session 2026-11-24T20:00:11Z branch head edfef50285 target Shard1 part=1; rh-ci-v128-2: session 2026-11-24T20:00:11Z branch head edfef50285 target Shard1 part=1; rh-ci-v128-3: session 2026-11-24T20:03:37Z branch head 922ec0eed6 target Shard2 part=1; rh-ci-v128-3: session 2026-11-24T20:03:37Z branch head 922ec0eed6 target Shard2 part=1; rh-ci-v128-4: session 2026-11-24T20:03:29Z branch head 922ec0eed6 target Shard3 part=0; rh-ci-v128-4: session 2026-11-24T20:03:29Z branch head 922ec0eed6 target Shard3 part=0.
+
+| First error | Round | Kind | Error |
+|---|---|---|---|
+| `GroundTheory/AutomorphicForms/GL2/GJStandardLEuler.lean:216` | 1 | error | failed to synthesize instance of type class |
+| `Development/AbelianVarietyTheory/Proofs/FlagMeasures/ExistsIsHaarProbabilityMaxCompactHermitian.lean:67` | 1 | error | failed to synthesize instance of type class |
+
 ## Open PRs not auto-merged
 
 - #15 (@aliromman): touches protected files (needs manual review)
