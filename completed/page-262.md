@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M168018 | P0674 | `GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsDiagFormDiv` | build-observed |
 | M168020 | P0544 | `GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsDiagOffUnit` | build-observed |
 | M168021 | P0544 | `GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsDiagOrdOne` | build-observed |
 | M168022 | P0511 | `GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsDiagPull` | build-observed |
@@ -401,4 +402,3 @@
 | M168496 | P0386 | `GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PTwistTilde` | wave-reused |
 | M168497 | P0386 | `GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PTwistVanish` | wave-reused |
 | M168498 | P0386 | `GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PTwistVanishAll` | wave-reused |
-| M168499 | P0511 | `GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PVeryAmpleCech` | wave-reused |

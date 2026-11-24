@@ -26,7 +26,6 @@
 | [@mabdelazim](https://github.com/mabdelazim) | [M062151](https://github.com/rohanarun/alpoge-rh-replay/issues/22327) | Claimed |
 | [@mabdelazim](https://github.com/mabdelazim) | [M062155](https://github.com/rohanarun/alpoge-rh-replay/issues/22332) | Claimed |
 | [@gilad12-coder](https://github.com/gilad12-coder) | [M063130](https://github.com/rohanarun/alpoge-rh-replay/issues/25879) | Claimed |
-| [@maugomez77](https://github.com/maugomez77) | [M118930](https://github.com/rohanarun/alpoge-rh-replay/issues/25886) | Claimed |
 | [@gilad12-coder](https://github.com/gilad12-coder) | [M131258](https://github.com/rohanarun/alpoge-rh-replay/issues/25970) | Claimed |
 | [@loremcdmx](https://github.com/loremcdmx) | [M051277](https://github.com/rohanarun/alpoge-rh-replay/issues/26977) | Claimed |
 | [@loremcdmx](https://github.com/loremcdmx) | [M079827](https://github.com/rohanarun/alpoge-rh-replay/issues/26978) | Claimed |
@@ -39,10 +38,4 @@
 | [@loremcdmx](https://github.com/loremcdmx) | [M036491](https://github.com/rohanarun/alpoge-rh-replay/issues/27042) | Claimed |
 | [@loremcdmx](https://github.com/loremcdmx) | [M079838](https://github.com/rohanarun/alpoge-rh-replay/issues/27043) | Claimed |
 | [@loremcdmx](https://github.com/loremcdmx) | [M140261](https://github.com/rohanarun/alpoge-rh-replay/issues/27044) | Claimed |
-| [@maugomez77](https://github.com/maugomez77) | [M118430](https://github.com/rohanarun/alpoge-rh-replay/issues/27317) | Claimed |
-| [@maugomez77](https://github.com/maugomez77) | [M116378](https://github.com/rohanarun/alpoge-rh-replay/issues/28207) | Claimed |
-| [@maugomez77](https://github.com/maugomez77) | [M111760](https://github.com/rohanarun/alpoge-rh-replay/issues/28316) | Claimed |
-| [@maugomez77](https://github.com/maugomez77) | [M113163](https://github.com/rohanarun/alpoge-rh-replay/issues/28725) | Claimed |
-| [@user42245](https://github.com/user42245) | [M164325](https://github.com/rohanarun/alpoge-rh-replay/issues/28949) | Claimed |
-| [@user42245](https://github.com/user42245) | [M163709](https://github.com/rohanarun/alpoge-rh-replay/issues/28973) | Claimed |
-| [@user42245](https://github.com/user42245) | [M168805](https://github.com/rohanarun/alpoge-rh-replay/issues/28987) | Claimed |
+| [@emsi](https://github.com/emsi) | [M034433](https://github.com/rohanarun/alpoge-rh-replay/issues/30092) | Claimed |

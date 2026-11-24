@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M175067 | P0171 | `ReciprocityTheory.SemistableReduction.BWPolyC` | wave-reused |
 | M175068 | P0171 | `ReciprocityTheory.SemistableReduction.BalancedSchwarz` | wave-reused |
 | M175069 | P0236 | `ReciprocityTheory.SemistableReduction.CauchyInequalityOnTorus` | wave-reused |
 | M175070 | P0093 | `ReciprocityTheory.SemistableReduction.ComapInclusionIsLocalHom` | wave-reused |

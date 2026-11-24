@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M174069 | P0863 | `ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.SmoothA` | wave-reused |
 | M174070 | P0808 | `ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.SmoothBr` | wave-reused |
 | M174071 | P0808 | `ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.SmoothCore` | wave-reused |
 | M174072 | P0836 | `ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.SmoothDS` | wave-reused |
@@ -401,4 +402,3 @@
 | M174587 | P0092 | `ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.CutFold` | build-observed |
 | M174588 | P0863 | `ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.DerivSmulConstAll` | build-observed |
 | M174590 | P0944 | `ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.HalfRatioLeSegmentBaseOfStd` | build-observed |
-| M174592 | P0916 | `ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.HermitianMeasures.EquivA` | volunteer-build-reviewed |

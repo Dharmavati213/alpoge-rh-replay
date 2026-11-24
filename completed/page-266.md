@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M170422 | P0807 | `GroundTheory.ProfiniteCohomology.LocalClassFormation.CupSymbolUnramified` | build-observed |
 | M170423 | P0862 | `GroundTheory.ProfiniteCohomology.LocalClassFormation.FiniteVanishing` | build-observed |
 | M170427 | P0781 | `GroundTheory.ProfiniteCohomology.LocalClassFormation.FiniteVanishing.KummerOpen` | build-observed |
 | M170429 | P0807 | `GroundTheory.ProfiniteCohomology.LocalClassFormation.FiniteVanishing.Trivial` | build-observed |
@@ -401,4 +402,3 @@
 | M171146 | P2634 | `PositivityTheory.AutomorphicForms.PublishedInputs.JacquetLanglands.TorusKernels.LoweringOperatorRelationHolomorphic` | volunteer-build-reviewed |
 | M171147 | P2688 | `PositivityTheory.AutomorphicForms.PublishedInputs.JacquetLanglands.TorusKernels.MixSeedOf` | volunteer-build-reviewed |
 | M171148 | P0167 | `PositivityTheory.AutomorphicForms.PublishedInputs.JacquetLanglands.TorusKernels.MultivariableReproducingFormula` | volunteer-build-reviewed |
-| M171149 | P0232 | `PositivityTheory.AutomorphicForms.PublishedInputs.JacquetLanglands.TorusKernels.MultivariableReproducingFormulaProof` | volunteer-build-reviewed |

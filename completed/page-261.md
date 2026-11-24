@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M167281 | P0338 | `GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.CoordinateIdeals.FubiniLeviGen` | volunteer-build-reviewed |
 | M167282 | P0385 | `GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.CoordinateIdeals.LineField` | wave-reused |
 | M167283 | P0338 | `GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.CoordinateIdeals.MemMCoordIdealOfAevalEqZero` | wave-reused |
 | M167286 | P0084 | `GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.Counterexample.OscWeight` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M168015 | P0544 | `GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsChartFormsRational` | build-observed |
 | M168016 | P0286 | `GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsChartRankAdjoin` | volunteer-build-reviewed |
 | M168017 | P0511 | `GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsDiagDiv` | build-observed |
-| M168018 | P0674 | `GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsDiagFormDiv` | build-observed |

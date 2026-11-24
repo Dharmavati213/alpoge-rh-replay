@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M169748 | P0085 | `GroundTheory.HeightsAndTheta.Theta.EisensteinZeta.AdicFrames.Imports` | volunteer-build-reviewed |
 | M169749 | P0862 | `GroundTheory.HeightsAndTheta.Theta.EisensteinZeta.AdicFrames.InstSecondCountableTopologyFrameSp` | build-observed |
 | M169750 | P0835 | `GroundTheory.HeightsAndTheta.Theta.EisensteinZeta.AdicFrames.IsHermitianForExH` | build-observed |
 | M169752 | P0862 | `GroundTheory.HeightsAndTheta.Theta.EisensteinZeta.AdicFrames.SwmConeStatements` | build-observed |
@@ -401,4 +402,3 @@
 | M170419 | P0972 | `GroundTheory.ProfiniteCohomology.LocalClassFormation.CupSymbolPrime` | build-observed |
 | M170420 | P1026 | `GroundTheory.ProfiniteCohomology.LocalClassFormation.CupSymbolReal` | build-observed |
 | M170421 | P1026 | `GroundTheory.ProfiniteCohomology.LocalClassFormation.CupSymbolSep` | build-observed |
-| M170422 | P0807 | `GroundTheory.ProfiniteCohomology.LocalClassFormation.CupSymbolUnramified` | build-observed |

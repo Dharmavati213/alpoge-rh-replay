@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M173005 | P0513 | `ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.FlowMatrixMajorants` | wave-reused |
 | M173006 | P0433 | `ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.FlowMeanContinuity` | wave-reused |
 | M173007 | P0646 | `ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.FlowMinimumLowerBoundHolds` | wave-reused |
 | M173008 | P0473 | `ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.FourierCoefficientDomain` | wave-reused |
@@ -401,4 +402,3 @@
 | M173633 | P0170 | `ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.LemmaSA` | wave-reused |
 | M173634 | P0170 | `ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.LemmaSB` | wave-reused |
 | M173635 | P0344 | `ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.MemOfProjTwoEqZero` | wave-reused |
-| M173636 | P0291 | `ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.NormProjectionSq` | wave-reused |

@@ -4,7 +4,6 @@
 
 | Contributor | Task | Review |
 |---|---|---|
-| [@HITEYY](https://github.com/HITEYY) | [M065417](https://github.com/rohanarun/alpoge-rh-replay/issues/24954#issuecomment-7067863667) | Pending review |
 | [@HITEYY](https://github.com/HITEYY) | [M065415](https://github.com/rohanarun/alpoge-rh-replay/issues/24957#issuecomment-7067860541) | Pending review |
 | [@HITEYY](https://github.com/HITEYY) | [M064789](https://github.com/rohanarun/alpoge-rh-replay/issues/24958#issuecomment-7067855704) | Pending review |
 | [@HITEYY](https://github.com/HITEYY) | [M065621](https://github.com/rohanarun/alpoge-rh-replay/issues/24959#issuecomment-7067867844) | Pending review |
@@ -254,3 +253,4 @@
 | [@loremcdmx](https://github.com/loremcdmx) | [M028911](https://github.com/rohanarun/alpoge-rh-replay/issues/25750#issuecomment-7068730089) | Pending review |
 | [@loremcdmx](https://github.com/loremcdmx) | [M029636](https://github.com/rohanarun/alpoge-rh-replay/issues/25751#issuecomment-7068733264) | Pending review |
 | [@loremcdmx](https://github.com/loremcdmx) | [M030607](https://github.com/rohanarun/alpoge-rh-replay/issues/25752#issuecomment-7068734705) | Pending review |
+| [@loremcdmx](https://github.com/loremcdmx) | [M033358](https://github.com/rohanarun/alpoge-rh-replay/issues/25753#issuecomment-7068736269) | Pending review |

@@ -84,6 +84,7 @@
 | M164953 | P0163 | `GroundTheory.HeightsAndTheta.Heights.CountingLowerBound.PMeanCuspWeight` | volunteer-build-reviewed |
 | M164954 | P0163 | `GroundTheory.HeightsAndTheta.Heights.CountingLowerBound.PMeanLogPlus` | volunteer-build-reviewed |
 | M164955 | P0163 | `GroundTheory.HeightsAndTheta.Heights.CountingLowerBound.PMinkowskiCovolumeBound` | volunteer-build-reviewed |
+| M164958 | P0163 | `GroundTheory.HeightsAndTheta.Heights.CountingLowerBound.PReductionSmallLast` | volunteer-build-reviewed |
 | M164960 | P0163 | `GroundTheory.HeightsAndTheta.Heights.CountingLowerBound.PTailBound` | volunteer-build-reviewed |
 | M164961 | P0163 | `GroundTheory.HeightsAndTheta.Heights.CountingLowerBound.PTelescopeMetric` | volunteer-build-reviewed |
 | M164962 | P0083 | `GroundTheory.HeightsAndTheta.Heights.CountingLowerBound.Statements` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M165360 | P0337 | `GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.StatementsPointIdealMultiProj` | wave-reused |
 | M165361 | P0083 | `GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.StatementsPowReductionCut` | volunteer-build-reviewed |
 | M165362 | P0428 | `GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.StatementsProjIdealFormValue` | wave-reused |
-| M165363 | P0083 | `GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.StatementsReesAlgebraDim` | wave-reused |

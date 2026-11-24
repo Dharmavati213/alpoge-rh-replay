@@ -2,6 +2,7 @@
 
 | Part ID | Packet | Module | Evidence |
 |---|---|---|---|
+| M169283 | P0287 | `GroundTheory.HeightsAndTheta.Heights.RemainderTerms.IsPowerSumDecompositionHomogeneousComponent` | volunteer-build-reviewed |
 | M169284 | P0165 | `GroundTheory.HeightsAndTheta.Heights.RemainderTerms.JacobiTrudi` | volunteer-build-reviewed |
 | M169285 | P0230 | `GroundTheory.HeightsAndTheta.Heights.RemainderTerms.Lattice` | volunteer-build-reviewed |
 | M169286 | P0230 | `GroundTheory.HeightsAndTheta.Heights.RemainderTerms.NumStandardTableEqCardMonotone` | volunteer-build-reviewed |
@@ -401,4 +402,3 @@
 | M169745 | P0889 | `GroundTheory.HeightsAndTheta.Theta.EisensteinZeta.AdicFrames.ContinuousFramePairLeft` | build-observed |
 | M169746 | P0085 | `GroundTheory.HeightsAndTheta.Theta.EisensteinZeta.AdicFrames.ContinuousOnChartProjM` | volunteer-build-reviewed |
 | M169747 | P0862 | `GroundTheory.HeightsAndTheta.Theta.EisensteinZeta.AdicFrames.FramePairAddRight` | build-observed |
-| M169748 | P0085 | `GroundTheory.HeightsAndTheta.Theta.EisensteinZeta.AdicFrames.Imports` | volunteer-build-reviewed |

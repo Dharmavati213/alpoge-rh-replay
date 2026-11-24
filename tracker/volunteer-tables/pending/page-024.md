@@ -4,6 +4,8 @@
 
 | Contributor | Task | Review |
 |---|---|---|
+| [@BenCaunt](https://github.com/BenCaunt) | [M154515](https://github.com/rohanarun/alpoge-rh-replay/issues/30000#issuecomment-7076426250) | Pending review |
+| [@1337isnot1337](https://github.com/1337isnot1337) | [M165169](https://github.com/rohanarun/alpoge-rh-replay/issues/30001#issuecomment-7074846244) | Pending review |
 | [@1337isnot1337](https://github.com/1337isnot1337) | [M072632](https://github.com/rohanarun/alpoge-rh-replay/issues/30031#issuecomment-7074849819) | Pending review |
 | [@1337isnot1337](https://github.com/1337isnot1337) | [M162268](https://github.com/rohanarun/alpoge-rh-replay/issues/30036#issuecomment-7074858683) | Pending review |
 | [@BenCaunt](https://github.com/BenCaunt) | [M126615](https://github.com/rohanarun/alpoge-rh-replay/issues/30041#issuecomment-7077570314) | Pending review |
@@ -12,7 +14,6 @@
 | [@1337isnot1337](https://github.com/1337isnot1337) | [M073330](https://github.com/rohanarun/alpoge-rh-replay/issues/30058#issuecomment-7074912035) | Pending review |
 | [@1337isnot1337](https://github.com/1337isnot1337) | [M105778](https://github.com/rohanarun/alpoge-rh-replay/issues/30059#issuecomment-7074906122) | Pending review |
 | [@1337isnot1337](https://github.com/1337isnot1337) | [M165059](https://github.com/rohanarun/alpoge-rh-replay/issues/30060#issuecomment-7074909506) | Pending review |
-| [@emsi](https://github.com/emsi) | [M034433](https://github.com/rohanarun/alpoge-rh-replay/issues/30092#issuecomment-7075202207) | Pending review |
 | [@1337isnot1337](https://github.com/1337isnot1337) | [M072633](https://github.com/rohanarun/alpoge-rh-replay/issues/30093#issuecomment-7075098224) | Pending review |
 | [@1337isnot1337](https://github.com/1337isnot1337) | [M165062](https://github.com/rohanarun/alpoge-rh-replay/issues/30094#issuecomment-7075101986) | Pending review |
 | [@f10etclawdbot](https://github.com/f10etclawdbot) | [M106068](https://github.com/rohanarun/alpoge-rh-replay/issues/30095#issuecomment-7075115603) | Pending review |
@@ -253,4 +254,3 @@
 | [@HITEYY](https://github.com/HITEYY) | [M137664](https://github.com/rohanarun/alpoge-rh-replay/issues/32048#issuecomment-7078457117) | Pending review |
 | [@HITEYY](https://github.com/HITEYY) | [M073087](https://github.com/rohanarun/alpoge-rh-replay/issues/32050#issuecomment-7078449191) | Pending review |
 | [@HITEYY](https://github.com/HITEYY) | [M064959](https://github.com/rohanarun/alpoge-rh-replay/issues/32052#issuecomment-7078433358) | Pending review |
-| [@HITEYY](https://github.com/HITEYY) | [M071896](https://github.com/rohanarun/alpoge-rh-replay/issues/32053#issuecomment-7078441312) | Pending review |

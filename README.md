@@ -38,11 +38,17 @@ Thank you to all volunteers and agent contributors who helped replay and port th
 
 <!-- active-volunteers-start -->
 
-[42 entries. View the full table](tracker/volunteer-tables/active/README.md).
+[35 entries. View the full table](tracker/volunteer-tables/active/README.md).
 
 | Contributor | Task | Status |
 |---|---|---|
-| [@maugomez77](https://github.com/maugomez77) | [M118930](https://github.com/rohanarun/alpoge-rh-replay/issues/25886) | Claimed |
+| [@galakurpi](https://github.com/galakurpi) | [M137346](https://github.com/rohanarun/alpoge-rh-replay/issues/21117) | Claimed |
+| [@galakurpi](https://github.com/galakurpi) | [M108927](https://github.com/rohanarun/alpoge-rh-replay/issues/21118) | Claimed |
+| [@galakurpi](https://github.com/galakurpi) | [M173750](https://github.com/rohanarun/alpoge-rh-replay/issues/21119) | Claimed |
+| [@mabdelazim](https://github.com/mabdelazim) | [M062140](https://github.com/rohanarun/alpoge-rh-replay/issues/22254) | Claimed |
+| [@mabdelazim](https://github.com/mabdelazim) | [M062151](https://github.com/rohanarun/alpoge-rh-replay/issues/22327) | Claimed |
+| [@mabdelazim](https://github.com/mabdelazim) | [M062155](https://github.com/rohanarun/alpoge-rh-replay/issues/22332) | Claimed |
+| [@gilad12-coder](https://github.com/gilad12-coder) | [M063130](https://github.com/rohanarun/alpoge-rh-replay/issues/25879) | Claimed |
 | [@gilad12-coder](https://github.com/gilad12-coder) | [M131258](https://github.com/rohanarun/alpoge-rh-replay/issues/25970) | Claimed |
 | [@loremcdmx](https://github.com/loremcdmx) | [M051277](https://github.com/rohanarun/alpoge-rh-replay/issues/26977) | Claimed |
 | [@loremcdmx](https://github.com/loremcdmx) | [M079827](https://github.com/rohanarun/alpoge-rh-replay/issues/26978) | Claimed |
@@ -55,13 +61,7 @@ Thank you to all volunteers and agent contributors who helped replay and port th
 | [@loremcdmx](https://github.com/loremcdmx) | [M036491](https://github.com/rohanarun/alpoge-rh-replay/issues/27042) | Claimed |
 | [@loremcdmx](https://github.com/loremcdmx) | [M079838](https://github.com/rohanarun/alpoge-rh-replay/issues/27043) | Claimed |
 | [@loremcdmx](https://github.com/loremcdmx) | [M140261](https://github.com/rohanarun/alpoge-rh-replay/issues/27044) | Claimed |
-| [@maugomez77](https://github.com/maugomez77) | [M118430](https://github.com/rohanarun/alpoge-rh-replay/issues/27317) | Claimed |
-| [@maugomez77](https://github.com/maugomez77) | [M116378](https://github.com/rohanarun/alpoge-rh-replay/issues/28207) | Claimed |
-| [@maugomez77](https://github.com/maugomez77) | [M111760](https://github.com/rohanarun/alpoge-rh-replay/issues/28316) | Claimed |
-| [@maugomez77](https://github.com/maugomez77) | [M113163](https://github.com/rohanarun/alpoge-rh-replay/issues/28725) | Claimed |
-| [@user42245](https://github.com/user42245) | [M164325](https://github.com/rohanarun/alpoge-rh-replay/issues/28949) | Claimed |
-| [@user42245](https://github.com/user42245) | [M163709](https://github.com/rohanarun/alpoge-rh-replay/issues/28973) | Claimed |
-| [@user42245](https://github.com/user42245) | [M168805](https://github.com/rohanarun/alpoge-rh-replay/issues/28987) | Claimed |
+| [@emsi](https://github.com/emsi) | [M034433](https://github.com/rohanarun/alpoge-rh-replay/issues/30092) | Claimed |
 
 <!-- active-volunteers-end -->
 
@@ -106,11 +106,10 @@ Thank you to all volunteers and agent contributors who helped replay and port th
 
 <!-- volunteers-start -->
 
-[15,268 entries. View the full table](tracker/volunteer-tables/reviewed/README.md).
+[15,269 entries. View the full table](tracker/volunteer-tables/reviewed/README.md).
 
 | Contributor | Task | Modules | Review |
 |---|---|---:|---|
-| [@JamCh01](https://github.com/JamCh01) | [M042507](https://github.com/rohanarun/alpoge-rh-replay/issues/34756#issuecomment-7083203610) | 1 | [Build evidence verified](evidence/volunteers/M042507.json) |
 | [@JamCh01](https://github.com/JamCh01) | [M037921](https://github.com/rohanarun/alpoge-rh-replay/issues/34753#issuecomment-7083211648) | 1 | [Build evidence verified](evidence/volunteers/M037921.json) |
 | [@gilad12-coder](https://github.com/gilad12-coder) | [M123501](https://github.com/rohanarun/alpoge-rh-replay/issues/34752#issuecomment-7083139794) | 1 | [Build evidence verified](evidence/volunteers/M123501.json) |
 | [@JamCh01](https://github.com/JamCh01) | [M034792](https://github.com/rohanarun/alpoge-rh-replay/issues/34749#issuecomment-7083201969) | 1 | [Build evidence verified](evidence/volunteers/M034792.json) |
@@ -130,6 +129,7 @@ Thank you to all volunteers and agent contributors who helped replay and port th
 | [@JamCh01](https://github.com/JamCh01) | [P2814](https://github.com/rohanarun/alpoge-rh-replay/issues/32081#issuecomment-7078705646) | 11 | [Build evidence verified](evidence/volunteers/P2814.json) |
 | [@RhizoNymph](https://github.com/RhizoNymph) | [P2748](https://github.com/rohanarun/alpoge-rh-replay/issues/25103#issuecomment-7085656907) | 64 | [Build evidence verified](evidence/volunteers/P2748.json) |
 | [@UnityChaos](https://github.com/UnityChaos) | [P2771](https://github.com/rohanarun/alpoge-rh-replay/issues/30424#issuecomment-7088754643) | 64 | [Build evidence verified](evidence/volunteers/P2771.json) |
+| [@hipotures](https://github.com/hipotures) | [M164958](https://github.com/rohanarun/alpoge-rh-replay/issues/34579#issuecomment-7082827663) | 1 | [Build evidence verified](evidence/volunteers/M164958.json) |
 
 <!-- volunteers-end -->
 
@@ -145,9 +145,9 @@ Thank you to all volunteers and agent contributors who helped replay and port th
 | Pilot proof object reused | 150 |
 | Pilot downstream module kernel-checked | 1 |
 | Distributed proof object reused | 16,970 |
-| Volunteer build evidence reviewed | 65,933 |
+| Volunteer build evidence reviewed | 65,934 |
 | Worker target kernel replay reviewed | 72 |
-| **Total with recorded module evidence** | **109,717 / 175,187** |
+| **Total with recorded module evidence** | **109,718 / 175,187** |
 
 [See each completed part and its evidence](completed/README.md) · [Machine-readable ledger](tracker/completed.tsv)
 
