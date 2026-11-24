@@ -91,6 +91,15 @@
   <div class="bar big-bar" role="img" aria-label="Overall progress"><div class="big-fill" id="bigfill" style="width:0%"></div></div>
   <div class="cards" id="cards"></div>
 
+  <section id="pr120p-section" aria-labelledby="pr120p-heading" hidden>
+    <h2 id="pr120p-heading">PR #120 build progress (Lean 4.36 consolidation)</h2>
+    <p class="sub" id="pr120p-sub"></p>
+    <div class="headline-num" id="pr120p-headline"></div>
+    <div class="bar big-bar" role="img" id="pr120p-bar" aria-label="PR #120 compiled modules"><div class="big-fill" id="pr120p-fill" style="width:0%"></div></div>
+    <div class="cards" id="pr120p-cards"></div>
+    <div id="pr120p-chart" style="margin-top:10px"></div>
+  </section>
+
   <section id="pr120-section" aria-labelledby="pr120-heading" hidden>
     <h2 id="pr120-heading">PR #120 optimization contributors</h2>
     <p class="sub" id="pr120-sub"></p>
@@ -498,6 +507,48 @@ fetch("pr120-contributors.json?t=" + Date.now())
         '<span class="val">' + esc(parts.join(" · ")) + '</span></div>';
     }).join("");
     el("pr120-section").hidden = false;
+  })
+  .catch(function () { /* section stays hidden */ });
+
+// PR #120 build progress (issue #35036): written each coordinator cycle by dashboard/update_pr120_progress.py.
+fetch("pr120-progress.json?t=" + Date.now())
+  .then(function (r) { if (!r.ok) { throw new Error("HTTP " + r.status); } return r.json(); })
+  .then(function (d) {
+    if (!d.total) { return; }
+    var pct = 100 * d.built / d.total;
+    el("pr120p-headline").textContent = fmt(d.built) + " / " + fmt(d.total) + " modules compiled (" + pct.toFixed(1) + "%)";
+    el("pr120p-fill").style.width = pct.toFixed(2) + "%";
+    el("pr120p-sub").innerHTML = 'Union of compiled modules across the four build shards for ' +
+      '<a href="https://github.com/rohanarun/riemann-hypothesis/tree/opt/collapse-and-consolidate-4.36" target="_blank" rel="noopener">' +
+      '<code>opt/collapse-and-consolidate-4.36</code></a>. Open root errors are listed in ' +
+      '<a href="https://github.com/rohanarun/alpoge-rh-replay/blob/main/PR120-BUGS.md" target="_blank" rel="noopener">PR120-BUGS.md</a>. ' +
+      'Updated ' + esc(d.updated.replace("T", " ").replace("Z", " UTC")) + (d.head ? ", branch head <code>" + esc(d.head) + "</code>" : "") + ".";
+    el("pr120p-cards").innerHTML = card(fmt(d.total - d.built), "modules left") +
+      (d.open != null ? card(fmt(d.open), "open root errors") : "");
+    var h = (d.history || []).filter(function (p) { return p.total; });
+    if (h.length > 1) {
+      var W = 720, H = 190, padL = 8, padT = 12, iw = W - padL - 70, ih = H - padT - 28;
+      var t0 = Date.parse(h[0].t), t1 = Date.parse(h[h.length - 1].t) || t0 + 1;
+      var lo = Math.min.apply(null, h.map(function (p) { return 100 * p.built / p.total; }));
+      lo = Math.max(0, Math.floor(lo / 5) * 5);
+      var X = function (p) { return padL + iw * (Date.parse(p.t) - t0) / Math.max(1, t1 - t0); };
+      var Y = function (p) { return padT + ih * (1 - (100 * p.built / p.total - lo) / (100 - lo)); };
+      var pts = h.map(function (p) { return X(p).toFixed(1) + "," + Y(p).toFixed(1); }).join(" ");
+      var last = h[h.length - 1];
+      var lbl = function (p) { return p.t.slice(0, 16).replace("T", " ") + " UTC"; };
+      el("pr120p-chart").innerHTML = '<svg viewBox="0 0 ' + W + ' ' + H + '" width="100%" role="img" ' +
+        'aria-label="PR #120 percent of modules compiled over time" style="display:block">' +
+        '<line x1="' + padL + '" x2="' + (padL + iw) + '" y1="' + padT + '" y2="' + padT + '" stroke="var(--muted)" stroke-dasharray="3 4" opacity="0.5"/>' +
+        '<text x="' + (padL + iw + 6) + '" y="' + (padT + 4) + '" fill="var(--muted)" font-size="12">100%</text>' +
+        '<polyline fill="none" stroke="var(--accent)" stroke-width="2" points="' + pts + '"/>' +
+        '<circle cx="' + X(last).toFixed(1) + '" cy="' + Y(last).toFixed(1) + '" r="3.5" fill="var(--accent)"/>' +
+        '<text x="' + (X(last) + 8).toFixed(1) + '" y="' + (Y(last) + 4).toFixed(1) + '" fill="var(--muted)" font-size="13" font-weight="700">' +
+        (100 * last.built / last.total).toFixed(1) + '%</text>' +
+        '<text x="' + (padL + iw + 6) + '" y="' + (padT + ih) + '" fill="var(--muted)" font-size="12">' + lo + '%</text>' +
+        '<text x="' + padL + '" y="' + (H - 6) + '" fill="var(--muted)" font-size="12">' + esc(lbl(h[0])) + '</text>' +
+        '<text x="' + (padL + iw) + '" y="' + (H - 6) + '" fill="var(--muted)" font-size="12" text-anchor="end">' + esc(lbl(last)) + '</text></svg>';
+    }
+    el("pr120p-section").hidden = false;
   })
   .catch(function () { /* section stays hidden */ });
 </script>
