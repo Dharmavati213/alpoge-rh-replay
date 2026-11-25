@@ -1,0 +1,52 @@
+# Added for the shared build cache (see ../CACHE.md). The rest of this file, up to the
+# next such comment, is unchanged from grh-lean commit 72fead1.
+platformIndependent = true
+
+name = "GRH"
+srcDir = "src"
+defaultTargets = ["Lib", "New", "Main"]
+moreLeanArgs = ["--tstack=400000"]
+
+[leanOptions]
+autoImplicit = false
+relaxedAutoImplicit = false
+maxSynthPendingDepth = 3
+pp.unicode.fun = true
+maxHeartbeats = 4000000
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "56a005855ea17e0b0958f73ec801ae140b0a1679"
+
+[[lean_lib]]
+name = "Lib"
+globs = ["Lib.+"]
+
+[[lean_lib]]
+name = "New"
+globs = ["New.+"]
+
+[[lean_lib]]
+name = "Main"
+roots = ["Statements", "Main"]
+
+[[lean_lib]]
+name = "Challenge"
+srcDir = ".."
+
+# Added for the shared build cache. It is not part of the original project.
+[[lean_exe]]
+name = "cache"
+root = "scripts.Cache"
+srcDir = ".."
+
+# Stock Lake also reads this file as its cache-service configuration (LAKE_CONFIG).
+[cache]
+defaultService = "grh-lean"
+
+[[cache.service]]
+name = "grh-lean"
+kind = "s3"
+artifactEndpoint = "https://rh-cache.taucetiproject.org/artifacts"
+revisionEndpoint = "https://rh-cache.taucetiproject.org/grh-lean/revisions"
