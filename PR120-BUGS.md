@@ -143,6 +143,28 @@ The table lists the **root failures** from a 4-shard build of all 47,881 modules
 | `Formalism/LocalToGlobal/SiegelLatticeTheory/ClosedLocalOrbits/GaugeLatticeShifts/SlabCoverPf.lean:14` | missing declaration | Unknown constant `Formalism.L2.SG.PoincareInHH.PoincareSetting` |  |
 | `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/RootLatticeThresholds/FullExists.lean:18` | missing declaration | Unknown constant `Formalism.L2.SG.TermOp` d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲ d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲ |  |
 
+## Look-ahead: all known errors (preview)
+
+A scratch build compiles the current branch head and, where a declaration fails, replaces only that declaration's proof with `sorry` in the scratch copy so everything after it can be checked too. This lists errors the normal build can't reach yet. Round 1 = current layer; round 2+ = hidden behind it (**start there: nobody else sees those yet**). Nothing from the scratch copy is ever committed. Pull the branch and compile the file before fixing; rows can be minutes old. 15 files (14 in rounds 2+). Sessions: rh-ci-v128: session 2026-11-25T07:48:35Z branch head 94ff1f0fd0 target Shard0 part=1; rh-ci-v128: session 2026-11-25T07:48:35Z branch head 94ff1f0fd0 target Shard0 part=1; rh-ci-v128-2: session 2026-11-25T05:24:14Z branch head 9422ea4335 target Shard1 part=1; rh-ci-v128-2: done 2026-11-25T09:31:58Z; rh-ci-v128-3: session 2026-11-25T05:29:11Z branch head 057825ae87 target Shard2 part=1; rh-ci-v128-3: done 2026-11-25T09:59:55Z; rh-ci-v128-4: session 2026-11-25T08:04:21Z branch head 947729fc72 target Shard3 part=0; rh-ci-v128-4: session 2026-11-25T08:04:21Z branch head 947729fc72 target Shard3 part=0.
+
+| First error | Round | Kind | Error |
+|---|---|---|---|
+| `Development/AutomorphicArithmetic/LocalEmbeddings/ReBaseZeta.lean:40` | 8 | error | Application type mismatch: The argument |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/GammaLaurentFactors/LocalEmbeddingNorms/LeviDiv.lean:30` | 8 | error | Application type mismatch: The argument |
+| `Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/ExistsSelectedRealization.lean:61` | 8 | error | unexpected token 'import'; expected 'lemma' |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/BuildingsResidueChars/LocalZetaFunctionalUniqueness.lean:166` | 6 | error | Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/LeviSmoothLocalization/PrincipalSeriesMatching/SideXCen.lean:201` | 6 | error | Function expected at |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/GammaLaurentFactors/LocalEmbeddingNorms/GamLocOf.lean:26` | 5 | error | Function expected at |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/GammaLaurentFactors/LaurentBlockInduction/LdDefs.lean:58` | 5 | error | Application type mismatch: The argument |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/GammaLaurentFactors/LocalEmbeddingNorms/SideGCenOf.lean:205` | 5 | error | synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/ArchimedeanSchwartz/ArchimedeanDerivatives/SatDict.lean:67` | 4 | error | Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/ArchimedeanSchwartz/ArchimedeanDerivatives/LocUnr.lean:212` | 4 | error | Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/GammaLaurentFactors/HodgeTateFromSandwich.lean:30` | 4 | error | Application type mismatch: The argument |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/ArchimedeanSchwartz/HodgeTateFromSandwich.lean:28` | 3 | error | synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized |
+| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle3029.lean:309` | 3 | error | failed to synthesize |
+| `Development/AbelianVarietyTheory/Proofs/FlagMeasures/Bundle0354.lean:99` | 2 | error | failed to synthesize instance of type class |
+| `Development/AbelianVarietyTheory/Proofs/FlagMeasures/ExistsIsHaarProbabilityMaxCompactHermitian.lean:67` | 1 | error | failed to synthesize instance of type class |
+
 ## Open PRs not auto-merged
 
 - #15 (@aliromman): touches protected files (needs manual review)
