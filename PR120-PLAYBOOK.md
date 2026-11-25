@@ -127,3 +127,8 @@ and only if it then compiles quickly.
 If a section is identical to the original and still fails only because of the bundle's widened imports, the reliable
 fallback is to split that section back into its own file with the original's imports. Then make the bundle import that
 file. Say so in the PR so the coordinator can review the extra file.
+
+## Root causes from the late layers (for the 4.37 regeneration)
+- [Dharmavati213's consolidated list of root causes behind 55 late-layer failures](https://github.com/rohanarun/alpoge-rh-replay/issues/35028), mostly leaked instances from widened imports (disable in the section, or lower priority at the source). Reuse it as a checklist when the consolidation is regenerated on `main`.
+- `attribute [-instance]` lines are double-edged: several files broke when a mass edit added or removed them (`ExistsIsHaarProbabilityMaxCompactHermitian`, `ReBaseZeta`, `HodgeTateFromSandwich`). Always check a change against **current** dependencies, never a stale build tree.
+- Independent full builds: roy7 (green at `b35a3239c4`, 114,030 jobs, 0 errors), maugomez77 (iterative ~20-min full builds with warm artifacts).
