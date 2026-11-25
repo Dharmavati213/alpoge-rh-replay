@@ -1,8 +1,9 @@
 # PR #120 — open build failures
 
-Branch `rohanarun/riemann-hypothesis:opt/collapse-and-consolidate-4.36`, head `fc339a91f6`. Updated 2026-11-25 10:01 UTC.
+Branch `rohanarun/riemann-hypothesis:opt/collapse-and-consolidate-4.36`, head `fc339a91f6`. Updated 2026-11-25 10:11 UTC.
 
-**Compiled: 43,930 / 47,885 modules (91.7%)** across the four build shards, as of 2026-11-25 10:01 UTC.
+**Compiled: 43,930 / 47,885 modules (91.7%)** across the four build shards, as of 2026-11-25 10:11 UTC.
+
 
 
 
@@ -108,7 +109,7 @@ The table lists the **root failures** from a 4-shard build of all 47,881 modules
 | `Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/Bundle0561.lean:97` | wrong name resolved (likely collision) | Function expected at coordL P ?m.949 but this term has type ↥(P.ext ?m.949) →ₗ[O] ι → ZMod a → ↥?m.949 m |  |
 | `Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/SupercuspidalSupportUniqueGL.lean:290` | wrong name resolved (likely collision) | Application type mismatch: The argument ρ has type Representation ℂ (GL (Fin b) k) V of sort `Type` but is expected to have type AlgebraicGeometry.Scheme.Modules ?m.216 |  |
 | `Development/AbelianVarietyTheory/Proofs/JetHarmonics/RawChartTangentMaximalIdealOfNonDegenerate.lean:27` | ambiguous name | Ambiguous term mm_zero Possible interpretations: PlaceProj.mm_zero : V.MM 0 Formalism.L2.FormalSeriesBounds.mm_zero : V.MM 0 |  |
-| `Development/AbelianVarietyTheory/Proofs/RingsOfIntegers/FormalMatrixKernelFiniteNcardEqRank.lean:157` | other | Invalid simp theorem: Expected a proposition, but found (A : Typ |  |
+| `Development/AbelianVarietyTheory/Proofs/RingsOfIntegers/FormalMatrixKernelFiniteNcardEqRank.lean:157` | other | Invalid simp theorem: Expected a proposition, but found (A : Type) → [inst : CommRing A] → [IsLocalRing A] → ↥(Sp A) |  |
 | `Development/AbelianVarietyTheory/Proofs/ThetaShiftProofs/LetterSquaredLengthLeFlowHeight.lean:190` | ambiguous name | Ambiguous term relab Possible interpretations: Formalism.L2.PjFree.relab c σ τ : E →+* ℂ Formalism.L2.Pj.relab c σ τ : E →+* ℂ |  |
 | `Development/AbelianVarietyTheory/Proofs/TwistedOperators/FinrankInvFunBranch.lean:98` | instance | failed to synthesize Module.Free ℂ ↥(invFun ((outer ρ).tprod (outer σ))) (deterministic) timeout at `typeclass`, maximum number of heartbeats (20000) has been reached |  |
 | `Development/AbelianVarietyTheory/Proofs/UnitaryExistence/Bundle0086.lean:418` | ambiguous name | ambiguous term, use fully qualified name, possible interpretations [@Formalism.L2.PjFree.rdU, @Formalism.L2.Pj.rdU] |  |
@@ -136,28 +137,6 @@ The table lists the **root failures** from a 4-shard build of all 47,881 modules
 | `Formalism/LocalToGlobal/SiegelLatticeTheory/ClosedLocalOrbits/GaugeLatticeShifts/SatGramActL.lean:18` | missing declaration | Unknown constant `Formalism.L2.SG.NormCut` d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲ d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲ |  |
 | `Formalism/LocalToGlobal/SiegelLatticeTheory/ClosedLocalOrbits/GaugeLatticeShifts/SlabCoverPf.lean:14` | missing declaration | Unknown constant `Formalism.L2.SG.PoincareInHH.PoincareSetting` |  |
 | `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/RootLatticeThresholds/FullExists.lean:18` | missing declaration | Unknown constant `Formalism.L2.SG.TermOp` d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲ d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲ |  |
-
-## Look-ahead: all known errors (preview)
-
-A scratch build compiles the current branch head and, where a declaration fails, replaces only that declaration's proof with `sorry` in the scratch copy so everything after it can be checked too. This lists errors the normal build can't reach yet. Round 1 = current layer; round 2+ = hidden behind it (**start there: nobody else sees those yet**). Nothing from the scratch copy is ever committed. Pull the branch and compile the file before fixing; rows can be minutes old. 15 files (14 in rounds 2+). Sessions: rh-ci-v128: session 2026-11-25T07:48:35Z branch head 94ff1f0fd0 target Shard0 part=1; rh-ci-v128: session 2026-11-25T07:48:35Z branch head 94ff1f0fd0 target Shard0 part=1; rh-ci-v128-2: session 2026-11-25T05:24:14Z branch head 9422ea4335 target Shard1 part=1; rh-ci-v128-2: done 2026-11-25T09:31:58Z; rh-ci-v128-3: session 2026-11-25T05:29:11Z branch head 057825ae87 target Shard2 part=1; rh-ci-v128-3: done 2026-11-25T09:59:55Z; rh-ci-v128-4: session 2026-11-25T08:04:21Z branch head 947729fc72 target Shard3 part=0; rh-ci-v128-4: session 2026-11-25T08:04:21Z branch head 947729fc72 target Shard3 part=0.
-
-| First error | Round | Kind | Error |
-|---|---|---|---|
-| `Development/AutomorphicArithmetic/LocalEmbeddings/ReBaseZeta.lean:40` | 8 | error | Application type mismatch: The argument |
-| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/GammaLaurentFactors/LocalEmbeddingNorms/LeviDiv.lean:30` | 8 | error | Application type mismatch: The argument |
-| `Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/ExistsSelectedRealization.lean:61` | 8 | error | unexpected token 'import'; expected 'lemma' |
-| `Development/AutomorphicArithmetic/AutomorphicVarieties/BuildingsResidueChars/LocalZetaFunctionalUniqueness.lean:166` | 6 | error | Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce |
-| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/LeviSmoothLocalization/PrincipalSeriesMatching/SideXCen.lean:201` | 6 | error | Function expected at |
-| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/GammaLaurentFactors/LocalEmbeddingNorms/GamLocOf.lean:26` | 5 | error | Function expected at |
-| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/GammaLaurentFactors/LaurentBlockInduction/LdDefs.lean:58` | 5 | error | Application type mismatch: The argument |
-| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/GammaLaurentFactors/LocalEmbeddingNorms/SideGCenOf.lean:205` | 5 | error | synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized |
-| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/ArchimedeanSchwartz/ArchimedeanDerivatives/SatDict.lean:67` | 4 | error | Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce |
-| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/ArchimedeanSchwartz/ArchimedeanDerivatives/LocUnr.lean:212` | 4 | error | Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce |
-| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/GammaLaurentFactors/HodgeTateFromSandwich.lean:30` | 4 | error | Application type mismatch: The argument |
-| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/ArchimedeanSchwartz/HodgeTateFromSandwich.lean:28` | 3 | error | synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized |
-| `Development/AbelianVarietyTheory/Proofs/DivisorProofs/Bundle3029.lean:309` | 3 | error | failed to synthesize |
-| `Development/AbelianVarietyTheory/Proofs/FlagMeasures/Bundle0354.lean:99` | 2 | error | failed to synthesize instance of type class |
-| `Development/AbelianVarietyTheory/Proofs/FlagMeasures/ExistsIsHaarProbabilityMaxCompactHermitian.lean:67` | 1 | error | failed to synthesize instance of type class |
 
 ## Open PRs not auto-merged
 
