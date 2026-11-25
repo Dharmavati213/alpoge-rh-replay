@@ -1,8 +1,9 @@
 # PR #120 — open build failures
 
-Branch `rohanarun/riemann-hypothesis:opt/collapse-and-consolidate-4.36`, head `947729fc72`. Updated 2026-11-25 08:14 UTC.
+Branch `rohanarun/riemann-hypothesis:opt/collapse-and-consolidate-4.36`, head `947729fc72`. Updated 2026-11-25 08:23 UTC.
 
-**Compiled: 43,930 / 47,885 modules (91.7%)** across the four build shards, as of 2026-11-25 08:14 UTC.
+**Compiled: 43,930 / 47,885 modules (91.7%)** across the four build shards, as of 2026-11-25 08:23 UTC.
+
 
 
 
@@ -125,16 +126,6 @@ The table lists the **root failures** from a 4-shard build of all 47,881 modules
 | `Formalism/LocalToGlobal/SiegelLatticeTheory/ClosedLocalOrbits/GaugeLatticeShifts/SatGramActL.lean:18` | missing declaration | Unknown constant `Formalism.L2.SG.NormCut` d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲ d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲ |  |
 | `Formalism/LocalToGlobal/SiegelLatticeTheory/ClosedLocalOrbits/GaugeLatticeShifts/SlabCoverPf.lean:14` | missing declaration | Unknown constant `Formalism.L2.SG.PoincareInHH.PoincareSetting` |  |
 | `Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/RootLatticeThresholds/FullExists.lean:18` | missing declaration | Unknown constant `Formalism.L2.SG.TermOp` d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲ d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲ |  |
-
-## Look-ahead: all known errors (preview)
-
-A scratch build compiles the current branch head and, where a declaration fails, replaces only that declaration's proof with `sorry` in the scratch copy so everything after it can be checked too. This lists errors the normal build can't reach yet. Round 1 = current layer; round 2+ = hidden behind it (**start there: nobody else sees those yet**). Nothing from the scratch copy is ever committed. Pull the branch and compile the file before fixing; rows can be minutes old. 3 files (2 in rounds 2+). Sessions: rh-ci-v128: session 2026-11-25T07:48:35Z branch head 94ff1f0fd0 target Shard0 part=1; rh-ci-v128: session 2026-11-25T07:48:35Z branch head 94ff1f0fd0 target Shard0 part=1; rh-ci-v128-2: session 2026-11-25T05:24:14Z branch head 9422ea4335 target Shard1 part=1; rh-ci-v128-2: 06:35:22 round 2: 1 errors in 1 files, 1 declarations stubbed, 0 statement errors; rh-ci-v128-3: session 2026-11-25T05:29:11Z branch head 057825ae87 target Shard2 part=1; rh-ci-v128-3: 06:42:21 round 2: 1 errors in 1 files, 1 declarations stubbed, 0 statement errors; rh-ci-v128-4: session 2026-11-25T08:04:21Z branch head 947729fc72 target Shard3 part=0; rh-ci-v128-4: session 2026-11-25T08:04:21Z branch head 947729fc72 target Shard3 part=0.
-
-| First error | Round | Kind | Error |
-|---|---|---|---|
-| `Development/AutomorphicArithmetic/LocalEmbeddings/ReBaseZeta.lean:40` | 3 | error | Application type mismatch: The argument |
-| `Development/AbelianVarietyTheory/Proofs/FlagMeasures/Bundle0354.lean:99` | 2 | error | failed to synthesize instance of type class |
-| `Development/AbelianVarietyTheory/Proofs/FlagMeasures/ExistsIsHaarProbabilityMaxCompactHermitian.lean:67` | 1 | error | failed to synthesize instance of type class |
 
 ## Open PRs not auto-merged
 
