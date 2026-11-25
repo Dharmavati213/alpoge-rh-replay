@@ -1,42 +1,50 @@
-# Agent Instructions — Make PR #120 build
+# Agent Instructions: verify, port and optimize grh-lean
 
-> **Priority right now:** help get [PR #120](https://github.com/leanprover-community/riemann-hypothesis/pull/120) to a clean build. It consolidates the Lean `v4.36.0` RH proof from ~149k to **47,884 modules (−67.9% files)**. The remaining work is a list of compile failures introduced by bundling. Each is small and self-contained. Do **not** claim legacy packets (`Claim P####` / `Claim M######`) or open 4.33 → 4.36 porting PRs here.
+> **New priority (Nov 25, 2026).** Luke Sernau has published [lsernau/grh-lean](https://github.com/lsernau/grh-lean): a Lean 4 proof of RH and of GRH for Dirichlet L-functions, based on the same proof (Levent Alpöge's, with Claude). It is far smaller: the compact edition is **about 76,000 lines** and the readable edition about 300,000. Our PR #120 consolidation of the old 15-million-line proof is **paused**. All effort now goes into **verifying, understanding and optimizing grh-lean**.
+>
+> Upstream is a research artifact and does **not** accept contributions. Send PRs to the community fork, **[rohanarun/grh-lean](https://github.com/rohanarun/grh-lean)**. Call to action and discussion: see the pinned issue in this repo.
 
-> **Build status (Nov 24, 2026):** the branch does **not** build cleanly yet. About **83% of modules compile** (39,723 of 47,885); the rest sit behind open errors. **Where to work:** [PR120-BUGS.md](PR120-BUGS.md) has two lists. The **Open** table is the current layer from the normal build. The **Look-ahead: all known errors** table comes from a scratch build that stubs failing proofs so it can check everything after them; it lists errors several layers down that the normal build can't reach yet. **Prefer look-ahead rows from round 2+**: nobody else sees them yet, so they're the least likely to be duplicated. Always pull the branch and compile the file first; rows can be minutes stale.
+## Status
 
-## Read these first
+| | v4.35.0 (as published, `72fead1`) | v4.37.0-rc1 port |
+|---|---|---|
+| `grh-compact/` (~76k lines, 794 files) | **builds**, panic-free, 0 `sorry`; `#print axioms` = `propext`, `Classical.choice`, `Quot.sound` | in progress: 47 errors in 15 files after the first fix |
+| `grh/` (~300k lines, 803 files) | **builds**, same axioms | in progress: 41 errors at first build, about half fixed |
+| `lake comparator` | running | after the port is green |
+| `con-leche --olean` | running | `--compare` needs con-leche's compare branch ported to 4.37 (in progress) |
 
-1. **[PR120-BUGS.md](PR120-BUGS.md):** the live list of open root failures, refreshed every cycle (~25 minutes) by a 4-shard, 512-vCPU build, including the look-ahead list. Rows marked `claimed: #N @you` are taken.
-2. **[PR120-PLAYBOOK.md](PR120-PLAYBOOK.md):** every failure pattern found so far, with the fix that worked. **Most open rows match one of its patterns**: namespace-prefix shadowing, a table of ambiguous-name pairs, instance-search culprits such as the `IsCD`/`IsCO` instances, and Lean 4.36 elaboration changes such as `maxSynthPendingDepth`.
+Baseline build times, with the Mathlib cache, both editions at once on 128 cores: `grh` 1057 s, `grh-compact` 1290 s. The compact edition is slower despite having 4× fewer lines, which makes it the first profiling target.
 
-## Where the work is
+## What to work on
 
-- **Branch:** `rohanarun/riemann-hypothesis`, branch `opt/collapse-and-consolidate-4.36` (the head of PR #120).
-- Modules that fail only with `bad import` are **not** bugs. They import a broken module and will build once it's fixed. Fix the root failures in the list.
-- The whole tree is not green yet, so `lake build` of everything (or `lake comparator`) can't pass. Verify your fix by building the module you changed and its importers.
+1. **Verify.** Build either edition yourself (`lake exe cache get && LEAN_ABORT_ON_PANIC=1 lake build && lake env lean scripts/PrintAxioms.lean`) and run `lake comparator` against its `Challenge.lean` + `comparator.json`. Post the result (toolchain, machine, time, axioms) as a comment on the pinned issue. Independent confirmations matter most.
+2. **Port to Lean v4.37.0-rc1** (Mathlib tag `v4.37.0-rc1`, commit `31ce06ea`). Breakages found so far:
+   - root-level `one_apply` / `mul_apply` now shadow `Matrix.` / `ArithmeticFunction.` ones, so qualify them;
+   - `padicValNat` lemmas are deprecated in favour of `multiplicity`;
+   - `simps!` now generates `permStep_apply_cauchy`, so `permStep_apply` is gone;
+   - `Set.exists_max_image` now takes a `Set` and `Set.Nonempty`;
+   - `IsRoot.map` now takes `f` explicitly;
+   - `fun_prop` no longer discharges some `ContinuousMonoidHom` auto-params;
+   - `Matrix.fromBlocks_one` uses a different `DecidableEq` instance (use `convert`).
+3. **Optimize** (after the port is green). Luke's suggestion: *"I would bet that there are some big wins still to be had"* by unrolling definitions into a long, flat proof, simplifying across what used to be boundaries, then rolling them back up. Concrete targets:
+   - profile the slowest files (`set_option profiler true`, `lake build -v` timings), starting with `grh-compact`;
+   - the two heartbeat-timeout files from the 4.37 port: `Lib/General/Analysis/HolomorphicIntegral.lean`, `Lib/General/NumberTheory/Embeddings.lean`;
+   - dead lemmas (unused by the 5 headline theorems), heavy `import Mathlib` lines that can be narrowed, `simp`/`aesop`/`grind` calls that can become direct terms;
+   - shorter arguments (Luke: some parts "needed entirely new arguments", such as removing Vandiver).
+4. **Understand.** Notes, blueprints and explanations of the argument are welcome as Markdown in the fork (`notes/`). No mathematician has read the proof through yet.
 
-## How to take a bug
+## How to contribute
 
-1. Check [open PRs against the branch](https://github.com/rohanarun/riemann-hypothesis/pulls) so you don't duplicate someone else's work.
-2. Open a **draft PR early** against `rohanarun/riemann-hypothesis:opt/collapse-and-consolidate-4.36`, titled `Fix <Module>`. That's your claim.
-3. One module (or one family, such as all `JetR` files) per PR.
-4. **Claim before you start.** Every ~15 minutes a coordinator script fixes unclaimed rows it can resolve mechanically (name collisions), pushes them to the branch, and republishes [PR120-BUGS.md](PR120-BUGS.md). It never touches a file that an open PR against the branch modifies. Before you push, pull the branch so you're working on the latest fixes.
-5. **Mark the PR "Ready for review" when your fix is done.** Every 15 minutes the coordinator merges ready PRs that only change `src/*.lean`, touch no protected files, add no `sorry`/`admit`/axioms/`unsafe`, and merge cleanly. A draft is also merged early if it passes the same checks, changes at most 5 files, and every file it changes is currently a failing row in [PR120-BUGS.md](PR120-BUGS.md). Merged PRs are closed automatically. If two PRs fix the same file, the first to merge wins. If your PR is closed as superseded, the file was already fixed another way; pick a new row.
-6. **Force-pushing and rebasing are fine.** The coordinator now fetches PR heads with a forcing refspec, and handles non-ASCII paths such as `GaloisCohomology₂/`. If a PR of yours was stuck on `fetch failed` or `empty diff` before Nov 23, that was a coordinator bug; it's fixed now.
-
-## How to diagnose
-
-Most failures come from bundling. Several original files were merged into one `BundleNNNN.lean` (each section marked `-- bundled from <OriginalModule>`), and each original proof now sees the imports, names and instances of its neighbours.
-
-- **Find the original.** Look it up on `main` (`c779160312`): `git grep -F '<the failing line>' c779160312 -- src`. Its `open`s and imports tell you which declaration was meant. Qualify the bare name to that declaration's full name, **only inside that original's `namespace … end` block**. Never rewrite the `def`/`theorem` line that declares the name.
-- **Lean looks up enclosing namespaces before opened ones.** Inside `namespace PI.Foo`, a bare `sigR` finds `PI.sigR` before an opened `GenusMassVolumes.sigR`. `open X hiding y` does **not** help there; qualify instead. The playbook lists the known cases.
-- **Instance timeouts (`failed to synthesize … timeout at typeclass`).** Usually a newly visible instance derails the search. Check the culprit table in the playbook first; the usual fix is `attribute [-instance] <culprit> in` placed right before the failing declaration.
-- **Unknown identifier / already declared.** Usually a declaration lost or duplicated when thin wrappers were collapsed. Compare with the original module on `main`.
-- **Last resort:** if a section is identical to the original and still fails only because of the bundle's widened imports, split it back into its own file with the original's imports, and say so in the PR.
+- Fork-and-PR against `rohanarun/grh-lean`. Open a **draft PR early** titled `Port: <File>`, `Opt: <File>` or `Verify: <what>`; that's your claim. One file or one family of files per PR.
+- In the PR, include the before/after build time (for optimizations) or the original error (for port fixes), and the result of `lake env lean scripts/PrintAxioms.lean`.
 
 ## Strict rules
 
-- **Never modify** `src/Challenge.lean`, `src/Statements.lean`, `comparator.json`, `lakefile*` or `lean-toolchain`.
-- **Never introduce** `sorry`, `admit`, new `axiom`s, `native_decide`, `implemented_by` or unsafe features. Don't change what a theorem states.
-- Build the module you changed if you can (`lake build <Module>`; `lake exe mathlib/cache get` for Mathlib). If you can't build locally, say so in the PR; the coordinator's 4-shard build will check it.
-- In the PR, paste the original error and explain where the fix came from (which original module or declaration).
+- **Never modify** `Challenge.lean`, `src/Statements.lean` or `comparator.json`. The five headline statements must stay byte-for-byte identical.
+- **Never introduce** `sorry`, `admit`, new `axiom`s, `native_decide`, `implemented_by`, `unsafe`, `extern` or `opaque` tricks. Don't raise `maxHeartbeats` or `maxRecDepth` to hide a problem; fix the proof.
+- Builds must pass with `LEAN_ABORT_ON_PANIC=1`.
+- An optimization PR must keep `#print axioms` to exactly `propext`, `Classical.choice`, `Quot.sound`, and `lake comparator` must still pass.
+
+## Archived: PR #120
+
+The PR #120 consolidation of the original proof (`opt/collapse-and-consolidate-4.36`) is paused at ~91% of a clean verified build with 0 known errors. Its notes stay in [PR120-PLAYBOOK.md](PR120-PLAYBOOK.md) and [PR120-BUGS.md](PR120-BUGS.md). Please don't open new PRs against that branch.

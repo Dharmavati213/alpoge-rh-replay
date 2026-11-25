@@ -4,14 +4,11 @@ Levent Alpöge announced a Lean proof of the Riemann Hypothesis on November 20, 
 
 ## Current status
 
-> **Agents: start at [auto-research.md](auto-research.md)**: current status, how to claim a bug, and links to [PR120-BUGS.md](PR120-BUGS.md) and the fix playbook [PR120-PLAYBOOK.md](PR120-PLAYBOOK.md).
+> **New priority (Nov 25, 2026): [lsernau/grh-lean](https://github.com/lsernau/grh-lean).** Luke Sernau has published a much shorter Lean proof of RH (and GRH for Dirichlet L-functions), based on the same proof: the compact edition is about **76,000 lines**. Everyone is now **verifying, porting to Lean v4.37.0-rc1, and optimizing** that version. **Agents: start at [auto-research.md](auto-research.md).** Send PRs to the community fork [rohanarun/grh-lean](https://github.com/rohanarun/grh-lean).
 
-> **Build status (Nov 23, 16:15 UTC):** the branch does **not** build cleanly yet. About **80% of modules compile** (38,047 of 47,718); the other ~20% are blocked behind **28 open root errors** listed in [PR120-BUGS.md](PR120-BUGS.md). So far **449 root errors** have been fixed by **23 contributors** (with AI agents assisting). Until it is green, `lake build` of the whole tree will fail. Verify your fix by building the module you changed (and its importers), not the whole tree.
+> **Verified so far:** both editions build as published (Lean v4.35.0) with `LEAN_ABORT_ON_PANIC=1`, 0 `sorry`, and only the axioms `propext`, `Classical.choice`, `Quot.sound`. Comparator and con-leche runs are in progress.
 
-**Priority: get the consolidated Lean 4.36 proof ([PR #120](https://github.com/leanprover-community/riemann-hypothesis/pull/120)) to a clean build.**
-
-- **47,881 modules, −67.9% files** compared with `main`. The remaining work is a list of small compile failures introduced by bundling: name collisions and declarations lost when wrappers were collapsed.
-- **Open failures:** [PR120-BUGS.md](PR120-BUGS.md). **How to help:** [AGENTS.md](AGENTS.md). Claim a bug by opening a draft PR `Fix <Module>` against `rohanarun/riemann-hypothesis:opt/collapse-and-consolidate-4.36`.
+- **PR #120 is paused.** The consolidated 4.36 build of the original proof stopped at ~91% with 0 known errors; its notes stay in [PR120-PLAYBOOK.md](PR120-PLAYBOOK.md). Please don't open new PRs against that branch.
 - **Packet claims remain closed:** don't open `Claim P####` / `Claim M######` issues or 4.33 → 4.36 porting PRs.
 - **Historical replay archive:** volunteer credits, packet logs and pinned 4.33.1 replay records remain below and on the [live progress dashboard](https://rohanarun.github.io/alpoge-rh-replay/).
 
@@ -155,15 +152,13 @@ Thank you to all volunteers and agent contributors who helped replay and port th
 
 ## Give this prompt to an agent
 
-**Default: fix a PR #120 build failure.**
+**Default: verify, port or optimize grh-lean.**
 
-> Help get the consolidated Lean 4.36 Riemann Hypothesis proof to build: https://github.com/leanprover-community/riemann-hypothesis/pull/120 (branch `opt/collapse-and-consolidate-4.36` in https://github.com/rohanarun/riemann-hypothesis). Read https://github.com/rohanarun/alpoge-rh-replay/blob/main/AGENTS.md, pick one open row from https://github.com/rohanarun/alpoge-rh-replay/blob/main/PR120-BUGS.md, and check the open PRs on rohanarun/riemann-hypothesis so you don't duplicate work. Open a draft PR `Fix <Module>` against that branch to claim it.
+> Help verify and optimize the short Lean proof of RH/GRH at https://github.com/lsernau/grh-lean (community fork for PRs: https://github.com/rohanarun/grh-lean). Read https://github.com/rohanarun/alpoge-rh-replay/blob/main/auto-research.md and pick one task: an independent build plus `lake comparator`, a Lean v4.37.0-rc1 port fix, or an optimization (profile slow files, flatten-simplify-refold proofs, remove dead lemmas, narrow imports). Check open PRs on rohanarun/grh-lean first, then open a draft PR to claim your file.
 >
-> Most failures come from bundling: merged files see each other's `open`s. Find the original module on `main` (`c779160312`) and qualify the name it meant, only inside that original's namespace block. For missing or duplicate declarations, check aliromman's `codex/pr120-integration-4.36` branch first.
->
-> **Strict rules:** never modify `src/Challenge.lean`, `src/Statements.lean` or `comparator.json`; never add `sorry`, `admit`, axioms or unsafe features; don't change any theorem statement. Paste the original error and where the fix came from in the PR.
+> **Strict rules:** never modify `Challenge.lean`, `src/Statements.lean` or `comparator.json`; never add `sorry`, `admit`, axioms, `native_decide` or unsafe features; don't raise `maxHeartbeats` to hide a problem; build with `LEAN_ABORT_ON_PANIC=1` and keep `#print axioms` to `propext`, `Classical.choice`, `Quot.sound`. Include before/after build times for optimizations.
 
-[Agent instructions](AGENTS.md) · [Open failures](PR120-BUGS.md) · [PR #120](https://github.com/leanprover-community/riemann-hypothesis/pull/120) · [Historical replay archive](STATUS.md)
+[Agent instructions](AGENTS.md) · [grh-lean fork](https://github.com/rohanarun/grh-lean) · [PR #120 (paused)](https://github.com/leanprover-community/riemann-hypothesis/pull/120) · [Historical replay archive](STATUS.md)
 
 ## Reproduce the check
 
