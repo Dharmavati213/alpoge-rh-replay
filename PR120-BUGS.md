@@ -1,8 +1,9 @@
 # PR #120 — open build failures
 
-Branch `rohanarun/riemann-hypothesis:opt/collapse-and-consolidate-4.36`, head `612c05de83`. Updated 2026-11-25 12:23 UTC.
+Branch `rohanarun/riemann-hypothesis:opt/collapse-and-consolidate-4.36`, head `35777992d6`. Updated 2026-11-25 12:34 UTC.
 
-**Compiled: 43,930 / 47,885 modules (91.7%)** across the four build shards, as of 2026-11-25 12:23 UTC.
+**Compiled: 43,930 / 47,885 modules (91.7%)** across the four build shards, as of 2026-11-25 12:34 UTC.
+
 
 
 
@@ -151,14 +152,26 @@ The table lists the **root failures** from a 4-shard build of all 47,881 modules
 
 ## Look-ahead: all known errors (preview)
 
-A scratch build compiles the current branch head and, where a declaration fails, replaces only that declaration's proof with `sorry` in the scratch copy so everything after it can be checked too. This lists errors the normal build can't reach yet. Round 1 = current layer; round 2+ = hidden behind it (**start there: nobody else sees those yet**). Nothing from the scratch copy is ever committed. Pull the branch and compile the file before fixing; rows can be minutes old. 4 files (3 in rounds 2+). Sessions: rh-ci-v128: session 2026-11-25T12:15:05Z branch head 612c05de83 target Shard0 part=1; rh-ci-v128: session 2026-11-25T12:15:05Z branch head 612c05de83 target Shard0 part=1; rh-ci-v128-2: session 2026-11-25T11:02:45Z branch head b35a3239c4 target Shard1 part=1; rh-ci-v128-2: session 2026-11-25T11:02:45Z branch head b35a3239c4 target Shard1 part=1; rh-ci-v128-3: session 2026-11-25T11:02:57Z branch head b35a3239c4 target Shard2 part=1; rh-ci-v128-3: session 2026-11-25T11:02:57Z branch head b35a3239c4 target Shard2 part=1; rh-ci-v128-4: session 2026-11-25T08:04:21Z branch head 947729fc72 target Shard3 part=0; rh-ci-v128-4: 12:16:37 round 1: 3 errors in 1 files, 3 declarations stubbed, 0 statement errors.
+A scratch build on shard 3 compiles the current branch head and, where a declaration fails, replaces only that declaration's proof with `sorry` in the scratch copy so the modules after it can be checked too. That exposes errors that the normal build can't reach yet. Round 1 is the current layer; round 2+ are hidden behind it. Nothing from the scratch copy is ever committed. Fix PRs for any row are welcome (keep the hard rules: no sorry/axiom in real files). 16 locations, 13 of them in rounds 2+. Session: 2026-11-25T08:04:21Z branch head 947729fc72 target Shard3 part=0; last: 12:34:43 round 4: 4 errors in 2 files, 2 declarations stubbed, 0 statement errors.
 
-| First error | Round | Kind | Error |
+| Location | Round | Kind | Error |
 |---|---|---|---|
-| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/ArchimedeanSchwartz/ArchimedeanDerivatives/SatDict.lean:67` | 2 | error | Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce |
-| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/ArchimedeanSchwartz/ArchimedeanDerivatives/LocUnr.lean:212` | 2 | error | Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce |
-| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/GammaLaurentFactors/HodgeTateFromSandwich.lean:30` | 2 | error | Application type mismatch: The argument |
-| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/ArchimedeanSchwartz/HodgeTateFromSandwich.lean:28` | 1 | error | synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/ArchimedeanSchwartz/HodgeTateFromSandwich.lean:43` | 1 | stubbed | synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/ArchimedeanSchwartz/HodgeTateFromSandwich.lean:34` | 1 | stubbed | synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/ArchimedeanSchwartz/HodgeTateFromSandwich.lean:28` | 1 | stubbed | synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/ArchimedeanSchwartz/ArchimedeanDerivatives/SatDict.lean:67` | 2 | stubbed | Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/ArchimedeanSchwartz/ArchimedeanDerivatives/LocUnr.lean:212` | 2 | stubbed | Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/GammaLaurentFactors/HodgeTateFromSandwich.lean:30` | 2 | stubbed | Application type mismatch: The argument |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/GammaLaurentFactors/LocalEmbeddingNorms/GamLocOf.lean:26` | 3 | stubbed | Function expected at |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/GammaLaurentFactors/LaurentBlockInduction/LdDefs.lean:58` | 3 | stubbed | Application type mismatch: The argument |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/GammaLaurentFactors/LocalEmbeddingNorms/SideGCenOf.lean:211` | 3 | stubbed | synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/GammaLaurentFactors/LocalEmbeddingNorms/SideGCenOf.lean:209` | 3 | stubbed | Function expected at |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/GammaLaurentFactors/LocalEmbeddingNorms/SideGCenOf.lean:205` | 3 | stubbed | synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/GammaLaurentFactors/LocalEmbeddingNorms/SideGCenOf.lean:159` | 3 | stubbed | unsolved goals |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/BuildingsResidueChars/LocalZetaFunctionalUniqueness.lean:166` | 4 | stubbed | Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/LeviSmoothLocalization/PrincipalSeriesMatching/SideXCen.lean:220` | 4 | stubbed | Function expected at |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/LeviSmoothLocalization/PrincipalSeriesMatching/SideXCen.lean:201` | 4 | stubbed | Function expected at |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/LeviSmoothLocalization/PrincipalSeriesMatching/SideXCen.lean:148` | 4 | stubbed | unsolved goals |
 
 ## Open PRs not auto-merged
 
@@ -170,7 +183,7 @@ A scratch build compiles the current branch head and, where a declaration fails,
 
 ## Fixed so far (on the branch)
 
-About 1 files, including:
+About 10 files, including:
 
 - **Name collisions:** `sigR` (104 files), `Gz`, `Wp`, `UJ`, `wt`, `Zhat`, `blockEnds`, `GE`, `Ideles`/`localIdele`, `dualLattice`, `homAt`, `IsCWCont`, `cechDiag`/`cechAug`, `admitted`, `expandsAt_scale`, `mem_nonzeroLocus`, `wd_congr`.
 - **Restored or deduplicated declarations:** 29 files from aliromman's integration branch (thanks, @aliromman).
