@@ -1,8 +1,9 @@
 # PR #120 — open build failures
 
-Branch `rohanarun/riemann-hypothesis:opt/collapse-and-consolidate-4.36`, head `94ff1f0fd0`. Updated 2026-11-25 06:35 UTC.
+Branch `rohanarun/riemann-hypothesis:opt/collapse-and-consolidate-4.36`, head `94ff1f0fd0`. Updated 2026-11-25 06:46 UTC.
 
-**Compiled: 43,930 / 47,885 modules (91.7%)** across the four build shards, as of 2026-11-25 06:35 UTC.
+**Compiled: 43,930 / 47,885 modules (91.7%)** across the four build shards, as of 2026-11-25 06:46 UTC.
+
 
 
 
@@ -119,12 +120,17 @@ The table lists the **root failures** from a 4-shard build of all 47,881 modules
 
 ## Look-ahead: all known errors (preview)
 
-A scratch build compiles the current branch head and, where a declaration fails, replaces only that declaration's proof with `sorry` in the scratch copy so everything after it can be checked too. This lists errors the normal build can't reach yet. Round 1 = current layer; round 2+ = hidden behind it (**start there: nobody else sees those yet**). Nothing from the scratch copy is ever committed. Pull the branch and compile the file before fixing; rows can be minutes old. 2 files (1 in rounds 2+). Sessions: rh-ci-v128: session 2026-11-25T06:28:24Z branch head 94ff1f0fd0 target Shard0 part=1; rh-ci-v128: session 2026-11-25T06:28:24Z branch head 94ff1f0fd0 target Shard0 part=1; rh-ci-v128-2: session 2026-11-25T05:24:14Z branch head 9422ea4335 target Shard1 part=1; rh-ci-v128-2: 06:35:22 round 2: 1 errors in 1 files, 1 declarations stubbed, 0 statement errors; rh-ci-v128-3: session 2026-11-25T05:29:11Z branch head 057825ae87 target Shard2 part=1; rh-ci-v128-3: session 2026-11-25T05:29:11Z branch head 057825ae87 target Shard2 part=1; rh-ci-v128-4: session 2026-11-25T05:20:12Z branch head 9422ea4335 target Shard3 part=0; rh-ci-v128-4: 06:29:24 round 2: 1 errors in 1 files, 1 declarations stubbed, 0 statement errors.
+A scratch build on shard 3 compiles the current branch head and, where a declaration fails, replaces only that declaration's proof with `sorry` in the scratch copy so the modules after it can be checked too. That exposes errors that the normal build can't reach yet. Round 1 is the current layer; round 2+ are hidden behind it. Nothing from the scratch copy is ever committed. Fix PRs for any row are welcome (keep the hard rules: no sorry/axiom in real files). 7 locations, 1 of them in rounds 2+. Session: 2026-11-25T05:20:12Z branch head 9422ea4335 target Shard3 part=0; last: 06:29:24 round 2: 1 errors in 1 files, 1 declarations stubbed, 0 statement errors.
 
-| First error | Round | Kind | Error |
+| Location | Round | Kind | Error |
 |---|---|---|---|
-| `Development/AbelianVarietyTheory/Proofs/FlagMeasures/Bundle0354.lean:99` | 2 | error | failed to synthesize instance of type class |
-| `Development/AbelianVarietyTheory/Proofs/FlagMeasures/ExistsIsHaarProbabilityMaxCompactHermitian.lean:67` | 1 | error | failed to synthesize instance of type class |
+| `Development/AbelianVarietyTheory/Proofs/FlagMeasures/ExistsIsHaarProbabilityMaxCompactHermitian.lean:88` | 1 | stubbed | failed to synthesize instance of type class |
+| `Development/AbelianVarietyTheory/Proofs/FlagMeasures/ExistsIsHaarProbabilityMaxCompactHermitian.lean:83` | 1 | stubbed | failed to synthesize instance of type class |
+| `Development/AbelianVarietyTheory/Proofs/FlagMeasures/ExistsIsHaarProbabilityMaxCompactHermitian.lean:74` | 1 | stubbed | Tactic `rewrite` failed: Did not find an occurrence of the pattern |
+| `Development/AbelianVarietyTheory/Proofs/FlagMeasures/ExistsIsHaarProbabilityMaxCompactHermitian.lean:73` | 1 | stubbed | failed to synthesize instance of type class |
+| `Development/AbelianVarietyTheory/Proofs/FlagMeasures/ExistsIsHaarProbabilityMaxCompactHermitian.lean:71` | 1 | stubbed | failed to synthesize instance of type class |
+| `Development/AbelianVarietyTheory/Proofs/FlagMeasures/ExistsIsHaarProbabilityMaxCompactHermitian.lean:67` | 1 | stubbed | failed to synthesize instance of type class |
+| `Development/AbelianVarietyTheory/Proofs/FlagMeasures/Bundle0354.lean:99` | 2 | stubbed | failed to synthesize instance of type class |
 
 ## Open PRs not auto-merged
 
