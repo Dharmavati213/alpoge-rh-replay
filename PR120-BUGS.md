@@ -112,6 +112,14 @@ These files changed after the build that reported the error (a merged PR or coor
 | `Formalism/LocalToGlobal/GlobalTheory/CoordinateLengths/Bundle0001.lean:89` | instance | failed to synthesize CoeT (((D.mem u).C.cls 0 → (D.mem u).C.Y 0 → ℂ) ≃ₗ[ℂ] (D.mem u).C.cls 0 → Fr D 0 ⋯ → ℂ) e (((D.mem u).C.cls 0 → (D.mem u).C.Y 0 → ℂ) →ₗ[ℂ] (D.mem u).C.cls 0 → Frames (gramC (gramN D 0 ⋯) (embT D)) →  |  |
 | `Formalism/LocalToGlobal/SiegelLatticeTheory/ClosedLocalOrbits/GaugeLatticeShifts/SatGramActL.lean:18` | missing declaration | Unknown constant `Formalism.L2.SG.NormCut` d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲ d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲ |  |
 
+## Look-ahead: all known errors (preview)
+
+A scratch build compiles the current branch head and, where a declaration fails, replaces only that declaration's proof with `sorry` in the scratch copy so everything after it can be checked too. This lists errors the normal build can't reach yet. Round 1 = current layer; round 2+ = hidden behind it (**start there: nobody else sees those yet**). Nothing from the scratch copy is ever committed. Pull the branch and compile the file before fixing; rows can be minutes old. 1 files (0 in rounds 2+). Sessions: rh-ci-v128: session 2026-11-25T03:08:28Z branch head b964e9b2e1 target Shard0 part=1; rh-ci-v128: session 2026-11-25T03:08:28Z branch head b964e9b2e1 target Shard0 part=1; rh-ci-v128-2: session 2026-11-25T00:45:02Z branch head 1a572fff84 target Shard1 part=1; rh-ci-v128-2: session 2026-11-25T00:45:02Z branch head 1a572fff84 target Shard1 part=1; rh-ci-v128-3: session 2026-11-25T00:21:19Z branch head e78e102ec6 target Shard2 part=1; rh-ci-v128-3: session 2026-11-25T00:21:19Z branch head e78e102ec6 target Shard2 part=1; rh-ci-v128-4: session 2026-11-25T00:17:08Z branch head c307e80f8f target Shard3 part=0; rh-ci-v128-4: session 2026-11-25T00:17:08Z branch head c307e80f8f target Shard3 part=0.
+
+| First error | Round | Kind | Error |
+|---|---|---|---|
+| `Development/AbelianVarietyTheory/Proofs/SiegelThetaTransformation/ShortThetaValueComplexPointEqClassicalTheta.lean:276` | 1 | error | Tactic `rewrite` failed: Did not find an occurrence of the pattern |
+
 ## Open PRs not auto-merged
 
 - #15 (@aliromman): touches protected files (needs manual review)
