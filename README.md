@@ -4,7 +4,7 @@ Levent Alpöge announced a Lean proof of the Riemann Hypothesis on November 20, 
 
 ## Current status
 
-> **New priority (Nov 25, 2026): [lsernau/grh-lean](https://github.com/lsernau/grh-lean).** Luke Sernau has published a much shorter Lean proof of RH (and GRH for Dirichlet L-functions), based on the same proof: the compact edition is about **76,000 lines**. Everyone is now **verifying, porting to Lean v4.37.0-rc1, and optimizing** that version. **Agents: start at [auto-research.md](auto-research.md).** Send PRs to the community fork [rohanarun/grh-lean](https://github.com/rohanarun/grh-lean).
+> **New priority (Nov 25, 2026): [lsernau/grh-lean](https://github.com/lsernau/grh-lean).** Luke Sernau has published a much shorter Lean proof of RH (and GRH for Dirichlet L-functions), based on the same proof: the compact edition is about **76,000 lines**. Its 300k-line readable edition is now `main` of [leanprover-community/riemann-hypothesis](https://github.com/leanprover-community/riemann-hypothesis), and the focus is **optimizing that edition**. **Agents: start at [auto-research.md](auto-research.md).** Send PRs to [leanprover-community/riemann-hypothesis](https://github.com/leanprover-community/riemann-hypothesis), whose `main` is now the 300k readable edition.
 
 > **Verified so far:** both editions build as published (Lean v4.35.0) with `LEAN_ABORT_ON_PANIC=1`, 0 `sorry`, and only the axioms `propext`, `Classical.choice`, `Quot.sound`. Comparator and con-leche runs are in progress.
 
@@ -154,11 +154,11 @@ Thank you to all volunteers and agent contributors who helped replay and port th
 
 **Default: verify, port or optimize grh-lean.**
 
-> Help verify and optimize the short Lean proof of RH/GRH at https://github.com/lsernau/grh-lean (community fork for PRs: https://github.com/rohanarun/grh-lean). Read https://github.com/rohanarun/alpoge-rh-replay/blob/main/auto-research.md and pick one task: an independent build plus `lake comparator`, a Lean v4.37.0-rc1 port fix, or an optimization (profile slow files, flatten-simplify-refold proofs, remove dead lemmas, narrow imports). Check open PRs on rohanarun/grh-lean first, then open a draft PR to claim your file.
+> Help verify and optimize the short Lean proof of RH/GRH at https://github.com/lsernau/grh-lean (now on `main` of https://github.com/leanprover-community/riemann-hypothesis; send PRs there). Read https://github.com/rohanarun/alpoge-rh-replay/blob/main/auto-research.md and pick one task: an independent build plus `lake comparator`, a Lean v4.37.0-rc1 port fix, or an optimization (profile slow files, flatten-simplify-refold proofs, remove dead lemmas, narrow imports). Check open PRs on leanprover-community/riemann-hypothesis first, then open a draft PR to claim your file.
 >
 > **Strict rules:** never modify `Challenge.lean`, `src/Statements.lean` or `comparator.json`; never add `sorry`, `admit`, axioms, `native_decide` or unsafe features; don't raise `maxHeartbeats` to hide a problem; build with `LEAN_ABORT_ON_PANIC=1` and keep `#print axioms` to `propext`, `Classical.choice`, `Quot.sound`. Include before/after build times for optimizations.
 
-[Agent instructions](AGENTS.md) · [grh-lean fork](https://github.com/rohanarun/grh-lean) · [PR #120 (paused)](https://github.com/leanprover-community/riemann-hypothesis/pull/120) · [Historical replay archive](STATUS.md)
+[Agent instructions](AGENTS.md) · [Upstream repo](https://github.com/leanprover-community/riemann-hypothesis) · [PR #120 (paused)](https://github.com/leanprover-community/riemann-hypothesis/pull/120) · [Historical replay archive](STATUS.md)
 
 ## Reproduce the check
 

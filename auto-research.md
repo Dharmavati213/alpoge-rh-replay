@@ -1,8 +1,8 @@
 # Agent Instructions: verify, port and optimize grh-lean
 
-> **New priority (Nov 25, 2026).** Luke Sernau has published [lsernau/grh-lean](https://github.com/lsernau/grh-lean): a Lean 4 proof of RH and of GRH for Dirichlet L-functions, based on the same proof (Levent Alpöge's, with Claude). It is far smaller: the compact edition is **about 76,000 lines** and the readable edition about 300,000. Our PR #120 consolidation of the old 15-million-line proof is **paused**. All effort now goes into **verifying, understanding and optimizing grh-lean**.
+> **New priority (Nov 25, 2026).** Luke Sernau has published [lsernau/grh-lean](https://github.com/lsernau/grh-lean): a Lean 4 proof of RH and of GRH for Dirichlet L-functions, based on the same proof (Levent Alpöge's, with Claude). It is far smaller: the compact edition is **about 76,000 lines** and the readable edition about 300,000. Our PR #120 consolidation of the old 15-million-line proof is **paused**. All effort now goes into **optimizing the 300k-line readable edition** (`grh/`), which is now `main` of [leanprover-community/riemann-hypothesis](https://github.com/leanprover-community/riemann-hypothesis). The compact edition is on that repo's `grh-lean` branch and is not the focus.
 >
-> Upstream is a research artifact and does **not** accept contributions. Send PRs to the community fork, **[rohanarun/grh-lean](https://github.com/rohanarun/grh-lean)**. Call to action and discussion: see the pinned issue in this repo.
+> Send PRs to **[leanprover-community/riemann-hypothesis](https://github.com/leanprover-community/riemann-hypothesis)** (its `main` is now the 300k readable edition). Call to action and discussion: see the pinned issue in this repo.
 
 ## Status
 
@@ -16,6 +16,8 @@
 Baseline build times, with the Mathlib cache, both editions at once on 128 cores: `grh` 1057 s, `grh-compact` 1290 s. The compact edition is slower despite having 4× fewer lines, which makes it the first profiling target.
 
 ## What to work on
+
+**Focus: optimize the 300k readable edition on upstream `main` (Lean v4.35.0).** Verification and the v4.37 port are secondary.
 
 1. **Verify.** Build either edition yourself (`lake exe cache get && LEAN_ABORT_ON_PANIC=1 lake build && lake env lean scripts/PrintAxioms.lean`) and run `lake comparator` against its `Challenge.lean` + `comparator.json`. Post the result (toolchain, machine, time, axioms) as a comment on the pinned issue. Independent confirmations matter most.
 2. **Port to Lean v4.37.0-rc1** (Mathlib tag `v4.37.0-rc1`, commit `31ce06ea`). Breakages found so far:
@@ -31,11 +33,11 @@ Baseline build times, with the Mathlib cache, both editions at once on 128 cores
    - the two heartbeat-timeout files from the 4.37 port: `Lib/General/Analysis/HolomorphicIntegral.lean`, `Lib/General/NumberTheory/Embeddings.lean`;
    - dead lemmas (unused by the 5 headline theorems), heavy `import Mathlib` lines that can be narrowed, `simp`/`aesop`/`grind` calls that can become direct terms;
    - shorter arguments (Luke: some parts "needed entirely new arguments", such as removing Vandiver).
-4. **Understand.** Notes, blueprints and explanations of the argument are welcome as Markdown in the fork (`notes/`). No mathematician has read the proof through yet.
+4. **Understand.** Notes, blueprints and explanations of the argument are welcome as Markdown PRs upstream. No mathematician has read the proof through yet.
 
 ## How to contribute
 
-- Fork-and-PR against `rohanarun/grh-lean`. Open a **draft PR early** titled `Port: <File>`, `Opt: <File>` or `Verify: <what>`; that's your claim. One file or one family of files per PR.
+- Fork-and-PR against [leanprover-community/riemann-hypothesis](https://github.com/leanprover-community/riemann-hypothesis) `main` (Lean v4.35.0; run `lake exe cache get` first, since upstream publishes a build cache). Open a **draft PR early** titled `Port: <File>`, `Opt: <File>` or `Verify: <what>`; that's your claim. One file or one family of files per PR.
 - In the PR, include the before/after build time (for optimizations) or the original error (for port fixes), and the result of `lake env lean scripts/PrintAxioms.lean`.
 
 ## Strict rules
