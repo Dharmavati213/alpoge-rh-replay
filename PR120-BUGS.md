@@ -151,13 +151,14 @@ The table lists the **root failures** from a 4-shard build of all 47,881 modules
 
 ## Look-ahead: all known errors (preview)
 
-A scratch build on shard 3 compiles the current branch head and, where a declaration fails, replaces only that declaration's proof with `sorry` in the scratch copy so the modules after it can be checked too. That exposes errors that the normal build can't reach yet. Round 1 is the current layer; round 2+ are hidden behind it. Nothing from the scratch copy is ever committed. Fix PRs for any row are welcome (keep the hard rules: no sorry/axiom in real files). 3 locations, 0 of them in rounds 2+. Session: 2026-11-25T08:04:21Z branch head 947729fc72 target Shard3 part=0; last: 12:16:37 round 1: 3 errors in 1 files, 3 declarations stubbed, 0 statement errors.
+A scratch build compiles the current branch head and, where a declaration fails, replaces only that declaration's proof with `sorry` in the scratch copy so everything after it can be checked too. This lists errors the normal build can't reach yet. Round 1 = current layer; round 2+ = hidden behind it (**start there: nobody else sees those yet**). Nothing from the scratch copy is ever committed. Pull the branch and compile the file before fixing; rows can be minutes old. 4 files (3 in rounds 2+). Sessions: rh-ci-v128: session 2026-11-25T12:15:05Z branch head 612c05de83 target Shard0 part=1; rh-ci-v128: session 2026-11-25T12:15:05Z branch head 612c05de83 target Shard0 part=1; rh-ci-v128-2: session 2026-11-25T11:02:45Z branch head b35a3239c4 target Shard1 part=1; rh-ci-v128-2: session 2026-11-25T11:02:45Z branch head b35a3239c4 target Shard1 part=1; rh-ci-v128-3: session 2026-11-25T11:02:57Z branch head b35a3239c4 target Shard2 part=1; rh-ci-v128-3: session 2026-11-25T11:02:57Z branch head b35a3239c4 target Shard2 part=1; rh-ci-v128-4: session 2026-11-25T08:04:21Z branch head 947729fc72 target Shard3 part=0; rh-ci-v128-4: 12:16:37 round 1: 3 errors in 1 files, 3 declarations stubbed, 0 statement errors.
 
-| Location | Round | Kind | Error |
+| First error | Round | Kind | Error |
 |---|---|---|---|
-| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/ArchimedeanSchwartz/HodgeTateFromSandwich.lean:43` | 1 | stubbed | synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized |
-| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/ArchimedeanSchwartz/HodgeTateFromSandwich.lean:34` | 1 | stubbed | synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized |
-| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/ArchimedeanSchwartz/HodgeTateFromSandwich.lean:28` | 1 | stubbed | synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/ArchimedeanSchwartz/ArchimedeanDerivatives/SatDict.lean:67` | 2 | error | Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/ArchimedeanSchwartz/ArchimedeanDerivatives/LocUnr.lean:212` | 2 | error | Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/GammaLaurentFactors/HodgeTateFromSandwich.lean:30` | 2 | error | Application type mismatch: The argument |
+| `Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/ArchimedeanSchwartz/HodgeTateFromSandwich.lean:28` | 1 | error | synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized |
 
 ## Open PRs not auto-merged
 
