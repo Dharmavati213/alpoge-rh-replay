@@ -121,6 +121,14 @@ These files changed after the build that reported the error (a merged PR or coor
 |---|---|---|---|
 | `Development/AbelianVarietyTheory/Proofs/FlagMeasures/ExistsIsHaarProbabilityMaxCompactHermitian.lean:74` | instance | failed to synthesize instance of type class IsProbabilityMeasure (Measure.map (incKH k r) ν) |  |
 
+## Look-ahead: all known errors (preview)
+
+A scratch build compiles the current branch head and, where a declaration fails, replaces only that declaration's proof with `sorry` in the scratch copy so everything after it can be checked too. This lists errors the normal build can't reach yet. Round 1 = current layer; round 2+ = hidden behind it (**start there: nobody else sees those yet**). Nothing from the scratch copy is ever committed. Pull the branch and compile the file before fixing; rows can be minutes old. 1 files (0 in rounds 2+). Sessions: rh-ci-v128: session 2026-11-25T05:52:57Z branch head 6b1b16f1b4 target Shard0 part=1; rh-ci-v128: session 2026-11-25T05:52:57Z branch head 6b1b16f1b4 target Shard0 part=1; rh-ci-v128-2: session 2026-11-25T05:24:14Z branch head 9422ea4335 target Shard1 part=1; rh-ci-v128-2: session 2026-11-25T05:24:14Z branch head 9422ea4335 target Shard1 part=1; rh-ci-v128-3: session 2026-11-25T05:29:11Z branch head 057825ae87 target Shard2 part=1; rh-ci-v128-3: session 2026-11-25T05:29:11Z branch head 057825ae87 target Shard2 part=1; rh-ci-v128-4: session 2026-11-25T05:20:12Z branch head 9422ea4335 target Shard3 part=0; rh-ci-v128-4: session 2026-11-25T05:20:12Z branch head 9422ea4335 target Shard3 part=0.
+
+| First error | Round | Kind | Error |
+|---|---|---|---|
+| `Development/AbelianVarietyTheory/Proofs/FlagMeasures/ExistsIsHaarProbabilityMaxCompactHermitian.lean:67` | 1 | error | failed to synthesize instance of type class |
+
 ## Open PRs not auto-merged
 
 - #15 (@aliromman): touches protected files (needs manual review)
