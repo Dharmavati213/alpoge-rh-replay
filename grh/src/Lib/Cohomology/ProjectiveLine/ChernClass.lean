@@ -174,7 +174,9 @@ variable {C C' : Type _} [Category C] [Category C'] {ℓ : ℕ} {A : Type} [Comm
 private lemma tateModule_apply_inv_mem_rootsOfUnity {c : C} (t : tateModule g c) :
     (t.val (1 / ℓ)).down ∈ rootsOfUnity ℓ ((ringOf g).obj c) := by
   have h_pow : ℓ • t.val (1 / ℓ) = 0 := by
-    calc ℓ • t.val (1 / ℓ) = (ℓ • t.val.comp (.mulRight (ℓ : ℚ)⁻¹)) 1 := by simp
+    -- the first step holds by definition, after writing 1 / ℓ as 1 * ℓ⁻¹
+    calc ℓ • t.val (1 / ℓ) = (ℓ • t.val.comp (AddMonoidHom.mulRight (ℓ : ℚ)⁻¹)) 1 :=
+        congrArg (fun q : ℚ ↦ ℓ • t.val q) (one_div (ℓ : ℚ) |>.trans (one_mul _).symm)
       _ = t.val 1 := by rw [AddMonoidHom.nsmul_comp_mulRight_inv_natCast]
       _ = 0 := t.property
   exact congrArg ULift.down h_pow
@@ -241,8 +243,9 @@ lemma isCohomEquiv_tensorPoint_tateGen (hS : ∀ (c : C) (x : S c), ℓ • x = 
     let pairing : S c →ₗ[ℤ] tateModule g c →ₗ[ℤ] S c :=
       ((l.toAddMonoidHom.comp (tateRoot ψ)).toIntLinearMap.smulRight 1).flip
     have h_tmul : s ⊗ₜ[ℤ] ε = 0 := hs
-    have h_smul : l (tateRoot ψ ε) • s = 0 := by
-      simpa [pairing] using congrArg (lift pairing) h_tmul
+    -- `lift pairing (s ⊗ₜ ε)` is `l (tateRoot ψ ε) • s` by definition
+    have h_smul : l (tateRoot ψ ε) • s = 0 :=
+      (congrArg (lift pairing) h_tmul).trans (map_zero (lift pairing))
     obtain rfl : s = 0 := (smul_eq_zero_iff_right hl).mp h_smul
     exact ⟨1, m.one_notMem, fun b f' _ ↦ map_zero (S.map _).hom⟩
   · -- Cokernel: t (1 / ℓ) = ζ ^ i at m, so y = t' (1 / ℓ) is 1 at m for t' = t - i • ε.
@@ -275,7 +278,10 @@ lemma isCohomEquiv_tensorPoint_tateGen (hS : ∀ (c : C) (x : S c), ℓ • x = 
     have hτ : τ = ℓ • τ' := Subtype.ext (AddMonoidHom.nsmul_comp_mulRight_inv_natCast τ.val ℓ).symm
     have h_zero : S.map (f.down ≫ f') s ⊗ₜ[ℤ] τ = 0 := by rw [hτ, ← smul_tmul, hS, zero_tmul]
     -- In the cokernel s ⊗ t and s ⊗ t' agree, as they differ by (i • s) ⊗ ε.
-    have h_sub : (i • s) ⊗ₜ[ℤ] ε = s ⊗ₜ[ℤ] t - s ⊗ₜ[ℤ] t' := by simp [t', tmul_sub, smul_tmul]
+    have h_sub : (i • s) ⊗ₜ[ℤ] ε = s ⊗ₜ[ℤ] t - s ⊗ₜ[ℤ] t' :=
+      calc (i • s) ⊗ₜ[ℤ] ε = s ⊗ₜ[ℤ] (i • ε) := smul_tmul i s ε
+        _ = s ⊗ₜ[ℤ] (t - t') := congrArg (s ⊗ₜ[ℤ] ·) (sub_sub_cancel t (i • ε)).symm
+        _ = s ⊗ₜ[ℤ] t - s ⊗ₜ[ℤ] t' := tmul_sub s t t'
     have h_class : (abCoker.π ((tensorPoint (tateGen g)).app S)).app c (s ⊗ₜ[ℤ] t) =
         (abCoker.π ((tensorPoint (tateGen g)).app S)).app c (s ⊗ₜ[ℤ] t') :=
       QuotientAddGroup.eq_iff_sub_mem.mpr ⟨i • s, h_sub⟩
@@ -306,6 +312,8 @@ lemma TorsionCoeff.pullbackAlong_tensorPoint_tateAction :
       surjInv_eq (isCohomEquiv_tensorPoint_tateGen M.prime_smul_eq_zero M.zariski_descent 0).2 _]
   rfl
 
+-- Keeps definitional checks from unfolding the Ext groups and their group structure.
+seal CategoryTheory.Abelian.Ext addCommGroupH in
 /-- The generator ε acts as the identity: for a class y in total Ext(S, M), the Yoneda composite of
 x ↦ x ⊗ ε, y ⊗ 𝕋 and `New.Variety.TorsionCoeff.tateAction` of M is y (𝕋 the Tate module,
 ε = `New.Variety.tateGen`). -/
@@ -323,6 +331,8 @@ lemma TorsionCoeff.pullbackAlong_tensorPoint_comp_tateAction (y : TotalH S M.fun
         rfl
     _ = y := TotalH.comp_id
 
+-- Keeps definitional checks from unfolding the Ext groups and their group structure.
+seal CategoryTheory.Abelian.Ext addCommGroupH in
 /-- For coefficients K along g and M' along g∘φ, every class T in total Ext(K∘φ, M') commutes
 with the actions μ = `New.Variety.TorsionCoeff.tateAction` of the Tate module 𝕋: in diagram
 order, μ_K restricted along φ and then T equals T ⊗ 𝕋 and then μ_{M'}. -/
@@ -368,6 +378,8 @@ lemma TorsionCoeff.mulClass_apply [HasFlatValues S] (ξ : TotalH P (tateModule g
       (mapThenComp (abTensor.flip (tateModule g)) M.tateAction.toTotalH y) :=
   rfl
 
+-- Keeps definitional checks from unfolding the Ext groups and their group structure.
+seal CategoryTheory.Abelian.Ext addCommGroupH in
 /-- The product is natural in the coefficient. Let φ : C' ⥤ C, K a coefficient along g (an ℓ-torsion
 functor with Zariski descent, `TorsionCoeff`) and M' one along φ ⋙ g, and let S have flat values.
 Let y be a class in total Ext(S, K), ξ one in total Ext(P, 𝕋) (𝕋 the Tate module) and T one in total
@@ -408,6 +420,8 @@ lemma TorsionCoeff.mulClass_naturality [HasFlatValues S] (ξ : TotalH P (tateMod
           (mapThenComp (restrictAlong φ) T y) :=
         congrArg _ (map_comp_assoc (abTensor.flip.obj (tateModule (φ ⋙ g))) _).symm
 
+-- Keeps definitional checks from unfolding the Ext groups and their group structure.
+seal CategoryTheory.Abelian.Ext addCommGroupH in
 /-- Let Θ be a theory along g (an ℓ-torsion coefficient F = Θ.functor with Zariski descent that
 behaves well on closed loci). Let J be a compatible family of ideals J_c of the rings g(c), and
 U = `relFreeAb J.topLocus` (ℤ modulo ℤ[V], V the locus where J is the unit ideal). Let ξ be a class
@@ -425,19 +439,25 @@ lemma Theory.mulClass_congr_of_eq_on_zeros [HasFlatValues S] [HasFlatValues S'] 
   -- agree.
   let Φ : AbFunctor C ⥤ AbFunctor C := abTensor.flip.obj (relFreeAb J.topLocus)
   -- By `exists_isTensorClass`, a class w from F ⊗ U to F ⊗ 𝕋 (𝕋 the Tate module) has
-  -- z ∪ ξ = (z ⊗ U, then w).
-  obtain ⟨w, hw⟩ :
-      ∃ w : TotalH (Φ.obj Θ.functor) ((abTensor.flip.obj (tateModule g)).obj Θ.functor),
+  -- z ∪ ξ = (z ⊗ U, then w). This is shown for a class ζ between arbitrary functors N and K in
+  -- place of U and 𝕋: with variables, the checks that `𝟭 C ⋙ N` is `N` do not unfold U and 𝕋.
+  have h_tensor {N K : AbFunctor C} [HasFlatValues N] [HasFlatValues K] (ζ : H N K 2) :
+      ∃ w : TotalH ((abTensor.flip.obj N).obj Θ.functor) ((abTensor.flip.obj K).obj Θ.functor),
         ∀ (S : AbFunctor C) [HasFlatValues S] (z : TotalH S Θ.functor),
-          TotalH.comp (.map Φ z) w = z.cup ξ.toTotalH := by
-    obtain ⟨family, h_family⟩ := exists_isTensorClass ξ
+          TotalH.comp (TotalH.map (abTensor.flip.obj N) z) w = z.cup ζ.toTotalH := by
+    obtain ⟨family, h_family⟩ := exists_isTensorClass ζ
     refine ⟨(family C (𝟭 C) Θ.functor).toTotalH, fun S _ z ↦ ?_⟩
-    -- for S with flat values the class of the family is S ⊗ ξ
-    have h_flat : (family C (𝟭 C) S).toTotalH = TotalH.map (abTensor.obj S) ξ.toTotalH :=
+    -- for S with flat values the class of the family is S ⊗ ζ
+    have h_flat : (family C (𝟭 C) S).toTotalH = TotalH.map (abTensor.obj S) ζ.toTotalH :=
       (h_family.eq_of_flat C (𝟭 C) S).trans (congrArg _ TotalH.map_id)
     refine (h_family.comm C (𝟭 C) S Θ.functor z).trans ?_
     rw [h_flat]
     rfl
+  obtain ⟨w, hw⟩ :
+      ∃ w : TotalH (Φ.obj Θ.functor) ((abTensor.flip.obj (tateModule g)).obj Θ.functor),
+        ∀ (S : AbFunctor C) [HasFlatValues S] (z : TotalH S Θ.functor),
+          TotalH.comp (.map Φ z) w = z.cup ξ.toTotalH :=
+    h_tensor ξ
   -- The sections of ker (F → F_J) ⊗ U are locally zero: locally s dies, or J is the unit ideal
   -- and then U is zero.
   have h_loc (c : C) (t : Φ (kerComplex (J.toZerosCoeff Θ.functor)).X₁ c) :
@@ -458,7 +478,9 @@ lemma Theory.mulClass_congr_of_eq_on_zeros [HasFlatValues S] [HasFlatValues S'] 
   have h_eqv : IsCohomEquiv Θ.functor ((kerComplex (J.toZerosCoeff Θ.functor)).map Φ).g :=
     isCohomEquiv_quotient_of_acyclic
       ((kerComplex_shortExact fun _ ↦ Quot.mk_surjective).map_of_exact Φ)
-      (cohomology_eq_zero_of_locallyZero h_loc)
+      -- (the two sides state the vanishing with different names for the group structure of Ext,
+      -- which is sealed here)
+      (by with_unfolding_all exact cohomology_eq_zero_of_locallyZero h_loc)
   obtain ⟨v, hv⟩ : ∃ v : TotalH (Φ.obj (J.zerosCoeff Θ.functor)) Θ.functor,
       pullbackAlong (Φ.map (J.toZerosCoeff Θ.functor)) v = w.comp Θ.tateAction.toTotalH :=
     h_eqv.bijective_pullbackAlong.surjective (w.comp Θ.tateAction.toTotalH)
@@ -792,6 +814,8 @@ lemma etaTensorClass_naturality {S' : AbFunctor C} (y : TotalH S S') :
       comp (etaTensorClass g S).toTotalH (map (abTensor.flip (tateModule g)) y) :=
   TorsionCoeff.isTensorClass_etaTensor.comm C g S S' y
 
+-- Keeps definitional checks from unfolding the Ext groups and their group structure.
+seal CategoryTheory.Abelian.Ext addCommGroupH in
 /-- The class `etaTensorClass g S` is compatible with restriction along a functor `φ`. -/
 lemma map_restrictAlong_etaTensorClass :
     map (restrictAlong φ) (etaTensorClass g S).toTotalH =
@@ -812,6 +836,8 @@ lemma map_restrictAlong_etaClass :
     Ext.mapExactFunctor_extClass]
   rfl
 
+-- Keeps definitional checks from unfolding the Ext groups and their group structure.
+seal CategoryTheory.Abelian.Ext addCommGroupH in
 /-- If `S` has flat values, then `etaTensorClass g S` is the image of `η` under the exact functor
 `S ⊗ -`. -/
 lemma etaTensorClass_of_hasFlatValues [HasFlatValues S] :
@@ -894,10 +920,17 @@ lemma exists_etaClass_supported_diagonal (q q' : (projLineAlong g).sections) :
   rw [H.map_comp] at h_dies
   -- Exactness at `H² (ℤ[pt], T)` of the sequence of the pair `(pt, J.topLocus)`.
   obtain ⟨_, h_exact : ShortComplex.ShortExact _⟩ := relFreeAb.shortExact J.topLocus
+  -- (stated for an arbitrary short exact sequence `a`, `b`: with variables the kernel checks
+  -- quickly that `H.map` is composition with the class of a map)
+  have h_lift {N N' N'' : AbFunctor C} {a : N' ⟶ N} {b : N ⟶ N''} {w : a ≫ b = 0}
+      (h : ShortComplex.ShortExact ⟨a, b, w⟩) (x : H N (tateModule g) 2)
+      (hx : H.map (tateModule g) a 2 x = 0) :
+      ∃ ξ : H N'' (tateModule g) 2, H.map (tateModule g) b 2 ξ = x :=
+    Ext.contravariant_sequence_exact₂ h _ x hx
   obtain ⟨ξ, hξ⟩ : ∃ ξ : H (relFreeAb J.topLocus) (tateModule g) 2,
       H.map (tateModule g) (relFreeAb.π J.topLocus) 2 ξ =
         H.map (tateModule g) (freeAbSectionMap q + freeAbSectionMap q') 2 (etaClass g) :=
-    Ext.contravariant_sequence_exact₂ h_exact _ _ h_dies
+    h_lift h_exact _ h_dies
   exact ⟨ξ, by rw [pullbackAlong_of, pullbackAlong_of, hξ]⟩
 
 /-- `mapThenComp Φ u x` is `Φ x` followed by `u`. -/
@@ -936,6 +969,8 @@ lemma toTotalH_etaAt (b : freeAb (onePointFunctor C) ⟶ freeAb (projLineAlong g
   -- the degrees `2` and `2 + 0` agree by definition
   rfl
 
+-- Keeps definitional checks from unfolding the Ext groups and their group structure.
+seal CategoryTheory.Abelian.Ext addCommGroupH in
 /-- The product of a class `y` from `S` to `M` with `M.etaAt b` is the composite of `x ↦ x ⊗ b`,
 `S ⊗ η`, `y ⊗ T` and the action `M.tateAction`. -/
 lemma comp_etaAt (b : freeAb (onePointFunctor C) ⟶ freeAb (projLineAlong g))
@@ -960,6 +995,8 @@ lemma comp_etaAt (b : freeAb (onePointFunctor C) ⟶ freeAb (projLineAlong g))
         congrArg (comp (homClass (tensorPoint b S)))
           (TotalH.comp_assoc_of_sq (etaTensorClass_naturality y) _)
 
+-- Keeps definitional checks from unfolding the Ext groups and their group structure.
+seal CategoryTheory.Abelian.Ext addCommGroupH in
 /-- Let `K` be a coefficient along `g`, `M'` one along `φ ⋙ g`, and `T` (not the Tate module) a
 class of any degree in total Ext from `K` restricted along `φ` to `M'`. Then `T` commutes with the
 product with `η` at `b`: restricting `K.etaAt b` along `φ` and composing with `T` is `T` followed by
@@ -1002,6 +1039,8 @@ private lemma pullbackAlong_tensorPoint_mulClass {S : AbFunctor C} [HasFlatValue
   rw [h_tp, ← pullbackAlong_pullbackAlong, mulClass_apply, mulClass_apply, h_map, comp_assoc]
   rfl -- `pullbackAlong` is composition with `homClass`
 
+-- Keeps definitional checks from unfolding the Ext groups and their group structure.
+seal CategoryTheory.Abelian.Ext addCommGroupH in
 /-- Let `S` have flat values. If `ξ` pulled back along `ρ` is `η` pulled back along `b`, then the
 product `M.mulClass ξ y` of `y` with `ξ`, pulled back along `x ↦ x ⊗ ρ`, is the product of `y`
 with `M.etaAt b`. -/
@@ -1062,6 +1101,8 @@ lemma lineBasis_false : M.lineBasis false = M.cupClass := rfl
 over the cohomology of every `S`. -/
 def HasLineFormula : Prop := ∀ S : AbFunctor C, IsLerayHirschBasis M.lineBasis S
 
+-- Keeps definitional checks from unfolding the Ext groups and their group structure.
+seal CategoryTheory.Abelian.Ext addCommGroupH in
 /-- Restricting `M.etaAt b` to the category of points of `X` gives `etaAt` of the restrictions. -/
 lemma map_etaAt_onElements (X : C ⥤ Type 1)
     (b : freeAb (onePointFunctor C) ⟶ freeAb (projLineAlong g)) :
