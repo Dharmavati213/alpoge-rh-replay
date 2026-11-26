@@ -134,45 +134,64 @@ lemma exists_isTensorClass [HasFlatValues N] [HasFlatValues K] (ξ : H N K 2) :
     ∃ h : TensorClassFamily N K, IsTensorClass ξ h := by
   -- Cover N twice by sums of representables: ξ is the product of two extension classes and a map u.
   -- The two sequences stay exact after restricting and tensoring, which defines the new classes.
-  -- `g M` is the cover of `M`; its extension class maps Extⁿ(ker, F) onto Extⁿ⁺¹(M, F) (`h_onto`).
-  have h_cover : ∀ M : AbFunctor C, ∃ (ι : Type 1) (c : ι → C)
-      (g : freeAb.obj (sigma fun i : ι ↦ reprBy (c i)) ⟶ M) (h_ses : (kerComplex g).ShortExact),
-      ∀ (F : AbFunctor C) (n : ℕ),
-        Function.Surjective ((LongExactSeq.contravariant h_ses F).δ n) :=
-    fun M ↦ exists_acyclic_cover M
-  choose ι c g h_exact h_onto using h_cover
+  -- `g` is the cover of `N`; its extension class maps Extⁿ(ker, F) onto Extⁿ⁺¹(N, F) (`h_onto`).
+  -- `g₁` is the cover of the kernel `N₁` of `g`, with `h_onto₁`.
+  -- (Two `obtain`s: choosing a cover of every functor with `choose` is slow in the kernel.)
+  obtain ⟨ι, c, g, h_exact, h_onto⟩ := exists_acyclic_cover N
+  let N₁ : AbFunctor C := (kerComplex g).X₁
+  obtain ⟨ι₁, c₁, g₁, h_exact₁, h_onto₁⟩ := exists_acyclic_cover N₁
   -- the values of the kernel of a cover are subgroups of free groups, so flat
-  have h_flat_ker (M : AbFunctor C) : HasFlatValues (kerComplex (g M)).X₁ :=
+  have h_flat_ker {J : Type 1} {d : J → C} {M : AbFunctor C}
+      (p : freeAb.obj (sigma fun i ↦ reprBy (d i)) ⟶ M) : HasFlatValues (kerComplex p).X₁ :=
     ⟨fun A ↦
-      have := HasFlatValues.flat A (F := freeAb.obj (sigma fun i ↦ reprBy (c M i)))
-      inferInstanceAs (Module.Flat ℤ ((g M).app A).hom.toIntLinearMap.ker)⟩
-  let N₁ : AbFunctor C := (kerComplex (g N)).X₁
+      have := HasFlatValues.flat A (F := freeAb.obj (sigma fun i ↦ reprBy (d i)))
+      inferInstanceAs (Module.Flat ℤ (p.app A).hom.toIntLinearMap.ker)⟩
   -- ξ comes from degree 1 on the kernel N₁ and that from degree 0, so from a map u (`h_onto`)
-  obtain ⟨u, rfl⟩ : ∃ u : (kerComplex (g N₁)).X₁ ⟶ K,
-      (h_exact N).extClass.comp ((h_exact N₁).extClass.comp (.mk₀ u) rfl) rfl = ξ :=
-    (h_onto N K 1).comp ((h_onto N₁ K 0).comp (Ext.mk₀_bijective _ K).surjective) ξ
-  -- the cover of a flat M, restricted along φ, stays exact after tensoring with any functor
-  have h_ses_tensor {D : Type 1} [Category.{0} D] (φ : D ⥤ C) (M : AbFunctor C) [HasFlatValues M]
-      (S : AbFunctor D) :
+  obtain ⟨u, rfl⟩ : ∃ u : (kerComplex g₁).X₁ ⟶ K,
+      h_exact.extClass.comp (h_exact₁.extClass.comp (.mk₀ u) rfl) rfl = ξ :=
+    (h_onto K 1).comp ((h_onto₁ K 0).comp (Ext.mk₀_bijective _ K).surjective) ξ
+  -- the cover `p` of a flat M, restricted along φ, stays exact after tensoring with any functor
+  have h_ses_tensor {D : Type 1} [Category.{0} D] (φ : D ⥤ C) {M E : AbFunctor C} [HasFlatValues M]
+      {p : E ⟶ M} (hp : (kerComplex p).ShortExact) (S : AbFunctor D) :
       (ShortComplex.mk
-        ((abTensor.flip.map (φ.whiskerLeft (kerComplex (g M)).f)).app S)
-        ((abTensor.flip.map (φ.whiskerLeft (g M))).app S)
-        (((kerComplex (g M)).map (restrictAlong φ)).map (abTensor.obj S)).zero).ShortExact :=
-    abTensor_shortExact (G := φ ⋙ M) (G' := φ ⋙ (kerComplex (g M)).X₁)
-      ((h_exact M).map_of_exact (restrictAlong φ)) S
-  refine ⟨fun D _ φ S ↦ (h_ses_tensor φ N S).extClass.comp
-      ((h_ses_tensor φ N₁ S).extClass.comp
+        ((abTensor.flip.map (φ.whiskerLeft (kerComplex p).f)).app S)
+        ((abTensor.flip.map (φ.whiskerLeft p)).app S)
+        (((kerComplex p).map (restrictAlong φ)).map (abTensor.obj S)).zero).ShortExact :=
+    abTensor_shortExact (G := φ ⋙ M) (G' := φ ⋙ (kerComplex p).X₁)
+      (hp.map_of_exact (restrictAlong φ)) S
+  refine ⟨fun D _ φ S ↦ (h_ses_tensor φ h_exact S).extClass.comp
+      ((h_ses_tensor φ h_exact₁ S).extClass.comp
         (.mk₀ ((abTensor.flip.map (φ.whiskerLeft u)).app S)) rfl) rfl,
     { comm := ?_, eq_of_flat := ?_, restrict := ?_ }⟩
   · intro D instD φ S S' y
     induction y using DirectSum.induction_on with
     | of a y =>
       -- y passes each extension class with the sign (-1) ^ a (`extClass_sign_comm`), and the two
-      -- signs cancel; it passes the map induced by u by `naturality`
-      -- (`map_of` and the `flip` simp lemmas are excluded)
-      simp [N₁, ← comp_of, comp_assoc, naturality, smul_smul,
-        comp_assoc_of_eq (extClass_sign_comm (h_ses_tensor φ _) _), ← mul_pow,
-        -map_of, -Functor.flip_obj_obj, -Functor.flip_map_app]
+      -- signs cancel; it passes the map induced by u by `naturality`.
+      -- The computation is done first for arbitrary classes `e₀, e₁, v` and `e₀', e₁', v'`
+      -- (`h_pass`): with the actual extension classes every rewriting step is slow to check.
+      have h_split {A₀ A₁ A₂ A₃ : AbFunctor D} (e₀ : H A₀ A₁ 1) (e₁ : H A₁ A₂ 1) (v : A₂ ⟶ A₃) :
+          (e₀.comp (e₁.comp (.mk₀ v) rfl) rfl).toTotalH =
+            comp e₀.toTotalH (comp e₁.toTotalH (homClass v)) := by
+        rw [comp_of _ _ (rfl : 1 + 0 = 1), comp_of _ _ (rfl : 1 + 1 = 2)]
+      have h_zsmul (n : ℤ) {A B B' : AbFunctor D} (x : TotalH A B) (z : TotalH B B') :
+          comp (n • x) z = n • comp x z := by
+        rw [map_zsmul]
+        rfl
+      have h_pass {A₀ A₁ A₂ A₃ B₀ B₁ B₂ B₃ : AbFunctor D} {y₀ : TotalH A₀ B₀} {y₁ : TotalH A₁ B₁}
+          {y₂ : TotalH A₂ B₂} {y₃ : TotalH A₃ B₃} {e₀ : H A₀ A₁ 1} {e₁ : H A₁ A₂ 1} {v : A₂ ⟶ A₃}
+          {e₀' : H B₀ B₁ 1} {e₁' : H B₁ B₂ 1} {v' : B₂ ⟶ B₃}
+          (h₀ : comp y₀ e₀'.toTotalH = (-1 : ℤ) ^ a • comp e₀.toTotalH y₁)
+          (h₁ : comp y₁ e₁'.toTotalH = (-1 : ℤ) ^ a • comp e₁.toTotalH y₂)
+          (h₂ : comp y₂ (homClass v') = comp (homClass v) y₃) :
+          comp y₀ (e₀'.comp (e₁'.comp (.mk₀ v') rfl) rfl).toTotalH =
+            comp (e₀.comp (e₁.comp (.mk₀ v) rfl) rfl).toTotalH y₃ := by
+        rw [h_split e₀ e₁ v, h_split e₀' e₁' v', comp_assoc, comp_assoc, comp_assoc_of_eq h₀,
+          h_zsmul, comp_assoc, comp_assoc_of_eq h₁, h_zsmul, comp_assoc, h₂, map_zsmul, smul_smul,
+          ← mul_pow, neg_mul_neg, one_mul, one_pow, one_smul]
+      exact h_pass (extClass_sign_comm (h_ses_tensor φ h_exact) y)
+        (extClass_sign_comm (h_ses_tensor φ h_exact₁) y)
+        (naturality (abTensor.flip.map (φ.whiskerLeft u)) (DirectSum.of _ a y))
     | zero => simp only [map_zero, AddMonoidHom.zero_apply]
     | add y y' hy hy' => simp only [map_add, AddMonoidHom.add_apply, hy, hy']
   · intro D instD φ S instS
