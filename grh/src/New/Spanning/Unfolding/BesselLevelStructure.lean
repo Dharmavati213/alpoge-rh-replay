@@ -500,8 +500,6 @@ identity; J is the Gram matrix in the lattice basis. -/
 def idOrInvAdjoint (b : Bool) : MulAut (Matrix 𝔰.BesselIndex 𝔰.BesselIndex F)ˣ :=
   if b then S.invAdjoint else 1
 
-lemma idOrInvAdjoint_false : S.idOrInvAdjoint (F := F) false = 1 := rfl
-
 lemma idOrInvAdjoint_true : S.idOrInvAdjoint (F := F) true = S.invAdjoint := rfl
 
 /-- For a chosen place w, of norm p₀ or p₁, and a Boolean, the ring homomorphism from the integral

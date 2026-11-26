@@ -58,9 +58,6 @@ level `0`. -/
 /-- The integers within distance `n` of `0` or of `c`. -/
 noncomputable abbrev twoWindows (n : ℕ) (c : ℤ) : Finset ℤ := Icc (-n : ℤ) n ∪ Icc (c - n) (c + n)
 
-lemma mem_twoWindows {n : ℕ} {c y : ℤ} : y ∈ twoWindows n c ↔ |y| ≤ n ∨ |y - c| ≤ n := by
-  grind
-
 /-- The gap condition: `p` divides no nonzero integer within distance `n` of `0`, of `b` or
 of `-b`. -/
 def NoMultipleNear (p n : ℕ) (b : ℤ) : Prop :=

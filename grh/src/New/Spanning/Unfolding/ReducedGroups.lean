@@ -45,15 +45,6 @@ def mulEquivOfKerEq (hf : Function.Surjective f) (hg : Function.Surjective g)
     ((QuotientGroup.quotientMulEquivOfEq h_ker).trans
       (QuotientGroup.quotientKerEquivOfSurjective g hg))
 
-/-- For surjective homomorphisms `f` and `g` with the same kernel, the isomorphism
-`mulEquivOfKerEq hf hg h_ker` sends `f a` to `g a` for every `a : G`. -/
-lemma mulEquivOfKerEq_apply (hf : Function.Surjective f) (hg : Function.Surjective g)
-    (h_ker : f.ker = g.ker) (a : G) : mulEquivOfKerEq hf hg h_ker (f a) = g a := by
-  have h_symm : (QuotientGroup.quotientKerEquivOfSurjective f hf).symm (f a) = (a : G ⧸ f.ker) :=
-    (MulEquiv.symm_apply_eq _).2 rfl
-  rw [mulEquivOfKerEq, MulEquiv.trans_apply, h_symm]
-  rfl
-
 end KerEq
 
 section Unitriangular
@@ -401,14 +392,6 @@ theorem mem_reducedImage_iff_forall_place {r : 𝔰.BesselIndex → 𝔰.BesselI
       simp [h_ne]
     · simp [hj]
 
-/-- The group `R̄ = S.reducedImage besselS`, the reduction of the integral points of the Bessel
-subgroup, is the product of its projections to the chosen places: `s` lies in `R̄` if and only if
-each component `s i w` is the component of some element of `R̄`. -/
-theorem mem_reducedImage_besselS_iff_forall_place {s : S.ResidueGL} :
-    s ∈ S.reducedImage besselS ↔
-      ∀ (i : Fin 2) (w : S.chosenPlaces i), ∃ t ∈ S.reducedImage besselS, t i w = s i w :=
-  S.mem_reducedImage_iff_forall_place fun _ ↦ Iff.rfl
-
 /-- The hermitian space `V` of the filling data `S` is the sum of `𝔰.ϱ` hyperbolic planes, the
 standard hermitian space `X₀` with basis indexed by `𝔰.κ`, and a line. The map `S.inclHFin` extends
 an isometry of `X₀` to `V` by the identity on the other summands and writes it in the lattice basis
@@ -508,30 +491,6 @@ def reducedImageBesselHEquiv : S.reducedImage besselH ≃*
   mulEquivOfKerEq S.toReducedImageBesselH_surjective S.reduceLatticeStabilizerH_surjective
     S.ker_toReducedImageBesselH
 
-/-- Let `k` be an integral element of the unitary group of `X₀` whose image `S.inclHFin k` preserves
-the lattice. The isomorphism `S.reducedImageBesselHEquiv` sends the reduction of `S.inclHFin k` to
-the family of the reductions of `k` at the chosen places. -/
-lemma reducedImageBesselHEquiv_reduction_inclHFin (k : stdLevel E 𝔰.κ)
-    (hk : S.inclHFin k ∈ S.latticeStabilizer) (p : Σ i : Fin 2, S.chosenPlaces i) :
-    S.reducedImageBesselHEquiv
-        ⟨S.reduction ⟨S.inclHFin k, hk⟩, S.reduction_inclHFin_mem_reducedImage_besselH hk⟩ p =
-      stdLevel.reduceAt (p.2 : FinPlace E) k :=
-  congrFun (mulEquivOfKerEq_apply S.toReducedImageBesselH_surjective
-    S.reduceLatticeStabilizerH_surjective S.ker_toReducedImageBesselH ⟨k, hk⟩) p
-
-/-- The group `H̄ = S.reducedImage besselH` is isomorphic to the product of the groups `GL_κ(𝔽_w)`
-over the chosen places `w`, compatibly with reduction: for an integral element `k` of the unitary
-group of `X₀` whose image `S.inclHFin k` preserves the lattice, the reduction of `S.inclHFin k`
-corresponds to the family of the reductions `stdLevel.reduceAt w k`. -/
-theorem exists_mulEquiv_reducedImage_besselH :
-    ∃ φ : S.reducedImage besselH ≃*
-        ∀ p : Σ i : Fin 2, S.chosenPlaces i, GL 𝔰.κ (ResField (p.2 : FinPlace E)),
-      ∀ (k : stdLevel E 𝔰.κ) (hk : S.inclHFin k ∈ S.latticeStabilizer)
-        (p : Σ i : Fin 2, S.chosenPlaces i),
-        φ ⟨S.reduction ⟨S.inclHFin k, hk⟩, S.reduction_inclHFin_mem_reducedImage_besselH hk⟩ p =
-          stdLevel.reduceAt (p.2 : FinPlace E) k :=
-  ⟨S.reducedImageBesselHEquiv, S.reducedImageBesselHEquiv_reduction_inclHFin⟩
-
 /-- An element of the stabiliser of the lattice lies in the principal congruence subgroup
 `S.principalLevel` if and only if it reduces to `1` at all chosen places. -/
 lemma coe_mem_principalLevel_iff_reduction_eq_one {k : S.latticeStabilizer} :
@@ -600,14 +559,6 @@ lemma mem_reducedImage_besselS {s : S.ResidueGL} :
       S.reduction.map_mul ⟨u, hu_int⟩ ⟨h, hh_int⟩⟩
   · rintro ⟨u', ⟨u, hu, rfl⟩, h', ⟨h, hh, rfl⟩, rfl⟩
     exact ⟨u * h, mem_besselS.2 ⟨u, hu, h, hh, rfl⟩, S.reduction.map_mul u h⟩
-
-/-- The reduction `R̄` of the Bessel subgroup `besselS` normalises the reduction `Ū` of its
-unipotent subgroup `besselU`. This is a corollary of `besselS_le_normalizer_besselU`. -/
-lemma reducedImage_besselS_le_normalizer :
-    S.reducedImage besselS ≤ Subgroup.normalizer (S.reducedImage besselU) := by
-  refine Subgroup.le_normalizer_iff.2 ?_
-  rintro s' ⟨s, hs, rfl⟩ u' ⟨u, hu, rfl⟩
-  exact ⟨s * u * s⁻¹, (besselS_le_normalizer_besselU hs u).1 hu, by simp⟩
 
 /-- Let `Ū`, `H̄`, `R̄` be the reductions of `besselU`, `besselH` (the fixer of the basis vectors
 outside `X₀`) and `besselS`. Then `|R̄| = |H̄| |Ū|`, where `|Ū| = S.unipotentOrder`. -/
