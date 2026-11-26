@@ -151,13 +151,21 @@ theorem sq_le_norm_det_blockDiagPart (g : USign ε) [Nonempty n] :
     -- the excluded simp lemmas would rewrite the conjugation and casts before `det` is evaluated
     simp [← mem_maxCompactU, h_block, IsHermitian.cfc, -conjStarAlgAut_apply, -ofReal_mul, ev]
   have h_spec : spectrum ℝ z.val.val = Set.range ev := hz_herm.spectrum_real_eq_range_eigenvalues
-  obtain ⟨i, hi⟩ : ‖z.val.val‖ ∈ Set.range ev := h_spec.le (norm_mem_spectrum_of_nonneg _)
+  -- stated once, so that the default `cfc_tac` does not search for it twice below
+  have hz_nonneg : (0 : Matrix n n ℂ) ≤ z.val.val := by
+    open ComplexOrder in exact hz.posSemidef.nonneg
+  obtain ⟨i, hi⟩ : ‖z.val.val‖ ∈ Set.range ev :=
+    h_spec.le (norm_mem_spectrum_of_nonneg _ hz_nonneg)
   -- `‖z⁻¹‖ = ‖z‖` lies in the spectrum of `z⁻¹`
   obtain ⟨j, hj⟩ : ‖z.val.val‖⁻¹ ∈ Set.range ev := by
     rw [← h_spec, ← norm_inv z]
-    exact spectrum.inv₀_mem (norm_mem_spectrum_of_nonneg _ (CFC.inv_nonneg_of_nonneg _))
+    exact spectrum.inv₀_mem
+      (norm_mem_spectrum_of_nonneg _ (CFC.inv_nonneg_of_nonneg _ hz_nonneg))
   have h_factor (x : n) : 1 ≤ 2⁻¹ * |ev x + (ev x)⁻¹| := by
-    grind [one_le_cosh (log (ev x)), cosh_log (hz.eigenvalues_pos x)]
+    -- `(x + x⁻¹) / 2 = cosh (log x) ≥ 1` for the positive eigenvalue `x`
+    have h_cosh := one_le_cosh (log (ev x))
+    rw [cosh_log (hz.eigenvalues_pos x)] at h_cosh
+    rwa [abs_of_nonneg (by linarith), inv_mul_eq_div]
   rw [h_norm, h_det]
   calc
     (‖z.val.val‖ / 2) ^ 2 ≤ ((‖z.val.val‖ + ‖z.val.val‖⁻¹) / 2) ^ 2 := by bound
@@ -585,11 +593,16 @@ def toL2 (hg : l.HasLargeGap A) : l.DsModule →ₗ[ℂ] USign ε →₂[volume]
   √l.formalDegree •
     IsLinearMap.mk' (R := ℂ) (fun f : l.DsModule ↦ (hg.memLp f).toLp) ⟨by tauto, by tauto⟩
 
+-- The measure `volume` of `hw` and `hz` is written out. Left to the default `by volume_tac`, it is
+-- filled in only after the whole statement is elaborated, and until then every unification with
+-- `MemLp _ 2 ?μ` fails slowly. The instance given for `hw` is the one elaboration chose before, so
+-- the statement is the same term.
 omit [Nonempty n] in
 /-- For square integrable functions `w` and `z` on `U(diag ε)`, the inner product in `L²` of `w`
 with the right translate of `z` by `x` is `∫ g, z (g * x) * conj (w g)`. -/
-theorem _root_.New.inner_toLp_rightRegularL2_toLp {w z : USign ε → ℂ} (hw : MemLp w 2)
-    (hz : MemLp z 2) (x : USign ε) :
+theorem _root_.New.inner_toLp_rightRegularL2_toLp {w z : USign ε → ℂ}
+    (hw : MemLp (m0 := Subtype.instMeasurableSpace) w 2 volume) (hz : MemLp z 2 volume)
+    (x : USign ε) :
     ⟪hw.toLp w, rightRegularL2 x (hz.toLp z)⟫_ℂ = ∫ g : USign ε, z (g * x) * conj (w g) :=
   integral_congr_ae (hw.coeFn_toLp.comp₂ _ (AEEqFun.coeFn_mk ..))
 
@@ -821,7 +834,7 @@ theorem norm_dsCoeff_sub_le [hg : l.HasLargeGap B] (hL : ∀ a : n, |l a| ≤ L)
     let w : (Matrix n n ℂ)ˣ := Units.oneSub _ (small.trans_lt two_inv_lt_one)
     have hγ : (γ t).1.1 = 1 + t • (A * w⁻¹) := by simp [γ, ← inverse_unit, u, w]
     have norm_inv_le : ‖w⁻¹.1‖ ≤ 2 := by
-      refine (tsum_geometric_le_of_norm_lt_one _ (by grind)).trans ?_
+      refine (tsum_geometric_le_of_norm_lt_one _ (small.trans_lt two_inv_lt_one)).trans ?_
       grw [small]
       bound
     -- The derivative of `γ` at `t`, from that of the inverse at the unit `w`.
@@ -833,8 +846,10 @@ theorem norm_dsCoeff_sub_le [hg : l.HasLargeGap B] (hL : ∀ a : n, |l a| ≤ L)
       have h_inv : HasDerivAt (fun s ↦ (u s)⁻¹ʳ) ((2 : ℝ)⁻¹ • (w⁻¹.1 * (A * w⁻¹.1))) t := by
         simpa [Function.comp_def, mul_assoc] using
           (hasFDerivAt_ringInverse (𝕜 := ℝ) w).comp_hasDerivAt_of_eq t h_u hw.symm
-      simpa [γ, γ', hw, mul_add, mul_assoc, smul_comm t (2 : ℝ)⁻¹, add_comm] using
-        ((((hasDerivAt_id t).smul_const A).mul h_inv).const_add 1).const_mul x.1.1
+      -- the product rule, then the derivative is rearranged into `x * γ'`
+      refine
+        (((((hasDerivAt_id t).smul_const A).mul h_inv).const_add 1).const_mul x.1.1).congr_deriv ?_
+      rw [hw, inverse_unit, one_smul, id, smul_mul_assoc, mul_smul_comm, add_comm]
     have norm_γ : ‖(γ t).1.1‖ ≤ 3 := by
       grw [hγ, norm_add_le, norm_smul, norm_mul_le, norm_inv_le, hA, norm_of_nonneg ht₀, ht₁]
       norm_num
