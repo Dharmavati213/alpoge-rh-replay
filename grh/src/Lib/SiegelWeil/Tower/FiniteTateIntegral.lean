@@ -238,7 +238,9 @@ variable (E) in
 /-- The variable of Tate's integral on the two sides of Poisson's formula: `a` itself for
 `β = true`, and `ā⁻¹` for `β = false`. -/
 def poissonVariable (β : Bool) : (𝔸 E)ˣ ≃ₜ* (𝔸 E)ˣ :=
-  cond β (.refl (𝔸 E)ˣ) ⟨.inv (𝔸 E)ˣ * starMulAut, continuous_star.inv, continuous_inv.star⟩
+  -- `by exact` elaborates `.inv` once its type `MulAut (𝔸 E)ˣ` is known: fast, and the same term
+  cond β (.refl (𝔸 E)ˣ)
+    ⟨(by exact .inv (𝔸 E)ˣ) * starMulAut, continuous_star.inv, continuous_inv.star⟩
 
 lemma poissonVariable_true (a : (𝔸 E)ˣ) : poissonVariable E true a = a := rfl
 

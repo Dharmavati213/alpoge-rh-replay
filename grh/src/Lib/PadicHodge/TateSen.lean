@@ -88,10 +88,10 @@ private lemma New.Period.exists_sum_smul_sub_one_pow_eq {p : ℕ} [ThePrime p] {
     refine (fixedField_fixingSubgroup _).le fun g ↦ h_fix g ?_
     -- `g` fixes `ζ - 1`, hence `ζ`
     simpa using g.property (gen ℚ_[p] (ζ - 1))
-  have h_poly : aeval (ζ - 1) ((cyclotomic (p ^ (n + 1)) ℚ_[p]).comp (X + .C 1)) = 0 := by
+  have h_poly : aeval (ζ - 1) ((cyclotomic (p ^ (n + 1)) ℚ_[p]).comp (X + C 1)) = 0 := by
     rw [aeval_comp]
     simpa [← eval_map_algebraMap] using isRoot_cyclotomic_iff.mpr hζ
-  have h_deg : ((cyclotomic (p ^ (n + 1)) ℚ_[p]).comp (X + .C 1)).natDegree =
+  have h_deg : ((cyclotomic (p ^ (n + 1)) ℚ_[p]).comp (X + C 1)).natDegree =
       (p ^ (n + 1)).totient := by
     rw [natDegree_comp, natDegree_X_add_C, mul_one, natDegree_cyclotomic]
   have h_span : z ∈ span ℚ_[p] ((Finset.range (p ^ (n + 1)).totient).image

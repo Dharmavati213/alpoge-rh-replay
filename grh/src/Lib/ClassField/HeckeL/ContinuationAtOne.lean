@@ -449,7 +449,7 @@ lemma exists_idele_character (hψ : IsHeckeOfType ψ n) (hψ_ne : ψ ≠ 1) :
   -- Take `X (t, a) = ∏ w, (p w t / ‖p w t‖) ^ n w * ψ a`, with `p w` the extension of `Φ w`.
   choose p hp using exists_continuousAlgHom_mixedEmbedding_eq (K := K)
   -- The homomorphism `arg` is `z ↦ z / ‖z‖`.
-  let arg : ℂˣ →* ℂˣ := .id ℂˣ / map (ofRealHom.toMonoidHom.comp normHom.toMonoidHom)
+  let arg : ℂˣ →* ℂˣ := MonoidHom.id ℂˣ / map (ofRealHom.toMonoidHom.comp normHom.toMonoidHom)
   have h_arg (z : ℂˣ) : (arg z : ℂ) = z / ‖z.val‖ := by simp [arg]
   let X : (mixedEmbedding.mixedSpace K)ˣ × (𝔸f K)ˣ →* ℂ := (coeHom ℂ).comp <|
     .coprod (∏ w, (arg.comp (map (p w).toAlgHom.toRingHom.toMonoidHom)) ^ n w) ψ

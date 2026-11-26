@@ -273,9 +273,9 @@ omit [PadicPlace p] in
 has a root without constant term, by Hensel's lemma. -/
 lemma _root_.New.exists_isRoot_cubic_constantCoeff_eq_zero (a : valRingCp p) :
     ∃ y : (valRingCp p)⟦X⟧,
-      (⟨1, 0, 1 - .C a * X, -X * X⟩ : Cubic (valRingCp p)⟦X⟧).toPoly.IsRoot y ∧
+      (⟨1, 0, 1 - PowerSeries.C a * X, -X * X⟩ : Cubic (valRingCp p)⟦X⟧).toPoly.IsRoot y ∧
       constantCoeff y = 0 := by
-  set F : Cubic (valRingCp p)⟦X⟧ := ⟨1, 0, 1 - .C a * X, -X * X⟩ with hF
+  set F : Cubic (valRingCp p)⟦X⟧ := ⟨1, 0, 1 - PowerSeries.C a * X, -X * X⟩ with hF
   have h_approx : F.toPoly.eval 0 ∈ Ideal.span {X} := by
     simp [hF, Cubic.toPoly, Ideal.mem_span_singleton]
   have h_simple : IsUnit (Ideal.Quotient.mk (Ideal.span {X}) (F.toPoly.derivative.eval 0)) := by
@@ -297,7 +297,7 @@ lemma taylorVia_translatedX_mem_integralSeriesRing :
   -- `Y³ + (1 - a₁ X) Y - X²` has a root `r` in `X 𝔬[[X]]`, and `r(y)` is the same root: over a
   -- local ring two roots that are congruent and simple modulo the maximal ideal agree.
   let a₁ : valRingCp p := ⟨ιₚ C.a₁, C.norm_a₁_le_one⟩
-  let F : Cubic (valRingCp p)⟦X⟧ := ⟨1, 0, 1 - .C a₁ * X, -X * X⟩
+  let F : Cubic (valRingCp p)⟦X⟧ := ⟨1, 0, 1 - PowerSeries.C a₁ * X, -X * X⟩
   obtain ⟨r, hr_root : F.toPoly.IsRoot r, hr₀⟩ := exists_isRoot_cubic_constantCoeff_eq_zero a₁
   set y : ℂ_[p]⟦X⟧ := taylorVia ιₚ C.translatedY with hy
   set x : ℂ_[p]⟦X⟧ := taylorVia ιₚ C.translatedX with hx
@@ -307,7 +307,8 @@ lemma taylorVia_translatedX_mem_integralSeriesRing :
   have hΦ (g : (valRingCp p)⟦X⟧) : Φ g = subst y (seriesToCp g) := by simp [Φ, coe_substAlgHom]
   have hΦr₀ : constantCoeff (Φ r) = 0 := by simp [hΦ, hy₀, constantCoeff_seriesToCp, hr₀]
   have h_map : F.toPoly.map Φ =
-      Polynomial.X ^ 3 + .C (1 - .C (ιₚ C.a₁) * y) * Polynomial.X - .C (y * y) := by
+      Polynomial.X ^ 3 + Polynomial.C (1 - .C (ιₚ C.a₁) * y) * Polynomial.X -
+        Polynomial.C (y * y) := by
     have hΦ_C : Φ (.C a₁) = .C (ιₚ C.a₁) := by
       rw [hΦ, seriesToCp_eq_map, map_C, subst_C]
       rfl

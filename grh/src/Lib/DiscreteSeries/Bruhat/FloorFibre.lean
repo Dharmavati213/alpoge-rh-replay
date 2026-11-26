@@ -257,7 +257,8 @@ lemma leFibreMeasure_frameVector (b : Fin 𝔰.n) :
 vectors of floor greater than `a`. -/
 noncomputable def dualPoint (a : Fin 𝔰.ϱ)
     (p : ℂ × ({i : 𝔰.BesselIndex // a + 1 ≤ floorOf i} → ℂ)) : 𝔰.BesselIndex → ℂ :=
-  Pi.single (eStar a) 1 + inclMatrix ℂ Subtype.val *ᵥ p.2 + p.1 • Pi.single (.inl a) 1
+  -- `by exact` elaborates `.inl a` once the index type is known: fast, and the same term
+  Pi.single (eStar a) 1 + inclMatrix ℂ Subtype.val *ᵥ p.2 + p.1 • Pi.single (by exact .inl a) 1
 
 @[fun_prop]
 lemma continuous_dualPoint (a : Fin 𝔰.ϱ) : Continuous (dualPoint a) := by fun_prop [dualPoint]
@@ -315,7 +316,7 @@ lemma leFibreMeasure_dualPoint (a : Fin 𝔰.ϱ) :
       fun p : ℂ × (S → ℂ) ↦ Sum.elim (fun _ : Unit ↦ p.1) p.2 := by
     funext p
     have h_single : inclMatrix ℂ (fun _ : Unit ↦ (.inl a : 𝔰.BesselIndex)) *ᵥ (fun _ ↦ p.1) =
-        p.1 • Pi.single (.inl a) 1 := by
+        p.1 • Pi.single (Sum.inl a) 1 := by
       ext i
       simp [inclMatrix, mulVec, dotProduct, one_apply, Pi.single_apply]
     rw [Function.comp_apply, h_base, inclMatrix_sumElim_mulVec, h_single, dualPoint, add_assoc,

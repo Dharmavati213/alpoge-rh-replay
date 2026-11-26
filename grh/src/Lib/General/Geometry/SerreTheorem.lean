@@ -150,8 +150,9 @@ lemma eventually_mem_formSpan_of_mul {k F : Type*} {ι : Type} [CommRing k] [IsN
   -- at some `c`. For `D ≥ c`, `f = f * x r` is the value of a homogeneous `p ∈ I (D + 1) = I c`.
   let T : ℕ → Submodule k F := formSpan k x
   -- The `n`-th coefficient of `φ p = p(X · x)` is the value at `x` of the degree `n` part of `p`.
-  let φ : MvPolynomial ι k →ₐ[k] Polynomial F := aeval fun i ↦ Polynomial.X * .C (x i)
-  have φ_mul_X (p : MvPolynomial ι k) (j : ι) : φ (p * X j) = φ p * Polynomial.X * .C (x j) := by
+  let φ : MvPolynomial ι k →ₐ[k] Polynomial F := aeval fun i ↦ Polynomial.X * Polynomial.C (x i)
+  have φ_mul_X (p : MvPolynomial ι k) (j : ι) :
+      φ (p * X j) = φ p * Polynomial.X * Polynomial.C (x j) := by
     simp [φ, mul_assoc]
   -- `p ∈ I c`: for each `n`, this value `g` has all `g * x i` in `T n`, and `g` itself lies in
   -- `T (n - 1)` if `c < n`.

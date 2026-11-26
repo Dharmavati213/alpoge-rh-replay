@@ -257,7 +257,7 @@ lemma New.Selmer.exists_anticyclotomicChar_of_frob_fixes_roots {E : Type} [Field
   have hlg_cont : Continuous lg :=
     .of_isOpen_ker lg (isOpen_of_forall_pow_mem index_ne_zero_of_finite lg.ker.pow_index_mem)
   obtain ⟨θ, hθ_cont, hθ_rat, hθ⟩ := exists_ideleClassChar_of_local h_gen hlg_cont hlg_unit
-  let θ' : (𝔸f E)ˣ →* Multiplicative (ZMod q) := θ.comp (.id _ / starMulAut.toMonoidHom)
+  let θ' : (𝔸f E)ˣ →* Multiplicative (ZMod q) := θ.comp (MonoidHom.id _ / starMulAut.toMonoidHom)
   have hθ'_rat (x : Eˣ) : θ' (principalIdele x) = 1 := by
     have h_conj : star (principalIdele x) = principalIdele (star x) := by
       ext1

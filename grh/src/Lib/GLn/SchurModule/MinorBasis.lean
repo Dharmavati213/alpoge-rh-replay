@@ -484,7 +484,8 @@ lemma degree_rowExpansion_mem_interlacing (hf : f ∈ nabla R c l) :
     exact h_scale _ h_deg_lt
   -- Right side: the weight factor, and the coefficient of `T ^ γ i` at `δ` in `Ψ f`.
   have h_weight :
-      (l.prod fun p k ↦ b (p.1, p.2, p.2) ^ k) = C (.C .X ^ l (c x, i) * .X ^ l (c x, i + 1)) := by
+      (l.prod fun p k ↦ b (p.1, p.2, p.2) ^ k) =
+        C (Polynomial.C Polynomial.X ^ l (c x, i) * Polynomial.X ^ l (c x, i + 1)) := by
     -- The flags stop `simp` from splitting the powers `s ^ [p = (c x, i)]` into cases, and from
     -- rewriting `C (a ^ n)` as `C a ^ n`.
     simp [b, prod_mul_distrib, -pow_ite, -Prod.mk.injEq, prod_pow_eq_pow_sum, ↓if_mem_support, prod,

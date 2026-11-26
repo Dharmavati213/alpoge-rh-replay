@@ -133,7 +133,7 @@ lemma p_mul_X : p * Amax.xiDivP = xi :=
 lemma Amax.p_mem_nonZeroDivisors : ↑p ∈ Amax⁰ := by
   -- The ring obtained by adjoining a root of `p X - ξ` has no `p`-torsion, and this passes to its
   -- `p`-adic completion.
-  have h_reg : IsSMulRegular (AdjoinRoot (C (p : Ainf) * .X - C xi)) p := by
+  have h_reg : IsSMulRegular (AdjoinRoot (C (p : Ainf) * X - C xi)) p := by
     refine .of_right_eq_zero_of_smul fun y hy ↦ ?_
     obtain ⟨f, rfl⟩ := mk_surjective y
     have h_dvd : C (p : Ainf) * .X - C xi ∣ C (p : Ainf) * f :=
@@ -156,7 +156,7 @@ lemma Amax.exists_lift [IsAdicComplete (span {(p : R)}) R] (f : Ainf →+* R) (x
   -- Send the root of `p X - ξ` to `x`, pass to the `p`-adic completions, and use that `R` is
   -- complete.
   have h_root : (C (p : Ainf) * .X - C xi).eval₂ f x = 0 := by simp [h_xi]
-  let F₀ : AdjoinRoot (C (p : Ainf) * .X - C xi) →+* R := AdjoinRoot.lift f x h_root
+  let F₀ : AdjoinRoot (C (p : Ainf) * X - C xi) →+* R := AdjoinRoot.lift f x h_root
   let e : R ≃ₐ[R] AdicCompletion (span {(p : R)}) R := AdicCompletion.ofAlgEquiv (span {(p : R)})
   refine ⟨e.symm.toRingHom.comp (adicMap F₀ (by simp)), fun a ↦ ?_, ?_⟩
   -- `erw`: the composite is typed through `Amax`, which is the completion only by definition, so a
@@ -669,7 +669,7 @@ lemma amaxImage.p_pow_mul_mem_of_dvd_mu {e : Ainf} {n : ℕ} (he_dvd_mu : e ∣ 
       _ = ((p ^ m * (t ^ n * c) : Amax) : BPlus) := by
         simp [hc, smul_def, ← IsScalarTower.algebraMap_apply]
   -- A monic polynomial in `X` is regular modulo `pᵐ`; hence `pᵐ ∣ b`, and `pᵐ` cancels in `hb`.
-  have h_dvd : (p : Amax) ^ m ∣ aeval xiDivP ((.X * (.X - C 1)) ^ n : Ainf[X]) * b :=
+  have h_dvd : (p : Amax) ^ m ∣ aeval xiDivP ((X * (X - C 1)) ^ n : Ainf[X]) * b :=
     ⟨t ^ n * c, by simpa [g] using h_mul_eq⟩
   obtain ⟨b', rfl⟩ : (p : Amax) ^ m ∣ b :=
     b.p_pow_dvd_of_dvd_aeval_mul ((monic_X.mul (monic_X_sub_C 1)).pow n) m h_dvd
@@ -779,16 +779,16 @@ lemma BPlus.eq_zero_of_forall_pow_dvd (a : Ainf)
   -- `F : A → (A_inf / (p, ξ))[X]` has kernel `p A` and sends `P (ξ / p)` to the reduction of `P`
   obtain ⟨F, hF, hF_ker⟩ := Amax.exists_reduction_mod_p (p := p)
   -- divisibility holds in `BPlus`, where `p` is a unit
-  have h_loc (m : ℕ) : algebraMap Amax BPlus (aeval Amax.xiDivP ((.X - C a) ^ m)) ∣ ↑c := by
+  have h_loc (m : ℕ) : algebraMap Amax BPlus (aeval Amax.xiDivP ((X - C a) ^ m)) ∣ ↑c := by
     have h_dvd : algebraMap Ainf BPlus (xi - p * a) ^ m ∣ y := h_pow_dvd m
     grw [algebraMap_apply _ Amax, Dvd.intro_left _ hb] at h_dvd
     simpa [← mul_sub, mul_pow, IsUnit.pow] using h_dvd
   -- the quotient lies in `A`, since `(X - a) ^ m` is monic (`Amax.p_pow_dvd_of_dvd_aeval_mul`)
-  have h_int (m : ℕ) : aeval Amax.xiDivP ((.X - C a) ^ m) ∣ c := by
+  have h_int (m : ℕ) : aeval Amax.xiDivP ((X - C a) ^ m) ∣ c := by
     -- `hw : c = (X - a) ^ m * w` in `B⁺`
     obtain ⟨w, hw⟩ := h_loc m
     obtain ⟨l, d, hd⟩ := w.exists_p_pow_mul_eq_amax
-    have h_mul_eq : aeval Amax.xiDivP ((.X - C a) ^ m) * d = p.cast ^ l * c := by
+    have h_mul_eq : aeval Amax.xiDivP ((X - C a) ^ m) * d = p.cast ^ l * c := by
       apply injective_Amax_BPlus
       calc ((aeval Amax.xiDivP ((.X - C a) ^ m) * d : Amax) : BPlus)
           = algebraMap Amax BPlus (aeval Amax.xiDivP ((.X - C a) ^ m)) * (p ^ l * w) := by
@@ -808,12 +808,12 @@ lemma BPlus.eq_zero_of_forall_pow_dvd (a : Ainf)
         rfl
       exact (BPlus.isUnit_p.pow l).mul_left_cancel h_mul
     refine ⟨e, injective_Amax_BPlus ?_⟩
-    show (c : BPlus) = ((aeval Amax.xiDivP ((.X - C a) ^ m) * e : Amax) : BPlus)
+    show (c : BPlus) = ((aeval Amax.xiDivP ((X - C a) ^ m) * e : Amax) : BPlus)
     rw [hw, hw_eq, algebraMap.coe_mul]
   -- a nonzero polynomial is not divisible by `X - a` to its root multiplicity plus one
   have hFc_ne : F c ≠ 0 := fun h_zero ↦ hc ((hF_ker c).mpr h_zero)
   set r : ℕ := rootMultiplicity (Ideal.Quotient.mk (span {(p : Ainf), xi}) a) (F c) + 1
-  have h_map : F (aeval Amax.xiDivP ((.X - C a) ^ r)) ∣ F c := map_dvd F (h_int r)
+  have h_map : F (aeval Amax.xiDivP ((X - C a) ^ r)) ∣ F c := map_dvd F (h_int r)
   rw [hF] at h_map
   have h_dvd_F : (Polynomial.X - C (Ideal.Quotient.mk (span {(p : Ainf), xi}) a)) ^ r ∣ F c := by
     simpa using h_map

@@ -428,7 +428,7 @@ lemma hyperplaneSum_mul_labelIdem {c : Polynomial k} {χ : MulChar k ℂ}
     e ≪≫ₗ .symm (prodEquiv k ≪≫ₗ ringLmapEquivSelf k k (k × ((n → k) ⧸ L)))
   have h_det (u : n → k) : (1 + vecMulVec u l).det = (1 + (E u).1).det := by
     simp [E, e, vecMulVec_eq Unit, det_one_add_mul_comm]
-  have h_cls (u : n → k) : simClassOf (.id + (vecMulVec u l).toLin') =
+  have h_cls (u : n → k) : simClassOf (LinearMap.id + (vecMulVec u l).toLin') =
       simClassOf (blockTriangularEnd 1 (1 + (E u).1) (E u).2) :=
     simClassOf_eq_of_equiv e (by simp [E, e, vecMulVec_mulVec, add_comm])
   -- `N` is parametrized by an invertible scalar block `g` and an arbitrary off-diagonal block `x`.

@@ -133,7 +133,7 @@ variable {p : ℕ} [ThePrime p]
 lemma Amax.exists_sub_mul_frobEnd_eq {u : Amax} (hp_dvd : (p : Amax) ∣ u) (w : Amax) :
     ∃ c : Amax, c - u * frobEnd c = w := by
   -- `c ↦ c - u * φ c` is the identity modulo `p`, so it is onto by successive approximation
-  let f : Amax →+ Amax := .id Amax - u • frobEnd.toAddMonoidHom
+  let f : Amax →+ Amax := AddMonoidHom.id Amax - u • frobEnd.toAddMonoidHom
   have h_step (v : Amax) : ∃ n y : Amax, v = f n + (p : ℤ) • y := by
     obtain ⟨y, hy⟩ : (p : Amax) ∣ u * frobEnd v := hp_dvd.mul_right _
     exact ⟨v, y, by simp [f, ← hy]⟩

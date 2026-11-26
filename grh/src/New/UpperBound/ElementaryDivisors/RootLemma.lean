@@ -176,7 +176,7 @@ lemma algHom_sub_mem_of_mem_gaussFiltration (χ : MvPolynomial σ R →ₐ[R] A)
       add_mem (ih_monomial h_monomial).2 (ih_f h_rest).2
   | mul_X p i ih =>
     have hp : p ∈ gaussFiltration F c (t - c i) := fun α ↦ by
-      have h_level : t - c i - weight c α = t - weight c (α + .single i 1) := by
+      have h_level : t - c i - weight c α = t - weight c (α + Finsupp.single i 1) := by
         simp [weight_single, sub_add_eq_sub_sub_swap]
       rw [h_level, ← coeff_mul_X α i p]
       exact hf _
@@ -393,7 +393,8 @@ lemma defectWeight_eq [NeZero N] {T : FrobeniusCycle N W R} (D : T.RootAt k) (z 
 `-1` at `a`. It relates the point at infinity of the projective line to the finite point with the
 affine coordinate `ι_i(r)`. -/
 def swapTransvection {T : FrobeniusCycle N W R} (D : T.RootAt k) (r : W) : GL (Fin k) W :=
-  .swap W D.fst D.snd * transvectionGL D.ne (if T.isEven D.letter then -r else r) *
+  GeneralLinearGroup.swap W D.fst D.snd *
+    transvectionGL D.ne (if T.isEven D.letter then -r else r) *
     diagGL (Function.update 1 D.fst (-1))
 
 /-- The sign `-1` at the variables with index `a`, and `1` at the other variables. -/
@@ -447,8 +448,9 @@ lemma polyAction_swapTransvection_X [NeZero N] {T : FrobeniusCycle N W R} (D : T
   -- `D.letter`.
   let M : Matrix (Fin k) (Fin k) W :=
     if T.isEven z.2 then transvection D.fst D.snd x else (transvection D.fst D.snd (-x))ᵀ
-  have h_column : T.polyAction (.swap W D.fst D.snd * transvectionGL D.ne x) (X z) =
-      ∑ b : Fin k, C (T.embedding z.2 (M b z.1)) * X (Equiv.swap D.fst D.snd b, z.2) := by
+  have h_column :
+      T.polyAction (GeneralLinearGroup.swap W D.fst D.snd * transvectionGL D.ne x) (X z) =
+        ∑ b : Fin k, C (T.embedding z.2 (M b z.1)) * X (Equiv.swap D.fst D.snd b, z.2) := by
     simp [M, polyAction_X, letterMatrix_apply, transvectionGL, swap,
       GeneralLinearGroup.swap, Equiv.swap_apply_eq_iff]
   -- Off the diagonal, the column of `z` has only the entry `D.sign z * r`, in the row of `X_s`.

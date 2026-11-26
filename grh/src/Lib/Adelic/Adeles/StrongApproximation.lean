@@ -519,9 +519,8 @@ lemma New.Exchange.denseRange_rat_matrix_add {E m n : Type*} [Field E] [CMType E
   rw [← Matrix.one_mul Y, ← x.inv_mul, Matrix.mul_assoc]
   refine map_mem_closure (f := fun Z ↦ x⁻¹.val * Z) (by fun_prop) h_approx ?_
   rintro _ ⟨p, rfl⟩
-  refine ⟨(.of fun i j ↦ (p i j).1, x⁻¹.val * .of fun i j ↦ (p i j).2), ?_⟩
+  refine ⟨(.of fun i j ↦ (p i j).1, x⁻¹.val * Matrix.of fun i j ↦ (p i j).2), ?_⟩
   simp only [Matrix.mul_add, Matrix.mul_smul]
-  rfl
 
 /-!
 ## One-sided Poisson summation on the adeles

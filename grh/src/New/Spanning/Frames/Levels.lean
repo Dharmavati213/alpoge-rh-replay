@@ -373,7 +373,7 @@ lemma inclMatrix_mulVec_flatChart_eq_heisenbergElem_mulVec (a : Fin 𝔰.ϱ) (t 
     linear_combination (-element * t * c) * h_cancel
   have h_incl (x y : A) (w : {i : 𝔰.BesselIndex // a + 1 ≤ floorOf i} → A) :
       inclMatrix A (floorIndexEnum a) *ᵥ (![x, y] ⊕ᵥ w) =
-        Pi.single (eStar a) y + inclMatrix A Subtype.val *ᵥ w + x • Pi.single (.inl a) 1 := by
+        Pi.single (eStar a) y + inclMatrix A Subtype.val *ᵥ w + x • Pi.single (Sum.inl a) 1 := by
     ext i
     simp [floorIndexEnum, inclMatrix, mulVec_apply_eq_sum, Pi.single_apply, Matrix.one_apply,
       add_comm, add_assoc]
