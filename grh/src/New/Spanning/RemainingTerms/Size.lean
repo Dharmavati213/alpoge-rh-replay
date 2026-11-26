@@ -264,6 +264,9 @@ lemma eq_one_of_mul_eq_mul_of_termDisc_ne_zero {c c' : S.Classes} {γ w p : S.G 
   · simpa [toMatrix, frameGram, splitGram, ← Matrix.ext_iff, Matrix.mul_apply, Matrix.one_apply]
       using h_inv
 
+-- The class `⟦_⟧` is in parentheses: `ρ ⟦x⟧` is also read as the shift `ρ⟦x⟧` of the category
+-- theory library, which fails slowly. The first factor is coerced to `S.G E` by hand: otherwise
+-- Lean first looks for a coercion of `γ` into the subgroup, a slow failing search.
 open scoped Classical in
 /-- Let `ρ` choose a representative in each double coset of `U⁰_c = S.classUnipotent₀ c` and
 `U_c' = S.classUnipotent c'`, and let `γ` have `S.termDisc γ ≠ 0`. Then exactly one pair `(a, b)` in
@@ -276,8 +279,8 @@ lemma tsum_ite_representative_eq_one {c c' : S.Classes}
       DoubleCoset.mk (S.classUnipotent₀ c) (S.classUnipotent c') (ρ q) = q) {γ : S.G E}
     (hγ : S.termDisc γ ≠ 0) :
     ∑' (a : (S.classUnipotent₀ c).subgroupOf (S.classUnipotent c)) (b : S.classUnipotent c'),
-      (if ρ ⟦(a : S.classUnipotent c) * γ * (b : S.G E)⁻¹⟧ =
-          (a : S.classUnipotent c) * γ * (b : S.G E)⁻¹ then (1 : ℝ≥0∞) else 0) = 1 := by
+      (if ρ (⟦((a : S.classUnipotent c) : S.G E) * γ * (b : S.G E)⁻¹⟧) =
+          ((a : S.classUnipotent c) : S.G E) * γ * (b : S.G E)⁻¹ then (1 : ℝ≥0∞) else 0) = 1 := by
   obtain ⟨u, hu, u', hu', h_rep⟩ : ∃ u ∈ S.classUnipotent₀ c, ∃ u' ∈ S.classUnipotent c',
       ρ (DoubleCoset.mk (S.classUnipotent₀ c) (S.classUnipotent c') γ) = u * γ * u' :=
     (DoubleCoset.eq ..).mp (hρ _).symm
@@ -435,6 +438,8 @@ lemma toReal_smul_besselKernel_eq_zero [HasPrimitiveRoot5040 E] {c c' : S.Classe
     h_kernel fun h_zero ↦ hy (by simp [h_zero])
   exact h_none δ hδ h_same
 
+-- The class `⟦_⟧` is in parentheses and `u.1` is coerced by hand, as in
+-- `tsum_ite_representative_eq_one`.
 open scoped Classical in
 omit [S.IsAdmissible] in
 /-- Let `T` be a set of rational elements with `𝗀 = termDisc ≠ 0` that is stable under the rational
@@ -452,7 +457,7 @@ lemma tsum_representative_weight_eq_one {c c' : S.Classes}
     (hT : S.IsStable T) (h_disc : ∀ γ ∈ T, S.termDisc γ ≠ 0) {γ : S.G E} (hγ : γ ∈ T)
     (y : NumberField.InfinitePlace E → 𝔰.G₁) :
     ∑' u : S.classUnipotent c × S.classUnipotent c',
-      (if ρ ⟦u.1 * γ * u.2⁻¹⟧ = u.1 * γ * u.2⁻¹ then 1 else 0) *
+      (if ρ (⟦(u.1 : S.G E) * γ * u.2⁻¹⟧) = (u.1 : S.G E) * γ * u.2⁻¹ then 1 else 0) *
         ω (S.ratToInf u.1 * y) = 1 := by
   let repIndicator (g : S.G E) : ℝ≥0∞ := if ρ ⟦g⟧ = g then 1 else 0
   let repCount (x : S.classUnipotent c) : ℝ≥0∞ :=

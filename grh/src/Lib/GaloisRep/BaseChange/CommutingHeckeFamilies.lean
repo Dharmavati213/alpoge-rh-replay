@@ -148,6 +148,9 @@ abbrev IsMatchingPairAbove :
 
 lemma continuous_baseChangeGf : Continuous (baseChangeGf : Gf E n → Gf E' n) := U.continuous_map
 
+-- Keeps the check that the completions at `u.below E` and at `u.comap (algebraMap E E')` are the
+-- same field from unfolding the field structure of the completion: it compares the places.
+seal IsDedekindDomain.HeightOneSpectrum.adicCompletion.instField in
 /-- The component of the base change of `g` at `u` is the image of the component of `g` at the
 place below `u`. -/
 lemma atPlace_baseChangeGf :

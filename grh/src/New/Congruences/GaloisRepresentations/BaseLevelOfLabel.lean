@@ -61,6 +61,10 @@ section
 
 variable {O : DescentPair D.E r n} [DecidableEq n]
 
+-- Keeps definitional checks from unfolding `levelOf`. The level written in the statement and the
+-- one in the type of `O.levelChar` differ only in proofs that `D.E` is a CM number field; with
+-- `levelOf` sealed the check compares the arguments instead of unfolding both subgroups.
+seal levelOf in
 open scoped Classical in
 set_option backward.isDefEq.respectTransparency false in
 /-- Let `w = O.chosenPlace i` be a chosen place of the pair `O`, assumed split (`hw`), and write
@@ -114,6 +118,8 @@ theorem hasParahoricType_chosenGLRep {S : Submodule ℂ (Gf D.E n → WeylIndex 
   refine (h_loc k).symm.trans ((congrArg Subtype.val h_act).symm.trans ?_)
   simp [MulChar.one_apply, GeneralLinearGroup.det_ne_zero]
 
+-- Keeps definitional checks from unfolding `levelOf`, as for `hasParahoricType_chosenGLRep`.
+seal levelOf in
 /-- Let `v` have the level and character of the pair `O` under `π`, and let
 `ψ_i = O.tamePart (O.chosenPlace i)`, a character of the residue field of the `i`-th chosen place.
 The element `a` of the group algebra of `O.ChosenGL r = ∏ i, GL_r` of these residue fields acts on
@@ -386,6 +392,8 @@ lemma apply_ofSplitPlace_eq_formTranslation
         (ofSplitPlace (O.apart.star_ne j j) k) :=
   hπ _ (supportedOn_mono (by simp [-Sum.elim_range]) (ofSplitPlace_mem_supportedOn _ k))
 
+-- Keeps definitional checks from unfolding `levelOf`, as for `hasParahoricType_chosenGLRep`.
+seal levelOf in
 open scoped Classical in
 /-- Let the labels `c` form a lift setting for `O` and `ϑ`. Let `π` be a representation on forms of
 weight `(O.columnCount, O.detExp)` that agrees with right translation (`formTranslation`) on the
@@ -421,6 +429,8 @@ lemma hasProductLabel_of_tupleIdem_apply_ne_zero
   -- polynomial.
   simpa [scaledTypePoly] using h_lift.not_isRoot_scaledTypePoly i
 
+-- Keeps definitional checks from unfolding `levelOf`, as for `hasParahoricType_chosenGLRep`.
+seal levelOf in
 /-- Let `π` be a representation on forms of weight `(O.columnCount, O.detExp)` that agrees with
 right translation on the elements supported at the places of `O`, and let `u` have the level and
 character of `O` under `π`. Let `w = O.twistPlace i` be one of the twist places of the pair, and
@@ -481,6 +491,8 @@ lemma toSmoothForm_mem_levelSpace_repOff {m : ℕ}
   exact y.algFormRep_eq_self_of_mem
     (inf_trivialOn_le_levelOf ⟨componentOn_mem_stdLevel (levelOf_le_stdLevel k.property), h_triv⟩)
 
+-- Keeps definitional checks from unfolding `levelOf`, as for `hasParahoricType_chosenGLRep`.
+seal levelOf in
 /-- Let `T` commute with `π k` for all `k` in the maximal level. Then `T` keeps the vectors with the
 level and character of `O` under `π`, and commutes there with the action of each element `a` of the
 group algebra of `O.ChosenGL r`. -/

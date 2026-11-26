@@ -683,6 +683,10 @@ namespace New.Data
 
 variable {P : Parameters} (D : Data P)
 
+-- Keeps definitional checks from unfolding `levelOf`. The two sides take values in forms of the
+-- same level, written in two ways; with `levelOf` sealed the check compares the arguments of the
+-- two levels instead of unfolding them to sets of matrices.
+seal levelOf in
 /-- Let `D` be admissible data for the parameters `P`. They give the CM field `D.E`, the hermitian
 spaces `X₀` and `Y₀`, the source forms and the filling data `D.filling` with their Bessel function.
 For a real point `g` of the unitary group of `Y₀` and a linear form `t` on the space of values of
@@ -743,6 +747,9 @@ Poincaré series of the Bessel function. -/
 def poincare : D.SourceForm →ₗ[ℂ] D.principalForms (D.spaceY 0) :=
   D.poincareAt D.besselPoint D.besselForm
 
+-- Keeps definitional checks from unfolding `levelOf`, as for
+-- `exists_poincareAt_eq_poincareMap_comp`.
+seal levelOf in
 /-- The Poincaré map sends a source form `φ` to the Poincaré series of the Bessel function with the
 coefficients `D.sourceFormCoords φ`, the values at the class representatives of the central
 translate of `φ` by `D.latticeScale 0`. -/

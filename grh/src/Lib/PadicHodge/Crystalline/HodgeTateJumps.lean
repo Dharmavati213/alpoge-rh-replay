@@ -305,11 +305,13 @@ variable {p : ℕ} [ThePrime p]
   [Algebra.IsAlgebraic ℤ_[p] R] [OverGp Γ p] {ρ : Representation R Γ T}
   {ι : Type*} [Fintype ι] [DecidableEq ι] (e : Basis ι R T)
 
+-- The matrices of `P` and `P⁻¹` are written `P.val`, `P⁻¹.val`. Left to a coercion `↑P`, each one
+-- is found by a slow search through the coercions into square matrices.
 /-- The rows of the inverse of an invertible Hodge–Tate frame `P` satisfy
 `P⁻¹ N = diag (χ(g) ^ (-k i)) · g(P⁻¹)`. -/
 lemma inv_mul_apply_of_isHodgeTateFrame {N : Matrix ι ι ℂ_[p]} {k : ι → ℤ} {g : Gp p}
-    {P : GL ι ℂ_[p]} (h_frame : IsHodgeTateFrame N P k g) (i l : ι) :
-    ((P⁻¹ : GL ι ℂ_[p]) * N : Matrix ι ι ℂ_[p]) i l =
+    {P : GL ι ℂ_[p]} (h_frame : IsHodgeTateFrame N P.val k g) (i l : ι) :
+    (P⁻¹.val * N) i l =
       ((cyclotomicGp g ^ (-k i) : ℤ_[p]ˣ) : ℤ_[p]) • g • P⁻¹ i l := by
   -- Apply `mulVec_twist` to the column `l` of `P⁻¹` and multiply by `P⁻¹`.
   set Pinv : Matrix ι ι ℂ_[p] := ((P⁻¹ : GL ι ℂ_[p]) : Matrix ι ι ℂ_[p]) with hPinv
@@ -320,6 +322,7 @@ lemma inv_mul_apply_of_isHodgeTateFrame {N : Matrix ι ι ℂ_[p]} {k : ι → �
   simp only [mulVec_mulVec, hPinv, Units.inv_mul, Units.mul_inv, one_mulVec] at h_entry
   simpa [hPinv, one_apply, mulVec_apply_eq_sum] using h_entry.symm
 
+-- The matrix of `Q` is written `Q.val`, as in `inv_mul_apply_of_isHodgeTateFrame`.
 /-- Let `R` be algebraic over `ℤ_[p]` and `e` a finite basis of `T`. Let `Q` be invertible over
 `ℂ_[p]` with `Q · γ(ρ g) = diag (χ(g) ^ (-k i)) · g(Q)` for `g` near `1`, where `ρ g` is written
 as a matrix in the basis `e`. Then the `k i` are the jumps of `ρ` at `γ`, and the `γ`-semilinear
@@ -327,7 +330,7 @@ forms whose values on `e` are the rows of `Q` form a basis, the `i`-th in
 `New.Period.hodgeTateMaps` for the weight `k i`. -/
 lemma hasJumps_of_rows {γ : R →ₐ[ℤ_[p]] ℂ_[p]} (Q : GL ι ℂ_[p]) (k : ι → ℤ)
     (h_rows : ∀ᶠ g : Γ in nearOne Γ, ∀ i l : ι,
-      ((Q : Matrix ι ι ℂ_[p]) * ((ρ g).toMatrix e e).map γ) i l =
+      (Q.val * ((ρ g).toMatrix e e).map γ) i l =
         ((χ g ^ (-k i) : ℤ_[p]ˣ) : ℤ_[p]) • toGp g • Q i l) :
     HasJumps ρ γ (univ.val.map k) ∧
     ∃ b : Basis ι ℂ_[p] (T →ₛₗ[(γ : R →+* ℂ_[p])] ℂ_[p]),
@@ -393,6 +396,7 @@ lemma IsPotentiallyCrystalline.top_le_span_fixed (h : IsPotentiallyCrystalline �
   filter_upwards [h_equivariant y, hy_fix] with g hg hfix
   rw [hg, hfix]
 
+-- The matrix of `P` is written `P.val`, as in `inv_mul_apply_of_isHodgeTateFrame`.
 /-- For `toGp` with open image and `R` algebraic over ℤ_p, the Hodge–Tate frame of a potentially
 crystalline `ρ` along `γ`: an invertible matrix `P` over `ℂ_[p]` and integers `k i` such that (a)
 near `1` the columns of `P` are Hodge–Tate vectors of weights `k` for the matrix of `ρ g` in the
@@ -402,8 +406,7 @@ lemma IsPotentiallyCrystalline.exists_isHodgeTateFrame (h : IsPotentiallyCrystal
     (γ : R →ₐ[ℤ_[p]] ℂ_[p]) :
     ∃ P : GL ι ℂ_[p], ∃ k : ι → ℤ,
       -- (a)
-      (∀ᶠ g : Γ in nearOne Γ,
-        IsHodgeTateFrame (((ρ g).toMatrix e e).map γ) (P : Matrix ι ι ℂ_[p]) k (toGp g)) ∧
+      (∀ᶠ g : Γ in nearOne Γ, IsHodgeTateFrame (((ρ g).toMatrix e e).map γ) P.val k (toGp g)) ∧
       -- (b)
       HasJumps ρ γ (univ.val.map k) ∧
       -- (c)

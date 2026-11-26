@@ -869,8 +869,11 @@ lemma stdClassSum_thirdExchangeKernel_productDatum {a : Type} [Fintype a]
     simp [← ext_iff, Prod.ext_iff, funext_iff, New.U.sum, regroupEquiv, Matrix.one_apply]
     aesop (add simp regroupEquiv)
 
--- Keeps definitional checks from unfolding `Finset.prod`.
-seal Finset.prod in
+-- Keeps definitional checks from unfolding `Finset.prod` and the trivial twist `1`. The rows `w`
+-- are matrices modulo `D.untwistedModulus 2`, the modulus of the twist `1`, used modulo the square
+-- of the chosen places of `ϑ`; with `1` sealed the check fails at once on `ϑ = 1` and goes on to
+-- unfold the two moduli, which agree.
+seal Finset.prod instOneTwist in
 /-- Let `D` be admissible data, `ϑ` a twist, `j` a lift index, `W_j = D.spaceW j`, and `V″` the
 standard definite space on `FirstFactorIndex j`, which contains the indices of `W_j`. Let `i` be a
 choice with matrix `Λ = i.matrix` modulo `ϖ²` (`ϖ` the product of the chosen places), and `w` rows
@@ -906,6 +909,9 @@ lemma stdClassSum_thirdExchangeKernel_eq_productDatum {a : Type} [Fintype a]
   -- the real group of `V″` fixes the polynomial of the kernel
   simpa using! realPairWeil_stackedDetProd (signOrder j) _ rfl (constantRows j i.rowChoice _) 1
 
+-- Keeps definitional checks from unfolding the trivial twist `1`, as for
+-- `stdClassSum_thirdExchangeKernel_eq_productDatum`.
+seal instOneTwist in
 /-- If `u * w` is the matrix `Λ` of `i`, the left side of the third exchange is the theta
 series `kernelClassSum` on `U(W_j)`: the class sum, at the level cut out by the rows `w`, of kernels
 with the vectors `leftSideSeries ϑ j i h`. -/

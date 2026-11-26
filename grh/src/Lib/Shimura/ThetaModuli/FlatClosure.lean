@@ -637,6 +637,8 @@ lemma isDenseFamily_of_isChartPresentation {J W : Type} {X : Scheme} {L : LineBu
   have hf_zero : u c f = 0 := h_ideal c (by simpa using hf_vanish)
   simp [hf_zero] at hf_y
 
+-- `RingHom.ker` is written in full. With `Limits` open, a bare `ker` is also tried as the kernel
+-- of a morphism in a category; that attempt fails slowly, looking for a coercion of `u`.
 /-- In the chart `c` of the base change of `z : A ⟶ S` along `b`, a map `φ` kills the ideal of the
 chart exactly when the `φ (X j)` are the coordinates of a point of `A` in the chart `c` that lies
 over the point of `S` given by `φ.comp C` and `b`. -/
@@ -644,7 +646,7 @@ lemma IsChartPresentation.ker_le_ker_iff {J B : Type} [CommRing B] {A S : Scheme
     {N : LineBundle A J} {z : A ⟶ S} {R : CommRingCat} {b : Spec R ⟶ S} {c : J}
     {u : MvPolynomial J R →+* Γ(pullback z b, (N.pull (fst z b)).opens c)}
     (hu : IsChartPresentation (N.pull (fst z b)) (snd z b) c u) (φ : MvPolynomial J R →+* B) :
-    ker u ≤ ker φ ↔ ∃ y : Spec (CommRingCat.of B) ⟶ A, LandsIn y (N.opens c) ∧
+    RingHom.ker u ≤ RingHom.ker φ ↔ ∃ y : Spec (CommRingCat.of B) ⟶ A, LandsIn y (N.opens c) ∧
       y ≫ z = specMap (φ.comp C) ≫ b ∧
       ∀ j : J, N.transition c j (CommRingCat.of B) y = φ (X j) := by
   constructor
@@ -668,6 +670,7 @@ lemma IsChartPresentation.ker_le_ker_iff {J B : Type} [CommRing B] {A S : Scheme
       simpa [y', hy_coord, ← hom_eval₂, lift_snd, lift_fst] using hu.ofSection_eq h_in f
     simp [mem_ker, ← h_value, mem_ker.1 hf]
 
+-- `RingHom.ker` is written in full, as in `IsChartPresentation.ker_le_ker_iff`.
 /-- Let `A` and `S` be reduced schemes with `z : A ⟶ S`, and let `u` present the chart `c` of the
 pullback of the line bundle `N` to the base change of `A` to the local ring of `S` at `p`. Let the
 complex points `x (a, v)` be dense in `A`, lie over the complex points `ξ a` of `S` (finitely many
@@ -685,11 +688,11 @@ lemma IsChartPresentation.mem_ker_stalk_iff {J W ι : Type} [Finite ι] {A S : S
     (h_over : ∀ w : ι × W, x w ≫ z = ξ w.1)
     (h_coords : ∀ w : ι × W, N.IsHomogeneousCoords (x w) (θ w.1 w.2))
     (f : MvPolynomial J (S.presheaf.stalk p)) :
-    f ∈ ker u ↔
+    f ∈ RingHom.ker u ↔
       ∀ (a : ι) (ψ : S.presheaf.stalk p ⟶ CommRingCat.of ℂ),
         Spec.map ψ ≫ S.fromSpecStalk p = ξ a →
         MvPolynomial.map ψ.hom f ∈
-          ⨅ v ∈ {v ∈ Set.range (θ a) | v c ≠ 0}, ker (MvPolynomial.eval (v · / v c)) := by
+          ⨅ v ∈ {v ∈ Set.range (θ a) | v c ≠ 0}, RingHom.ker (MvPolynomial.eval (v · / v c)) := by
   have h_finite : (Set.range (x · ≫ z)).Finite :=
     (Set.finite_range ξ).subset (Set.range_subset_iff.2 fun w ↦ ⟨w.1, (h_over w).symm⟩)
   -- The lifts of the `x w` to the base change separate functions.
@@ -773,6 +776,7 @@ lemma exists_reduced_projective_closure {J Ω : Type} [Finite J] {S : Scheme}
   · simpa [← h_fac] using hp_over
   · simpa [← h_fac, ← IsHomogeneousCoords.pull_iff] using hp_coords
 
+-- `RingHom.ker` is written in full, as in `IsChartPresentation.ker_le_ker_iff`.
 /-- The main step towards `exists_isFlatClosure`. Let `S` be reduced, with finitely many dense
 complex points `η (j a)`, and at every `η n` the ideals of the vectors `θ n v` are cut out by the
 linear systems `P`, where `1 < r` and `i` is a degree bound for the ranks `σ`. Let `A` be reduced
@@ -798,7 +802,7 @@ lemma flat_snd_and_iInf_ker_eq_of_isCutOutAt {J W ι I κ : Type} {S : Scheme} {
     {k : Type} [Field k] {t : Spec (.of k) ⟶ S} {Z : Set (J → k)}
     (hZ : IsCutOutAt r i σ P t Z) :
     Flat (snd z (S.fromSpecStalk (t (IsLocalRing.closedPoint k)))) ∧
-      ∀ c : J, ⨅ v ∈ {v ∈ Z | v c ≠ 0}, ker (eval (v · / v c)) = ker (u t c) := by
+      ∀ c : J, ⨅ v ∈ {v ∈ Z | v c ≠ 0}, RingHom.ker (eval (v · / v c)) = RingHom.ker (u t c) := by
   -- In each chart, `eq_map_and_flat_of_isCutOut` over the local ring at `t` gives both claims.
   let p : S := t (IsLocalRing.closedPoint k)
   let s : Spec (S.presheaf.stalk p) ⟶ S := S.fromSpecStalk p
@@ -830,6 +834,7 @@ lemma flat_snd_and_iInf_ker_eq_of_isCutOutAt {J W ι I κ : Type} {S : Scheme} {
       (hu t c).ker_le_ker_iff]
     simp [comp_assoc, ht, specMap]
 
+-- `RingHom.ker` is written in full, as in `IsChartPresentation.ker_le_ker_iff`.
 /-- Let `N` embed `A` in projective space over `S` along `z`, let `ξ` be a complex point of `S`, and
 let `u` present the chart `c` of the fibre of `A` over `ξ`. A vector `θ₀` with `θ₀ c ≠ 0` whose
 evaluation (scaled to `θ₀ c = 1`) vanishes on the ideal of the chart is the vector of homogeneous
@@ -838,7 +843,7 @@ lemma exists_isHomogeneousCoords_of_ker_le_ker {J : Type} {A S : Scheme} {z : A 
     {N : LineBundle A J} (h_emb : N.IsProjEmbedding z) {ξ : Spec (CommRingCat.of ℂ) ⟶ S} {c : J}
     {u : MvPolynomial J (CommRingCat.of ℂ) →+* Γ(pullback z ξ, (N.pull (fst z ξ)).opens c)}
     (hu : IsChartPresentation (N.pull (fst z ξ)) (snd z ξ) c u) {θ₀ : J → ℂ} (hc : θ₀ c ≠ 0)
-    (h_le : ker u ≤ ker (eval (θ₀ · / θ₀ c))) :
+    (h_le : RingHom.ker u ≤ RingHom.ker (eval (θ₀ · / θ₀ c))) :
     ∃ x : Over.mk ξ ⟶ Over.mk z, N.IsHomogeneousCoords x.left θ₀ := by
   obtain ⟨y, hy_in, hy_over, hy_coord⟩ : ∃ y : Spec (CommRingCat.of ℂ) ⟶ A, LandsIn y (N.opens c) ∧
       y ≫ z = specMap ((eval (θ₀ · / θ₀ c)).comp C) ≫ ξ ∧

@@ -545,6 +545,8 @@ lemma isNearPairOverAgreeingBlock_of_mem_nearRepresentativesOver {E : Type} [Fie
   obtain ⟨⟨-, h_over'⟩, -, h_near'⟩ := hp'
   exact ⟨h_near, h_near', s, h_agrees, h_over, h_over'⟩
 
+-- `ENNReal.ofReal` is written in full. A leading-dot `.ofReal` is elaborated before the type of the
+-- summand is known: Lean prepares an error by scanning the environment, drops it and retries.
 /-- Let `E` be a CM field with a primitive root of unity of order 5040, and let `S` be data of the
 filling theorem over `E` that satisfy the standing hypotheses `S.IsAdmissible`. Let `T`, `T'` be
 subsets of `Γ* = S.remainingTerms` that are stable, that is, invariant on both sides under the
@@ -569,8 +571,8 @@ lemma enorm_amplitudeSum_mul_le {E : Type} [Field E] [CMType E] {𝔰 : Shape} {
     (h_sub : T ⊆ S.remainingTerms) (h_sub' : T' ⊆ S.remainingTerms) {s : S.ResidueGL} :
     ‖S.amplitudeSum .cut T c s c'‖ₑ * ‖S.amplitudeSum .cut T' c s c'‖ₑ ≤
       ∑' q : S.nearRepresentativesOver T c s c' × S.nearRepresentativesOver T' c s c',
-        .ofReal (S.unipotentCovolume ^ 2) *
-        .ofReal (S.termSize c c' q.1 * S.termSize c c' q.2) := by
+        ENNReal.ofReal (S.unipotentCovolume ^ 2) *
+        ENNReal.ofReal (S.termSize c c' q.1 * S.termSize c c' q.2) := by
   grw [enorm_amplitudeSum_le_tsum_termSize hT h_sub,
     enorm_amplitudeSum_le_tsum_termSize hT' h_sub']
   simp_rw [← ENNReal.tsum_mul_right, ← ENNReal.tsum_mul_left, ← ENNReal.tsum_prod]

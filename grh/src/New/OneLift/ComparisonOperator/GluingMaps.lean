@@ -220,6 +220,11 @@ lemma isGlued_splittingV_of_isGlued {ϑ' : D.Twist}
   -- the conditions on a lattice do not involve the twist, up to unfolding
   { hL with }
 
+-- Keeps definitional checks from unfolding the trivial twist `1`. The matrix `i.1` is taken
+-- modulo `D.untwistedModulus 2`, the modulus of the twist `1`, and used modulo the square of the
+-- chosen places of `ϑ`; with `1` sealed the check fails at once on `ϑ = 1` and goes on to unfold
+-- the two moduli, which agree.
+seal instOneTwist in
 /-- The lattice `glueLattice j ϑ i` is glued for the matrix `Λ = i.1` (`IsGlued`): the congruence
 modulo `ϖ` that defines it is, after a translation by a unique element of `congruenceGroup`, a
 pair of conditions on the blocks `V″` and `V°`, and its inverse is integral on most of `V″`. -/
@@ -358,6 +363,8 @@ is the matrix of `glueLattice j ϑ i`, `M = D.M`, and `l₁` is
     simp [↓classAut_gluingLevel_eq_bot, smul_comm a, ← smul_sum, classSum,
       ↓finsum_eq_sum_of_fintype]
 
+-- Keeps definitional checks from unfolding the trivial twist `1`, as for `isGlued_glueLattice`.
+seal instOneTwist in
 set_option backward.isDefEq.respectTransparency false in
 /-- The period is a sum of slices. Let `φ` be a form on `V_j = V″ ⊕ V°` and `ζ` a tuple of forms on
 `V°`. The inner product of `ζ` with the adjoint of the gluing map `glue j ϑ` at `φ` is `M ^ l₁`

@@ -141,6 +141,8 @@ lemma exists_pderiv_mul_eq_smul {κ : ℂ_[p]} (hκ : 1 < ‖κ‖) {G : MvPower
   linear_combination
     -(pderiv y (seriesToCp g) + seriesToCp g * seriesToCp B) * G * h_cancel
 
+-- `MvPolynomial.X` is written in full. A leading-dot `.X` is elaborated before the type of the
+-- product is known: Lean prepares an error by scanning the environment, drops it and retries.
 /-- Let `κ ∈ ℂ_[p]` have norm greater than `1`. If `∂_(t i) G = (κ A_i + B_i) G` with `A_i`, `B_i`
 integral, then `(∏_(i ∈ T) ∂_(t i)) G = κ ^ #T g G` with `g` integral and congruent to `∏ A_i`
 modulo the maximal ideal. The identity is stated after applying each differential operator `f(∂)`
@@ -153,7 +155,8 @@ lemma exists_jet_mul_prod_X {κ : ℂ_[p]} (hκ : 1 < ‖κ‖) {G : MvPowerSeri
     ∃ g : MvPowerSeries Y (valRingCp p),
       g.map (residue (valRingCp p)) = ∏ i ∈ T, (A i).map (residue (valRingCp p)) ∧
       ∀ f : MvPolynomial Y ℂ_[p],
-        jet ℂ_[p] (f * ∏ i ∈ T, .X (t i)) G = κ ^ #T * jet ℂ_[p] f (seriesToCp g * G) := by
+        jet ℂ_[p] (f * ∏ i ∈ T, MvPolynomial.X (t i)) G =
+          κ ^ #T * jet ℂ_[p] f (seriesToCp g * G) := by
   induction T using cons_induction with
   | empty => exact ⟨1, by simp, by simp⟩
   | cons i T hi ih =>
@@ -321,6 +324,7 @@ lemma monomial_mul_prod_X_partner {R : Type} [CommRing R] (pr : ℕ → Φ → �
   simp [pairExponent, partnerDegree, prod_sigma, MvPolynomial.X_pow_eq_monomial,
     Finsupp.mapDomain_finsetSum, ← MvPolynomial.monomial_sum_one]
 
+-- `MvPolynomial.X` is written in full, as in `exists_jet_mul_prod_X`.
 /-- Let `κ ∈ ℂ_[p]` have norm greater than `1`, let `F = W exp (κ Ξ)` with `W`, `Ξ` integral, `W` a
 unit and `Ξ(0) = 0`, let `δ 0 = 1` and let `G = F(z' + z'') ∏_(c ≠ 0) F(δ_c z')` in two copies `z'`,
 `z''` of the variables. Differentiating `G` in the variables `z''_(t i)`, `i ∈ T`, gives
@@ -334,7 +338,8 @@ lemma exists_jet_prod_copySubst_couplingSubst {X ι : Type} [Fintype X] {κ : �
       (killCompl (Function.Embedding.sectL X 0) g).map (residue (valRingCp p)) =
         ∏ i ∈ T, (pderiv (t i) Ξ).map (residue (valRingCp p)) ∧
       ∀ f : MvPolynomial (X × Fin 2) ℂ_[p],
-        jet ℂ_[p] (f * ∏ i ∈ T, .X (t i, 1)) G = κ ^ #T * jet ℂ_[p] f (seriesToCp g * G) := by
+        jet ℂ_[p] (f * ∏ i ∈ T, MvPolynomial.X (t i, 1)) G =
+          κ ^ #T * jet ℂ_[p] f (seriesToCp g * G) := by
   have h_log (i : ι) : ∃ B : MvPowerSeries (X × Fin 2) (valRingCp p), pderiv (t i, 1) G =
       (κ • seriesToCp (copySubst 1 (pderiv (t i) Ξ)) + seriesToCp B) * G := by
     obtain ⟨B, hB⟩ := exists_pderiv_mul_expSubst hW hΞ κ (t i)
