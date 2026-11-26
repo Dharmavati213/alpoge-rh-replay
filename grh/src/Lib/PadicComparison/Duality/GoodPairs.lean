@@ -264,7 +264,7 @@ lemma isFiniteLerayHirsch_iff_of_locally_bijective (u : E ⟶ Y)
     · exact (QuotientAddGroup.eq_zero_iff _).mpr ⟨0, (relFreeAb.mk_eq_zero hU).symm⟩
 
 -- Unsealed, `Ext` is unfolded when the two forms of the restricted Tate module are compared.
-seal Abelian.Ext in
+seal Abelian.Ext Abelian.Ext.instAddCommGroup in
 /-- For a flat functor `N`, a class `ξ` in the total Ext from `P` to the Tate module, a map
 `p : N' ⟶ N ⊗ P` and a map `π : N ⟶ K`: the operation `y ↦ p^*((π^* y) · ξ)` from the total Ext of
 `K ∘ g` to that of `N' ∘ g`, with coefficients in a theory `Θ` along `g`, natural in `Θ`. -/
@@ -284,8 +284,8 @@ def mulClassOp {N N' K P : AbFunctor (TestOver A)} [HasFlatValues N]
       map_restrictAlong_restrictAlong _ _ ξ, map_comp_assoc, map_homClass]
     rfl
 
--- Keeps definitional checks from unfolding the Ext groups.
-seal CategoryTheory.Abelian.Ext in
+-- Keeps definitional checks from unfolding the Ext groups and their group structure.
+seal CategoryTheory.Abelian.Ext CategoryTheory.Abelian.Ext.instAddCommGroup in
 /-- A pair is a retract of its product with `(ℙ¹, S)`, where `S ≅ 𝔸¹` is the complement
 `affineChart` of `(0 : 1)`. Let `V` be a subfunctor of `Y`. If the product pair
 `(Y × ℙ¹, V × ℙ¹ ∪ Y × S)` is good for the compared theory `D` (`h_prod`), so is `(Y, V)`. -/
@@ -487,8 +487,8 @@ private lemma isZariskiLocallyTop_range_rootPairsToProdLine_sup :
 
 /-! ### Principal open sets of affine space and standard étale charts -/
 
--- Keeps definitional checks from unfolding the Ext groups.
-seal CategoryTheory.Abelian.Ext in
+-- Keeps definitional checks from unfolding the Ext groups and their group structure.
+seal CategoryTheory.Abelian.Ext CategoryTheory.Abelian.Ext.instAddCommGroup in
 /-- Alexander duality for a principal open set of `Spec T ⊆ (ℙ¹)^d`, embedded by the presentation
 `e` of `T` as a polynomial ring. `D.IsFiniteLerayHirsch N` requires, among other things, that
 `w ↦ ∑ i, (w i restricted along g) · D.comparison i` be a bijection from families in total

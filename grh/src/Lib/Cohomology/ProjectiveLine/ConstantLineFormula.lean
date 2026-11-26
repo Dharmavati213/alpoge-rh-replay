@@ -104,6 +104,8 @@ def etaOneClass (c : TestOver A) :=
   H.map _ (freeAb.map (toUnit (testOfPoint A projLine ⋙ reprBy c))) 2
     (H.map _ oneLocConst 2 Theory.locallyConstant.cupClass)
 
+-- Without the seal, unification unfolds the group structure of the Ext groups and is slow.
+seal CategoryTheory.Abelian.Ext.instAddCommGroup in
 /-- Pull-back along a map of tests c → d over A sends `New.Variety.etaOneClass` c to
 `New.Variety.etaOneClass` d. -/
 lemma map_etaOneClass {c d : TestOver A} (φ : c ⟶ d) :
@@ -112,6 +114,8 @@ lemma map_etaOneClass {c d : TestOver A} (φ : c ⟶ d) :
       etaOneClass d :=
   H.map_map ..
 
+-- Without the seal, unification unfolds the group structure of the Ext groups and is slow.
+seal CategoryTheory.Abelian.Ext.instAddCommGroup in
 /-- Pull a class x back along f, restrict it along φ, pull it back along α and compose with T. The
 result is the restriction of x composed with T, pulled back along α followed by the restriction
 of f. -/
@@ -147,7 +151,7 @@ lemma comp_restrict_pull_map {D D' : Type 1} [Category D] [Category D'] (φ : D'
           (mapThenComp (restrictAlong φ) T x.toTotalH) := comp_assoc ..
 
 -- Keeps definitional checks from unfolding the Ext groups and their group structure.
-seal CategoryTheory.Abelian.Ext addCommGroupH in
+seal CategoryTheory.Abelian.Ext CategoryTheory.Abelian.Ext.instAddCommGroup addCommGroupH in
 /-- Let c be a test over A and u a map from the point to the functor d ↦ Hom(c, g(d)), that is, maps
 c → g(d) natural in the object d of C. Let T be a class in total Ext from the locally constant
 ℤ/ℓ coefficient to M, both restricted to the points of ℙ¹ over g. Pull `New.Variety.etaOneClass` c
@@ -192,6 +196,8 @@ lemma comp_pull_etaOneClass_eq_pullbackAlong_oneLocConst {M : TorsionCoeff g}
   exact (congrArg _ h_nat).trans
     (congrArg (fun f ↦ pullbackAlong f (comp T M.cupClass.toTotalH)) h_one)
 
+-- Without the seal, unification unfolds the group structure of the Ext groups and is slow.
+seal CategoryTheory.Abelian.Ext.instAddCommGroup in
 /-- Let c be a test over A and u a map from the point to the functor d ↦ Hom(c, g(d)) that has
 universal points for the restriction along g of the locally constant ℤ/ℓ coefficient. Suppose that
 this restriction is a coefficient along g (`h_torsion`, `h_descent`) and that its class η, pulled
@@ -299,8 +305,9 @@ lemma pointMap_ofSelf_bijective :
 end
 
 /-! ### The projective line formula over a valuation ring -/
--- Without the seal, unification unfolds these two functors and runs out of heartbeats.
-seal locConstCoeff projLine in
+-- Without the seal, unification unfolds these two functors and runs out of heartbeats; it also
+-- unfolds the group structure of the Ext groups into the derived category, which is slow.
+seal locConstCoeff projLine CategoryTheory.Abelian.Ext.instAddCommGroup in
 /-- If every non-zero element of A is a unit in every test g(d) (so every g(d) lies over the generic
 point of A) and `New.Variety.etaOneClass` vanishes at the residue field of A at its generic point
 (`residueTest (TestOver.ofSelf A) ⊥`, with A seen as a test over itself), then y · η = 0 over the
@@ -332,6 +339,8 @@ lemma lerayHirsch_lineBasis_single_false_eq_zero_of_etaOneClass_eq_zero {C : Typ
   erw [← comp_pull_etaOneClass_eq_pullbackAlong_oneLocConst u, h_generic]
   simp
 
+-- Without the seal, unification unfolds the group structure of the Ext groups and is slow.
+seal CategoryTheory.Abelian.Ext.instAddCommGroup in
 /-- If `New.Variety.etaOneClass` vanishes at a test k over A that is a field, then it vanishes at
 the residue field of A at its generic point. -/
 lemma etaOneClass_residueTest_bot_eq_zero {ℓ : ℕ} {A : Type} [CommRing A] [InvertsPrime A ℓ]
@@ -445,6 +454,8 @@ lemma hasLineFormula_of_lerayHirsch_ne_zero {C : Type _} [Category C]
   exact isLerayHirschBasis_lineBasis_of_basis Θ (fun i : b ↦ i.val.snd)
     ⟨⟨2, Θ.cupClass⟩, h_eta_mem h_eta_ne⟩ rfl h_basis_point h_basis_line
 
+-- Without the seal, unification unfolds the group structure of the Ext groups and is slow.
+seal CategoryTheory.Abelian.Ext.instAddCommGroup in
 /-- Let `A` be a valuation ring (`PreValuationRing A`) that is local and absolutely integrally
 closed, with ℓ invertible in it (`InvertsPrime A ℓ`), and that has an injective ring map to ℂ_ℓ. A
 test over `A` is a commutative `A`-algebra whose underlying ring is a test ring. Then the theory
