@@ -83,15 +83,37 @@ lemma translateByClassReps_inv_mul_mul (c c' : S.Classes) (u γ u' : S.G E) :
     S.translateByClassReps c c' (u⁻¹ * γ * u') =
       (S.translateByClassReps c c u)⁻¹ * S.translateByClassReps c c' γ *
         S.translateByClassReps c' c' u' := by
-  simp [translateByClassReps, mul_assoc]
+  -- `MonoidHom.map_mul` and `MonoidHom.map_inv` are named to avoid a slow instance search.
+  simp only [translateByClassReps, MonoidHom.map_mul, MonoidHom.map_inv, _root_.mul_inv_rev,
+    inv_inv, mul_assoc, mul_inv_cancel_left]
 
 /-- If `σ` fixes the vectors `e_a`, `e*_a` of the `ϱ` hyperbolic pairs (`floorGroup 𝔰.ϱ`), so does
 its translate `h_c⁻¹ σ h_c'` by class representatives. -/
 lemma translateByClassReps_mem_floorGroup {σ : S.G E} (hσ : σ ∈ floorGroup 𝔰.ϱ) (c c' : S.Classes) :
     S.translateByClassReps c c' σ ∈ floorGroup 𝔰.ϱ := by
-  simp [mem_floorGroup, Sum.forall, apply_eq_one_apply_of_mem_floorGroup hσ,
-    coe_translateByClassReps, classBasis, toBesselH,
-    besselLatticeBasis, mul_apply, Matrix.one_apply]
+  -- The class representatives fix the hyperbolic pairs.
+  have h_rep (c : S.Classes) : S.classRep c ∈ floorGroup 𝔰.ϱ :=
+    floorGroup_anti 𝔰.ϱ.le_succ (inclHFin_mem_besselH c.out)
+  -- So does `σ` read in the lattice basis: in the columns of the hyperbolic pairs the lattice
+  -- basis, its inverse and `σ` agree with `1`. (This is faster than unfolding all the entries.)
+  have h_rat : S.ratToFin σ ∈ floorGroup 𝔰.ϱ := by
+    -- If column `j` of `N` is that of `1`, then column `j` of `M * N` is that of `M`.
+    have h_col {M N : Matrix 𝔰.BesselIndex 𝔰.BesselIndex (𝔸f E)} {j : 𝔰.BesselIndex}
+        (hN : ∀ x, N x j = (1 : Matrix 𝔰.BesselIndex 𝔰.BesselIndex (𝔸f E)) x j)
+        (i : 𝔰.BesselIndex) : (M * N) i j = M i j := by
+      simp [mul_apply, hN, Matrix.one_apply]
+    have h_basis : ∀ j : 𝔰.BesselIndex, floorOf j < 𝔰.ϱ → ∀ x,
+        S.latticeBasis.val x j = (1 : Matrix 𝔰.BesselIndex 𝔰.BesselIndex (𝔸f E)) x j ∧
+        S.latticeBasis⁻¹.val x j = (1 : Matrix 𝔰.BesselIndex 𝔰.BesselIndex (𝔸f E)) x j := by
+      simp [Sum.forall, besselLatticeBasis, Matrix.one_apply]
+    refine mem_floorGroup.2 fun i j hj ↦ ?_
+    have h_map (x : 𝔰.BesselIndex) :
+        (GeneralLinearGroup.map (algebraMap E (𝔸f E)) σ.val).val x j =
+          (1 : Matrix 𝔰.BesselIndex 𝔰.BesselIndex (𝔸f E)) x j := by
+      simp [apply_eq_one_apply_of_mem_floorGroup hσ x j (.inr hj), Matrix.one_apply, apply_ite]
+    rw [coe_ratToFin, Units.val_mul, Units.val_mul, h_col fun x ↦ (h_basis j hj x).1, h_col h_map,
+      (h_basis j hj i).2]
+  exact mul_mem (mul_mem (inv_mem (h_rep c)) h_rat) (h_rep c')
 
 /-- Let `σ` fix the vectors `e_a`, `e*_a` of the `ϱ = 𝔰.ϱ` hyperbolic pairs (`floorGroup 𝔰.ϱ`). Let
 `L = h_c⁻¹ σ h_c'` be its translate by the representatives of the classes `c`, `c'`, and let `z` be
@@ -152,14 +174,31 @@ the entries `p` read in the finite adeles on the right. -/
 lemma translateByClassReps_weylElem_mul (c c' : S.Classes) (p : ℕ → Eˣ) (σ : S.G E) :
     S.translateByClassReps c c' (weylElem 𝔰.ϱ p * σ) =
       weylElem 𝔰.ϱ (Units.map (algebraMap E (𝔸f E)) ∘ p) * S.translateByClassReps c c' σ := by
-  -- No `e*_a` has level below `ϱ`.
-  have h_level (a : Fin 𝔰.ϱ) : ¬2 * 𝔰.ϱ - a < 𝔰.ϱ := by lia
-  -- The Weyl element commutes with the change of basis, entry by entry.
-  simp +contextual [Subtype.ext_iff, ← mul_assoc, Units.ext_iff, ← ext_iff, Sum.forall, weylElem,
-    weylOn, coe_translateByClassReps, classBasis, toBesselH, besselLatticeBasis,
-      fromBlocks_multiply,
-    fromCols_mul_fromBlocks, mul_apply, Matrix.one_apply, BesselIndex.level, h_level,
-    apply_ite (algebraMap E (𝔸f E))]
+  -- The rational Weyl element, read in the lattice basis, is the finite adelic Weyl element. Both
+  -- are block matrices, and the lattice basis is the identity on the hyperbolic pairs; so the
+  -- claim `w_p B = B w_p` is a product of blocks. (Unfolding the entries of `w_p` is far slower.)
+  have h_weyl : S.ratToFin (weylElem 𝔰.ϱ p) =
+      weylElem 𝔰.ϱ (Units.map (algebraMap E (𝔸f E)) ∘ p) := by
+    have h_rat := coe_weylElem_mul (T := S.ratMiddle E) (p := p) (one_mem (floorGroup 𝔰.ϱ))
+    have h_fin := coe_weylElem_mul (T := S.latticeMiddle (𝔸f E))
+      (p := Units.map (algebraMap E (𝔸f E)) ∘ p) (one_mem (floorGroup 𝔰.ϱ))
+    rw [mul_one] at h_rat h_fin
+    -- The middle block of the identity matrix is the identity matrix.
+    have h_one (R : Type) [CommRing R] :
+        (toBlocks₂₂ (1 : Matrix 𝔰.BesselIndex 𝔰.BesselIndex R)).toBlocks₁₁ = 1 := by
+      ext i j
+      simp [toBlocks₂₂, toBlocks₁₁, Matrix.one_apply]
+    refine Subtype.ext ?_
+    rw [coe_ratToFin, mul_assoc, inv_mul_eq_iff_eq_mul]
+    refine Units.ext ?_
+    rw [Units.val_mul, Units.val_mul, h_fin]
+    simp [h_rat, besselLatticeBasis, h_one, fromBlocks_map, fromCols_map, fromRows_map,
+      diagonal_map, fromBlocks_multiply, fromCols_mul_fromBlocks, fromBlocks_mul_fromRows]
+  -- The class representative fixes the hyperbolic pairs, so it commutes with the Weyl element.
+  have h_fix : (S.classRep c)⁻¹ ∈ floorGroup 𝔰.ϱ :=
+    inv_mem (floorGroup_anti 𝔰.ϱ.le_succ (inclHFin_mem_besselH c.out))
+  simp only [translateByClassReps, MonoidHom.map_mul, h_weyl, mul_assoc]
+  exact (weylElem_left_comm h_fix).symm
 
 end
 
